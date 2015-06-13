@@ -2,4 +2,14 @@ parameters:
     # path from project root
     epfremmer.swagger.file: swagger.yaml
 
+    # service classes
+    epfremmer.provider.swagger.class: Epfremmer\SwaggerBundle\Provider\SwaggerProvider
+
 services:
+
+    epfremmer.provider.swagger:
+        class: %epfremmer.provider.swagger.class%
+        arguments:
+          - @kernel
+          - @jms_serializer
+          - %epfremmer.swagger.file%
