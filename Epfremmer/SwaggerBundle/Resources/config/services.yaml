@@ -1,0 +1,5 @@
+parameters:
+    # path from project root
+    epfremmer.swagger.file: swagger.yaml
+
+services:
