@@ -6,7 +6,6 @@
  */
 namespace Epfremmer\SwaggerBundle\Tests\Entity\Schemas\Primitives;
 
-use Doctrine\Common\Collections\ArrayCollection;
 use Epfremmer\SwaggerBundle\Entity\Schemas\Primitives\BooleanPrimitive;
 
 /**
