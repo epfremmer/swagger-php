@@ -46,8 +46,8 @@ class ContactTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Contact::setName
      * @covers Epfremmer\SwaggerBundle\Entity\Contact::getName
+     * @covers Epfremmer\SwaggerBundle\Entity\Contact::setName
      */
     public function testName()
     {
@@ -58,8 +58,8 @@ class ContactTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Contact::setUrl
      * @covers Epfremmer\SwaggerBundle\Entity\Contact::getUrl
+     * @covers Epfremmer\SwaggerBundle\Entity\Contact::setUrl
      */
     public function testUrl()
     {
@@ -70,8 +70,8 @@ class ContactTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Contact::setEmail
      * @covers Epfremmer\SwaggerBundle\Entity\Contact::getEmail
+     * @covers Epfremmer\SwaggerBundle\Entity\Contact::setEmail
      */
     public function testEmail()
     {
