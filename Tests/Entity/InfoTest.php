@@ -130,7 +130,7 @@ class InfoTest extends \PHPUnit_Framework_TestCase
      */
     public function testDeserialize()
     {
-        $data = json_encode((object)[
+        $data = json_encode([
             'title'          => 'foo',
             'description'    => 'bar',
             'termsOfService' => 'baz',
