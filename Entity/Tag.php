@@ -31,6 +31,7 @@ class Tag
 
     /**
      * @JMS\Type("Epfremmer\SwaggerBundle\Entity\ExternalDocumentation")
+     * @JMS\SerializedName("externalDocs")
      * @var ExternalDocumentation
      */
     protected $externalDocs;
