@@ -74,7 +74,7 @@ class ExternalDocumentationTest extends \PHPUnit_Framework_TestCase
      */
     public function testDeserialize()
     {
-        $data = json_encode((object)[
+        $data = json_encode([
             'description' => 'foo',
             'url'         => 'bar',
         ]);

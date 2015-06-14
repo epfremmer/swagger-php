@@ -86,7 +86,7 @@ class ContactTest extends \PHPUnit_Framework_TestCase
      */
     public function testDeserialize()
     {
-        $data = json_encode((object)[
+        $data = json_encode([
             'name'  => 'foo',
             'url'   => 'bar',
             'email' => 'baz',
