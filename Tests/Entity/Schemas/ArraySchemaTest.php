@@ -6,7 +6,6 @@
  */
 namespace Epfremmer\SwaggerBundle\Tests\Entity\Schemas;
 
-use Epfremmer\SwaggerBundle\Entity\ExternalDocumentation;
 use Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema;
 use Epfremmer\SwaggerBundle\Entity\Schemas\ArraySchema;
 
