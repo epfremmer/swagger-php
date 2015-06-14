@@ -126,7 +126,7 @@ class InfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Contact
+     * @covers Epfremmer\SwaggerBundle\Entity\Info
      */
     public function testDeserialize()
     {

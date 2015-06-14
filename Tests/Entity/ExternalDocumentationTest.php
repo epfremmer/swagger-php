@@ -49,7 +49,7 @@ class ExternalDocumentationTest extends \PHPUnit_Framework_TestCase
      * @covers Epfremmer\SwaggerBundle\Entity\ExternalDocumentation::getDescription
      * @covers Epfremmer\SwaggerBundle\Entity\ExternalDocumentation::setDescription
      */
-    public function testName()
+    public function testDescription()
     {
         $this->assertClassHasAttribute('description', ExternalDocumentation::class);
         $this->assertInstanceOf(ExternalDocumentation::class, $this->externalDocumentation->setDescription('foo'));
@@ -70,7 +70,7 @@ class ExternalDocumentationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Contact
+     * @covers Epfremmer\SwaggerBundle\Entity\ExternalDocumentation
      */
     public function testDeserialize()
     {
