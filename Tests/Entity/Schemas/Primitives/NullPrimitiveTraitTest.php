@@ -36,4 +36,10 @@ class NullPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
         $this->mockTrait = $this->getMockForTrait(NullPrimitive::class);
         $this->mockClass = get_class($this->mockTrait);
     }
+
+    /** Empty */
+    public function test()
+    {
+        $this->assertTrue(true);
+    }
 }

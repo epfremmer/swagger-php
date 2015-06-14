@@ -4,7 +4,7 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Tests\Entity\Schemas;
+namespace Epfremmer\SwaggerBundle\Tests\Entity\Headers;
 
 use Epfremmer\SwaggerBundle\Entity\Headers\IntegerHeader;
 
@@ -28,5 +28,11 @@ class IntegerHeaderTest extends \PHPUnit_Framework_TestCase
     protected function setUp()
     {
         $this->integerHeader = new IntegerHeader();
+    }
+
+    /** Empty */
+    public function test()
+    {
+        $this->assertTrue(true);
     }
 }
