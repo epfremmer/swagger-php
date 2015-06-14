@@ -31,6 +31,7 @@ class Info
 
     /**
      * @JMS\Type("string")
+     * @JMS\SerializedName("termsOfService")
      * @var string
      */
     protected $termsOfService;
