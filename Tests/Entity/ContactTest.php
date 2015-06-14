@@ -47,61 +47,37 @@ class ContactTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @covers Epfremmer\SwaggerBundle\Entity\Contact::setName
+     * @covers Epfremmer\SwaggerBundle\Entity\Contact::getName
      */
-    public function testSetName()
+    public function testName()
     {
         $this->assertClassHasAttribute('name', Contact::class);
         $this->assertInstanceOf(Contact::class, $this->contact->setName('foo'));
         $this->assertAttributeEquals('foo', 'name', $this->contact);
-    }
-
-    /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Contact::getName
-     * @depends testSetName
-     */
-    public function testGetName()
-    {
-        $this->contact->setName('foo');
         $this->assertEquals('foo', $this->contact->getName());
     }
 
     /**
      * @covers Epfremmer\SwaggerBundle\Entity\Contact::setUrl
+     * @covers Epfremmer\SwaggerBundle\Entity\Contact::getUrl
      */
-    public function testSetUrl()
+    public function testUrl()
     {
         $this->assertClassHasAttribute('url', Contact::class);
         $this->assertInstanceOf(Contact::class, $this->contact->setUrl('foo'));
         $this->assertAttributeEquals('foo', 'url', $this->contact);
-    }
-
-    /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Contact::getUrl
-     * @depends testSetUrl
-     */
-    public function testGetUrl()
-    {
-        $this->contact->setUrl('foo');
         $this->assertEquals('foo', $this->contact->getUrl());
     }
 
     /**
      * @covers Epfremmer\SwaggerBundle\Entity\Contact::setEmail
+     * @covers Epfremmer\SwaggerBundle\Entity\Contact::getEmail
      */
-    public function testSetEmail()
+    public function testEmail()
     {
         $this->assertClassHasAttribute('email', Contact::class);
         $this->assertInstanceOf(Contact::class, $this->contact->setEmail('foo'));
         $this->assertAttributeEquals('foo', 'email', $this->contact);
-    }
-
-    /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Contact::getEmail
-     * @depends testSetEmail
-     */
-    public function testGetEmail()
-    {
-        $this->contact->setEmail('foo');
         $this->assertEquals('foo', $this->contact->getEmail());
     }
 
