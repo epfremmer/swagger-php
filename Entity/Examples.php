@@ -20,7 +20,9 @@ class Examples
 
     /**
      * @JMS\Inline()
+     * @JMS\SerializedName("data")
      * @JMS\Type("ArrayCollection<string,array>")
+     *
      * @var ArrayCollection
      */
     protected $examples;
@@ -37,7 +39,7 @@ class Examples
      * @param ArrayCollection $examples
      * @return Examples
      */
-    public function setExamples($examples)
+    public function setExamples(ArrayCollection $examples)
     {
         $this->examples = $examples;
         return $this;
