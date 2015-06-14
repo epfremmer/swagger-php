@@ -24,11 +24,6 @@ class AbstractSchemaTest extends \PHPUnit_Framework_TestCase
     protected $mockSchema;
 
     /**
-     * @var Serializer
-     */
-    protected static $serializer;
-
-    /**
      * {@inheritdoc}
      */
     protected function setUp()
