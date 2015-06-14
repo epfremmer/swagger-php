@@ -8,8 +8,6 @@ namespace Epfremmer\SwaggerBundle\Tests\Entity\Schemas\Primitives;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Epfremmer\SwaggerBundle\Entity\Schemas\Primitives\ArrayPrimitive;
-use JMS\Serializer\Serializer;
-use JMS\Serializer\SerializerBuilder;
 
 /**
  * Class ArrayPrimitiveTraitTest
@@ -30,11 +28,6 @@ class ArrayPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
      * @var string
      */
     protected $mockClass;
-
-    /**
-     * @var Serializer
-     */
-    protected static $serializer;
 
     /**
      * {@inheritdoc}
