@@ -4,6 +4,7 @@ parameters:
 
     # service classes
     epfremmer.provider.swagger.class: Epfremmer\SwaggerBundle\Provider\SwaggerProvider
+    epfremmer.serializer_subscriber.class: Epfremmer\SwaggerBundle\Listener\SerializationSubscriber
 
 services:
 
@@ -13,3 +14,8 @@ services:
           - @kernel
           - @jms_serializer
           - %epfremmer.swagger.file%
+
+    epfremmer.serializer.subscriber:
+        class: %epfremmer.serializer_subscriber.class%
+        tags:
+            - { name: jms_serializer.event_subscriber }

@@ -72,7 +72,7 @@ class SwaggerProvider
             $rootDir = $this->kernel->getRootDir();
             $config  = $parser->parse(file_get_contents($rootDir . '/../' . $this->file));
 
-            $this->swagger = $this->serializer->deserialize(json_encode($config), 'array', 'json');
+            $this->swagger = $this->serializer->deserialize(json_encode($config), SwaggerDoc::class, 'json');
         }
 
         return $this->swagger;
