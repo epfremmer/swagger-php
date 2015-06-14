@@ -26,19 +26,19 @@ trait AnyPrimitive
     protected $enum;
 
     /**
-     * @JMS\Type("string")
+     * @JMS\Type("array")
      * @var array
      */
     protected $allOf;
 
     /**
-     * @JMS\Type("string")
+     * @JMS\Type("array")
      * @var array
      */
     protected $anyOf;
 
     /**
-     * @JMS\Type("string")
+     * @JMS\Type("array")
      * @var array
      */
     protected $oneOf;
@@ -50,7 +50,7 @@ trait AnyPrimitive
     protected $not;
 
     /**
-     * @JMS\Type("ArrayCollection<Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema>")
+     * @JMS\Type("ArrayCollection<string,Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema>")
      * @JMS\Accessor(setter="setDefinitions")
      *
      * @var AbstractSchema[]|ArrayCollection
