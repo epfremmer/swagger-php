@@ -6,8 +6,11 @@
  */
 namespace Epfremmer\SwaggerBundle\Tests\Entity\Schemas;
 
+use Epfremmer\SwaggerBundle\Entity\ExternalDocumentation;
 use Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema;
 use Epfremmer\SwaggerBundle\Entity\Schemas\StringSchema;
+use JMS\Serializer\Serializer;
+use JMS\Serializer\SerializerBuilder;
 
 /**
  * Class StringSchemaTest
@@ -24,11 +27,24 @@ class StringSchemaTest extends \PHPUnit_Framework_TestCase
     protected $stringSchema;
 
     /**
+     * @var Serializer
+     */
+    protected static $serializer;
+
+    /**
      * {@inheritdoc}
      */
     protected function setUp()
     {
         $this->stringSchema = new StringSchema();
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public static function setUpBeforeClass()
+    {
+        self::$serializer = SerializerBuilder::create()->build();
     }
 
     /**
@@ -38,5 +54,34 @@ class StringSchemaTest extends \PHPUnit_Framework_TestCase
     {
         $this->assertNotEmpty($this->stringSchema->getType());
         $this->assertEquals(AbstractSchema::STRING_TYPE, $this->stringSchema->getType());
+    }
+
+    /**
+     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\BooleanSchema
+     */
+    public function testSerialization()
+    {
+        $data = json_encode([
+            'type' => AbstractSchema::STRING_TYPE,
+            'format'      => 'foo',
+            'title'       => 'bar',
+            'description' => 'baz',
+            'example'     => 'qux',
+            'externalDocs' => (object)[],
+        ]);
+
+        $schema = self::$serializer->deserialize($data, AbstractSchema::class, 'json');
+
+        $this->assertInstanceOf(StringSchema::class, $schema);
+        $this->assertAttributeEquals('foo', 'format', $schema);
+        $this->assertAttributeEquals('bar', 'title', $schema);
+        $this->assertAttributeEquals('baz', 'description', $schema);
+        $this->assertAttributeEquals('qux', 'example', $schema);
+        $this->assertAttributeInstanceOf(ExternalDocumentation::class, 'externalDocs', $schema);
+
+        $json = self::$serializer->serialize($schema, 'json');
+
+        $this->assertJson($json);
+        $this->assertJsonStringEqualsJsonString($data, $json);
     }
 }
