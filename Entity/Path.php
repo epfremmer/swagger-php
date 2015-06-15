@@ -23,27 +23,27 @@ class Path
     /**
      * @JMS\Inline()
      * @JMS\SerializedName("data")
-     * @JMS\Type("ArrayCollection<string,Epfremmer\SwaggerBundle\Entity\Route>")
+     * @JMS\Type("ArrayCollection<string,Epfremmer\SwaggerBundle\Entity\Operation>")
      *
-     * @var Route[]|ArrayCollection
+     * @var Operation[]|ArrayCollection
      */
-    protected $routes;
+    protected $operations;
 
     /**
-     * @return Route[]|ArrayCollection
+     * @return Operation[]|ArrayCollection
      */
     public function getRoutes()
     {
-        return $this->routes;
+        return $this->operations;
     }
 
     /**
-     * @param ArrayCollection $routes
+     * @param ArrayCollection $operations
      * @return Path
      */
-    public function setRoutes(ArrayCollection $routes)
+    public function setRoutes(ArrayCollection $operations)
     {
-        $this->routes = $routes;
+        $this->operations = $operations;
         return $this;
     }
 
