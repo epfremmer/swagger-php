@@ -1,0 +1,259 @@
+<?php
+/**
+ * File SwaggerDoc.php
+ *
+ * @author Edward Pfremmer <epfremme@nerdery.com>
+ */
+namespace Epfremmer\SwaggerBundle\Entity;
+
+use Doctrine\Common\Collections\ArrayCollection;
+use Epfremmer\SwaggerBundle\Entity\Parameters\AbstractParameter;
+use Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema;
+use JMS\Serializer\Annotation as JMS;
+
+/**
+ * Class SwaggerDoc
+ *
+ * @package Epfremmer\SwaggerBundle
+ * @subpackage Entity
+ */
+class SwaggerDoc
+{
+
+    /**
+     * @JMS\Type("string")
+     * @JMS\SerializedName("swagger")
+     * @var string
+     */
+    protected $version;
+
+    /**
+     * @JMS\Type("Epfremmer\SwaggerBundle\Entity\Info")
+     * @var Info
+     */
+    protected $info;
+
+    /**
+     * @JMS\Type("string")
+     * @var string
+     */
+    protected $host;
+
+    /**
+     * @JMS\Type("string")
+     * @JMS\SerializedName("basePath")
+     * @var string
+     */
+    protected $basePath;
+
+    /**
+     * @JMS\Type("array")
+     * @var array
+     */
+    protected $schemes;
+
+    /**
+     * @JMS\Type("array")
+     * @var string[]
+     */
+    protected $consumes;
+
+    /**
+     * @JMS\Type("array")
+     * @var string[]
+     */
+    protected $produces;
+
+    /**
+     * @JMS\Type("ArrayCollection<string,Epfremmer\SwaggerBundle\Entity\Path>")
+     * @var ArrayCollection|Path[]
+     */
+    protected $paths;
+
+    /**
+     * @JMS\Type("ArrayCollection<string,Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema>")
+     * @var ArrayCollection|AbstractSchema[]
+     */
+    protected $definitions;
+
+    /**
+     * @JMS\Type("ArrayCollection<string,Epfremmer\SwaggerBundle\Entity\Parameters\AbstractParameter>")
+     * @var ArrayCollection|AbstractParameter[]
+     */
+    protected $parameters;
+
+    /**
+     * @JMS\Type("ArrayCollection<string,Epfremmer\SwaggerBundle\Entity\Response>")
+     * @var ArrayCollection|Response[]
+     */
+    protected $responses;
+
+    /**
+     * @JMS\Type("ArrayCollection<string,Epfremmer\SwaggerBundle\Entity\SecurityDefinition>")
+     * @var ArrayCollection|SecurityDefinition[]
+     */
+    protected $securityDefinitions;
+
+    /**
+     * @JMS\Type("ArrayCollection<string,array>")
+     * @var ArrayCollection|string[]
+     */
+    protected $security;
+
+    /**
+     * @JMS\Type("ArrayCollection<string,Epfremmer\SwaggerBundle\Entity\Tag>")
+     * @var ArrayCollection|Tag[]
+     */
+    protected $tags;
+
+    /**
+     * @JMS\Type("Epfremmer\SwaggerBundle\Entity\ExternalDocumentation")
+     * @var ExternalDocumentation
+     */
+    protected $externalDocs;
+
+    /**
+     * @return string
+     */
+    public function getVersion()
+    {
+        return $this->version;
+    }
+
+    /**
+     * @param Info $version
+     * @return self
+     */
+    public function setVersion(Info $version)
+    {
+        $this->version = $version;
+        return $this;
+    }
+
+    /**
+     * @return Info
+     */
+    public function getInfo()
+    {
+        return $this->info;
+    }
+
+    /**
+     * @param array $info
+     * @return self
+     */
+    public function setInfo(array $info = [])
+    {
+        $this->info = $info;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getHost()
+    {
+        return $this->host;
+    }
+
+    /**
+     * @param string $host
+     * @return self
+     */
+    public function setHost($host)
+    {
+        $this->host = $host;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getBasePath()
+    {
+        return $this->basePath;
+    }
+
+    /**
+     * @param string $basePath
+     * @return self
+     */
+    public function setBasePath($basePath)
+    {
+        $this->basePath = $basePath;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSchemes()
+    {
+        return $this->schemes;
+    }
+
+    /**
+     * @param array $schemes
+     * @return self
+     */
+    public function setSchemes(array $schemes = [])
+    {
+        $this->schemes = $schemes;
+        return $this;
+    }
+
+    /**
+     * @return ArrayCollection|Path[]
+     */
+    public function getPaths()
+    {
+        return $this->paths;
+    }
+
+    /**
+     * @param ArrayCollection|Path[] $paths
+     * @return self
+     */
+    public function setPaths(ArrayCollection $paths)
+    {
+        $this->paths = $paths;
+        return $this;
+    }
+
+    /**
+     * @return ArrayCollection|SecurityDefinition[]
+     */
+    public function getSecurityDefinitions()
+    {
+        return $this->securityDefinitions;
+    }
+
+    /**
+     * @param ArrayCollection|SecurityDefinition[] $securityDefinitions
+     * @return self
+     */
+    public function setSecurityDefinitions(ArrayCollection $securityDefinitions)
+    {
+        $this->securityDefinitions = $securityDefinitions;
+        return $this;
+    }
+
+    /**
+     * @return ArrayCollection|AbstractSchema[]
+     */
+    public function getDefinitions()
+    {
+        return $this->definitions;
+    }
+
+    /**
+     * @param ArrayCollection|AbstractSchema[] $definitions
+     * @return self
+     */
+    public function setDefinitions(ArrayCollection $definitions)
+    {
+        $this->definitions = $definitions;
+        return $this;
+    }
+
+}
