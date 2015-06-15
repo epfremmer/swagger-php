@@ -8,7 +8,7 @@ namespace Epfremmer\SwaggerBundle\Tests\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Epfremmer\SwaggerBundle\Entity\Examples;
-use Epfremmer\SwaggerBundle\Tests\SerializerContextTrait;
+use Epfremmer\SwaggerBundle\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class ExamplesTest

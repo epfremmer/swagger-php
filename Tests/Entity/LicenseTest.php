@@ -7,7 +7,7 @@
 namespace Epfremmer\SwaggerBundle\Tests\Entity;
 
 use Epfremmer\SwaggerBundle\Entity\License;
-use Epfremmer\SwaggerBundle\Tests\SerializerContextTrait;
+use Epfremmer\SwaggerBundle\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class LicenseTest

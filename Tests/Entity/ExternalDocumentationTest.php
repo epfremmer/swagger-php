@@ -7,7 +7,7 @@
 namespace Epfremmer\SwaggerBundle\Tests\Entity;
 
 use Epfremmer\SwaggerBundle\Entity\ExternalDocumentation;
-use Epfremmer\SwaggerBundle\Tests\SerializerContextTrait;
+use Epfremmer\SwaggerBundle\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class ExternalDocumentationTest
