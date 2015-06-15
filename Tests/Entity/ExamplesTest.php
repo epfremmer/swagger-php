@@ -8,8 +8,7 @@ namespace Epfremmer\SwaggerBundle\Tests\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Epfremmer\SwaggerBundle\Entity\Examples;
-use JMS\Serializer\Serializer;
-use JMS\Serializer\SerializerBuilder;
+use Epfremmer\SwaggerBundle\Tests\SerializerContextTrait;
 
 /**
  * Class ExamplesTest
@@ -19,6 +18,7 @@ use JMS\Serializer\SerializerBuilder;
  */
 class ExamplesTest extends \PHPUnit_Framework_TestCase
 {
+    use SerializerContextTrait;
 
     /**
      * @var Examples
@@ -26,24 +26,11 @@ class ExamplesTest extends \PHPUnit_Framework_TestCase
     protected $examples;
 
     /**
-     * @var Serializer
-     */
-    protected static $serializer;
-
-    /**
      * {@inheritdoc}
      */
     protected function setUp()
     {
         $this->examples = new Examples();
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public static function setUpBeforeClass()
-    {
-        self::$serializer = SerializerBuilder::create()->build();
     }
 
     /**

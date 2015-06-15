@@ -9,8 +9,7 @@ namespace Epfremmer\SwaggerBundle\Tests\Entity;
 use Epfremmer\SwaggerBundle\Entity\Contact;
 use Epfremmer\SwaggerBundle\Entity\Info;
 use Epfremmer\SwaggerBundle\Entity\License;
-use JMS\Serializer\Serializer;
-use JMS\Serializer\SerializerBuilder;
+use Epfremmer\SwaggerBundle\Tests\SerializerContextTrait;
 
 /**
  * Class InfoTest
@@ -20,6 +19,7 @@ use JMS\Serializer\SerializerBuilder;
  */
 class InfoTest extends \PHPUnit_Framework_TestCase
 {
+    use SerializerContextTrait;
 
     /**
      * @var Info
@@ -27,24 +27,11 @@ class InfoTest extends \PHPUnit_Framework_TestCase
     protected $info;
 
     /**
-     * @var Serializer
-     */
-    protected static $serializer;
-
-    /**
      * {@inheritdoc}
      */
     protected function setUp()
     {
         $this->info = new Info();
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public static function setUpBeforeClass()
-    {
-        self::$serializer = SerializerBuilder::create()->build();
     }
 
     /**

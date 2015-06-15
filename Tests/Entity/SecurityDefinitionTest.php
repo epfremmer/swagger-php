@@ -7,8 +7,7 @@
 namespace Epfremmer\SwaggerBundle\Tests\Entity;
 
 use Epfremmer\SwaggerBundle\Entity\SecurityDefinition;
-use JMS\Serializer\Serializer;
-use JMS\Serializer\SerializerBuilder;
+use Epfremmer\SwaggerBundle\Tests\SerializerContextTrait;
 
 /**
  * Class SecurityDefinitionTest
@@ -18,6 +17,7 @@ use JMS\Serializer\SerializerBuilder;
  */
 class SecurityDefinitionTest extends \PHPUnit_Framework_TestCase
 {
+    use SerializerContextTrait;
 
     /**
      * @var SecurityDefinition
@@ -25,24 +25,11 @@ class SecurityDefinitionTest extends \PHPUnit_Framework_TestCase
     protected $securityDefinition;
 
     /**
-     * @var Serializer
-     */
-    protected static $serializer;
-
-    /**
      * {@inheritdoc}
      */
     protected function setUp()
     {
         $this->securityDefinition = new SecurityDefinition();
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public static function setUpBeforeClass()
-    {
-        self::$serializer = SerializerBuilder::create()->build();
     }
 
     /**
