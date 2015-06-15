@@ -4,7 +4,7 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Tests;
+namespace Epfremmer\SwaggerBundle\Tests\Mixin;
 
 use Epfremmer\SwaggerBundle\Listener\SerializationSubscriber;
 use JMS\Serializer\EventDispatcher\EventDispatcher;
