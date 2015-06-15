@@ -1,6 +1,6 @@
 <?php
 /**
- * File SwaggerDoc.php
+ * File Swagger.php
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
@@ -12,12 +12,12 @@ use Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema;
 use JMS\Serializer\Annotation as JMS;
 
 /**
- * Class SwaggerDoc
+ * Class Swagger
  *
  * @package Epfremmer\SwaggerBundle
  * @subpackage Entity
  */
-class SwaggerDoc
+class Swagger
 {
 
     /**

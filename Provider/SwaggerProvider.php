@@ -6,7 +6,7 @@
  */
 namespace Epfremmer\SwaggerBundle\Provider;
 
-use Epfremmer\SwaggerBundle\Entity\SwaggerDoc;
+use Epfremmer\SwaggerBundle\Entity\Swagger;
 use JMS\Serializer\Serializer;
 use Symfony\Component\HttpKernel\KernelInterface;
 use Symfony\Component\Yaml\Parser as YamlParser;
@@ -39,7 +39,7 @@ class SwaggerProvider
     protected $serializer;
 
     /**
-     * @var SwaggerDoc
+     * @var Swagger
      */
     protected $swagger;
 
@@ -63,7 +63,7 @@ class SwaggerProvider
     /**
      * Parse & return the swagger doc
      *
-     * @return SwaggerDoc
+     * @return Swagger
      */
     public function getSwaggerDoc()
     {
@@ -72,7 +72,7 @@ class SwaggerProvider
             $rootDir = $this->kernel->getRootDir();
             $config  = $parser->parse(file_get_contents($rootDir . '/../' . $this->file));
 
-            $this->swagger = $this->serializer->deserialize(json_encode($config), SwaggerDoc::class, 'json');
+            $this->swagger = $this->serializer->deserialize(json_encode($config), Swagger::class, 'json');
         }
 
         return $this->swagger;
