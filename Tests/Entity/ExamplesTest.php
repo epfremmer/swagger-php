@@ -64,15 +64,13 @@ class ExamplesTest extends \PHPUnit_Framework_TestCase
     public function testDeserialize()
     {
         $data = json_encode([
-            'data' => [
-                'text/plain' => [
-                    'foo' => 'bar',
-                    'baz' => 'foo'
-                ],
-                'application/json' => [
-                    'key' => 'any'
-                ],
-            ]
+            'text/plain' => [
+                'foo' => 'bar',
+                'baz' => 'foo'
+            ],
+            'application/json' => [
+                'key' => 'any'
+            ],
         ]);
 
         $examples = self::$serializer->deserialize($data, Examples::class, 'json');
