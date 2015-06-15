@@ -9,8 +9,7 @@ namespace Epfremmer\SwaggerBundle\Tests\Entity\Schemas;
 use Epfremmer\SwaggerBundle\Entity\ExternalDocumentation;
 use Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema;
 use Epfremmer\SwaggerBundle\Entity\Schemas\ArraySchema;
-use JMS\Serializer\Serializer;
-use JMS\Serializer\SerializerBuilder;
+use Epfremmer\SwaggerBundle\Tests\SerializerContextTrait;
 
 /**
  * Class ArraySchemaTest
@@ -20,6 +19,7 @@ use JMS\Serializer\SerializerBuilder;
  */
 class ArraySchemaTest extends \PHPUnit_Framework_TestCase
 {
+    use SerializerContextTrait;
 
     /**
      * @var ArraySchema
@@ -27,24 +27,11 @@ class ArraySchemaTest extends \PHPUnit_Framework_TestCase
     protected $arraySchema;
 
     /**
-     * @var Serializer
-     */
-    protected static $serializer;
-
-    /**
      * {@inheritdoc}
      */
     protected function setUp()
     {
         $this->arraySchema = new ArraySchema();
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public static function setUpBeforeClass()
-    {
-        self::$serializer = SerializerBuilder::create()->build();
     }
 
     /**

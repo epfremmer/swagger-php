@@ -9,8 +9,7 @@ namespace Epfremmer\SwaggerBundle\Tests\Entity\Schemas;
 use Epfremmer\SwaggerBundle\Entity\ExternalDocumentation;
 use Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema;
 use Epfremmer\SwaggerBundle\Entity\Schemas\StringSchema;
-use JMS\Serializer\Serializer;
-use JMS\Serializer\SerializerBuilder;
+use Epfremmer\SwaggerBundle\Tests\SerializerContextTrait;
 
 /**
  * Class StringSchemaTest
@@ -20,6 +19,7 @@ use JMS\Serializer\SerializerBuilder;
  */
 class StringSchemaTest extends \PHPUnit_Framework_TestCase
 {
+    use SerializerContextTrait;
 
     /**
      * @var StringSchema
@@ -27,24 +27,11 @@ class StringSchemaTest extends \PHPUnit_Framework_TestCase
     protected $stringSchema;
 
     /**
-     * @var Serializer
-     */
-    protected static $serializer;
-
-    /**
      * {@inheritdoc}
      */
     protected function setUp()
     {
         $this->stringSchema = new StringSchema();
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public static function setUpBeforeClass()
-    {
-        self::$serializer = SerializerBuilder::create()->build();
     }
 
     /**

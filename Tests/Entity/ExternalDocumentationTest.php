@@ -7,8 +7,7 @@
 namespace Epfremmer\SwaggerBundle\Tests\Entity;
 
 use Epfremmer\SwaggerBundle\Entity\ExternalDocumentation;
-use JMS\Serializer\Serializer;
-use JMS\Serializer\SerializerBuilder;
+use Epfremmer\SwaggerBundle\Tests\SerializerContextTrait;
 
 /**
  * Class ExternalDocumentationTest
@@ -18,6 +17,7 @@ use JMS\Serializer\SerializerBuilder;
  */
 class ExternalDocumentationTest extends \PHPUnit_Framework_TestCase
 {
+    use SerializerContextTrait;
 
     /**
      * @var ExternalDocumentation
@@ -25,24 +25,11 @@ class ExternalDocumentationTest extends \PHPUnit_Framework_TestCase
     protected $externalDocumentation;
 
     /**
-     * @var Serializer
-     */
-    protected static $serializer;
-
-    /**
      * {@inheritdoc}
      */
     protected function setUp()
     {
         $this->externalDocumentation = new ExternalDocumentation();
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public static function setUpBeforeClass()
-    {
-        self::$serializer = SerializerBuilder::create()->build();
     }
 
     /**

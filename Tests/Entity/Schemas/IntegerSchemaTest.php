@@ -9,8 +9,7 @@ namespace Epfremmer\SwaggerBundle\Tests\Entity\Schemas;
 use Epfremmer\SwaggerBundle\Entity\ExternalDocumentation;
 use Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema;
 use Epfremmer\SwaggerBundle\Entity\Schemas\IntegerSchema;
-use JMS\Serializer\Serializer;
-use JMS\Serializer\SerializerBuilder;
+use Epfremmer\SwaggerBundle\Tests\SerializerContextTrait;
 
 /**
  * Class IntegerSchemaTest
@@ -20,6 +19,7 @@ use JMS\Serializer\SerializerBuilder;
  */
 class IntegerSchemaTest extends \PHPUnit_Framework_TestCase
 {
+    use SerializerContextTrait;
 
     /**
      * @var IntegerSchema
@@ -27,24 +27,11 @@ class IntegerSchemaTest extends \PHPUnit_Framework_TestCase
     protected $integerSchema;
 
     /**
-     * @var Serializer
-     */
-    protected static $serializer;
-
-    /**
      * {@inheritdoc}
      */
     protected function setUp()
     {
         $this->integerSchema = new IntegerSchema();
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public static function setUpBeforeClass()
-    {
-        self::$serializer = SerializerBuilder::create()->build();
     }
 
     /**

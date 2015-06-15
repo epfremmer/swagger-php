@@ -7,8 +7,7 @@
 namespace Epfremmer\SwaggerBundle\Tests\Entity;
 
 use Epfremmer\SwaggerBundle\Entity\Contact;
-use JMS\Serializer\Serializer;
-use JMS\Serializer\SerializerBuilder;
+use Epfremmer\SwaggerBundle\Tests\SerializerContextTrait;
 
 /**
  * Class ContactTest
@@ -18,6 +17,7 @@ use JMS\Serializer\SerializerBuilder;
  */
 class ContactTest extends \PHPUnit_Framework_TestCase
 {
+    use SerializerContextTrait;
 
     /**
      * @var Contact
@@ -25,24 +25,11 @@ class ContactTest extends \PHPUnit_Framework_TestCase
     protected $contact;
 
     /**
-     * @var Serializer
-     */
-    protected static $serializer;
-
-    /**
      * {@inheritdoc}
      */
     protected function setUp()
     {
         $this->contact = new Contact();
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public static function setUpBeforeClass()
-    {
-        self::$serializer = SerializerBuilder::create()->build();
     }
 
     /**

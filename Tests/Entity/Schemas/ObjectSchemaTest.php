@@ -9,8 +9,7 @@ namespace Epfremmer\SwaggerBundle\Tests\Entity\Schemas;
 use Epfremmer\SwaggerBundle\Entity\ExternalDocumentation;
 use Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema;
 use Epfremmer\SwaggerBundle\Entity\Schemas\ObjectSchema;
-use JMS\Serializer\Serializer;
-use JMS\Serializer\SerializerBuilder;
+use Epfremmer\SwaggerBundle\Tests\SerializerContextTrait;
 
 /**
  * Class ObjectSchemaTest
@@ -20,6 +19,7 @@ use JMS\Serializer\SerializerBuilder;
  */
 class ObjectSchemaTest extends \PHPUnit_Framework_TestCase
 {
+    use SerializerContextTrait;
 
     /**
      * @var ObjectSchema
@@ -27,24 +27,11 @@ class ObjectSchemaTest extends \PHPUnit_Framework_TestCase
     protected $objectSchema;
 
     /**
-     * @var Serializer
-     */
-    protected static $serializer;
-
-    /**
      * {@inheritdoc}
      */
     protected function setUp()
     {
         $this->objectSchema = new ObjectSchema();
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public static function setUpBeforeClass()
-    {
-        self::$serializer = SerializerBuilder::create()->build();
     }
 
     /**

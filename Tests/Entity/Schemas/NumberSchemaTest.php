@@ -9,8 +9,7 @@ namespace Epfremmer\SwaggerBundle\Tests\Entity\Schemas;
 use Epfremmer\SwaggerBundle\Entity\ExternalDocumentation;
 use Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema;
 use Epfremmer\SwaggerBundle\Entity\Schemas\NumberSchema;
-use JMS\Serializer\Serializer;
-use JMS\Serializer\SerializerBuilder;
+use Epfremmer\SwaggerBundle\Tests\SerializerContextTrait;
 
 /**
  * Class NumberSchemaTest
@@ -20,6 +19,7 @@ use JMS\Serializer\SerializerBuilder;
  */
 class NumberSchemaTest extends \PHPUnit_Framework_TestCase
 {
+    use SerializerContextTrait;
 
     /**
      * @var NumberSchema
@@ -27,24 +27,11 @@ class NumberSchemaTest extends \PHPUnit_Framework_TestCase
     protected $numberSchema;
 
     /**
-     * @var Serializer
-     */
-    protected static $serializer;
-
-    /**
      * {@inheritdoc}
      */
     protected function setUp()
     {
         $this->numberSchema = new NumberSchema();
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public static function setUpBeforeClass()
-    {
-        self::$serializer = SerializerBuilder::create()->build();
     }
 
     /**
