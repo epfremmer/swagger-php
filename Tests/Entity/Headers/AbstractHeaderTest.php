@@ -30,9 +30,6 @@ class AbstractHeaderTest extends \PHPUnit_Framework_TestCase
         $this->mockHeader = $this->getMockForAbstractClass(AbstractHeader::class);
     }
 
-    /** Empty */
-    public function test()
-    {
-        $this->assertTrue(true);
-    }
+    /** Empty Class */
+    public function test() {}
 }
