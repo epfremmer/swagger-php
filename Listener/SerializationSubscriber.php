@@ -9,6 +9,7 @@ namespace Epfremmer\SwaggerBundle\Listener;
 use Epfremmer\SwaggerBundle\Entity\Examples;
 use Epfremmer\SwaggerBundle\Entity\Headers\AbstractHeader;
 use Epfremmer\SwaggerBundle\Entity\Parameters\AbstractParameter;
+use Epfremmer\SwaggerBundle\Entity\Parameters\AbstractTypedParameter;
 use Epfremmer\SwaggerBundle\Entity\Path;
 use Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema;
 use JMS\Serializer\EventDispatcher\Events;
@@ -35,6 +36,7 @@ class SerializationSubscriber implements EventSubscriberInterface
             ['event' => Events::PRE_SERIALIZE, 'class' => AbstractSchema::class, 'method' => 'onPreSerialize'],
             ['event' => Events::PRE_SERIALIZE, 'class' => AbstractHeader::class, 'method' => 'onPreSerialize'],
             ['event' => Events::PRE_SERIALIZE, 'class' => AbstractParameter::class, 'method' => 'onPreSerialize'],
+            ['event' => Events::PRE_SERIALIZE, 'method' => 'onParameterPreSerialize'],
 
             // deserialization listeners (prepare data types for proper deserialization)
             ['event' => Events::PRE_DESERIALIZE, 'class' => Path::class, 'method' => 'onPreDeserialize'],
@@ -59,6 +61,19 @@ class SerializationSubscriber implements EventSubscriberInterface
     public function onPreSerialize(PreSerializeEvent $event)
     {
         $event->setType(get_class($event->getObject()));
+    }
+
+    /**
+     * Remove injected class field from parameter entities
+     * during serialization
+     *
+     * @param PreSerializeEvent $event
+     */
+    public function onParameterPreSerialize(PreSerializeEvent $event)
+    {
+        if ($event->getObject() instanceof AbstractParameter) {
+            $event->setType(AbstractTypedParameter::class);
+        }
     }
 
     /**
@@ -98,8 +113,10 @@ class SerializationSubscriber implements EventSubscriberInterface
     {
         $data = $event->getData();
 
-        if (array_key_exists('type', $data)) {var_dump($data);
-            $data['in'] .= '.' . $data['type'];
+        $data['class'] = $data['in'];
+
+        if (array_key_exists('type', $data)) {
+            $data['class'] = sprintf('%s.%s', $data['in'], $data['type']);
         }
 
         if (array_key_exists('schema', $data)) {
