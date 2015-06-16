@@ -49,6 +49,13 @@ trait ArrayPrimitiveTrait
     protected $uniqueItems;
 
     /**
+     * @JMS\Type("string")
+     * @JMS\SerializedName("collectionFormat")
+     * @var string
+     */
+    protected $collectionFormat;
+
+    /**
      * @return array
      */
     public function getItems()
@@ -135,6 +142,24 @@ trait ArrayPrimitiveTrait
     public function setUniqueItems($uniqueItems)
     {
         $this->uniqueItems = $uniqueItems;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCollectionFormat()
+    {
+        return $this->collectionFormat;
+    }
+
+    /**
+     * @param string $collectionFormat
+     * @return ArrayHeader
+     */
+    public function setCollectionFormat($collectionFormat)
+    {
+        $this->collectionFormat = $collectionFormat;
         return $this;
     }
 }

@@ -13,11 +13,30 @@ use JMS\Serializer\Annotation as JMS;
  * Class AbstractParameter
  *
  * @JMS\Discriminator(field = "in", map = {
- *   "path"    : "Epfremmer\SwaggerBundle\Entity\Parameters\PathParameter",
- *   "query"   : "Epfremmer\SwaggerBundle\Entity\Parameters\QueryParameter",
- *   "header"  : "Epfremmer\SwaggerBundle\Entity\Parameters\HeaderParameter",
  *   "body"    : "Epfremmer\SwaggerBundle\Entity\Parameters\BodyParameter",
- *   "formData": "Epfremmer\SwaggerBundle\Entity\Parameters\FormParameter"
+ *
+ *   "path.string" : "Epfremmer\SwaggerBundle\Entity\Parameters\PathParameter\StringType",
+ *   "path.integer": "Epfremmer\SwaggerBundle\Entity\Parameters\PathParameter\IntegerType",
+ *   "path.boolean": "Epfremmer\SwaggerBundle\Entity\Parameters\PathParameter\BooleanType",
+ *
+ *   "query.string" : "Epfremmer\SwaggerBundle\Entity\Parameters\QueryParameter\StringType",
+ *   "query.number" : "Epfremmer\SwaggerBundle\Entity\Parameters\QueryParameter\NumberType",
+ *   "query.integer": "Epfremmer\SwaggerBundle\Entity\Parameters\QueryParameter\IntegerType",
+ *   "query.boolean": "Epfremmer\SwaggerBundle\Entity\Parameters\QueryParameter\BooleanType",
+ *   "query.array"  : "Epfremmer\SwaggerBundle\Entity\Parameters\QueryParameter\ArrayType",
+ *
+ *   "header.string" : "Epfremmer\SwaggerBundle\Entity\Parameters\HeaderParameter\StringType",
+ *   "header.number" : "Epfremmer\SwaggerBundle\Entity\Parameters\HeaderParameter\NumberType",
+ *   "header.integer": "Epfremmer\SwaggerBundle\Entity\Parameters\HeaderParameter\IntegerType",
+ *   "header.boolean": "Epfremmer\SwaggerBundle\Entity\Parameters\HeaderParameter\BooleanType",
+ *   "header.array"  : "Epfremmer\SwaggerBundle\Entity\Parameters\HeaderParameter\ArrayType",
+ *
+ *   "formData.string" : "Epfremmer\SwaggerBundle\Entity\Parameters\FormParameter\StringType",
+ *   "formData.number" : "Epfremmer\SwaggerBundle\Entity\Parameters\FormParameter\NumberType",
+ *   "formData.integer": "Epfremmer\SwaggerBundle\Entity\Parameters\FormParameter\IntegerType",
+ *   "formData.boolean": "Epfremmer\SwaggerBundle\Entity\Parameters\FormParameter\BooleanType",
+ *   "formData.array"  : "Epfremmer\SwaggerBundle\Entity\Parameters\FormParameter\ArrayType",
+ *   "formData.file"   : "Epfremmer\SwaggerBundle\Entity\Parameters\FormParameter\FileType"
  * })
  *
  * @package Epfremmer\SwaggerBundle
@@ -43,12 +62,6 @@ abstract class AbstractParameter
      * @var boolean
      */
     protected $required;
-
-    /**
-     * @JMS\Type("Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema")
-     * @var AbstractSchema
-     */
-    protected $schema;
 
     /**
      * @return string
@@ -101,24 +114,6 @@ abstract class AbstractParameter
     public function setRequired($required)
     {
         $this->required = $required;
-        return $this;
-    }
-
-    /**
-     * @return AbstractSchema
-     */
-    public function getSchema()
-    {
-        return $this->schema;
-    }
-
-    /**
-     * @param AbstractSchema $schema
-     * @return AbstractParameter
-     */
-    public function setSchema(AbstractSchema $schema)
-    {
-        $this->schema = $schema;
         return $this;
     }
 }
