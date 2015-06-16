@@ -32,6 +32,18 @@ class AbstractParameterTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * @covers Epfremmer\SwaggerBundle\Entity\Parameters\AbstractParameter::getIn
+     * @covers Epfremmer\SwaggerBundle\Entity\Parameters\AbstractParameter::setIn
+     */
+    public function testIn()
+    {
+        $this->assertClassHasAttribute('in', AbstractParameter::class);
+        $this->assertInstanceOf(AbstractParameter::class, $this->mockParameter->setIn('foo'));
+        $this->assertAttributeEquals('foo', 'in', $this->mockParameter);
+        $this->assertEquals('foo', $this->mockParameter->getIn());
+    }
+
+    /**
      * @covers Epfremmer\SwaggerBundle\Entity\Parameters\AbstractParameter::getName
      * @covers Epfremmer\SwaggerBundle\Entity\Parameters\AbstractParameter::setName
      */
@@ -65,20 +77,5 @@ class AbstractParameterTest extends \PHPUnit_Framework_TestCase
         $this->assertInstanceOf(AbstractParameter::class, $this->mockParameter->setRequired(true));
         $this->assertAttributeEquals(true, 'required', $this->mockParameter);
         $this->assertTrue($this->mockParameter->isRequired());
-    }
-    
-    /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Parameters\AbstractParameter::getSchema
-     * @covers Epfremmer\SwaggerBundle\Entity\Parameters\AbstractParameter::setSchema
-     */
-    public function testSchema()
-    {
-        $schema = new ObjectSchema();
-
-        $this->assertClassHasAttribute('schema', AbstractParameter::class);
-        $this->assertInstanceOf(AbstractParameter::class, $this->mockParameter->setSchema($schema));
-        $this->assertAttributeInstanceOf(ObjectSchema::class, 'schema', $this->mockParameter);
-        $this->assertAttributeEquals($schema, 'schema', $this->mockParameter);
-        $this->assertEquals($schema, $this->mockParameter->getSchema());
     }
 }
