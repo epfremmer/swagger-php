@@ -43,6 +43,18 @@ class ArrayHeaderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * @covers Epfremmer\SwaggerBundle\Entity\Headers\ArrayHeader::getCollectionFormat
+     * @covers Epfremmer\SwaggerBundle\Entity\Headers\ArrayHeader::setCollectionFormat
+     */
+    public function testCollectionFormat()
+    {
+        $this->assertClassHasAttribute('collectionFormat', ArrayHeader::class);
+        $this->assertInstanceOf(ArrayHeader::class, $this->arrayHeader->setCollectionFormat('csv'));
+        $this->assertAttributeEquals('csv', 'collectionFormat', $this->arrayHeader);
+        $this->assertEquals('csv', $this->arrayHeader->getCollectionFormat());
+    }
+
+    /**
      * @covers Epfremmer\SwaggerBundle\Entity\Headers\ArrayHeader
      */
     public function testSerialization()
