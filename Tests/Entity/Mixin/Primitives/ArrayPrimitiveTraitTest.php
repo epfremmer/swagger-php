@@ -4,9 +4,9 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Tests\Entity\Schemas\Primitives;
+namespace Epfremmer\SwaggerBundle\Tests\Entity\Mixin;
 
-use Epfremmer\SwaggerBundle\Entity\Schemas\Primitives\ArrayPrimitive;
+use Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\ArrayPrimitiveTrait;
 
 /**
  * Class ArrayPrimitiveTraitTest
@@ -18,7 +18,7 @@ class ArrayPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
-     * @var ArrayPrimitive|\PHPUnit_Framework_MockObject_MockObject
+     * @var ArrayPrimitiveTrait|\PHPUnit_Framework_MockObject_MockObject
      */
     protected $mockTrait;
 
@@ -33,13 +33,13 @@ class ArrayPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-        $this->mockTrait = $this->getMockForTrait(ArrayPrimitive::class);
+        $this->mockTrait = $this->getMockForTrait(ArrayPrimitiveTrait::class);
         $this->mockClass = get_class($this->mockTrait);
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\Primitives\ArrayPrimitive::getItems
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\Primitives\ArrayPrimitive::setItems
+     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\ArrayPrimitiveTrait::getItems
+     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\ArrayPrimitiveTrait::setItems
      */
     public function testItems()
     {
@@ -53,8 +53,8 @@ class ArrayPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\Primitives\ArrayPrimitive::isAdditionalItems
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\Primitives\ArrayPrimitive::setAdditionalItems
+     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\ArrayPrimitiveTrait::isAdditionalItems
+     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\ArrayPrimitiveTrait::setAdditionalItems
      */
     public function testAdditionalItems()
     {
@@ -66,8 +66,8 @@ class ArrayPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\Primitives\ArrayPrimitive::getMaxItems
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\Primitives\ArrayPrimitive::setMaxItems
+     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\ArrayPrimitiveTrait::getMaxItems
+     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\ArrayPrimitiveTrait::setMaxItems
      */
     public function testMaxItems()
     {
@@ -79,8 +79,8 @@ class ArrayPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\Primitives\ArrayPrimitive::getMinItems
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\Primitives\ArrayPrimitive::setMinItems
+     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\ArrayPrimitiveTrait::getMinItems
+     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\ArrayPrimitiveTrait::setMinItems
      */
     public function testMinItems()
     {
@@ -92,8 +92,8 @@ class ArrayPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\Primitives\ArrayPrimitive::isUniqueItems
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\Primitives\ArrayPrimitive::setUniqueItems
+     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\ArrayPrimitiveTrait::isUniqueItems
+     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\ArrayPrimitiveTrait::setUniqueItems
      */
     public function testUniqueItems()
     {

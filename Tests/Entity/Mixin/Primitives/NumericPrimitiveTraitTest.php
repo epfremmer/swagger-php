@@ -4,9 +4,9 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Tests\Entity\Schemas\Primitives;
+namespace Epfremmer\SwaggerBundle\Tests\Entity\Mixin;
 
-use Epfremmer\SwaggerBundle\Entity\Schemas\Primitives\NumericPrimitive;
+use Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\NumericPrimitiveTrait;
 
 /**
  * Class NumericPrimitiveTraitTest
@@ -18,7 +18,7 @@ class NumericPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
-     * @var NumericPrimitive|\PHPUnit_Framework_MockObject_MockObject
+     * @var NumericPrimitiveTrait|\PHPUnit_Framework_MockObject_MockObject
      */
     protected $mockTrait;
 
@@ -33,13 +33,13 @@ class NumericPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-        $this->mockTrait = $this->getMockForTrait(NumericPrimitive::class);
+        $this->mockTrait = $this->getMockForTrait(NumericPrimitiveTrait::class);
         $this->mockClass = get_class($this->mockTrait);
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\Primitives\NumericPrimitive::getMultipleOf
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\Primitives\NumericPrimitive::setMultipleOf
+     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\NumericPrimitiveTrait::getMultipleOf
+     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\NumericPrimitiveTrait::setMultipleOf
      */
     public function testMultipleOf()
     {
@@ -51,8 +51,8 @@ class NumericPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\Primitives\NumericPrimitive::getMaximum
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\Primitives\NumericPrimitive::setMaximum
+     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\NumericPrimitiveTrait::getMaximum
+     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\NumericPrimitiveTrait::setMaximum
      */
     public function testMaximum()
     {
@@ -64,8 +64,8 @@ class NumericPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\Primitives\NumericPrimitive::getExclusiveMaximum
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\Primitives\NumericPrimitive::setExclusiveMaximum
+     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\NumericPrimitiveTrait::getExclusiveMaximum
+     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\NumericPrimitiveTrait::setExclusiveMaximum
      */
     public function testExclusiveMaximum()
     {

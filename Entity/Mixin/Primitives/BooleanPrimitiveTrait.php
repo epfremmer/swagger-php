@@ -1,20 +1,20 @@
 <?php
 /**
- * File BooleanPrimitive.php
+ * File BooleanPrimitiveTrait.php
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Entity\Schemas\Primitives;
+namespace Epfremmer\SwaggerBundle\Entity\Mixin\Primitives;
 
 use JMS\Serializer\Annotation as JMS;
 
 /**
- * Trait BooleanPrimitive
+ * Trait BooleanPrimitiveTrait
  *
  * @package Epfremmer\SwaggerBundle
  * @subpackage Entity\Schemas\Primitives
  */
-trait BooleanPrimitive
+trait BooleanPrimitiveTrait
 {
-    use AnyPrimitive;
+    use AnyPrimitiveTrait;
 }

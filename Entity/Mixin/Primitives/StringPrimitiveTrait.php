@@ -1,22 +1,22 @@
 <?php
 /**
- * File StringPrimitive.php
+ * File StringPrimitiveTrait.php
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Entity\Schemas\Primitives;
+namespace Epfremmer\SwaggerBundle\Entity\Mixin\Primitives;
 
 use JMS\Serializer\Annotation as JMS;
 
 /**
- * Trait StringPrimitive
+ * Trait StringPrimitiveTrait
  *
  * @package Epfremmer\SwaggerBundle
  * @subpackage Entity\Schemas\Primitives
  */
-trait StringPrimitive
+trait StringPrimitiveTrait
 {
-    use AnyPrimitive;
+    use AnyPrimitiveTrait;
 
     /**
      * @JMS\Type("integer")
@@ -46,7 +46,7 @@ trait StringPrimitive
 
     /**
      * @param int $maxLength
-     * @return StringPrimitive
+     * @return StringPrimitiveTrait
      */
     public function setMaxLength($maxLength)
     {
@@ -64,7 +64,7 @@ trait StringPrimitive
 
     /**
      * @param int $minLength
-     * @return StringPrimitive
+     * @return StringPrimitiveTrait
      */
     public function setMinLength($minLength)
     {
@@ -82,7 +82,7 @@ trait StringPrimitive
 
     /**
      * @param string $pattern
-     * @return StringPrimitive
+     * @return StringPrimitiveTrait
      */
     public function setPattern($pattern)
     {

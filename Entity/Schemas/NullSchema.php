@@ -6,6 +6,8 @@
  */
 namespace Epfremmer\SwaggerBundle\Entity\Schemas;
 
+use Epfremmer\SwaggerBundle\Entity\Mixin\Primitives;
+
 /**
  * Class NullSchema
  *
@@ -14,7 +16,7 @@ namespace Epfremmer\SwaggerBundle\Entity\Schemas;
  */
 class NullSchema extends AbstractSchema
 {
-    use Primitives\NullPrimitive;
+    use Primitives\NullPrimitiveTrait;
 
     /**
      * {@inheritdoc}

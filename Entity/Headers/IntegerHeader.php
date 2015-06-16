@@ -6,7 +6,7 @@
  */
 namespace Epfremmer\SwaggerBundle\Entity\Headers;
 
-use Epfremmer\SwaggerBundle\Entity\Schemas\IntegerSchema;
+use Epfremmer\SwaggerBundle\Entity\Mixin\Primitives;
 
 /**
  * Class IntegerHeader
@@ -14,7 +14,15 @@ use Epfremmer\SwaggerBundle\Entity\Schemas\IntegerSchema;
  * @package Epfremmer\SwaggerBundle
  * @subpackage Entity\Headers
  */
-class IntegerHeader extends IntegerSchema
+class IntegerHeader extends AbstractHeader
 {
+    use Primitives\NumericPrimitiveTrait;
 
+    /**
+     * {@inheritdoc}
+     */
+    public function getType()
+    {
+        return AbstractHeader::INTEGER_TYPE;
+    }
 }

@@ -6,7 +6,8 @@
  */
 namespace Epfremmer\SwaggerBundle\Entity\Headers;
 
-use Epfremmer\SwaggerBundle\Entity\Schemas\BooleanSchema;
+use Epfremmer\SwaggerBundle\Entity\Mixin\Primitives;
+
 
 /**
  * Class BooleanHeader
@@ -14,7 +15,15 @@ use Epfremmer\SwaggerBundle\Entity\Schemas\BooleanSchema;
  * @package Epfremmer\SwaggerBundle
  * @subpackage Entity\Headers
  */
-class BooleanHeader extends BooleanSchema
+class BooleanHeader extends AbstractHeader
 {
+    use Primitives\BooleanPrimitiveTrait;
 
+    /**
+     * {@inheritdoc}
+     */
+    public function getType()
+    {
+        return AbstractHeader::BOOLEAN_TYPE;
+    }
 }

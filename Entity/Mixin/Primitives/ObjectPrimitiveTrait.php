@@ -1,24 +1,24 @@
 <?php
 /**
- * File ObjectPrimitive.php
+ * File ObjectPrimitiveTrait.php
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Entity\Schemas\Primitives;
+namespace Epfremmer\SwaggerBundle\Entity\Mixin\Primitives;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema;
 use JMS\Serializer\Annotation as JMS;
 
 /**
- * Trait ObjectPrimitive
+ * Trait ObjectPrimitiveTrait
  *
  * @package Epfremmer\SwaggerBundle
  * @subpackage Entity\Schemas\Primitives
  */
-trait ObjectPrimitive
+trait ObjectPrimitiveTrait
 {
-    use AnyPrimitive;
+    use AnyPrimitiveTrait;
 
     /**
      * @JMS\Type("integer")
@@ -72,7 +72,7 @@ trait ObjectPrimitive
 
     /**
      * @param int $maxProperties
-     * @return ObjectPrimitive
+     * @return ObjectPrimitiveTrait
      */
     public function setMaxProperties($maxProperties)
     {
@@ -90,7 +90,7 @@ trait ObjectPrimitive
 
     /**
      * @param int $minProperties
-     * @return ObjectPrimitive
+     * @return ObjectPrimitiveTrait
      */
     public function setMinProperties($minProperties)
     {
@@ -108,7 +108,7 @@ trait ObjectPrimitive
 
     /**
      * @param \string[] $required
-     * @return ObjectPrimitive
+     * @return ObjectPrimitiveTrait
      */
     public function setRequired($required)
     {
@@ -126,7 +126,7 @@ trait ObjectPrimitive
 
     /**
      * @param AbstractSchema[]|ArrayCollection $properties
-     * @return ObjectPrimitive
+     * @return ObjectPrimitiveTrait
      */
     public function setProperties($properties)
     {
@@ -144,7 +144,7 @@ trait ObjectPrimitive
 
     /**
      * @param boolean $additionalProperties
-     * @return ObjectPrimitive
+     * @return ObjectPrimitiveTrait
      */
     public function setAdditionalProperties($additionalProperties)
     {
@@ -162,7 +162,7 @@ trait ObjectPrimitive
 
     /**
      * @param string $patternProperties
-     * @return ObjectPrimitive
+     * @return ObjectPrimitiveTrait
      */
     public function setPatternProperties($patternProperties)
     {
@@ -180,7 +180,7 @@ trait ObjectPrimitive
 
     /**
      * @param array $dependencies
-     * @return ObjectPrimitive
+     * @return ObjectPrimitiveTrait
      */
     public function setDependencies($dependencies)
     {

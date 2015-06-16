@@ -4,11 +4,11 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Tests\Entity\Schemas\Primitives;
+namespace Epfremmer\SwaggerBundle\Tests\Entity\Mixin;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Epfremmer\SwaggerBundle\Entity\Schemas\ObjectSchema;
-use Epfremmer\SwaggerBundle\Entity\Schemas\Primitives\AnyPrimitive;
+use Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\AnyPrimitiveTrait;
 
 /**
  * Class AnyPrimitiveTraitTest
@@ -20,7 +20,7 @@ class AnyPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
-     * @var AnyPrimitive|\PHPUnit_Framework_MockObject_MockObject
+     * @var AnyPrimitiveTrait|\PHPUnit_Framework_MockObject_MockObject
      */
     protected $mockTrait;
 
@@ -35,13 +35,13 @@ class AnyPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-        $this->mockTrait = $this->getMockForTrait(AnyPrimitive::class);
+        $this->mockTrait = $this->getMockForTrait(AnyPrimitiveTrait::class);
         $this->mockClass = get_class($this->mockTrait);
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\Primitives\AnyPrimitive::getEnum
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\Primitives\AnyPrimitive::setEnum
+     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\AnyPrimitiveTrait::getEnum
+     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\AnyPrimitiveTrait::setEnum
      */
     public function testEnum()
     {
@@ -55,8 +55,8 @@ class AnyPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\Primitives\AnyPrimitive::getAllOf
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\Primitives\AnyPrimitive::setAllOf
+     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\AnyPrimitiveTrait::getAllOf
+     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\AnyPrimitiveTrait::setAllOf
      */
     public function testAllOf()
     {
@@ -70,8 +70,8 @@ class AnyPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\Primitives\AnyPrimitive::getAnyOf
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\Primitives\AnyPrimitive::setAnyOf
+     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\AnyPrimitiveTrait::getAnyOf
+     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\AnyPrimitiveTrait::setAnyOf
      */
     public function testAnyOf()
     {
@@ -85,8 +85,8 @@ class AnyPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\Primitives\AnyPrimitive::getOneOf
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\Primitives\AnyPrimitive::setOneOf
+     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\AnyPrimitiveTrait::getOneOf
+     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\AnyPrimitiveTrait::setOneOf
      */
     public function testOneOf()
     {
@@ -100,8 +100,8 @@ class AnyPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\Primitives\AnyPrimitive::getNot
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\Primitives\AnyPrimitive::setNot
+     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\AnyPrimitiveTrait::getNot
+     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\AnyPrimitiveTrait::setNot
      */
     public function testNot()
     {
@@ -115,8 +115,8 @@ class AnyPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\Primitives\AnyPrimitive::getDefinitions
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\Primitives\AnyPrimitive::setDefinitions
+     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\AnyPrimitiveTrait::getDefinitions
+     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\AnyPrimitiveTrait::setDefinitions
      */
     public function testDefinitions()
     {

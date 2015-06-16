@@ -6,6 +6,8 @@
  */
 namespace Epfremmer\SwaggerBundle\Entity\Schemas;
 
+use Epfremmer\SwaggerBundle\Entity\Mixin\Primitives;
+
 /**
  * Class BooleanSchema
  *
@@ -14,7 +16,7 @@ namespace Epfremmer\SwaggerBundle\Entity\Schemas;
  */
 class BooleanSchema extends AbstractSchema
 {
-    use Primitives\BooleanPrimitive;
+    use Primitives\BooleanPrimitiveTrait;
 
     /**
      * {@inheritdoc}

@@ -6,7 +6,7 @@
  */
 namespace Epfremmer\SwaggerBundle\Entity\Headers;
 
-use Epfremmer\SwaggerBundle\Entity\Schemas\StringSchema;
+use Epfremmer\SwaggerBundle\Entity\Mixin\Primitives;
 
 /**
  * Class StringHeader
@@ -14,7 +14,15 @@ use Epfremmer\SwaggerBundle\Entity\Schemas\StringSchema;
  * @package Epfremmer\SwaggerBundle
  * @subpackage Entity\Headers
  */
-class StringHeader extends StringSchema
+class StringHeader extends AbstractHeader
 {
+    use Primitives\StringPrimitiveTrait;
 
+    /**
+     * {@inheritdoc}
+     */
+    public function getType()
+    {
+        return AbstractHeader::STRING_TYPE;
+    }
 }

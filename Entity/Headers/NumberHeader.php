@@ -6,7 +6,7 @@
  */
 namespace Epfremmer\SwaggerBundle\Entity\Headers;
 
-use Epfremmer\SwaggerBundle\Entity\Schemas\NumberSchema;
+use Epfremmer\SwaggerBundle\Entity\Mixin\Primitives;
 
 /**
  * Class NumberHeader
@@ -14,7 +14,15 @@ use Epfremmer\SwaggerBundle\Entity\Schemas\NumberSchema;
  * @package Epfremmer\SwaggerBundle
  * @subpackage Entity\Headers
  */
-class NumberHeader extends NumberSchema
+class NumberHeader extends AbstractHeader
 {
+    use Primitives\NumericPrimitiveTrait;
 
+    /**
+     * {@inheritdoc}
+     */
+    public function getType()
+    {
+        return AbstractHeader::NUMBER_TYPE;
+    }
 }

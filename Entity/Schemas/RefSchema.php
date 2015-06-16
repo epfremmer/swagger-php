@@ -6,6 +6,7 @@
  */
 namespace Epfremmer\SwaggerBundle\Entity\Schemas;
 
+use Epfremmer\SwaggerBundle\Entity\Mixin\Primitives;
 use JMS\Serializer\Annotation as JMS;
 
 /**
@@ -16,7 +17,7 @@ use JMS\Serializer\Annotation as JMS;
  */
 class RefSchema extends AbstractSchema
 {
-    use Primitives\AnyPrimitive;
+    use Primitives\AnyPrimitiveTrait;
 
     /**
      * @JMS\Type("string")

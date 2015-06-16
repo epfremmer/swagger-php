@@ -4,9 +4,9 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Tests\Entity\Schemas\Primitives;
+namespace Epfremmer\SwaggerBundle\Tests\Entity\Mixin;
 
-use Epfremmer\SwaggerBundle\Entity\Schemas\Primitives\NullPrimitive;
+use Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\NullPrimitiveTrait;
 
 /**
  * Class NullPrimitiveTraitTest
@@ -18,7 +18,7 @@ class NullPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
-     * @var NullPrimitive|\PHPUnit_Framework_MockObject_MockObject
+     * @var NullPrimitiveTrait|\PHPUnit_Framework_MockObject_MockObject
      */
     protected $mockTrait;
 
@@ -33,13 +33,10 @@ class NullPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-        $this->mockTrait = $this->getMockForTrait(NullPrimitive::class);
+        $this->mockTrait = $this->getMockForTrait(NullPrimitiveTrait::class);
         $this->mockClass = get_class($this->mockTrait);
     }
 
-    /** Empty */
-    public function test()
-    {
-        $this->assertTrue(true);
-    }
+    /** Empty Class */
+    public function test() {}
 }

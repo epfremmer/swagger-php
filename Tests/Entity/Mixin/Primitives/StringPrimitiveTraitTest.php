@@ -4,9 +4,9 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Tests\Entity\Schemas\Primitives;
+namespace Epfremmer\SwaggerBundle\Tests\Entity\Mixin;
 
-use Epfremmer\SwaggerBundle\Entity\Schemas\Primitives\StringPrimitive;
+use Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\StringPrimitiveTrait;
 
 /**
  * Class StringPrimitiveTraitTest
@@ -18,7 +18,7 @@ class StringPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
-     * @var StringPrimitive|\PHPUnit_Framework_MockObject_MockObject
+     * @var StringPrimitiveTrait|\PHPUnit_Framework_MockObject_MockObject
      */
     protected $mockTrait;
 
@@ -33,13 +33,13 @@ class StringPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-        $this->mockTrait = $this->getMockForTrait(StringPrimitive::class);
+        $this->mockTrait = $this->getMockForTrait(StringPrimitiveTrait::class);
         $this->mockClass = get_class($this->mockTrait);
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\Primitives\StringPrimitive::getMaxLength
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\Primitives\StringPrimitive::setMaxLength
+     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\StringPrimitiveTrait::getMaxLength
+     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\StringPrimitiveTrait::setMaxLength
      */
     public function testMaxLength()
     {
@@ -51,8 +51,8 @@ class StringPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\Primitives\StringPrimitive::getMinLength
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\Primitives\StringPrimitive::setMinLength
+     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\StringPrimitiveTrait::getMinLength
+     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\StringPrimitiveTrait::setMinLength
      */
     public function testMinLength()
     {
@@ -64,8 +64,8 @@ class StringPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\Primitives\StringPrimitive::getPattern
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\Primitives\StringPrimitive::setPattern
+     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\StringPrimitiveTrait::getPattern
+     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\StringPrimitiveTrait::setPattern
      */
     public function testPattern()
     {
