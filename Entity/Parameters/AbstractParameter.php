@@ -12,25 +12,21 @@ use JMS\Serializer\Annotation as JMS;
 /**
  * Class AbstractParameter
  *
- * @JMS\Discriminator(field = "in", map = {
- *   "body"    : "Epfremmer\SwaggerBundle\Entity\Parameters\BodyParameter",
- *
- *   "path.string" : "Epfremmer\SwaggerBundle\Entity\Parameters\PathParameter\StringType",
- *   "path.integer": "Epfremmer\SwaggerBundle\Entity\Parameters\PathParameter\IntegerType",
- *   "path.boolean": "Epfremmer\SwaggerBundle\Entity\Parameters\PathParameter\BooleanType",
- *
- *   "query.string" : "Epfremmer\SwaggerBundle\Entity\Parameters\QueryParameter\StringType",
- *   "query.number" : "Epfremmer\SwaggerBundle\Entity\Parameters\QueryParameter\NumberType",
- *   "query.integer": "Epfremmer\SwaggerBundle\Entity\Parameters\QueryParameter\IntegerType",
- *   "query.boolean": "Epfremmer\SwaggerBundle\Entity\Parameters\QueryParameter\BooleanType",
- *   "query.array"  : "Epfremmer\SwaggerBundle\Entity\Parameters\QueryParameter\ArrayType",
- *
- *   "header.string" : "Epfremmer\SwaggerBundle\Entity\Parameters\HeaderParameter\StringType",
- *   "header.number" : "Epfremmer\SwaggerBundle\Entity\Parameters\HeaderParameter\NumberType",
- *   "header.integer": "Epfremmer\SwaggerBundle\Entity\Parameters\HeaderParameter\IntegerType",
- *   "header.boolean": "Epfremmer\SwaggerBundle\Entity\Parameters\HeaderParameter\BooleanType",
- *   "header.array"  : "Epfremmer\SwaggerBundle\Entity\Parameters\HeaderParameter\ArrayType",
- *
+ * @JMS\Discriminator(field = "class", map = {
+ *   "body"            : "Epfremmer\SwaggerBundle\Entity\Parameters\BodyParameter",
+ *   "path.string"     : "Epfremmer\SwaggerBundle\Entity\Parameters\PathParameter\StringType",
+ *   "path.integer"    : "Epfremmer\SwaggerBundle\Entity\Parameters\PathParameter\IntegerType",
+ *   "path.boolean"    : "Epfremmer\SwaggerBundle\Entity\Parameters\PathParameter\BooleanType",
+ *   "query.string"    : "Epfremmer\SwaggerBundle\Entity\Parameters\QueryParameter\StringType",
+ *   "query.number"    : "Epfremmer\SwaggerBundle\Entity\Parameters\QueryParameter\NumberType",
+ *   "query.integer"   : "Epfremmer\SwaggerBundle\Entity\Parameters\QueryParameter\IntegerType",
+ *   "query.boolean"   : "Epfremmer\SwaggerBundle\Entity\Parameters\QueryParameter\BooleanType",
+ *   "query.array"     : "Epfremmer\SwaggerBundle\Entity\Parameters\QueryParameter\ArrayType",
+ *   "header.string"   : "Epfremmer\SwaggerBundle\Entity\Parameters\HeaderParameter\StringType",
+ *   "header.number"   : "Epfremmer\SwaggerBundle\Entity\Parameters\HeaderParameter\NumberType",
+ *   "header.integer"  : "Epfremmer\SwaggerBundle\Entity\Parameters\HeaderParameter\IntegerType",
+ *   "header.boolean"  : "Epfremmer\SwaggerBundle\Entity\Parameters\HeaderParameter\BooleanType",
+ *   "header.array"    : "Epfremmer\SwaggerBundle\Entity\Parameters\HeaderParameter\ArrayType",
  *   "formData.string" : "Epfremmer\SwaggerBundle\Entity\Parameters\FormParameter\StringType",
  *   "formData.number" : "Epfremmer\SwaggerBundle\Entity\Parameters\FormParameter\NumberType",
  *   "formData.integer": "Epfremmer\SwaggerBundle\Entity\Parameters\FormParameter\IntegerType",
@@ -44,6 +40,12 @@ use JMS\Serializer\Annotation as JMS;
  */
 abstract class AbstractParameter
 {
+
+    /**
+     * @JMS\Type("string")
+     * @var string
+     */
+    protected $in;
 
     /**
      * @JMS\Type("string")

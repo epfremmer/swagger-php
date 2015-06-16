@@ -22,6 +22,12 @@ abstract class AbstractTypedParameter extends AbstractParameter
      * @JMS\Type("string")
      * @var string
      */
+    protected $type;
+
+    /**
+     * @JMS\Type("string")
+     * @var string
+     */
     protected $format;
 
     /**
