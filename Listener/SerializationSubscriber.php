@@ -98,13 +98,17 @@ class SerializationSubscriber implements EventSubscriberInterface
     {
         $data = $event->getData();
 
+        if (array_key_exists('type', $data)) {var_dump($data);
+            $data['in'] .= '.' . $data['type'];
+        }
+
         if (array_key_exists('schema', $data)) {
             $schema = $this->normalizeSchemaType($data['schema']);
 
             $data['schema'] = $schema;
-
-            $event->setData($data);
         }
+
+        $event->setData($data);
     }
 
     /**
