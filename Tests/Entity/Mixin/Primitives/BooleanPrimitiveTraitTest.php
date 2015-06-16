@@ -4,9 +4,9 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Tests\Entity\Schemas\Primitives;
+namespace Epfremmer\SwaggerBundle\Tests\Entity\Mixin;
 
-use Epfremmer\SwaggerBundle\Entity\Schemas\Primitives\BooleanPrimitive;
+use Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\BooleanPrimitiveTrait;
 
 /**
  * Class BooleanPrimitiveTraitTest
@@ -18,7 +18,7 @@ class BooleanPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
-     * @var BooleanPrimitive|\PHPUnit_Framework_MockObject_MockObject
+     * @var BooleanPrimitiveTrait|\PHPUnit_Framework_MockObject_MockObject
      */
     protected $mockTrait;
 
@@ -33,13 +33,10 @@ class BooleanPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-        $this->mockTrait = $this->getMockForTrait(BooleanPrimitive::class);
+        $this->mockTrait = $this->getMockForTrait(BooleanPrimitiveTrait::class);
         $this->mockClass = get_class($this->mockTrait);
     }
 
-    /** Empty */
-    public function test()
-    {
-        $this->assertTrue(true);
-    }
+    /** Empty Class */
+    public function test() {}
 }

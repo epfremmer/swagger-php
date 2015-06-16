@@ -1,10 +1,10 @@
 <?php
 /**
- * File AnyPrimitive.php
+ * File AnyPrimitiveTrait.php
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Entity\Schemas\Primitives;
+namespace Epfremmer\SwaggerBundle\Entity\Mixin\Primitives;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema;
@@ -16,7 +16,7 @@ use JMS\Serializer\Annotation as JMS;
  * @package Epfremmer\SwaggerBundle
  * @subpackage Entity\Schemas\Primitives
  */
-trait AnyPrimitive
+trait AnyPrimitiveTrait
 {
 
     /**
@@ -67,7 +67,7 @@ trait AnyPrimitive
 
     /**
      * @param array $enum
-     * @return AnyPrimitive
+     * @return AnyPrimitiveTrait
      */
     public function setEnum($enum)
     {
@@ -85,7 +85,7 @@ trait AnyPrimitive
 
     /**
      * @param array $allOf
-     * @return AnyPrimitive
+     * @return AnyPrimitiveTrait
      */
     public function setAllOf($allOf)
     {
@@ -103,7 +103,7 @@ trait AnyPrimitive
 
     /**
      * @param array $anyOf
-     * @return AnyPrimitive
+     * @return AnyPrimitiveTrait
      */
     public function setAnyOf($anyOf)
     {
@@ -121,7 +121,7 @@ trait AnyPrimitive
 
     /**
      * @param array $oneOf
-     * @return AnyPrimitive
+     * @return AnyPrimitiveTrait
      */
     public function setOneOf($oneOf)
     {
@@ -139,7 +139,7 @@ trait AnyPrimitive
 
     /**
      * @param array $not
-     * @return AnyPrimitive
+     * @return AnyPrimitiveTrait
      */
     public function setNot($not)
     {
@@ -157,7 +157,7 @@ trait AnyPrimitive
 
     /**
      * @param AbstractSchema[]|ArrayCollection $definitions
-     * @return AnyPrimitive
+     * @return AnyPrimitiveTrait
      */
     public function setDefinitions(ArrayCollection $definitions)
     {

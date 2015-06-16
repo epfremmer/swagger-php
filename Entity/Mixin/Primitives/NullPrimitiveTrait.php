@@ -1,20 +1,20 @@
 <?php
 /**
- * File NullPrimitive.php
+ * File NullPrimitiveTrait.php
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Entity\Schemas\Primitives;
+namespace Epfremmer\SwaggerBundle\Entity\Mixin\Primitives;
 
 use JMS\Serializer\Annotation as JMS;
 
 /**
- * Trait NullPrimitive
+ * Trait NullPrimitiveTrait
  *
  * @package Epfremmer\SwaggerBundle
  * @subpackage Entity\Schemas\Primitives
  */
-trait NullPrimitive
+trait NullPrimitiveTrait
 {
-    use AnyPrimitive;
+    use AnyPrimitiveTrait;
 }

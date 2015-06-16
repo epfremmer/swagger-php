@@ -6,6 +6,8 @@
  */
 namespace Epfremmer\SwaggerBundle\Entity\Schemas;
 
+use Epfremmer\SwaggerBundle\Entity\Mixin\Primitives;
+
 /**
  * Class IntegerSchema
  *
@@ -14,7 +16,7 @@ namespace Epfremmer\SwaggerBundle\Entity\Schemas;
  */
 class IntegerSchema extends AbstractSchema
 {
-    use Primitives\NumericPrimitive;
+    use Primitives\NumericPrimitiveTrait;
 
     /**
      * {@inheritdoc}

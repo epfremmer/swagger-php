@@ -1,22 +1,22 @@
 <?php
 /**
- * File NumericPrimitive.php
+ * File NumericPrimitiveTrait.php
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Entity\Schemas\Primitives;
+namespace Epfremmer\SwaggerBundle\Entity\Mixin\Primitives;
 
 use JMS\Serializer\Annotation as JMS;
 
 /**
- * Trait NumericPrimitive
+ * Trait NumericPrimitiveTrait
  *
  * @package Epfremmer\SwaggerBundle
  * @subpackage Entity\Schemas\Primitives
  */
-trait NumericPrimitive
+trait NumericPrimitiveTrait
 {
-    use AnyPrimitive;
+    use AnyPrimitiveTrait;
 
     /**
      * @JMS\Type("integer")
@@ -46,7 +46,7 @@ trait NumericPrimitive
 
     /**
      * @param int $multipleOf
-     * @return BooleanPrimitive
+     * @return BooleanPrimitiveTrait
      */
     public function setMultipleOf($multipleOf)
     {
@@ -64,7 +64,7 @@ trait NumericPrimitive
 
     /**
      * @param int $maximum
-     * @return BooleanPrimitive
+     * @return BooleanPrimitiveTrait
      */
     public function setMaximum($maximum)
     {
@@ -82,7 +82,7 @@ trait NumericPrimitive
 
     /**
      * @param int $exclusiveMaximum
-     * @return BooleanPrimitive
+     * @return BooleanPrimitiveTrait
      */
     public function setExclusiveMaximum($exclusiveMaximum)
     {

@@ -1,22 +1,22 @@
 <?php
 /**
- * File ArrayPrimitive.php
+ * File ArrayPrimitiveTrait.php
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Entity\Schemas\Primitives;
+namespace Epfremmer\SwaggerBundle\Entity\Mixin\Primitives;
 
 use JMS\Serializer\Annotation as JMS;
 
 /**
- * Trait ArrayPrimitive
+ * Trait ArrayPrimitiveTrait
  *
  * @package Epfremmer\SwaggerBundle
  * @subpackage Entity\Schemas\Primitives
  */
-trait ArrayPrimitive
+trait ArrayPrimitiveTrait
 {
-    use AnyPrimitive;
+    use AnyPrimitiveTrait;
 
     /**
      * @JMS\Type("array")
@@ -58,7 +58,7 @@ trait ArrayPrimitive
 
     /**
      * @param array $items
-     * @return ArrayPrimitive
+     * @return ArrayPrimitiveTrait
      */
     public function setItems($items)
     {
@@ -76,7 +76,7 @@ trait ArrayPrimitive
 
     /**
      * @param boolean $additionalItems
-     * @return ArrayPrimitive
+     * @return ArrayPrimitiveTrait
      */
     public function setAdditionalItems($additionalItems)
     {
@@ -94,7 +94,7 @@ trait ArrayPrimitive
 
     /**
      * @param int $maxItems
-     * @return ArrayPrimitive
+     * @return ArrayPrimitiveTrait
      */
     public function setMaxItems($maxItems)
     {
@@ -112,7 +112,7 @@ trait ArrayPrimitive
 
     /**
      * @param int $minItems
-     * @return ArrayPrimitive
+     * @return ArrayPrimitiveTrait
      */
     public function setMinItems($minItems)
     {
@@ -130,7 +130,7 @@ trait ArrayPrimitive
 
     /**
      * @param boolean $uniqueItems
-     * @return ArrayPrimitive
+     * @return ArrayPrimitiveTrait
      */
     public function setUniqueItems($uniqueItems)
     {

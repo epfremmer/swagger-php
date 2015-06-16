@@ -6,6 +6,8 @@
  */
 namespace Epfremmer\SwaggerBundle\Entity\Schemas;
 
+use Epfremmer\SwaggerBundle\Entity\Mixin\Primitives;
+
 /**
  * Class RefSchema
  *
@@ -14,7 +16,7 @@ namespace Epfremmer\SwaggerBundle\Entity\Schemas;
  */
 class StringSchema extends AbstractSchema
 {
-    use Primitives\StringPrimitive;
+    use Primitives\StringPrimitiveTrait;
 
     /**
      * {@inheritdoc}

@@ -6,6 +6,8 @@
  */
 namespace Epfremmer\SwaggerBundle\Entity\Schemas;
 
+use Epfremmer\SwaggerBundle\Entity\Mixin\Primitives;
+
 /**
  * Class ArraySchema
  *
@@ -14,7 +16,7 @@ namespace Epfremmer\SwaggerBundle\Entity\Schemas;
  */
 class ArraySchema extends AbstractSchema
 {
-    use Primitives\ArrayPrimitive;
+    use Primitives\ArrayPrimitiveTrait;
 
     /**
      * {@inheritdoc}
