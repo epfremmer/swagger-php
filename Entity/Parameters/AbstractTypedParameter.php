@@ -45,6 +45,24 @@ abstract class AbstractTypedParameter extends AbstractParameter
     /**
      * @return string
      */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
+     * @param string $type
+     * @return AbstractTypedParameter
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
     public function getFormat()
     {
         return $this->format;

@@ -68,6 +68,24 @@ abstract class AbstractParameter
     /**
      * @return string
      */
+    public function getIn()
+    {
+        return $this->in;
+    }
+
+    /**
+     * @param string $in
+     * @return AbstractParameter
+     */
+    public function setIn($in)
+    {
+        $this->in = $in;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
     public function getName()
     {
         return $this->name;
