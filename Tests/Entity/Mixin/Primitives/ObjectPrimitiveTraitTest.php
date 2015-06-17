@@ -7,8 +7,12 @@
 namespace Epfremmer\SwaggerBundle\Tests\Entity\Mixin;
 
 use Doctrine\Common\Collections\ArrayCollection;
+use Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema;
 use Epfremmer\SwaggerBundle\Entity\Schemas\ObjectSchema;
 use Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\ObjectPrimitiveTrait;
+use Epfremmer\SwaggerBundle\Entity\Schemas\RefSchema;
+use Epfremmer\SwaggerBundle\Entity\Schemas\SchemaInterface;
+use Epfremmer\SwaggerBundle\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class ObjectPrimitiveTraitTest
@@ -18,6 +22,7 @@ use Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\ObjectPrimitiveTrait;
  */
 class ObjectPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
 {
+    use SerializerContextTrait;
 
     /**
      * @var ObjectPrimitiveTrait|\PHPUnit_Framework_MockObject_MockObject
@@ -138,5 +143,49 @@ class ObjectPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
         $this->assertAttributeInternalType('array', 'dependencies', $this->mockTrait);
         $this->assertAttributeEquals($dependencies, 'dependencies', $this->mockTrait);
         $this->assertEquals($dependencies, $this->mockTrait->getDependencies());
+    }
+
+    /**
+     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\ObjectPrimitiveTrait
+     */
+    public function testSerialization()
+    {
+        $data = json_encode([
+            'type' => AbstractSchema::OBJECT_TYPE,
+            'maxProperties'        => 10,
+            'minProperties'        => 1,
+            'required'             => ['foo', 'bar'],
+            'properties'           => [
+                'foo' => [
+                    'type' => AbstractSchema::STRING_TYPE
+                ],
+                'bar' => [
+                    '$ref' => RefSchema::REF_TYPE
+                ],
+                'baz' => [
+                    'type' => AbstractSchema::NUMBER_TYPE
+                ],
+            ],
+            'additionalProperties' => true,
+            'patternProperties'    => 'foo',
+            'dependencies'         => ['foo', 'bar', 'baz'],
+        ]);
+
+        $primitive = self::$serializer->deserialize($data, AbstractSchema::class, 'json');
+
+        $this->assertInstanceOf(ObjectSchema::class, $primitive);
+        $this->assertAttributeEquals(10, 'maxProperties', $primitive);
+        $this->assertAttributeEquals(1, 'minProperties', $primitive);
+        $this->assertAttributeEquals(['foo', 'bar'], 'required', $primitive);
+        $this->assertAttributeInstanceOf(ArrayCollection::class, 'properties', $primitive);
+        $this->assertContainsOnlyInstancesOf(SchemaInterface::class, $primitive->getProperties());
+        $this->assertAttributeEquals(true, 'additionalProperties', $primitive);
+        $this->assertAttributeEquals('foo', 'patternProperties', $primitive);
+        $this->assertAttributeEquals(['foo', 'bar', 'baz'], 'dependencies', $primitive);
+
+        $json = self::$serializer->serialize($primitive, 'json');
+
+        $this->assertJson($json);
+        $this->assertJsonStringEqualsJsonString($data, $json);
     }
 }

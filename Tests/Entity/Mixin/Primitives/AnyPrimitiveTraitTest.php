@@ -7,8 +7,10 @@
 namespace Epfremmer\SwaggerBundle\Tests\Entity\Mixin;
 
 use Doctrine\Common\Collections\ArrayCollection;
+use Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema;
 use Epfremmer\SwaggerBundle\Entity\Schemas\ObjectSchema;
 use Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\AnyPrimitiveTrait;
+use Epfremmer\SwaggerBundle\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class AnyPrimitiveTraitTest
@@ -18,6 +20,7 @@ use Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\AnyPrimitiveTrait;
  */
 class AnyPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
 {
+    use SerializerContextTrait;
 
     /**
      * @var AnyPrimitiveTrait|\PHPUnit_Framework_MockObject_MockObject
@@ -131,5 +134,47 @@ class AnyPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($definitions, $this->mockTrait->getDefinitions());
         $this->assertContainsOnlyInstancesOf(ObjectSchema::class, $this->mockTrait->getDefinitions());
         $this->assertCount(1, $this->mockTrait->getDefinitions());
+    }
+
+    /**
+     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\AnyPrimitiveTrait
+     */
+    public function testSerialization()
+    {
+        $data = json_encode([
+            'type'  => AbstractSchema::OBJECT_TYPE,
+            'enum'  => ['foo', 'bar'],
+            'allOf' => ['foo'],
+            'anyOf' => ['foo', 'bar', 'baz'],
+            'oneOf' => ['foo', 'bar', 'baz'],
+            'not'   => ['qux'],
+            'definitions' => [
+                'def' => [
+                    'type' => AbstractSchema::OBJECT_TYPE,
+                    'format'       => 'foo',
+                    'title'        => 'bar',
+                    'description'  => 'baz',
+                    'example'      => 'qux',
+                    'externalDocs' => (object)[],
+                ]
+            ],
+        ]);
+
+        $primitive = self::$serializer->deserialize($data, AbstractSchema::class, 'json');
+
+        $this->assertInstanceOf(ObjectSchema::class, $primitive);
+        $this->assertAttributeEquals(['foo', 'bar'], 'enum', $primitive);
+        $this->assertAttributeEquals(['foo'], 'allOf', $primitive);
+        $this->assertAttributeEquals(['foo', 'bar', 'baz'], 'anyOf', $primitive);
+        $this->assertAttributeEquals(['foo', 'bar', 'baz'], 'oneOf', $primitive);
+        $this->assertAttributeEquals(['qux'], 'not', $primitive);
+        $this->assertAttributeInstanceOf(ArrayCollection::class, 'definitions', $primitive);
+        $this->assertContainsOnlyInstancesOf(ObjectSchema::class, $primitive->getDefinitions());
+        $this->assertInstanceOf(ObjectSchema::class, $primitive->getDefinitions()->get('def'));
+
+        $json = self::$serializer->serialize($primitive, 'json');
+
+        $this->assertJson($json);
+        $this->assertJsonStringEqualsJsonString($data, $json);
     }
 }

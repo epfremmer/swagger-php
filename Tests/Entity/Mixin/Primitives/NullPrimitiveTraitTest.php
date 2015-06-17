@@ -7,6 +7,9 @@
 namespace Epfremmer\SwaggerBundle\Tests\Entity\Mixin;
 
 use Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\NullPrimitiveTrait;
+use Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema;
+use Epfremmer\SwaggerBundle\Entity\Schemas\NullSchema;
+use Epfremmer\SwaggerBundle\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class NullPrimitiveTraitTest
@@ -16,6 +19,7 @@ use Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\NullPrimitiveTrait;
  */
 class NullPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
 {
+    use SerializerContextTrait;
 
     /**
      * @var NullPrimitiveTrait|\PHPUnit_Framework_MockObject_MockObject
@@ -37,6 +41,22 @@ class NullPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
         $this->mockClass = get_class($this->mockTrait);
     }
 
-    /** Empty Class */
-    public function test() {}
+    /**
+     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\NullPrimitiveTrait
+     */
+    public function testSerialization()
+    {
+        $data = json_encode([
+            'type' => AbstractSchema::NULL_TYPE
+        ]);
+
+        $primitive = self::$serializer->deserialize($data, AbstractSchema::class, 'json');
+
+        $this->assertInstanceOf(NullSchema::class, $primitive);
+
+        $json = self::$serializer->serialize($primitive, 'json');
+
+        $this->assertJson($json);
+        $this->assertJsonStringEqualsJsonString($data, $json);
+    }
 }
