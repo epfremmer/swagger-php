@@ -55,7 +55,7 @@ class BodyParameterTest extends \PHPUnit_Framework_TestCase
     public function testSerialization()
     {
         $data = json_encode([
-            'in'          => 'body',
+            'in'          => AbstractParameter::IN_BODY,
             'name'        => 'foo',
             'description' => 'bar',
             'required'    => false,
