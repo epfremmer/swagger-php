@@ -18,6 +18,14 @@ use JMS\Serializer\Annotation as JMS;
 abstract class AbstractTypedParameter extends AbstractParameter
 {
 
+    // parameter types
+    const FILE_TYPE    = 'file';
+    const BOOLEAN_TYPE = AbstractSchema::BOOLEAN_TYPE;
+    const INTEGER_TYPE = AbstractSchema::INTEGER_TYPE;
+    const NUMBER_TYPE  = AbstractSchema::NUMBER_TYPE;
+    const STRING_TYPE  = AbstractSchema::STRING_TYPE;
+    const ARRAY_TYPE   = AbstractSchema::ARRAY_TYPE;
+
     /**
      * @JMS\Type("string")
      * @var string
