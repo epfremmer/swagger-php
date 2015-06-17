@@ -48,7 +48,7 @@ trait AnyPrimitiveTrait
     protected $oneOf;
 
     /**
-     * @JMS\Type("string")
+     * @JMS\Type("array")
      * @JMS\SerializedName("not")
      * @var array
      */
