@@ -8,7 +8,6 @@ namespace Epfremmer\SwaggerBundle\Tests\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Epfremmer\SwaggerBundle\Entity\Examples;
-use Epfremmer\SwaggerBundle\Entity\ExternalDocumentation;
 use Epfremmer\SwaggerBundle\Entity\Headers;
 use Epfremmer\SwaggerBundle\Entity\Response;
 use Epfremmer\SwaggerBundle\Entity\Parameters;
