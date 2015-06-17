@@ -134,7 +134,7 @@ class SecurityDefinitionTest extends \PHPUnit_Framework_TestCase
     /**
      * @covers Epfremmer\SwaggerBundle\Entity\SecurityDefinition
      */
-    public function testDeserialize()
+    public function testSerialize()
     {
         $data = json_encode([
             'type'             => 'foo',
@@ -162,5 +162,10 @@ class SecurityDefinitionTest extends \PHPUnit_Framework_TestCase
         $this->assertAttributeEquals('corge', 'authorizationUrl', $securityDefinition);
         $this->assertAttributeEquals('grault', 'tokenUrl', $securityDefinition);
         $this->assertAttributeEquals(['foo', 'bar', 'baz'], 'scopes', $securityDefinition);
+
+        $json = self::$serializer->serialize($securityDefinition, 'json');
+
+        $this->assertJson($json);
+        $this->assertJsonStringEqualsJsonString($data, $json);
     }
 }

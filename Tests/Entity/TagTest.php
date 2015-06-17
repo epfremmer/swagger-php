@@ -75,7 +75,7 @@ class TagTest extends \PHPUnit_Framework_TestCase
     /**
      * @covers Epfremmer\SwaggerBundle\Entity\Tag
      */
-    public function testDeserialize()
+    public function testSerialize()
     {
         $data = json_encode([
             'name'         => 'foo',
@@ -89,5 +89,10 @@ class TagTest extends \PHPUnit_Framework_TestCase
         $this->assertAttributeEquals('foo', 'name', $tag);
         $this->assertAttributeEquals('bar', 'description', $tag);
         $this->assertAttributeInstanceOf(ExternalDocumentation::class, 'externalDocs', $tag);
+
+        $json = self::$serializer->serialize($tag, 'json');
+
+        $this->assertJson($json);
+        $this->assertJsonStringEqualsJsonString($data, $json);
     }
 }

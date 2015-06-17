@@ -8,6 +8,7 @@ namespace Epfremmer\SwaggerBundle\Tests\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Epfremmer\SwaggerBundle\Entity\Operation;
+use Epfremmer\SwaggerBundle\Entity\Parameters;
 use Epfremmer\SwaggerBundle\Entity\Path;
 use Epfremmer\SwaggerBundle\Tests\Mixin\SerializerContextTrait;
 
@@ -57,7 +58,7 @@ class PathTest extends \PHPUnit_Framework_TestCase
     /**
      * @covers Epfremmer\SwaggerBundle\Entity\Path
      */
-    public function testDeserialize()
+    public function testSerialize()
     {
         $data = json_encode([
             'get' => [
@@ -99,24 +100,24 @@ class PathTest extends \PHPUnit_Framework_TestCase
                 'parameters' => [
                     [
                         'name' => 'petId',
-                        'in' => 'path',
+                        'in' => Parameters\AbstractParameter::IN_PATH,
                         'description' => 'ID of pet that needs to be updated',
                         'required' => true,
-                        'type' => 'string'
+                        'type' => Parameters\AbstractTypedParameter::STRING_TYPE
                     ],
                     [
                         'name' => 'name',
-                        'in' => 'formData',
+                        'in' => Parameters\AbstractParameter::IN_FORM_DATA,
                         'description' => 'Updated name of the pet',
                         'required' => false,
-                        'type' => 'string'
+                        'type' => Parameters\AbstractTypedParameter::STRING_TYPE
                     ],
                     [
                         'name' => 'status',
-                        'in' => 'formData',
+                        'in' => Parameters\AbstractParameter::IN_FORM_DATA,
                         'description' => 'Updated status of the pet',
                         'required' => false,
-                        'type' => 'string'
+                        'type' => Parameters\AbstractTypedParameter::STRING_TYPE
                     ]
                 ],
                 'responses' => [

@@ -61,7 +61,7 @@ class ExamplesTest extends \PHPUnit_Framework_TestCase
     /**
      * @covers Epfremmer\SwaggerBundle\Entity\Examples
      */
-    public function testDeserialize()
+    public function testSerialize()
     {
         $data = json_encode([
             'text/plain' => [
@@ -79,5 +79,10 @@ class ExamplesTest extends \PHPUnit_Framework_TestCase
         $this->assertAttributeInstanceOf(ArrayCollection::class, 'examples', $examples);
         $this->assertContainsOnly('array', $examples->getExamples());
         $this->assertCount(2, $examples->getExamples());
+
+        $json = self::$serializer->serialize($examples, 'json');
+
+        $this->assertJson($json);
+        $this->assertJsonStringEqualsJsonString($data, $json);
     }
 }

@@ -115,7 +115,7 @@ class InfoTest extends \PHPUnit_Framework_TestCase
     /**
      * @covers Epfremmer\SwaggerBundle\Entity\Info
      */
-    public function testDeserialize()
+    public function testSerialize()
     {
         $data = json_encode([
             'title'          => 'foo',
@@ -135,5 +135,10 @@ class InfoTest extends \PHPUnit_Framework_TestCase
         $this->assertAttributeInstanceOf(Contact::class, 'contact', $info);
         $this->assertAttributeInstanceOf(License::class, 'license', $info);
         $this->assertAttributeEquals('1.0.0', 'version', $info);
+
+        $json = self::$serializer->serialize($info, 'json');
+
+        $this->assertJson($json);
+        $this->assertJsonStringEqualsJsonString($data, $json);
     }
 }
