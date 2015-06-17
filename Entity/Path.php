@@ -32,7 +32,7 @@ class Path
     /**
      * @return Operation[]|ArrayCollection
      */
-    public function getRoutes()
+    public function getOperations()
     {
         return $this->operations;
     }
@@ -41,7 +41,7 @@ class Path
      * @param ArrayCollection $operations
      * @return Path
      */
-    public function setRoutes(ArrayCollection $operations)
+    public function setOperations(ArrayCollection $operations)
     {
         $this->operations = $operations;
         return $this;
