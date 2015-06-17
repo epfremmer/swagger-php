@@ -6,6 +6,7 @@
  */
 namespace Epfremmer\SwaggerBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Epfremmer\SwaggerBundle\Entity\Schemas\SchemaInterface;
 use Epfremmer\SwaggerBundle\Entity\Headers\AbstractHeader;
 use JMS\Serializer\Annotation as JMS;
@@ -36,7 +37,7 @@ class Response
     /**
      * @JMS\Type("ArrayCollection<string,Epfremmer\SwaggerBundle\Entity\Headers\AbstractHeader>")
      * @JMS\SerializedName("headers")
-     * @var AbstractHeader
+     * @var AbstractHeader[]|ArrayCollection
      */
     protected $headers;
 
@@ -84,7 +85,7 @@ class Response
     }
 
     /**
-     * @return AbstractHeader
+     * @return ArrayCollection|AbstractHeader[]
      */
     public function getHeaders()
     {
@@ -92,10 +93,10 @@ class Response
     }
 
     /**
-     * @param AbstractHeader $headers
+     * @param ArrayCollection|AbstractHeader[] $headers
      * @return Response
      */
-    public function setHeaders($headers)
+    public function setHeaders(ArrayCollection $headers)
     {
         $this->headers = $headers;
         return $this;
