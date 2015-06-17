@@ -62,7 +62,7 @@ class SwaggerParser
      */
     public function getVersion()
     {
-        if (array_key_exists(self::VERSION_KEY, $this->data)) {
+        if (!array_key_exists(self::VERSION_KEY, $this->data)) {
             return self::DEFAULT_VERSION;
         }
 
