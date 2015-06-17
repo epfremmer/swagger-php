@@ -134,10 +134,10 @@ class Swagger
     }
 
     /**
-     * @param Info $version
-     * @return self
+     * @param string $version
+     * @return Swagger
      */
-    public function setVersion(Info $version)
+    public function setVersion($version)
     {
         $this->version = $version;
         return $this;
@@ -152,10 +152,10 @@ class Swagger
     }
 
     /**
-     * @param array $info
-     * @return self
+     * @param Info $info
+     * @return Swagger
      */
-    public function setInfo(array $info = [])
+    public function setInfo(Info $info)
     {
         $this->info = $info;
         return $this;
@@ -171,7 +171,7 @@ class Swagger
 
     /**
      * @param string $host
-     * @return self
+     * @return Swagger
      */
     public function setHost($host)
     {
@@ -189,7 +189,7 @@ class Swagger
 
     /**
      * @param string $basePath
-     * @return self
+     * @return Swagger
      */
     public function setBasePath($basePath)
     {
@@ -198,7 +198,7 @@ class Swagger
     }
 
     /**
-     * @return string
+     * @return array
      */
     public function getSchemes()
     {
@@ -207,11 +207,47 @@ class Swagger
 
     /**
      * @param array $schemes
-     * @return self
+     * @return Swagger
      */
-    public function setSchemes(array $schemes = [])
+    public function setSchemes($schemes)
     {
         $this->schemes = $schemes;
+        return $this;
+    }
+
+    /**
+     * @return \string[]
+     */
+    public function getConsumes()
+    {
+        return $this->consumes;
+    }
+
+    /**
+     * @param \string[] $consumes
+     * @return Swagger
+     */
+    public function setConsumes($consumes)
+    {
+        $this->consumes = $consumes;
+        return $this;
+    }
+
+    /**
+     * @return \string[]
+     */
+    public function getProduces()
+    {
+        return $this->produces;
+    }
+
+    /**
+     * @param \string[] $produces
+     * @return Swagger
+     */
+    public function setProduces($produces)
+    {
+        $this->produces = $produces;
         return $this;
     }
 
@@ -225,11 +261,65 @@ class Swagger
 
     /**
      * @param ArrayCollection|Path[] $paths
-     * @return self
+     * @return Swagger
      */
     public function setPaths(ArrayCollection $paths)
     {
         $this->paths = $paths;
+        return $this;
+    }
+
+    /**
+     * @return ArrayCollection|Schemas\SchemaInterface[]
+     */
+    public function getDefinitions()
+    {
+        return $this->definitions;
+    }
+
+    /**
+     * @param ArrayCollection|Schemas\SchemaInterface[] $definitions
+     * @return Swagger
+     */
+    public function setDefinitions(ArrayCollection $definitions)
+    {
+        $this->definitions = $definitions;
+        return $this;
+    }
+
+    /**
+     * @return ArrayCollection|Parameters\AbstractParameter[]
+     */
+    public function getParameters()
+    {
+        return $this->parameters;
+    }
+
+    /**
+     * @param ArrayCollection|Parameters\AbstractParameter[] $parameters
+     * @return Swagger
+     */
+    public function setParameters(ArrayCollection $parameters)
+    {
+        $this->parameters = $parameters;
+        return $this;
+    }
+
+    /**
+     * @return ArrayCollection|Response[]
+     */
+    public function getResponses()
+    {
+        return $this->responses;
+    }
+
+    /**
+     * @param ArrayCollection|Response[] $responses
+     * @return Swagger
+     */
+    public function setResponses(ArrayCollection $responses)
+    {
+        $this->responses = $responses;
         return $this;
     }
 
@@ -243,7 +333,7 @@ class Swagger
 
     /**
      * @param ArrayCollection|SecurityDefinition[] $securityDefinitions
-     * @return self
+     * @return Swagger
      */
     public function setSecurityDefinitions(ArrayCollection $securityDefinitions)
     {
@@ -252,21 +342,56 @@ class Swagger
     }
 
     /**
-     * @return ArrayCollection|SchemaInterface[]
+     * @return ArrayCollection|\string[]
      */
-    public function getDefinitions()
+    public function getSecurity()
     {
-        return $this->definitions;
+        return $this->security;
     }
 
     /**
-     * @param ArrayCollection|SchemaInterface[] $definitions
-     * @return self
+     * @param ArrayCollection|\string[] $security
+     * @return Swagger
      */
-    public function setDefinitions(ArrayCollection $definitions)
+    public function setSecurity(ArrayCollection $security)
     {
-        $this->definitions = $definitions;
+        $this->security = $security;
         return $this;
     }
 
+    /**
+     * @return ArrayCollection|Tag[]
+     */
+    public function getTags()
+    {
+        return $this->tags;
+    }
+
+    /**
+     * @param ArrayCollection|Tag[] $tags
+     * @return Swagger
+     */
+    public function setTags(ArrayCollection $tags)
+    {
+        $this->tags = $tags;
+        return $this;
+    }
+
+    /**
+     * @return ExternalDocumentation
+     */
+    public function getExternalDocs()
+    {
+        return $this->externalDocs;
+    }
+
+    /**
+     * @param ExternalDocumentation $externalDocs
+     * @return Swagger
+     */
+    public function setExternalDocs(ExternalDocumentation $externalDocs)
+    {
+        $this->externalDocs = $externalDocs;
+        return $this;
+    }
 }
