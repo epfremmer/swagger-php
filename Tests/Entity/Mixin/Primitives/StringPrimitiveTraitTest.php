@@ -7,6 +7,9 @@
 namespace Epfremmer\SwaggerBundle\Tests\Entity\Mixin;
 
 use Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\StringPrimitiveTrait;
+use Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema;
+use Epfremmer\SwaggerBundle\Entity\Schemas\StringSchema;
+use Epfremmer\SwaggerBundle\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class StringPrimitiveTraitTest
@@ -16,6 +19,7 @@ use Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\StringPrimitiveTrait;
  */
 class StringPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
 {
+    use SerializerContextTrait;
 
     /**
      * @var StringPrimitiveTrait|\PHPUnit_Framework_MockObject_MockObject
@@ -74,5 +78,30 @@ class StringPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
         $this->assertAttributeInternalType('string', 'pattern', $this->mockTrait);
         $this->assertAttributeEquals('foo', 'pattern', $this->mockTrait);
         $this->assertEquals('foo', $this->mockTrait->getPattern());
+    }
+
+    /**
+     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\StringPrimitiveTrait
+     */
+    public function testSerialization()
+    {
+        $data = json_encode([
+            'type' => AbstractSchema::STRING_TYPE,
+            'maxLength' => 10,
+            'minLength' => 1,
+            'pattern'   => 'foo',
+        ]);
+
+        $primitive = self::$serializer->deserialize($data, AbstractSchema::class, 'json');
+
+        $this->assertInstanceOf(StringSchema::class, $primitive);
+        $this->assertAttributeEquals(10, 'maxLength', $primitive);
+        $this->assertAttributeEquals(1, 'minLength', $primitive);
+        $this->assertAttributeEquals('foo', 'pattern', $primitive);
+
+        $json = self::$serializer->serialize($primitive, 'json');
+
+        $this->assertJson($json);
+        $this->assertJsonStringEqualsJsonString($data, $json);
     }
 }
