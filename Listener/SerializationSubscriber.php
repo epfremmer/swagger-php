@@ -12,6 +12,7 @@ use Epfremmer\SwaggerBundle\Entity\Parameters\AbstractParameter;
 use Epfremmer\SwaggerBundle\Entity\Parameters\AbstractTypedParameter;
 use Epfremmer\SwaggerBundle\Entity\Path;
 use Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema;
+use Epfremmer\SwaggerBundle\Entity\Schemas\RefSchema;
 use JMS\Serializer\EventDispatcher\Events;
 use JMS\Serializer\EventDispatcher\PreDeserializeEvent;
 use JMS\Serializer\EventDispatcher\EventSubscriberInterface;
@@ -101,6 +102,10 @@ class SerializationSubscriber implements EventSubscriberInterface
         $data = $event->getData();
         $data = $this->normalizeSchemaType($data);
 
+        if (array_key_exists('$ref', $data)) {
+            $event->setType(RefSchema::class);
+        }
+
         $event->setData($data);
     }
 
@@ -139,13 +144,8 @@ class SerializationSubscriber implements EventSubscriberInterface
      */
     protected function normalizeSchemaType(array $data)
     {
-        switch (true) {
-            case array_key_exists('$ref', $data):
-                $data['type'] = AbstractSchema::REF_TYPE;
-                break;
-            case !array_key_exists('type', $data):
-                $data['type'] = AbstractSchema::OBJECT_TYPE;
-                break;
+        if (!array_key_exists('type', $data)) {
+            $data['type'] = AbstractSchema::OBJECT_TYPE;
         }
 
         return $data;
