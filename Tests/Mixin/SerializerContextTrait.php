@@ -40,4 +40,16 @@ trait SerializerContextTrait
 
         self::$serializer = $builder->build();
     }
+
+    /**
+     * Return the serializer
+     *
+     * @return Serializer
+     */
+    public function getSerializer()
+    {
+        if (!self::$serializer) self::setUpBeforeClass();
+
+        return self::$serializer;
+    }
 }
