@@ -7,8 +7,8 @@
 namespace Epfremmer\SwaggerBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
+use Epfremmer\SwaggerBundle\Entity\Schemas\SchemaInterface;
 use Epfremmer\SwaggerBundle\Entity\Parameters\AbstractParameter;
-use Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema;
 use JMS\Serializer\Annotation as JMS;
 
 /**
@@ -79,7 +79,7 @@ class Swagger
     /**
      * @JMS\Type("ArrayCollection<string,Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema>")
      * @JMS\SerializedName("definitions")
-     * @var ArrayCollection|AbstractSchema[]
+     * @var ArrayCollection|SchemaInterface[]
      */
     protected $definitions;
 
@@ -252,7 +252,7 @@ class Swagger
     }
 
     /**
-     * @return ArrayCollection|AbstractSchema[]
+     * @return ArrayCollection|SchemaInterface[]
      */
     public function getDefinitions()
     {
@@ -260,7 +260,7 @@ class Swagger
     }
 
     /**
-     * @param ArrayCollection|AbstractSchema[] $definitions
+     * @param ArrayCollection|SchemaInterface[] $definitions
      * @return self
      */
     public function setDefinitions(ArrayCollection $definitions)

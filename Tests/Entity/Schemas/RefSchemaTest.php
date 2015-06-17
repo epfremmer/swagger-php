@@ -40,7 +40,7 @@ class RefSchemaTest extends \PHPUnit_Framework_TestCase
     public function testType()
     {
         $this->assertNotEmpty($this->refSchema->getType());
-        $this->assertEquals(AbstractSchema::REF_TYPE, $this->refSchema->getType());
+        $this->assertEquals(RefSchema::REF_TYPE, $this->refSchema->getType());
     }
 
     /**
@@ -50,34 +50,52 @@ class RefSchemaTest extends \PHPUnit_Framework_TestCase
     public function testRef()
     {
         $this->assertClassHasAttribute('ref', RefSchema::class);
-        $this->assertInstanceOf(RefSchema::class, $this->refSchema->setRef('#/foo'));
-        $this->assertAttributeEquals('#/foo', 'ref', $this->refSchema);
-        $this->assertEquals('#/foo', $this->refSchema->getRef());
+        $this->assertInstanceOf(RefSchema::class, $this->refSchema->setRef('#/definitions/foo'));
+        $this->assertAttributeEquals('#/definitions/foo', 'ref', $this->refSchema);
+        $this->assertEquals('#/definitions/foo', $this->refSchema->getRef());
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\BooleanSchema
+     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\RefSchema::getTitle
+     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\RefSchema::setTitle
+     */
+    public function testTitle()
+    {
+        $this->assertClassHasAttribute('title', AbstractSchema::class);
+        $this->assertInstanceOf(RefSchema::class, $this->refSchema->setTitle('foo'));
+        $this->assertAttributeEquals('foo', 'title', $this->refSchema);
+        $this->assertEquals('foo', $this->refSchema->getTitle());
+    }
+
+    /**
+     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\RefSchema::getDescription
+     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\RefSchema::setDescription
+     */
+    public function testDescription()
+    {
+        $this->assertClassHasAttribute('description', AbstractSchema::class);
+        $this->assertInstanceOf(RefSchema::class, $this->refSchema->setDescription('foo'));
+        $this->assertAttributeEquals('foo', 'description', $this->refSchema);
+        $this->assertEquals('foo', $this->refSchema->getDescription());
+    }
+
+    /**
+     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\RefSchema
      */
     public function testSerialization()
     {
         $data = json_encode([
-            '$ref' => '#/foo',
-            'type' => AbstractSchema::REF_TYPE,
-            'format'      => 'foo',
-            'title'       => 'bar',
-            'description' => 'baz',
-            'example'     => 'qux',
-            'externalDocs' => (object)[],
+            '$ref'        => '#/definitions/foo',
+            'title'       => 'foo',
+            'description' => 'bar',
         ]);
 
         $schema = self::$serializer->deserialize($data, AbstractSchema::class, 'json');
 
         $this->assertInstanceOf(RefSchema::class, $schema);
-        $this->assertAttributeEquals('foo', 'format', $schema);
-        $this->assertAttributeEquals('bar', 'title', $schema);
-        $this->assertAttributeEquals('baz', 'description', $schema);
-        $this->assertAttributeEquals('qux', 'example', $schema);
-        $this->assertAttributeInstanceOf(ExternalDocumentation::class, 'externalDocs', $schema);
+        $this->assertAttributeEquals('#/definitions/foo', 'ref', $schema);
+        $this->assertAttributeEquals('foo', 'title', $schema);
+        $this->assertAttributeEquals('bar', 'description', $schema);
 
         $json = self::$serializer->serialize($schema, 'json');
 

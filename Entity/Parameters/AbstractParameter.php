@@ -6,7 +6,6 @@
  */
 namespace Epfremmer\SwaggerBundle\Entity\Parameters;
 
-use Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema;
 use JMS\Serializer\Annotation as JMS;
 
 /**

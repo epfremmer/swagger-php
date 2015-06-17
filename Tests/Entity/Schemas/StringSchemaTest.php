@@ -44,7 +44,7 @@ class StringSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\BooleanSchema
+     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\StringSchema
      */
     public function testSerialization()
     {

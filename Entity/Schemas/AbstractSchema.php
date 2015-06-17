@@ -13,7 +13,6 @@ use JMS\Serializer\Annotation as JMS;
  * Class AbstractSchema
  *
  * @JMS\Discriminator(field = "type", map = {
- *   "ref"    : "Epfremmer\SwaggerBundle\Entity\Schemas\RefSchema",
  *   "null"   : "Epfremmer\SwaggerBundle\Entity\Schemas\NullSchema",
  *   "boolean": "Epfremmer\SwaggerBundle\Entity\Schemas\BooleanSchema",
  *   "integer": "Epfremmer\SwaggerBundle\Entity\Schemas\IntegerSchema",
@@ -26,10 +25,9 @@ use JMS\Serializer\Annotation as JMS;
  * @package Epfremmer\SwaggerBundle
  * @subpackage Entity\Schemas
  */
-abstract class AbstractSchema
+abstract class AbstractSchema implements SchemaInterface
 {
     // schema types
-    const REF_TYPE     = 'ref';
     const NULL_TYPE    = 'null';
     const BOOLEAN_TYPE = 'boolean';
     const INTEGER_TYPE = 'integer';
@@ -81,13 +79,6 @@ abstract class AbstractSchema
     protected $externalDocs;
 
     /**
-     * Return schema type
-     *
-     * @return string
-     */
-    abstract public function getType();
-
-    /**
      * @return string
      */
     public function getFormat()
@@ -106,7 +97,7 @@ abstract class AbstractSchema
     }
 
     /**
-     * @return string
+     * {@inheritdoc}
      */
     public function getTitle()
     {
@@ -114,8 +105,7 @@ abstract class AbstractSchema
     }
 
     /**
-     * @param string $title
-     * @return AbstractSchema
+     * {@inheritdoc}
      */
     public function setTitle($title)
     {
@@ -124,7 +114,7 @@ abstract class AbstractSchema
     }
 
     /**
-     * @return string
+     * {@inheritdoc}
      */
     public function getDescription()
     {
@@ -132,8 +122,7 @@ abstract class AbstractSchema
     }
 
     /**
-     * @param string $description
-     * @return AbstractSchema
+     * {@inheritdoc}
      */
     public function setDescription($description)
     {

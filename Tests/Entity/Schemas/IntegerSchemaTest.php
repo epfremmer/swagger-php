@@ -44,7 +44,7 @@ class IntegerSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\BooleanSchema
+     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\IntegerSchema
      */
     public function testSerialization()
     {
