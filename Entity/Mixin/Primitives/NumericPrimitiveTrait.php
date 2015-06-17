@@ -19,28 +19,42 @@ trait NumericPrimitiveTrait
     use AnyPrimitiveTrait;
 
     /**
-     * @JMS\Type("integer")
+     * @JMS\Type("float")
      * @JMS\SerializedName("multipleOf")
      * @var integer
      */
     protected $multipleOf;
 
     /**
-     * @JMS\Type("integer")
+     * @JMS\Type("float")
      * @JMS\SerializedName("maximum")
      * @var integer
      */
     protected $maximum;
 
     /**
-     * @JMS\Type("integer")
+     * @JMS\Type("float")
      * @JMS\SerializedName("exclusiveMaximum")
      * @var integer
      */
     protected $exclusiveMaximum;
 
     /**
-     * @return int
+     * @JMS\Type("float")
+     * @JMS\SerializedName("minimum")
+     * @var integer
+     */
+    protected $minimum;
+
+    /**
+     * @JMS\Type("float")
+     * @JMS\SerializedName("exclusiveMinimum")
+     * @var integer
+     */
+    protected $exclusiveMinimum;
+
+    /**
+     * @return float
      */
     public function getMultipleOf()
     {
@@ -48,7 +62,7 @@ trait NumericPrimitiveTrait
     }
 
     /**
-     * @param int $multipleOf
+     * @param float $multipleOf
      * @return BooleanPrimitiveTrait
      */
     public function setMultipleOf($multipleOf)
@@ -58,7 +72,7 @@ trait NumericPrimitiveTrait
     }
 
     /**
-     * @return int
+     * @return float
      */
     public function getMaximum()
     {
@@ -66,7 +80,7 @@ trait NumericPrimitiveTrait
     }
 
     /**
-     * @param int $maximum
+     * @param float $maximum
      * @return BooleanPrimitiveTrait
      */
     public function setMaximum($maximum)
@@ -76,7 +90,7 @@ trait NumericPrimitiveTrait
     }
 
     /**
-     * @return int
+     * @return float
      */
     public function getExclusiveMaximum()
     {
@@ -84,12 +98,48 @@ trait NumericPrimitiveTrait
     }
 
     /**
-     * @param int $exclusiveMaximum
+     * @param float $exclusiveMaximum
      * @return BooleanPrimitiveTrait
      */
     public function setExclusiveMaximum($exclusiveMaximum)
     {
         $this->exclusiveMaximum = $exclusiveMaximum;
+        return $this;
+    }
+
+    /**
+     * @return float
+     */
+    public function getMinimum()
+    {
+        return $this->minimum;
+    }
+
+    /**
+     * @param float $minimum
+     * @return NumericPrimitiveTrait
+     */
+    public function setMinimum($minimum)
+    {
+        $this->minimum = $minimum;
+        return $this;
+    }
+
+    /**
+     * @return float
+     */
+    public function getExclusiveMinimum()
+    {
+        return $this->exclusiveMinimum;
+    }
+
+    /**
+     * @param float $exclusiveMinimum
+     * @return NumericPrimitiveTrait
+     */
+    public function setExclusiveMinimum($exclusiveMinimum)
+    {
+        $this->exclusiveMinimum = $exclusiveMinimum;
         return $this;
     }
 }
