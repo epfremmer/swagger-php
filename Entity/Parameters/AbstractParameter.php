@@ -41,6 +41,13 @@ use JMS\Serializer\Annotation as JMS;
 abstract class AbstractParameter
 {
 
+    // parameter in constants
+    const IN_BODY      = 'body';
+    const IN_PATH      = 'path';
+    const IN_QUERY     = 'query';
+    const IN_HEADER    = 'header';
+    const IN_FORM_DATA = 'formData';
+
     /**
      * @JMS\Type("string")
      * @var string
