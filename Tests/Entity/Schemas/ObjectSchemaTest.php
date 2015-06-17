@@ -44,7 +44,7 @@ class ObjectSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\BooleanSchema
+     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\ObjectSchema
      */
     public function testSerialization()
     {

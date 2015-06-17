@@ -7,7 +7,7 @@
 namespace Epfremmer\SwaggerBundle\Entity\Mixin\Primitives;
 
 use Doctrine\Common\Collections\ArrayCollection;
-use Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema;
+use Epfremmer\SwaggerBundle\Entity\Schemas\SchemaInterface;
 use JMS\Serializer\Annotation as JMS;
 
 /**
@@ -59,7 +59,7 @@ trait AnyPrimitiveTrait
      * @JMS\Accessor(setter="setDefinitions")
      * @JMS\SerializedName("definitions")
      *
-     * @var AbstractSchema[]|ArrayCollection
+     * @var SchemaInterface[]|ArrayCollection
      */
     protected $definitions;
 
@@ -154,7 +154,7 @@ trait AnyPrimitiveTrait
     }
 
     /**
-     * @return AbstractSchema[]|ArrayCollection
+     * @return SchemaInterface[]|ArrayCollection
      */
     public function getDefinitions()
     {
@@ -162,7 +162,7 @@ trait AnyPrimitiveTrait
     }
 
     /**
-     * @param AbstractSchema[]|ArrayCollection $definitions
+     * @param SchemaInterface[]|ArrayCollection $definitions
      * @return AnyPrimitiveTrait
      */
     public function setDefinitions(ArrayCollection $definitions)

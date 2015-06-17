@@ -7,7 +7,7 @@
 namespace Epfremmer\SwaggerBundle\Entity\Mixin\Primitives;
 
 use Doctrine\Common\Collections\ArrayCollection;
-use Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema;
+use Epfremmer\SwaggerBundle\Entity\Schemas\SchemaInterface;
 use JMS\Serializer\Annotation as JMS;
 
 /**
@@ -44,7 +44,7 @@ trait ObjectPrimitiveTrait
     /**
      * @JMS\Type("ArrayCollection<string,Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema>")
      * @JMS\SerializedName("properties")
-     * @var AbstractSchema[]|ArrayCollection
+     * @var SchemaInterface[]|ArrayCollection
      */
     protected $properties;
 
@@ -124,7 +124,7 @@ trait ObjectPrimitiveTrait
     }
 
     /**
-     * @return AbstractSchema[]|ArrayCollection
+     * @return SchemaInterface[]|ArrayCollection
      */
     public function getProperties()
     {
@@ -132,7 +132,7 @@ trait ObjectPrimitiveTrait
     }
 
     /**
-     * @param AbstractSchema[]|ArrayCollection $properties
+     * @param SchemaInterface[]|ArrayCollection $properties
      * @return ObjectPrimitiveTrait
      */
     public function setProperties($properties)

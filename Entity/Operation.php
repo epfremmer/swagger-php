@@ -7,8 +7,8 @@
 namespace Epfremmer\SwaggerBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
+use Epfremmer\SwaggerBundle\Entity\Schemas\SchemaInterface;
 use Epfremmer\SwaggerBundle\Entity\Parameters\AbstractParameter;
-use Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema;
 use JMS\Serializer\Annotation as JMS;
 
 /**
@@ -79,7 +79,7 @@ class Operation
     /**
      * @JMS\Type("ArrayCollection<string,Epfremmer\SwaggerBundle\Entity\Response>")
      * @JMS\SerializedName("responses")
-     * @var AbstractSchema[]|ArrayCollection
+     * @var SchemaInterface[]|ArrayCollection
      */
     protected $responses;
 
@@ -123,7 +123,7 @@ class Operation
     }
 
     /**
-     * @return AbstractSchema[]|ArrayCollection
+     * @return SchemaInterface[]|ArrayCollection
      */
     public function getResponses()
     {

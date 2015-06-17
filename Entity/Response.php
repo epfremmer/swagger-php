@@ -6,8 +6,8 @@
  */
 namespace Epfremmer\SwaggerBundle\Entity;
 
+use Epfremmer\SwaggerBundle\Entity\Schemas\SchemaInterface;
 use Epfremmer\SwaggerBundle\Entity\Headers\AbstractHeader;
-use Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema;
 use JMS\Serializer\Annotation as JMS;
 
 /**
@@ -29,7 +29,7 @@ class Response
     /**
      * @JMS\Type("Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema")
      * @JMS\SerializedName("schema")
-     * @var AbstractSchema
+     * @var SchemaInterface
      */
     protected $schema;
 
@@ -66,7 +66,7 @@ class Response
     }
 
     /**
-     * @return AbstractSchema
+     * @return SchemaInterface
      */
     public function getSchema()
     {
@@ -74,10 +74,10 @@ class Response
     }
 
     /**
-     * @param AbstractSchema $schema
+     * @param SchemaInterface $schema
      * @return Response
      */
-    public function setSchema($schema)
+    public function setSchema(SchemaInterface $schema)
     {
         $this->schema = $schema;
         return $this;

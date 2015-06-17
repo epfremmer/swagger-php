@@ -15,9 +15,10 @@ use JMS\Serializer\Annotation as JMS;
  * @package Epfremmer\SwaggerBundle
  * @subpackage Entity\Schemas
  */
-class RefSchema extends AbstractSchema
+class RefSchema implements SchemaInterface
 {
-    use Primitives\AnyPrimitiveTrait;
+    // schema type
+    const REF_TYPE = 'ref';
 
     /**
      * @JMS\Type("string")
@@ -25,6 +26,28 @@ class RefSchema extends AbstractSchema
      * @var string
      */
     protected $ref;
+
+    /**
+     * @JMS\Type("string")
+     * @JMS\SerializedName("title")
+     * @var string
+     */
+    protected $title;
+
+    /**
+     * @JMS\Type("string")
+     * @JMS\SerializedName("description")
+     * @var string
+     */
+    protected $description;
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getType()
+    {
+        return self::REF_TYPE;
+    }
 
     /**
      * @return string
@@ -36,7 +59,7 @@ class RefSchema extends AbstractSchema
 
     /**
      * @param string $ref
-     * @return AbstractSchema
+     * @return RefSchema
      */
     public function setRef($ref)
     {
@@ -47,8 +70,34 @@ class RefSchema extends AbstractSchema
     /**
      * {@inheritdoc}
      */
-    public function getType()
+    public function getTitle()
     {
-        return AbstractSchema::REF_TYPE;
+        return $this->title;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function setTitle($title)
+    {
+        $this->title = $title;
+        return $this;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+        return $this;
     }
 }

@@ -6,6 +6,7 @@
  */
 namespace Epfremmer\SwaggerBundle\Entity\Mixin\Primitives;
 
+use Epfremmer\SwaggerBundle\Entity\Schemas\SchemaInterface;
 use JMS\Serializer\Annotation as JMS;
 
 /**
@@ -19,9 +20,9 @@ trait ArrayPrimitiveTrait
     use AnyPrimitiveTrait;
 
     /**
-     * @JMS\Type("array")
+     * @JMS\Type("Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema")
      * @JMS\SerializedName("items")
-     * @var array
+     * @var SchemaInterface
      */
     protected $items;
 
@@ -61,7 +62,7 @@ trait ArrayPrimitiveTrait
     protected $collectionFormat;
 
     /**
-     * @return array
+     * @return SchemaInterface
      */
     public function getItems()
     {
@@ -69,10 +70,10 @@ trait ArrayPrimitiveTrait
     }
 
     /**
-     * @param array $items
+     * @param SchemaInterface $items
      * @return ArrayPrimitiveTrait
      */
-    public function setItems($items)
+    public function setItems(SchemaInterface $items)
     {
         $this->items = $items;
         return $this;
@@ -160,7 +161,7 @@ trait ArrayPrimitiveTrait
 
     /**
      * @param string $collectionFormat
-     * @return ArrayHeader
+     * @return ArrayPrimitiveTrait
      */
     public function setCollectionFormat($collectionFormat)
     {
