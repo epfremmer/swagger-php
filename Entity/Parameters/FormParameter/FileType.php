@@ -6,6 +6,7 @@
  */
 namespace Epfremmer\SwaggerBundle\Entity\Parameters\FormParameter;
 
+use Epfremmer\SwaggerBundle\Entity\Mixin\Primitives;
 use Epfremmer\SwaggerBundle\Entity\Parameters\AbstractTypedParameter;
 
 /**
@@ -16,5 +17,5 @@ use Epfremmer\SwaggerBundle\Entity\Parameters\AbstractTypedParameter;
  */
 class FileType extends AbstractTypedParameter
 {
-
+    use Primitives\BooleanPrimitiveTrait;
 }

@@ -19,12 +19,14 @@ class Tag
 
     /**
      * @JMS\Type("string")
+     * @JMS\SerializedName("name")
      * @var string
      */
     protected $name;
 
     /**
      * @JMS\Type("string")
+     * @JMS\SerializedName("description")
      * @var string
      */
     protected $description;

@@ -20,18 +20,21 @@ trait NumericPrimitiveTrait
 
     /**
      * @JMS\Type("integer")
+     * @JMS\SerializedName("multipleOf")
      * @var integer
      */
     protected $multipleOf;
 
     /**
      * @JMS\Type("integer")
+     * @JMS\SerializedName("maximum")
      * @var integer
      */
     protected $maximum;
 
     /**
      * @JMS\Type("integer")
+     * @JMS\SerializedName("exclusiveMaximum")
      * @var integer
      */
     protected $exclusiveMaximum;

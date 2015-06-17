@@ -20,30 +20,35 @@ trait ArrayPrimitiveTrait
 
     /**
      * @JMS\Type("array")
+     * @JMS\SerializedName("items")
      * @var array
      */
     protected $items;
 
     /**
      * @JMS\Type("boolean")
+     * @JMS\SerializedName("additionalItems")
      * @var boolean
      */
     protected $additionalItems;
 
     /**
      * @JMS\Type("integer")
+     * @JMS\SerializedName("maxItems")
      * @var integer
      */
     protected $maxItems;
 
     /**
      * @JMS\Type("integer")
+     * @JMS\SerializedName("minItems")
      * @var integer
      */
     protected $minItems;
 
     /**
      * @JMS\Type("boolean")
+     * @JMS\SerializedName("uniqueItems")
      * @var boolean
      */
     protected $uniqueItems;

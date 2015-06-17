@@ -22,42 +22,49 @@ trait ObjectPrimitiveTrait
 
     /**
      * @JMS\Type("integer")
+     * @JMS\SerializedName("maxProperties")
      * @var integer
      */
     protected $maxProperties;
 
     /**
      * @JMS\Type("integer")
+     * @JMS\SerializedName("minProperties")
      * @var integer
      */
     protected $minProperties;
 
     /**
      * @JMS\Type("array")
+     * @JMS\SerializedName("required")
      * @var string[]
      */
     protected $required;
 
     /**
      * @JMS\Type("ArrayCollection<string,Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema>")
+     * @JMS\SerializedName("properties")
      * @var AbstractSchema[]|ArrayCollection
      */
     protected $properties;
 
     /**
      * @JMS\Type("boolean")
+     * @JMS\SerializedName("additionalProperties")
      * @var boolean
      */
     protected $additionalProperties;
 
     /**
      * @JMS\Type("string")
+     * @JMS\SerializedName("patternProperties")
      * @var string
      */
     protected $patternProperties;
 
     /**
      * @JMS\Type("array")
+     * @JMS\SerializedName("dependencies")
      * @var array
      */
     protected $dependencies;

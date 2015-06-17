@@ -19,12 +19,14 @@ class ExternalDocumentation
 
     /**
      * @JMS\Type("string")
+     * @JMS\SerializedName("description")
      * @var string
      */
     protected $description;
 
     /**
      * @JMS\Type("string")
+     * @JMS\SerializedName("url")
      * @var string
      */
     protected $url;

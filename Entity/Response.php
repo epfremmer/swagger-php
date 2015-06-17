@@ -21,24 +21,28 @@ class Response
 
     /**
      * @JMS\Type("string")
+     * @JMS\SerializedName("description")
      * @var string
      */
     protected $description;
 
     /**
      * @JMS\Type("Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema")
+     * @JMS\SerializedName("schema")
      * @var AbstractSchema
      */
     protected $schema;
 
     /**
      * @JMS\Type("ArrayCollection<string,Epfremmer\SwaggerBundle\Entity\Headers\AbstractHeader>")
+     * @JMS\SerializedName("headers")
      * @var AbstractHeader
      */
     protected $headers;
 
     /**
      * @JMS\Type("Epfremmer\SwaggerBundle\Entity\Examples")
+     * @JMS\SerializedName("examples")
      * @var string
      */
     protected $examples;

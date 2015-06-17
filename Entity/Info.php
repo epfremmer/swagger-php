@@ -19,12 +19,14 @@ class Info
 
     /**
      * @JMS\Type("string")
+     * @JMS\SerializedName("title")
      * @var string
      */
     protected $title;
 
     /**
      * @JMS\Type("string")
+     * @JMS\SerializedName("description")
      * @var string
      */
     protected $description;
@@ -38,18 +40,21 @@ class Info
 
     /**
      * @JMS\Type("Epfremmer\SwaggerBundle\Entity\Contact")
+     * @JMS\SerializedName("contact")
      * @var Contact
      */
     protected $contact;
 
     /**
      * @JMS\Type("Epfremmer\SwaggerBundle\Entity\License")
+     * @JMS\SerializedName("license")
      * @var License
      */
     protected $license;
 
     /**
      * @JMS\Type("string")
+     * @JMS\SerializedName("version")
      * @var string
      */
     protected $version;

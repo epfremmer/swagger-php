@@ -40,30 +40,35 @@ abstract class AbstractSchema
 
     /**
      * @JMS\Type("string")
+     * @JMS\SerializedName("format")
      * @var string
      */
     protected $format;
 
     /**
      * @JMS\Type("string")
+     * @JMS\SerializedName("title")
      * @var string
      */
     protected $title;
 
     /**
      * @JMS\Type("string")
+     * @JMS\SerializedName("description")
      * @var string
      */
     protected $description;
 
     /**
      * @JMS\Type("string")
+     * @JMS\SerializedName("default")
      * @var array
      */
     protected $default;
 
     /**
      * @JMS\Type("string")
+     * @JMS\SerializedName("example")
      * @var string
      */
     protected $example;

@@ -19,30 +19,35 @@ class SecurityDefinition
 
     /**
      * @JMS\Type("string")
+     * @JMS\SerializedName("type")
      * @var string
      */
     protected $type;
 
     /**
      * @JMS\Type("string")
+     * @JMS\SerializedName("description")
      * @var string
      */
     protected $description;
 
     /**
      * @JMS\Type("string")
+     * @JMS\SerializedName("name")
      * @var string
      */
     protected $name;
 
     /**
      * @JMS\Type("string")
+     * @JMS\SerializedName("in")
      * @var string
      */
     protected $in;
 
     /**
      * @JMS\Type("string")
+     * @JMS\SerializedName("flow")
      * @var string
      */
     protected $flow;
@@ -63,9 +68,10 @@ class SecurityDefinition
 
     /**
      * @JMS\Type("array")
+     * @JMS\SerializedName("scopes")
      * @var array
      */
-    protected $scopes = [];
+    protected $scopes;
 
     /**
      * @return string
@@ -205,7 +211,7 @@ class SecurityDefinition
      * @param array $scopes
      * @return SecurityDefinition
      */
-    public function setScopes(array $scopes)
+    public function setScopes($scopes)
     {
         $this->scopes = $scopes;
         return $this;

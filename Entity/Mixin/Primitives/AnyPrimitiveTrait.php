@@ -21,30 +21,35 @@ trait AnyPrimitiveTrait
 
     /**
      * @JMS\Type("array")
+     * @JMS\SerializedName("enum")
      * @var array
      */
     protected $enum;
 
     /**
      * @JMS\Type("array")
+     * @JMS\SerializedName("allOf")
      * @var array
      */
     protected $allOf;
 
     /**
      * @JMS\Type("array")
+     * @JMS\SerializedName("anyOf")
      * @var array
      */
     protected $anyOf;
 
     /**
      * @JMS\Type("array")
+     * @JMS\SerializedName("oneOf")
      * @var array
      */
     protected $oneOf;
 
     /**
      * @JMS\Type("string")
+     * @JMS\SerializedName("not")
      * @var array
      */
     protected $not;
@@ -52,6 +57,7 @@ trait AnyPrimitiveTrait
     /**
      * @JMS\Type("ArrayCollection<string,Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema>")
      * @JMS\Accessor(setter="setDefinitions")
+     * @JMS\SerializedName("definitions")
      *
      * @var AbstractSchema[]|ArrayCollection
      */
