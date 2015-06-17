@@ -20,6 +20,7 @@ class BodyParameter extends AbstractParameter
 
     /**
      * @JMS\Type("Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema")
+     * @JMS\SerializedName("schema")
      * @var AbstractSchema
      */
     protected $schema;

@@ -20,18 +20,21 @@ trait StringPrimitiveTrait
 
     /**
      * @JMS\Type("integer")
+     * @JMS\SerializedName("maxLength")
      * @var integer
      */
     protected $maxLength;
 
     /**
      * @JMS\Type("integer")
+     * @JMS\SerializedName("minLength")
      * @var integer
      */
     protected $minLength;
 
     /**
      * @JMS\Type("string")
+     * @JMS\SerializedName("pattern")
      * @var string
      */
     protected $pattern;

@@ -28,24 +28,28 @@ abstract class AbstractTypedParameter extends AbstractParameter
 
     /**
      * @JMS\Type("string")
+     * @JMS\SerializedName("type")
      * @var string
      */
     protected $type;
 
     /**
      * @JMS\Type("string")
+     * @JMS\SerializedName("format")
      * @var string
      */
     protected $format;
 
     /**
      * @JMS\Type("boolean")
+     * @JMS\SerializedName("allowEmptyValues")
      * @var boolean
      */
     protected $allowEmptyValues;
 
     /**
      * @JMS\Type("string")
+     * @JMS\SerializedName("default")
      * @var string
      */
     protected $default;

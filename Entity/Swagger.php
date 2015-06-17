@@ -29,12 +29,14 @@ class Swagger
 
     /**
      * @JMS\Type("Epfremmer\SwaggerBundle\Entity\Info")
+     * @JMS\SerializedName("info")
      * @var Info
      */
     protected $info;
 
     /**
      * @JMS\Type("string")
+     * @JMS\SerializedName("host")
      * @var string
      */
     protected $host;
@@ -48,66 +50,77 @@ class Swagger
 
     /**
      * @JMS\Type("array")
+     * @JMS\SerializedName("schemes")
      * @var array
      */
     protected $schemes;
 
     /**
      * @JMS\Type("array")
+     * @JMS\SerializedName("consumes")
      * @var string[]
      */
     protected $consumes;
 
     /**
      * @JMS\Type("array")
+     * @JMS\SerializedName("produces")
      * @var string[]
      */
     protected $produces;
 
     /**
      * @JMS\Type("ArrayCollection<string,Epfremmer\SwaggerBundle\Entity\Path>")
+     * @JMS\SerializedName("paths")
      * @var ArrayCollection|Path[]
      */
     protected $paths;
 
     /**
      * @JMS\Type("ArrayCollection<string,Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema>")
+     * @JMS\SerializedName("definitions")
      * @var ArrayCollection|AbstractSchema[]
      */
     protected $definitions;
 
     /**
      * @JMS\Type("ArrayCollection<string,Epfremmer\SwaggerBundle\Entity\Parameters\AbstractParameter>")
+     * @JMS\SerializedName("parameters")
      * @var ArrayCollection|AbstractParameter[]
      */
     protected $parameters;
 
     /**
      * @JMS\Type("ArrayCollection<string,Epfremmer\SwaggerBundle\Entity\Response>")
+     * @JMS\SerializedName("responses")
      * @var ArrayCollection|Response[]
      */
     protected $responses;
 
     /**
      * @JMS\Type("ArrayCollection<string,Epfremmer\SwaggerBundle\Entity\SecurityDefinition>")
+     * @JMS\SerializedName("securityDefinitions")
      * @var ArrayCollection|SecurityDefinition[]
      */
     protected $securityDefinitions;
 
     /**
      * @JMS\Type("ArrayCollection<string,array>")
+     * @JMS\SerializedName("security")
      * @var ArrayCollection|string[]
      */
     protected $security;
 
     /**
      * @JMS\Type("ArrayCollection<string,Epfremmer\SwaggerBundle\Entity\Tag>")
+     * @JMS\SerializedName("tags")
      * @var ArrayCollection|Tag[]
      */
     protected $tags;
 
     /**
      * @JMS\Type("Epfremmer\SwaggerBundle\Entity\ExternalDocumentation")
+     * @JMS\SerializedName("externalDocs")
      * @var ExternalDocumentation
      */
     protected $externalDocs;

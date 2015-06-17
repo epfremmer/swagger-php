@@ -22,72 +22,84 @@ class Operation
 
     /**
      * @JMS\Type("array")
+     * @JMS\SerializedName("tags")
      * @var string[]
      */
     protected $tags;
 
     /**
      * @JMS\Type("string")
+     * @JMS\SerializedName("summary")
      * @var string
      */
     protected $summary;
 
     /**
      * @JMS\Type("string")
+     * @JMS\SerializedName("description")
      * @var string
      */
     protected $description;
 
     /**
      * @JMS\Type("Epfremmer\SwaggerBundle\Entity\ExternalDocumentation")
+     * @JMS\SerializedName("externalDocs")
      * @var ExternalDocumentation
      */
     protected $externalDocs;
 
     /**
      * @JMS\Type("string")
+     * @JMS\SerializedName("operationId")
      * @var string
      */
     protected $operationId;
 
     /**
      * @JMS\Type("array")
+     * @JMS\SerializedName("consumes")
      * @var array
      */
     protected $consumes;
 
     /**
      * @JMS\Type("array")
+     * @JMS\SerializedName("produces")
      * @var string[]|array
      */
     protected $produces;
 
     /**
      * @JMS\Type("ArrayCollection<string,Epfremmer\SwaggerBundle\Entity\Parameters\AbstractParameter>")
+     * @JMS\SerializedName("parameters")
      * @var ArrayCollection|AbstractParameter[]
      */
     protected $parameters;
 
     /**
      * @JMS\Type("ArrayCollection<string,Epfremmer\SwaggerBundle\Entity\Response>")
+     * @JMS\SerializedName("responses")
      * @var AbstractSchema[]|ArrayCollection
      */
     protected $responses;
 
     /**
      * @JMS\Type("array")
+     * @JMS\SerializedName("schemes")
      * @var string[]
      */
     protected $schemes;
 
     /**
      * @JMS\Type("boolean")
+     * @JMS\SerializedName("deprecated")
      * @var boolean
      */
     protected $deprecated;
 
     /**
      * @JMS\Type("ArrayCollection<string,array>")
+     * @JMS\SerializedName("security")
      * @var ArrayCollection|string[]
      */
     protected $security;

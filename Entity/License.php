@@ -19,12 +19,14 @@ class License
 
     /**
      * @JMS\Type("string")
+     * @JMS\SerializedName("name")
      * @var string
      */
     protected $name;
 
     /**
      * @JMS\Type("string")
+     * @JMS\SerializedName("url")
      * @var string
      */
     protected $url;

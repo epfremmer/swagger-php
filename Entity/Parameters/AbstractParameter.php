@@ -50,24 +50,28 @@ abstract class AbstractParameter
 
     /**
      * @JMS\Type("string")
+     * @JMS\SerializedName("in")
      * @var string
      */
     protected $in;
 
     /**
      * @JMS\Type("string")
+     * @JMS\SerializedName("name")
      * @var string
      */
     protected $name;
 
     /**
      * @JMS\Type("string")
+     * @JMS\SerializedName("description")
      * @var string
      */
     protected $description;
 
     /**
      * @JMS\Type("boolean")
+     * @JMS\SerializedName("required")
      * @var boolean
      */
     protected $required;
