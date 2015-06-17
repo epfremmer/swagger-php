@@ -50,7 +50,7 @@ class SwaggerParser
      */
     protected function parse($file)
     {
-        $data = json_decode($file, true) ?: Yaml::parse(file_get_contents($file));
+        $data = json_decode(file_get_contents($file), true) ?: Yaml::parse(file_get_contents($file));
 
         return $data;
     }
