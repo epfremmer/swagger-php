@@ -59,7 +59,7 @@ class LicenseTest extends \PHPUnit_Framework_TestCase
     /**
      * @covers Epfremmer\SwaggerBundle\Entity\License
      */
-    public function testDeserialize()
+    public function testSerialize()
     {
         $data = json_encode([
             'name' => 'foo',
@@ -71,5 +71,10 @@ class LicenseTest extends \PHPUnit_Framework_TestCase
         $this->assertInstanceOf(License::class, $license);
         $this->assertAttributeEquals('foo', 'name', $license);
         $this->assertAttributeEquals('bar', 'url', $license);
+
+        $json = self::$serializer->serialize($license, 'json');
+
+        $this->assertJson($json);
+        $this->assertJsonStringEqualsJsonString($data, $json);
     }
 }

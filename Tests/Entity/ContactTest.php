@@ -71,7 +71,7 @@ class ContactTest extends \PHPUnit_Framework_TestCase
     /**
      * @covers Epfremmer\SwaggerBundle\Entity\Contact
      */
-    public function testDeserialize()
+    public function testSerialize()
     {
         $data = json_encode([
             'name'  => 'foo',
@@ -85,5 +85,10 @@ class ContactTest extends \PHPUnit_Framework_TestCase
         $this->assertAttributeEquals('foo', 'name', $contact);
         $this->assertAttributeEquals('bar', 'url', $contact);
         $this->assertAttributeEquals('baz', 'email', $contact);
+
+        $json = self::$serializer->serialize($contact, 'json');
+
+        $this->assertJson($json);
+        $this->assertJsonStringEqualsJsonString($data, $json);
     }
 }
