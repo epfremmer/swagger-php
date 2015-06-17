@@ -105,6 +105,42 @@ class Operation
     protected $security;
 
     /**
+     * @return \string[]
+     */
+    public function getTags()
+    {
+        return $this->tags;
+    }
+
+    /**
+     * @param \string[] $tags
+     * @return Operation
+     */
+    public function setTags($tags)
+    {
+        $this->tags = $tags;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSummary()
+    {
+        return $this->summary;
+    }
+
+    /**
+     * @param string $summary
+     * @return Operation
+     */
+    public function setSummary($summary)
+    {
+        $this->summary = $summary;
+        return $this;
+    }
+
+    /**
      * @return string
      */
     public function getDescription()
@@ -123,25 +159,61 @@ class Operation
     }
 
     /**
-     * @return SchemaInterface[]|ArrayCollection
+     * @return ExternalDocumentation
      */
-    public function getResponses()
+    public function getExternalDocs()
     {
-        return $this->responses;
+        return $this->externalDocs;
     }
 
     /**
-     * @param ArrayCollection $responses
+     * @param ExternalDocumentation $externalDocs
      * @return Operation
      */
-    public function setResponses($responses)
+    public function setExternalDocs(ExternalDocumentation $externalDocs)
     {
-        $this->responses = $responses;
+        $this->externalDocs = $externalDocs;
         return $this;
     }
 
     /**
-     * @return \string[]
+     * @return string
+     */
+    public function getOperationId()
+    {
+        return $this->operationId;
+    }
+
+    /**
+     * @param string $operationId
+     * @return Operation
+     */
+    public function setOperationId($operationId)
+    {
+        $this->operationId = $operationId;
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function getConsumes()
+    {
+        return $this->consumes;
+    }
+
+    /**
+     * @param array $consumes
+     * @return Operation
+     */
+    public function setConsumes($consumes)
+    {
+        $this->consumes = $consumes;
+        return $this;
+    }
+
+    /**
+     * @return array|\string[]
      */
     public function getProduces()
     {
@@ -149,7 +221,7 @@ class Operation
     }
 
     /**
-     * @param \string[] $produces
+     * @param array|\string[] $produces
      * @return Operation
      */
     public function setProduces($produces)
@@ -158,4 +230,93 @@ class Operation
         return $this;
     }
 
+    /**
+     * @return ArrayCollection|Parameters\AbstractParameter[]
+     */
+    public function getParameters()
+    {
+        return $this->parameters;
+    }
+
+    /**
+     * @param ArrayCollection|Parameters\AbstractParameter[] $parameters
+     * @return Operation
+     */
+    public function setParameters(ArrayCollection $parameters)
+    {
+        $this->parameters = $parameters;
+        return $this;
+    }
+
+    /**
+     * @return ArrayCollection|Schemas\SchemaInterface[]
+     */
+    public function getResponses()
+    {
+        return $this->responses;
+    }
+
+    /**
+     * @param ArrayCollection|Schemas\SchemaInterface[] $responses
+     * @return Operation
+     */
+    public function setResponses(ArrayCollection $responses)
+    {
+        $this->responses = $responses;
+        return $this;
+    }
+
+    /**
+     * @return \string[]
+     */
+    public function getSchemes()
+    {
+        return $this->schemes;
+    }
+
+    /**
+     * @param \string[] $schemes
+     * @return Operation
+     */
+    public function setSchemes($schemes)
+    {
+        $this->schemes = $schemes;
+        return $this;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function isDeprecated()
+    {
+        return $this->deprecated;
+    }
+
+    /**
+     * @param boolean $deprecated
+     * @return Operation
+     */
+    public function setDeprecated($deprecated)
+    {
+        $this->deprecated = $deprecated;
+        return $this;
+    }
+
+    /**
+     * @return ArrayCollection|\string[]
+     */
+    public function getSecurity()
+    {
+        return $this->security;
+    }
+
+    /**
+     * @param ArrayCollection|\string[] $security
+     * @return Operation
+     */
+    public function setSecurity(ArrayCollection $security)
+    {
+        $this->security = $security;
+        return $this;
+    }
 }
