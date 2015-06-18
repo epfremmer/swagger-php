@@ -50,11 +50,11 @@ class BooleanPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
             'type' => AbstractSchema::BOOLEAN_TYPE
         ]);
 
-        $primitive = self::$serializer->deserialize($data, AbstractSchema::class, 'json');
+        $primitive = $this->getSerializer()->deserialize($data, AbstractSchema::class, 'json');
 
         $this->assertInstanceOf(BooleanSchema::class, $primitive);
 
-        $json = self::$serializer->serialize($primitive, 'json');
+        $json = $this->getSerializer()->serialize($primitive, 'json');
 
         $this->assertJson($json);
         $this->assertJsonStringEqualsJsonString($data, $json);

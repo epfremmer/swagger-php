@@ -57,7 +57,7 @@ class StringSchemaTest extends \PHPUnit_Framework_TestCase
             'externalDocs' => (object)[],
         ]);
 
-        $schema = self::$serializer->deserialize($data, AbstractSchema::class, 'json');
+        $schema = $this->getSerializer()->deserialize($data, AbstractSchema::class, 'json');
 
         $this->assertInstanceOf(StringSchema::class, $schema);
         $this->assertAttributeEquals('foo', 'format', $schema);
@@ -66,7 +66,7 @@ class StringSchemaTest extends \PHPUnit_Framework_TestCase
         $this->assertAttributeEquals('qux', 'example', $schema);
         $this->assertAttributeInstanceOf(ExternalDocumentation::class, 'externalDocs', $schema);
 
-        $json = self::$serializer->serialize($schema, 'json');
+        $json = $this->getSerializer()->serialize($schema, 'json');
 
         $this->assertJson($json);
         $this->assertJsonStringEqualsJsonString($data, $json);

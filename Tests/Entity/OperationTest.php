@@ -278,7 +278,7 @@ class OperationTest extends \PHPUnit_Framework_TestCase
             'deprecated' => true,
         ]);
 
-        $operation = self::$serializer->deserialize($data, Operation::class, 'json');
+        $operation = $this->getSerializer()->deserialize($data, Operation::class, 'json');
 
         $this->assertInstanceOf(Operation::class, $operation);
         $this->assertAttributeEquals(['foo'], 'tags', $operation);
@@ -300,7 +300,7 @@ class OperationTest extends \PHPUnit_Framework_TestCase
         $this->assertAttributeContainsOnly('array', 'security', $operation);
         $this->assertAttributeEquals(true, 'deprecated', $operation);
 
-        $json = self::$serializer->serialize($operation, 'json');
+        $json = $this->getSerializer()->serialize($operation, 'json');
 
         $this->assertJson($json);
         $this->assertJsonStringEqualsJsonString($data, $json);

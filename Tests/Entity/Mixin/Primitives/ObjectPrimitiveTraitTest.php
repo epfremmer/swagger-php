@@ -171,7 +171,7 @@ class ObjectPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
             'dependencies'         => ['foo', 'bar', 'baz'],
         ]);
 
-        $primitive = self::$serializer->deserialize($data, AbstractSchema::class, 'json');
+        $primitive = $this->getSerializer()->deserialize($data, AbstractSchema::class, 'json');
 
         $this->assertInstanceOf(ObjectSchema::class, $primitive);
         $this->assertAttributeEquals(10, 'maxProperties', $primitive);
@@ -183,7 +183,7 @@ class ObjectPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
         $this->assertAttributeEquals('foo', 'patternProperties', $primitive);
         $this->assertAttributeEquals(['foo', 'bar', 'baz'], 'dependencies', $primitive);
 
-        $json = self::$serializer->serialize($primitive, 'json');
+        $json = $this->getSerializer()->serialize($primitive, 'json');
 
         $this->assertJson($json);
         $this->assertJsonStringEqualsJsonString($data, $json);

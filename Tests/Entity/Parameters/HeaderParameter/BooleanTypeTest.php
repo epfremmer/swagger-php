@@ -50,7 +50,7 @@ class BooleanTypeTest extends \PHPUnit_Framework_TestCase
             'default'          => false,
         ]);
 
-        $parameter = self::$serializer->deserialize($data, AbstractParameter::class, 'json');
+        $parameter = $this->getSerializer()->deserialize($data, AbstractParameter::class, 'json');
 
         $this->assertInstanceOf(HeaderParameter\BooleanType::class, $parameter);
         $this->assertAttributeEquals(AbstractParameter::IN_HEADER, 'in', $parameter);
@@ -62,7 +62,7 @@ class BooleanTypeTest extends \PHPUnit_Framework_TestCase
         $this->assertAttributeEquals(true, 'allowEmptyValues', $parameter);
         $this->assertAttributeEquals(false, 'default', $parameter);
 
-        $json = self::$serializer->serialize($parameter, 'json');
+        $json = $this->getSerializer()->serialize($parameter, 'json');
 
         $this->assertJson($json);
         $this->assertJsonStringEqualsJsonString($data, $json);

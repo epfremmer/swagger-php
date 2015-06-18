@@ -120,7 +120,7 @@ class NumericPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
             'exclusiveMinimum' => 10,
         ]);
 
-        $primitive = self::$serializer->deserialize($data, AbstractSchema::class, 'json');
+        $primitive = $this->getSerializer()->deserialize($data, AbstractSchema::class, 'json');
 
         $this->assertInstanceOf(NumberSchema::class, $primitive);
         $this->assertAttributeEquals(1, 'multipleOf', $primitive);
@@ -129,7 +129,7 @@ class NumericPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
         $this->assertAttributeEquals(10.5, 'minimum', $primitive);
         $this->assertAttributeEquals(10, 'exclusiveMinimum', $primitive);
 
-        $json = self::$serializer->serialize($primitive, 'json');
+        $json = $this->getSerializer()->serialize($primitive, 'json');
 
         $this->assertJson($json);
         $this->assertJsonStringEqualsJsonString($data, $json);

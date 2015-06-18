@@ -470,7 +470,7 @@ class SwaggerTest extends \PHPUnit_Framework_TestCase
             ],
         ]);
 
-        $swagger = self::$serializer->deserialize($data, Swagger::class, 'json');
+        $swagger = $this->getSerializer()->deserialize($data, Swagger::class, 'json');
 
         $this->assertInstanceOf(Swagger::class, $swagger);
         $this->assertAttributeInstanceOf(Info::class, 'info', $swagger);
@@ -497,7 +497,7 @@ class SwaggerTest extends \PHPUnit_Framework_TestCase
         $this->assertAttributeContainsOnly(Tag::class, 'tags', $swagger);
         $this->assertAttributeInstanceOf(ExternalDocumentation::class, 'externalDocs', $swagger);
 
-        $json = self::$serializer->serialize($swagger, 'json');
+        $json = $this->getSerializer()->serialize($swagger, 'json');
 
         $this->assertJson($json);
         $this->assertJsonStringEqualsJsonString($data, $json);

@@ -126,7 +126,7 @@ class ArrayPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
             'collectionFormat' => 'csv',
         ]);
 
-        $primitive = self::$serializer->deserialize($data, AbstractSchema::class, 'json');
+        $primitive = $this->getSerializer()->deserialize($data, AbstractSchema::class, 'json');
 
         $this->assertInstanceOf(ArraySchema::class, $primitive);
         $this->assertAttributeInstanceOf(RefSchema::class, 'items', $primitive);
@@ -136,7 +136,7 @@ class ArrayPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
         $this->assertAttributeEquals(true, 'uniqueItems', $primitive);
         $this->assertAttributeEquals('csv', 'collectionFormat', $primitive);
 
-        $json = self::$serializer->serialize($primitive, 'json');
+        $json = $this->getSerializer()->serialize($primitive, 'json');
 
         $this->assertJson($json);
         $this->assertJsonStringEqualsJsonString($data, $json);

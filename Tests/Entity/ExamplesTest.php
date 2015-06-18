@@ -73,14 +73,14 @@ class ExamplesTest extends \PHPUnit_Framework_TestCase
             ],
         ]);
 
-        $examples = self::$serializer->deserialize($data, Examples::class, 'json');
+        $examples = $this->getSerializer()->deserialize($data, Examples::class, 'json');
 
         $this->assertInstanceOf(Examples::class, $examples);
         $this->assertAttributeInstanceOf(ArrayCollection::class, 'examples', $examples);
         $this->assertContainsOnly('array', $examples->getExamples());
         $this->assertCount(2, $examples->getExamples());
 
-        $json = self::$serializer->serialize($examples, 'json');
+        $json = $this->getSerializer()->serialize($examples, 'json');
 
         $this->assertJson($json);
         $this->assertJsonStringEqualsJsonString($data, $json);
