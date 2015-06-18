@@ -59,6 +59,9 @@ class BodyParameterTest extends \PHPUnit_Framework_TestCase
             'name'        => 'foo',
             'description' => 'bar',
             'required'    => false,
+            'schema'      => [
+                'type' => 'string'
+            ]
         ]);
 
         $parameter = $this->getSerializer()->deserialize($data, AbstractParameter::class, 'json');
