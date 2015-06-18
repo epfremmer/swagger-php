@@ -4,7 +4,8 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Tests\Entity;
+namespace Epfremmer\SwaggerBundle\Tests\Parser;
+
 use Epfremmer\SwaggerBundle\Parser\SwaggerParser;
 
 /**
