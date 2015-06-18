@@ -140,13 +140,13 @@ class PathTest extends \PHPUnit_Framework_TestCase
             ],
         ]);
 
-        $path = self::$serializer->deserialize($data, Path::class, 'json');
+        $path = $this->getSerializer()->deserialize($data, Path::class, 'json');
 
         $this->assertInstanceOf(Path::class, $path);
         $this->assertAttributeInstanceOf(ArrayCollection::class, 'operations', $path);
         $this->assertAttributeContainsOnly(Operation::class, 'operations', $path);
 
-        $json = self::$serializer->serialize($path, 'json');
+        $json = $this->getSerializer()->serialize($path, 'json');
 
         $this->assertJson($json);
         $this->assertJsonStringEqualsJsonString($data, $json);

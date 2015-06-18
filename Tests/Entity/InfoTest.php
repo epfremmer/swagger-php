@@ -126,7 +126,7 @@ class InfoTest extends \PHPUnit_Framework_TestCase
             'version' => '1.0.0'
         ]);
 
-        $info = self::$serializer->deserialize($data, Info::class, 'json');
+        $info = $this->getSerializer()->deserialize($data, Info::class, 'json');
 
         $this->assertInstanceOf(Info::class, $info);
         $this->assertAttributeEquals('foo', 'title', $info);
@@ -136,7 +136,7 @@ class InfoTest extends \PHPUnit_Framework_TestCase
         $this->assertAttributeInstanceOf(License::class, 'license', $info);
         $this->assertAttributeEquals('1.0.0', 'version', $info);
 
-        $json = self::$serializer->serialize($info, 'json');
+        $json = $this->getSerializer()->serialize($info, 'json');
 
         $this->assertJson($json);
         $this->assertJsonStringEqualsJsonString($data, $json);

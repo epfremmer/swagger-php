@@ -54,14 +54,14 @@ class NumberHeaderTest extends \PHPUnit_Framework_TestCase
             'default'          => 'baz',
         ]);
 
-        $schema = self::$serializer->deserialize($data, AbstractHeader::class, 'json');
+        $schema = $this->getSerializer()->deserialize($data, AbstractHeader::class, 'json');
 
         $this->assertInstanceOf(NumberHeader::class, $schema);
         $this->assertAttributeEquals('foo', 'format', $schema);
         $this->assertAttributeEquals('bar', 'description', $schema);
         $this->assertAttributeEquals('baz', 'default', $schema);
 
-        $json = self::$serializer->serialize($schema, 'json');
+        $json = $this->getSerializer()->serialize($schema, 'json');
 
         $this->assertJson($json);
         $this->assertJsonStringEqualsJsonString($data, $json);

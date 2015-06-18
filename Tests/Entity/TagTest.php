@@ -83,14 +83,14 @@ class TagTest extends \PHPUnit_Framework_TestCase
             'externalDocs' => (object)[],
         ]);
 
-        $tag = self::$serializer->deserialize($data, Tag::class, 'json');
+        $tag = $this->getSerializer()->deserialize($data, Tag::class, 'json');
 
         $this->assertInstanceOf(Tag::class, $tag);
         $this->assertAttributeEquals('foo', 'name', $tag);
         $this->assertAttributeEquals('bar', 'description', $tag);
         $this->assertAttributeInstanceOf(ExternalDocumentation::class, 'externalDocs', $tag);
 
-        $json = self::$serializer->serialize($tag, 'json');
+        $json = $this->getSerializer()->serialize($tag, 'json');
 
         $this->assertJson($json);
         $this->assertJsonStringEqualsJsonString($data, $json);

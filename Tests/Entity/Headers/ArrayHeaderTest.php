@@ -67,7 +67,7 @@ class ArrayHeaderTest extends \PHPUnit_Framework_TestCase
             'collectionFormat' => 'csv',
         ]);
 
-        $schema = self::$serializer->deserialize($data, AbstractHeader::class, 'json');
+        $schema = $this->getSerializer()->deserialize($data, AbstractHeader::class, 'json');
 
         $this->assertInstanceOf(ArrayHeader::class, $schema);
         $this->assertAttributeEquals('foo', 'format', $schema);
@@ -75,7 +75,7 @@ class ArrayHeaderTest extends \PHPUnit_Framework_TestCase
         $this->assertAttributeEquals('baz', 'default', $schema);
         $this->assertAttributeEquals('csv', 'collectionFormat', $schema);
 
-        $json = self::$serializer->serialize($schema, 'json');
+        $json = $this->getSerializer()->serialize($schema, 'json');
 
         $this->assertJson($json);
         $this->assertJsonStringEqualsJsonString($data, $json);

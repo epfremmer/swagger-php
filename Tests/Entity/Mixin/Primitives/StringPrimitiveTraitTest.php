@@ -92,14 +92,14 @@ class StringPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
             'pattern'   => 'foo',
         ]);
 
-        $primitive = self::$serializer->deserialize($data, AbstractSchema::class, 'json');
+        $primitive = $this->getSerializer()->deserialize($data, AbstractSchema::class, 'json');
 
         $this->assertInstanceOf(StringSchema::class, $primitive);
         $this->assertAttributeEquals(10, 'maxLength', $primitive);
         $this->assertAttributeEquals(1, 'minLength', $primitive);
         $this->assertAttributeEquals('foo', 'pattern', $primitive);
 
-        $json = self::$serializer->serialize($primitive, 'json');
+        $json = $this->getSerializer()->serialize($primitive, 'json');
 
         $this->assertJson($json);
         $this->assertJsonStringEqualsJsonString($data, $json);

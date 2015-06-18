@@ -140,7 +140,7 @@ class ResponseTest extends \PHPUnit_Framework_TestCase
             ]
         ]);
 
-        $response = self::$serializer->deserialize($data, Response::class, 'json');
+        $response = $this->getSerializer()->deserialize($data, Response::class, 'json');
 
         $this->assertInstanceOf(Response::class, $response);
         $this->assertAttributeEquals('bar', 'description', $response);
@@ -149,7 +149,7 @@ class ResponseTest extends \PHPUnit_Framework_TestCase
         $this->assertAttributeContainsOnly(Headers\AbstractHeader::class, 'headers', $response);
         $this->assertAttributeInstanceOf(Examples::class, 'examples', $response);
 
-        $json = self::$serializer->serialize($response, 'json');
+        $json = $this->getSerializer()->serialize($response, 'json');
 
         $this->assertJson($json);
         $this->assertJsonStringEqualsJsonString($data, $json);

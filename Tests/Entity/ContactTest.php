@@ -79,14 +79,14 @@ class ContactTest extends \PHPUnit_Framework_TestCase
             'email' => 'baz',
         ]);
 
-        $contact = self::$serializer->deserialize($data, Contact::class, 'json');
+        $contact = $this->getSerializer()->deserialize($data, Contact::class, 'json');
 
         $this->assertInstanceOf(Contact::class, $contact);
         $this->assertAttributeEquals('foo', 'name', $contact);
         $this->assertAttributeEquals('bar', 'url', $contact);
         $this->assertAttributeEquals('baz', 'email', $contact);
 
-        $json = self::$serializer->serialize($contact, 'json');
+        $json = $this->getSerializer()->serialize($contact, 'json');
 
         $this->assertJson($json);
         $this->assertJsonStringEqualsJsonString($data, $json);

@@ -151,7 +151,7 @@ class SecurityDefinitionTest extends \PHPUnit_Framework_TestCase
             ],
         ]);
 
-        $securityDefinition = self::$serializer->deserialize($data, SecurityDefinition::class, 'json');
+        $securityDefinition = $this->getSerializer()->deserialize($data, SecurityDefinition::class, 'json');
 
         $this->assertInstanceOf(SecurityDefinition::class, $securityDefinition);
         $this->assertAttributeEquals('foo', 'type', $securityDefinition);
@@ -163,7 +163,7 @@ class SecurityDefinitionTest extends \PHPUnit_Framework_TestCase
         $this->assertAttributeEquals('grault', 'tokenUrl', $securityDefinition);
         $this->assertAttributeEquals(['foo', 'bar', 'baz'], 'scopes', $securityDefinition);
 
-        $json = self::$serializer->serialize($securityDefinition, 'json');
+        $json = $this->getSerializer()->serialize($securityDefinition, 'json');
 
         $this->assertJson($json);
         $this->assertJsonStringEqualsJsonString($data, $json);

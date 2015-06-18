@@ -66,13 +66,13 @@ class ExternalDocumentationTest extends \PHPUnit_Framework_TestCase
             'url'         => 'bar',
         ]);
 
-        $license = self::$serializer->deserialize($data, ExternalDocumentation::class, 'json');
+        $license = $this->getSerializer()->deserialize($data, ExternalDocumentation::class, 'json');
 
         $this->assertInstanceOf(ExternalDocumentation::class, $license);
         $this->assertAttributeEquals('foo', 'description', $license);
         $this->assertAttributeEquals('bar', 'url', $license);
 
-        $json = self::$serializer->serialize($license, 'json');
+        $json = $this->getSerializer()->serialize($license, 'json');
 
         $this->assertJson($json);
         $this->assertJsonStringEqualsJsonString($data, $json);

@@ -90,14 +90,14 @@ class RefSchemaTest extends \PHPUnit_Framework_TestCase
             'description' => 'bar',
         ]);
 
-        $schema = self::$serializer->deserialize($data, AbstractSchema::class, 'json');
+        $schema = $this->getSerializer()->deserialize($data, AbstractSchema::class, 'json');
 
         $this->assertInstanceOf(RefSchema::class, $schema);
         $this->assertAttributeEquals('#/definitions/foo', 'ref', $schema);
         $this->assertAttributeEquals('foo', 'title', $schema);
         $this->assertAttributeEquals('bar', 'description', $schema);
 
-        $json = self::$serializer->serialize($schema, 'json');
+        $json = $this->getSerializer()->serialize($schema, 'json');
 
         $this->assertJson($json);
         $this->assertJsonStringEqualsJsonString($data, $json);

@@ -66,13 +66,13 @@ class LicenseTest extends \PHPUnit_Framework_TestCase
             'url'  => 'bar',
         ]);
 
-        $license = self::$serializer->deserialize($data, License::class, 'json');
+        $license = $this->getSerializer()->deserialize($data, License::class, 'json');
 
         $this->assertInstanceOf(License::class, $license);
         $this->assertAttributeEquals('foo', 'name', $license);
         $this->assertAttributeEquals('bar', 'url', $license);
 
-        $json = self::$serializer->serialize($license, 'json');
+        $json = $this->getSerializer()->serialize($license, 'json');
 
         $this->assertJson($json);
         $this->assertJsonStringEqualsJsonString($data, $json);
