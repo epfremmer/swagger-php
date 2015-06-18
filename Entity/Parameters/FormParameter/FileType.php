@@ -17,5 +17,5 @@ use Epfremmer\SwaggerBundle\Entity\Parameters\AbstractTypedParameter;
  */
 class FileType extends AbstractTypedParameter
 {
-    use Primitives\BooleanPrimitiveTrait;
+
 }
