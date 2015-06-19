@@ -6,6 +6,7 @@
  */
 namespace ERP\Swagger\Parser;
 
+use ERP\Swagger\Exception\InvalidVersionException;
 use Symfony\Component\Yaml\Yaml;
 
 /**
@@ -18,7 +19,7 @@ class SwaggerParser
 {
 
     // default swagger version
-    const DEFAULT_VERSION = '2.0';
+    const MINIMUM_VERSION = '2.0';
     const VERSION_KEY = 'swagger';
 
     /**
@@ -63,7 +64,11 @@ class SwaggerParser
     public function getVersion()
     {
         if (!array_key_exists(self::VERSION_KEY, $this->data)) {
-            return self::DEFAULT_VERSION;
+            $this->data[self::VERSION_KEY] = self::MINIMUM_VERSION;
+        }
+
+        if (!version_compare($this->data[self::VERSION_KEY], SwaggerParser::MINIMUM_VERSION, '>=')) {
+            throw new InvalidVersionException($this->data[self::VERSION_KEY]);
         }
 
         return $this->data[self::VERSION_KEY];
