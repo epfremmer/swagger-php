@@ -6,13 +6,14 @@
  */
 namespace Epfremmer\SwaggerBundle\Entity\Schemas;
 
+use Epfremmer\SwaggerBundle\Annotations as EP;
 use Epfremmer\SwaggerBundle\Entity\ExternalDocumentation;
 use JMS\Serializer\Annotation as JMS;
 
 /**
  * Class AbstractSchema
  *
- * @JMS\Discriminator(field = "type", map = {
+ * @EP\Discriminator(field = "type", default="object", map = {
  *   "null"   : "Epfremmer\SwaggerBundle\Entity\Schemas\NullSchema",
  *   "boolean": "Epfremmer\SwaggerBundle\Entity\Schemas\BooleanSchema",
  *   "integer": "Epfremmer\SwaggerBundle\Entity\Schemas\IntegerSchema",
@@ -35,6 +36,13 @@ abstract class AbstractSchema implements SchemaInterface
     const STRING_TYPE  = 'string';
     const ARRAY_TYPE   = 'array';
     const OBJECT_TYPE  = 'object';
+
+    /**
+     * @JMS\Type("string")
+     * @JMS\SerializedName("type")
+     * @var string
+     */
+    protected $type;
 
     /**
      * @JMS\Type("string")

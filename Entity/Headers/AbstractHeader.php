@@ -7,12 +7,13 @@
 namespace Epfremmer\SwaggerBundle\Entity\Headers;
 
 use Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema;
+use Epfremmer\SwaggerBundle\Annotations as EP;
 use JMS\Serializer\Annotation as JMS;
 
 /**
  * Class AbstractHeader
  *
- * @JMS\Discriminator(field = "type", map = {
+ * @EP\Discriminator(field = "type", default="array", map = {
  *   "boolean": "Epfremmer\SwaggerBundle\Entity\Headers\BooleanHeader",
  *   "integer": "Epfremmer\SwaggerBundle\Entity\Headers\IntegerHeader",
  *   "number" : "Epfremmer\SwaggerBundle\Entity\Headers\NumberHeader",
@@ -32,6 +33,13 @@ abstract class AbstractHeader
     const NUMBER_TYPE  = AbstractSchema::NUMBER_TYPE;
     const STRING_TYPE  = AbstractSchema::STRING_TYPE;
     const ARRAY_TYPE   = AbstractSchema::ARRAY_TYPE;
+
+    /**
+     * @JMS\Type("string")
+     * @JMS\SerializedName("type")
+     * @var string
+     */
+    protected $type;
 
     /**
      * @JMS\Type("string")
