@@ -9,7 +9,8 @@
     }],
     "autoload": {
         "psr-4": {
-            "ERP\\Swagger\\": ""
+            "ERP\\Swagger\\": "src/",
+            "ERP\\Swagger\\Tests\\": "tests/"
         }
     },
     "require": {
