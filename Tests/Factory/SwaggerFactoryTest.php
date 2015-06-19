@@ -56,6 +56,14 @@ class SwaggerFactoryTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * @covers ERP\Swagger\Factory\SwaggerFactory
+     */
+    public function testFactoryConstructor()
+    {
+        $this->assertInstanceOf(SwaggerFactory::class, $this->getFactory());
+    }
+
+    /**
      * @expectedException \InvalidArgumentException
      */
     public function testBuildMissing()
