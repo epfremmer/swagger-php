@@ -4,16 +4,16 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Tests\Entity;
+namespace ERP\Swagger\Tests\Entity;
 
-use Epfremmer\SwaggerBundle\Entity\ExternalDocumentation;
-use Epfremmer\SwaggerBundle\Entity\Tag;
-use Epfremmer\SwaggerBundle\Tests\Mixin\SerializerContextTrait;
+use ERP\Swagger\Entity\ExternalDocumentation;
+use ERP\Swagger\Entity\Tag;
+use ERP\Swagger\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class TagTest
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Tests\Entity
  */
 class TagTest extends \PHPUnit_Framework_TestCase
@@ -34,8 +34,8 @@ class TagTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Tag::getName
-     * @covers Epfremmer\SwaggerBundle\Entity\Tag::setName
+     * @covers ERP\Swagger\Entity\Tag::getName
+     * @covers ERP\Swagger\Entity\Tag::setName
      */
     public function testName()
     {
@@ -46,8 +46,8 @@ class TagTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Tag::getDescription
-     * @covers Epfremmer\SwaggerBundle\Entity\Tag::setDescription
+     * @covers ERP\Swagger\Entity\Tag::getDescription
+     * @covers ERP\Swagger\Entity\Tag::setDescription
      */
     public function testDescription()
     {
@@ -58,8 +58,8 @@ class TagTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Tag::getExternalDocs
-     * @covers Epfremmer\SwaggerBundle\Entity\Tag::setExternalDocs
+     * @covers ERP\Swagger\Entity\Tag::getExternalDocs
+     * @covers ERP\Swagger\Entity\Tag::setExternalDocs
      */
     public function testExternalDocs()
     {
@@ -73,7 +73,7 @@ class TagTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Tag
+     * @covers ERP\Swagger\Entity\Tag
      */
     public function testSerialize()
     {

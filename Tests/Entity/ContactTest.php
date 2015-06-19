@@ -4,15 +4,15 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Tests\Entity;
+namespace ERP\Swagger\Tests\Entity;
 
-use Epfremmer\SwaggerBundle\Entity\Contact;
-use Epfremmer\SwaggerBundle\Tests\Mixin\SerializerContextTrait;
+use ERP\Swagger\Entity\Contact;
+use ERP\Swagger\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class ContactTest
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Tests\Entity
  */
 class ContactTest extends \PHPUnit_Framework_TestCase
@@ -33,8 +33,8 @@ class ContactTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Contact::getName
-     * @covers Epfremmer\SwaggerBundle\Entity\Contact::setName
+     * @covers ERP\Swagger\Entity\Contact::getName
+     * @covers ERP\Swagger\Entity\Contact::setName
      */
     public function testName()
     {
@@ -45,8 +45,8 @@ class ContactTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Contact::getUrl
-     * @covers Epfremmer\SwaggerBundle\Entity\Contact::setUrl
+     * @covers ERP\Swagger\Entity\Contact::getUrl
+     * @covers ERP\Swagger\Entity\Contact::setUrl
      */
     public function testUrl()
     {
@@ -57,8 +57,8 @@ class ContactTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Contact::getEmail
-     * @covers Epfremmer\SwaggerBundle\Entity\Contact::setEmail
+     * @covers ERP\Swagger\Entity\Contact::getEmail
+     * @covers ERP\Swagger\Entity\Contact::setEmail
      */
     public function testEmail()
     {
@@ -69,7 +69,7 @@ class ContactTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Contact
+     * @covers ERP\Swagger\Entity\Contact
      */
     public function testSerialize()
     {

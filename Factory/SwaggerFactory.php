@@ -4,21 +4,21 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Factory;
+namespace ERP\Swagger\Factory;
 
-use Epfremmer\SwaggerBundle\Entity\Swagger;
-use Epfremmer\SwaggerBundle\Parser\SwaggerParser;
+use ERP\Swagger\Entity\Swagger;
+use ERP\Swagger\Parser\SwaggerParser;
 use JMS\Serializer\DeserializationContext;
 use JMS\Serializer\SerializationContext;
 use JMS\Serializer\Serializer;
 use JMS\Serializer\SerializerBuilder;
 use JMS\Serializer\EventDispatcher\EventDispatcher;
-use Epfremmer\SwaggerBundle\Listener\SerializationSubscriber;
+use ERP\Swagger\Listener\SerializationSubscriber;
 
 /**
  * Class SwaggerFactory
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Factory
  */
 class SwaggerFactory

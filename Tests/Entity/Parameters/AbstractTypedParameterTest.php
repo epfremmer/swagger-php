@@ -4,14 +4,14 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Tests\Entity\Parameters;
+namespace ERP\Swagger\Tests\Entity\Parameters;
 
-use Epfremmer\SwaggerBundle\Entity\Parameters\AbstractTypedParameter;
+use ERP\Swagger\Entity\Parameters\AbstractTypedParameter;
 
 /**
  * Class AbstractTypedParameterTest
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Tests\Entity\Parameters
  */
 class AbstractTypedParameterTest extends \PHPUnit_Framework_TestCase
@@ -31,8 +31,8 @@ class AbstractTypedParameterTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Parameters\AbstractTypedParameter::getType
-     * @covers Epfremmer\SwaggerBundle\Entity\Parameters\AbstractTypedParameter::setType
+     * @covers ERP\Swagger\Entity\Parameters\AbstractTypedParameter::getType
+     * @covers ERP\Swagger\Entity\Parameters\AbstractTypedParameter::setType
      */
     public function testType()
     {
@@ -43,8 +43,8 @@ class AbstractTypedParameterTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Parameters\AbstractTypedParameter::getFormat
-     * @covers Epfremmer\SwaggerBundle\Entity\Parameters\AbstractTypedParameter::setFormat
+     * @covers ERP\Swagger\Entity\Parameters\AbstractTypedParameter::getFormat
+     * @covers ERP\Swagger\Entity\Parameters\AbstractTypedParameter::setFormat
      */
     public function testFormat()
     {
@@ -55,8 +55,8 @@ class AbstractTypedParameterTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Parameters\AbstractTypedParameter::isAllowEmptyValues
-     * @covers Epfremmer\SwaggerBundle\Entity\Parameters\AbstractTypedParameter::setAllowEmptyValues
+     * @covers ERP\Swagger\Entity\Parameters\AbstractTypedParameter::isAllowEmptyValues
+     * @covers ERP\Swagger\Entity\Parameters\AbstractTypedParameter::setAllowEmptyValues
      */
     public function testAllowEmptyValues()
     {
@@ -68,8 +68,8 @@ class AbstractTypedParameterTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Parameters\AbstractTypedParameter::getDefault
-     * @covers Epfremmer\SwaggerBundle\Entity\Parameters\AbstractTypedParameter::setDefault
+     * @covers ERP\Swagger\Entity\Parameters\AbstractTypedParameter::getDefault
+     * @covers ERP\Swagger\Entity\Parameters\AbstractTypedParameter::setDefault
      */
     public function testDefault()
     {

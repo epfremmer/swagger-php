@@ -4,15 +4,15 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Entity\Parameters\FormParameter;
+namespace ERP\Swagger\Entity\Parameters\FormParameter;
 
-use Epfremmer\SwaggerBundle\Entity\Mixin\Primitives;
-use Epfremmer\SwaggerBundle\Entity\Parameters\AbstractTypedParameter;
+use ERP\Swagger\Entity\Mixin\Primitives;
+use ERP\Swagger\Entity\Parameters\AbstractTypedParameter;
 
 /**
  * Class FileType
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Entity\Parameters\FormParameter
  */
 class FileType extends AbstractTypedParameter

@@ -4,17 +4,17 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Tests\Entity\Schemas;
+namespace ERP\Swagger\Tests\Entity\Schemas;
 
-use Epfremmer\SwaggerBundle\Entity\ExternalDocumentation;
-use Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema;
-use Epfremmer\SwaggerBundle\Entity\Schemas\ArraySchema;
-use Epfremmer\SwaggerBundle\Tests\Mixin\SerializerContextTrait;
+use ERP\Swagger\Entity\ExternalDocumentation;
+use ERP\Swagger\Entity\Schemas\AbstractSchema;
+use ERP\Swagger\Entity\Schemas\ArraySchema;
+use ERP\Swagger\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class ArraySchemaTest
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Tests\Entity\Schemas
  */
 class ArraySchemaTest extends \PHPUnit_Framework_TestCase
@@ -35,7 +35,7 @@ class ArraySchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\ArraySchema::getType
+     * @covers ERP\Swagger\Entity\Schemas\ArraySchema::getType
      */
     public function testType()
     {
@@ -44,7 +44,7 @@ class ArraySchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\ArraySchema
+     * @covers ERP\Swagger\Entity\Schemas\ArraySchema
      */
     public function testSerialization()
     {

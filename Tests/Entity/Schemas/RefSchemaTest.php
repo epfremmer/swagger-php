@@ -4,17 +4,17 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Tests\Entity\Schemas;
+namespace ERP\Swagger\Tests\Entity\Schemas;
 
-use Epfremmer\SwaggerBundle\Entity\ExternalDocumentation;
-use Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema;
-use Epfremmer\SwaggerBundle\Entity\Schemas\RefSchema;
-use Epfremmer\SwaggerBundle\Tests\Mixin\SerializerContextTrait;
+use ERP\Swagger\Entity\ExternalDocumentation;
+use ERP\Swagger\Entity\Schemas\AbstractSchema;
+use ERP\Swagger\Entity\Schemas\RefSchema;
+use ERP\Swagger\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class RefSchemaTest
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Tests\Entity\Schemas
  */
 class RefSchemaTest extends \PHPUnit_Framework_TestCase
@@ -35,7 +35,7 @@ class RefSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\RefSchema::getType
+     * @covers ERP\Swagger\Entity\Schemas\RefSchema::getType
      */
     public function testType()
     {
@@ -44,8 +44,8 @@ class RefSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\RefSchema::getRef
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\RefSchema::setRef
+     * @covers ERP\Swagger\Entity\Schemas\RefSchema::getRef
+     * @covers ERP\Swagger\Entity\Schemas\RefSchema::setRef
      */
     public function testRef()
     {
@@ -56,8 +56,8 @@ class RefSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\RefSchema::getTitle
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\RefSchema::setTitle
+     * @covers ERP\Swagger\Entity\Schemas\RefSchema::getTitle
+     * @covers ERP\Swagger\Entity\Schemas\RefSchema::setTitle
      */
     public function testTitle()
     {
@@ -68,8 +68,8 @@ class RefSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\RefSchema::getDescription
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\RefSchema::setDescription
+     * @covers ERP\Swagger\Entity\Schemas\RefSchema::getDescription
+     * @covers ERP\Swagger\Entity\Schemas\RefSchema::setDescription
      */
     public function testDescription()
     {
@@ -80,7 +80,7 @@ class RefSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\RefSchema
+     * @covers ERP\Swagger\Entity\Schemas\RefSchema
      */
     public function testSerialization()
     {

@@ -4,18 +4,18 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Tests\Entity;
+namespace ERP\Swagger\Tests\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
-use Epfremmer\SwaggerBundle\Entity\Operation;
-use Epfremmer\SwaggerBundle\Entity\Parameters;
-use Epfremmer\SwaggerBundle\Entity\Path;
-use Epfremmer\SwaggerBundle\Tests\Mixin\SerializerContextTrait;
+use ERP\Swagger\Entity\Operation;
+use ERP\Swagger\Entity\Parameters;
+use ERP\Swagger\Entity\Path;
+use ERP\Swagger\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class PathTest
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Tests\Entity
  */
 class PathTest extends \PHPUnit_Framework_TestCase
@@ -36,8 +36,8 @@ class PathTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Path::getOperations
-     * @covers Epfremmer\SwaggerBundle\Entity\Path::setOperations
+     * @covers ERP\Swagger\Entity\Path::getOperations
+     * @covers ERP\Swagger\Entity\Path::setOperations
      */
     public function testOperations()
     {
@@ -56,7 +56,7 @@ class PathTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Path
+     * @covers ERP\Swagger\Entity\Path
      */
     public function testSerialize()
     {

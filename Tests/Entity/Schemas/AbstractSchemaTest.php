@@ -4,15 +4,15 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Tests\Entity\Schemas;
+namespace ERP\Swagger\Tests\Entity\Schemas;
 
-use Epfremmer\SwaggerBundle\Entity\ExternalDocumentation;
-use Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema;
+use ERP\Swagger\Entity\ExternalDocumentation;
+use ERP\Swagger\Entity\Schemas\AbstractSchema;
 
 /**
  * Class AbstractSchemaTest
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Tests\Entity\Schemas
  */
 class AbstractSchemaTest extends \PHPUnit_Framework_TestCase
@@ -32,8 +32,8 @@ class AbstractSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema::getFormat
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema::setFormat
+     * @covers ERP\Swagger\Entity\Schemas\AbstractSchema::getFormat
+     * @covers ERP\Swagger\Entity\Schemas\AbstractSchema::setFormat
      */
     public function testFormat()
     {
@@ -44,8 +44,8 @@ class AbstractSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema::getTitle
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema::setTitle
+     * @covers ERP\Swagger\Entity\Schemas\AbstractSchema::getTitle
+     * @covers ERP\Swagger\Entity\Schemas\AbstractSchema::setTitle
      */
     public function testTitle()
     {
@@ -56,8 +56,8 @@ class AbstractSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema::getDescription
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema::setDescription
+     * @covers ERP\Swagger\Entity\Schemas\AbstractSchema::getDescription
+     * @covers ERP\Swagger\Entity\Schemas\AbstractSchema::setDescription
      */
     public function testDescription()
     {
@@ -68,8 +68,8 @@ class AbstractSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema::getExample
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema::setExample
+     * @covers ERP\Swagger\Entity\Schemas\AbstractSchema::getExample
+     * @covers ERP\Swagger\Entity\Schemas\AbstractSchema::setExample
      */
     public function testExample()
     {
@@ -80,8 +80,8 @@ class AbstractSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema::getExternalDocs
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema::setExternalDocs
+     * @covers ERP\Swagger\Entity\Schemas\AbstractSchema::getExternalDocs
+     * @covers ERP\Swagger\Entity\Schemas\AbstractSchema::setExternalDocs
      */
     public function testExternalDocs()
     {

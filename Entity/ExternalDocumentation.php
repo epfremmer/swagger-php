@@ -4,14 +4,14 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Entity;
+namespace ERP\Swagger\Entity;
 
 use JMS\Serializer\Annotation as JMS;
 
 /**
  * Class Tag
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Entity
  */
 class ExternalDocumentation

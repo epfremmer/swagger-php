@@ -4,17 +4,17 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Tests\Entity\Parameters\QueryParameter;
+namespace ERP\Swagger\Tests\Entity\Parameters\QueryParameter;
 
-use Epfremmer\SwaggerBundle\Entity\Parameters\AbstractParameter;
-use Epfremmer\SwaggerBundle\Entity\Parameters\AbstractTypedParameter;
-use Epfremmer\SwaggerBundle\Entity\Parameters\QueryParameter;
-use Epfremmer\SwaggerBundle\Tests\Mixin\SerializerContextTrait;
+use ERP\Swagger\Entity\Parameters\AbstractParameter;
+use ERP\Swagger\Entity\Parameters\AbstractTypedParameter;
+use ERP\Swagger\Entity\Parameters\QueryParameter;
+use ERP\Swagger\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class NumberTypeTest
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Tests\Entity\Parameters\QueryParameter
  */
 class NumberTypeTest extends \PHPUnit_Framework_TestCase
@@ -35,7 +35,7 @@ class NumberTypeTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Parameters\QueryParameter\NumberType
+     * @covers ERP\Swagger\Entity\Parameters\QueryParameter\NumberType
      */
     public function testSerialization()
     {

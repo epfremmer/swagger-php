@@ -4,16 +4,16 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Listener;
+namespace ERP\Swagger\Listener;
 
 use Doctrine\Common\Annotations\AnnotationReader;
-use Epfremmer\SwaggerBundle\Annotations\Discriminator;
-use Epfremmer\SwaggerBundle\Entity\Examples;
-use Epfremmer\SwaggerBundle\Entity\Headers\AbstractHeader;
-use Epfremmer\SwaggerBundle\Entity\Parameters\AbstractParameter;
-use Epfremmer\SwaggerBundle\Entity\Path;
-use Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema;
-use Epfremmer\SwaggerBundle\Entity\Schemas\RefSchema;
+use ERP\Swagger\Annotations\Discriminator;
+use ERP\Swagger\Entity\Examples;
+use ERP\Swagger\Entity\Headers\AbstractHeader;
+use ERP\Swagger\Entity\Parameters\AbstractParameter;
+use ERP\Swagger\Entity\Path;
+use ERP\Swagger\Entity\Schemas\AbstractSchema;
+use ERP\Swagger\Entity\Schemas\RefSchema;
 use JMS\Serializer\EventDispatcher\Events;
 use JMS\Serializer\EventDispatcher\PreDeserializeEvent;
 use JMS\Serializer\EventDispatcher\EventSubscriberInterface;
@@ -22,7 +22,7 @@ use JMS\Serializer\EventDispatcher\PreSerializeEvent;
 /**
  * Class SerializationSubscriber
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Listener
  */
 class SerializationSubscriber implements EventSubscriberInterface

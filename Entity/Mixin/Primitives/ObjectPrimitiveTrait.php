@@ -4,16 +4,16 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Entity\Mixin\Primitives;
+namespace ERP\Swagger\Entity\Mixin\Primitives;
 
 use Doctrine\Common\Collections\ArrayCollection;
-use Epfremmer\SwaggerBundle\Entity\Schemas\SchemaInterface;
+use ERP\Swagger\Entity\Schemas\SchemaInterface;
 use JMS\Serializer\Annotation as JMS;
 
 /**
  * Trait ObjectPrimitiveTrait
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Entity\Schemas\Primitives
  */
 trait ObjectPrimitiveTrait
@@ -42,7 +42,7 @@ trait ObjectPrimitiveTrait
     protected $required;
 
     /**
-     * @JMS\Type("ArrayCollection<string,Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema>")
+     * @JMS\Type("ArrayCollection<string,ERP\Swagger\Entity\Schemas\AbstractSchema>")
      * @JMS\SerializedName("properties")
      * @var SchemaInterface[]|ArrayCollection
      */

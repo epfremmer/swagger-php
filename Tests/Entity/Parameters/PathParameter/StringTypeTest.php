@@ -4,17 +4,17 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Tests\Entity\Parameters\PathParameter;
+namespace ERP\Swagger\Tests\Entity\Parameters\PathParameter;
 
-use Epfremmer\SwaggerBundle\Entity\Parameters\AbstractParameter;
-use Epfremmer\SwaggerBundle\Entity\Parameters\AbstractTypedParameter;
-use Epfremmer\SwaggerBundle\Entity\Parameters\PathParameter;
-use Epfremmer\SwaggerBundle\Tests\Mixin\SerializerContextTrait;
+use ERP\Swagger\Entity\Parameters\AbstractParameter;
+use ERP\Swagger\Entity\Parameters\AbstractTypedParameter;
+use ERP\Swagger\Entity\Parameters\PathParameter;
+use ERP\Swagger\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class StringTypeTest
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Entity\Parameters\PathParameter
  */
 class StringTypeTest extends \PHPUnit_Framework_TestCase
@@ -35,7 +35,7 @@ class StringTypeTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Parameters\PathParameter\StringType
+     * @covers ERP\Swagger\Entity\Parameters\PathParameter\StringType
      */
     public function testSerialization()
     {

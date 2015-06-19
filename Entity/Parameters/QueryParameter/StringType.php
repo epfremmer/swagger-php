@@ -4,15 +4,15 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Entity\Parameters\QueryParameter;
+namespace ERP\Swagger\Entity\Parameters\QueryParameter;
 
-use Epfremmer\SwaggerBundle\Entity\Mixin\Primitives;
-use Epfremmer\SwaggerBundle\Entity\Parameters\AbstractTypedParameter;
+use ERP\Swagger\Entity\Mixin\Primitives;
+use ERP\Swagger\Entity\Parameters\AbstractTypedParameter;
 
 /**
  * Class StringType
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Entity\Parameters\QueryParameter
  */
 class StringType extends AbstractTypedParameter

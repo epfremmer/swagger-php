@@ -4,38 +4,38 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Entity\Parameters;
+namespace ERP\Swagger\Entity\Parameters;
 
-use Epfremmer\SwaggerBundle\Annotations as EP;
+use ERP\Swagger\Annotations as EP;
 use JMS\Serializer\Annotation as JMS;
 
 /**
  * Class AbstractParameter
  *
  * @EP\Discriminator(field = "class", default="body", map = {
- *   "body"            : "Epfremmer\SwaggerBundle\Entity\Parameters\BodyParameter",
- *   "path.string"     : "Epfremmer\SwaggerBundle\Entity\Parameters\PathParameter\StringType",
- *   "path.integer"    : "Epfremmer\SwaggerBundle\Entity\Parameters\PathParameter\IntegerType",
- *   "path.boolean"    : "Epfremmer\SwaggerBundle\Entity\Parameters\PathParameter\BooleanType",
- *   "query.string"    : "Epfremmer\SwaggerBundle\Entity\Parameters\QueryParameter\StringType",
- *   "query.number"    : "Epfremmer\SwaggerBundle\Entity\Parameters\QueryParameter\NumberType",
- *   "query.integer"   : "Epfremmer\SwaggerBundle\Entity\Parameters\QueryParameter\IntegerType",
- *   "query.boolean"   : "Epfremmer\SwaggerBundle\Entity\Parameters\QueryParameter\BooleanType",
- *   "query.array"     : "Epfremmer\SwaggerBundle\Entity\Parameters\QueryParameter\ArrayType",
- *   "header.string"   : "Epfremmer\SwaggerBundle\Entity\Parameters\HeaderParameter\StringType",
- *   "header.number"   : "Epfremmer\SwaggerBundle\Entity\Parameters\HeaderParameter\NumberType",
- *   "header.integer"  : "Epfremmer\SwaggerBundle\Entity\Parameters\HeaderParameter\IntegerType",
- *   "header.boolean"  : "Epfremmer\SwaggerBundle\Entity\Parameters\HeaderParameter\BooleanType",
- *   "header.array"    : "Epfremmer\SwaggerBundle\Entity\Parameters\HeaderParameter\ArrayType",
- *   "formData.string" : "Epfremmer\SwaggerBundle\Entity\Parameters\FormParameter\StringType",
- *   "formData.number" : "Epfremmer\SwaggerBundle\Entity\Parameters\FormParameter\NumberType",
- *   "formData.integer": "Epfremmer\SwaggerBundle\Entity\Parameters\FormParameter\IntegerType",
- *   "formData.boolean": "Epfremmer\SwaggerBundle\Entity\Parameters\FormParameter\BooleanType",
- *   "formData.array"  : "Epfremmer\SwaggerBundle\Entity\Parameters\FormParameter\ArrayType",
- *   "formData.file"   : "Epfremmer\SwaggerBundle\Entity\Parameters\FormParameter\FileType"
+ *   "body"            : "ERP\Swagger\Entity\Parameters\BodyParameter",
+ *   "path.string"     : "ERP\Swagger\Entity\Parameters\PathParameter\StringType",
+ *   "path.integer"    : "ERP\Swagger\Entity\Parameters\PathParameter\IntegerType",
+ *   "path.boolean"    : "ERP\Swagger\Entity\Parameters\PathParameter\BooleanType",
+ *   "query.string"    : "ERP\Swagger\Entity\Parameters\QueryParameter\StringType",
+ *   "query.number"    : "ERP\Swagger\Entity\Parameters\QueryParameter\NumberType",
+ *   "query.integer"   : "ERP\Swagger\Entity\Parameters\QueryParameter\IntegerType",
+ *   "query.boolean"   : "ERP\Swagger\Entity\Parameters\QueryParameter\BooleanType",
+ *   "query.array"     : "ERP\Swagger\Entity\Parameters\QueryParameter\ArrayType",
+ *   "header.string"   : "ERP\Swagger\Entity\Parameters\HeaderParameter\StringType",
+ *   "header.number"   : "ERP\Swagger\Entity\Parameters\HeaderParameter\NumberType",
+ *   "header.integer"  : "ERP\Swagger\Entity\Parameters\HeaderParameter\IntegerType",
+ *   "header.boolean"  : "ERP\Swagger\Entity\Parameters\HeaderParameter\BooleanType",
+ *   "header.array"    : "ERP\Swagger\Entity\Parameters\HeaderParameter\ArrayType",
+ *   "formData.string" : "ERP\Swagger\Entity\Parameters\FormParameter\StringType",
+ *   "formData.number" : "ERP\Swagger\Entity\Parameters\FormParameter\NumberType",
+ *   "formData.integer": "ERP\Swagger\Entity\Parameters\FormParameter\IntegerType",
+ *   "formData.boolean": "ERP\Swagger\Entity\Parameters\FormParameter\BooleanType",
+ *   "formData.array"  : "ERP\Swagger\Entity\Parameters\FormParameter\ArrayType",
+ *   "formData.file"   : "ERP\Swagger\Entity\Parameters\FormParameter\FileType"
  * })
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Entity\Parameters
  */
 abstract class AbstractParameter

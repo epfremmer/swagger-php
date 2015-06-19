@@ -8,8 +8,8 @@
         "email" : "epfremme@nerdery.com"
     }],
     "autoload": {
-        "psr-0": {
-            "Epfremmer\\SwaggerBundle": ""
+        "psr-4": {
+            "ERP\\Swagger\\": ""
         }
     },
     "require": {

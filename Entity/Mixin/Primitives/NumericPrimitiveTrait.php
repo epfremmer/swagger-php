@@ -4,14 +4,14 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Entity\Mixin\Primitives;
+namespace ERP\Swagger\Entity\Mixin\Primitives;
 
 use JMS\Serializer\Annotation as JMS;
 
 /**
  * Trait NumericPrimitiveTrait
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Entity\Schemas\Primitives
  */
 trait NumericPrimitiveTrait
