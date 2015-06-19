@@ -51,9 +51,9 @@ class SwaggerTest extends \PHPUnit_Framework_TestCase
     public function testVersion()
     {
         $this->assertClassHasAttribute('version', Swagger::class);
-        $this->assertInstanceOf(Swagger::class, $this->swagger->setVersion('1.0'));
-        $this->assertAttributeEquals('1.0', 'version', $this->swagger);
-        $this->assertEquals('1.0', $this->swagger->getVersion());
+        $this->assertInstanceOf(Swagger::class, $this->swagger->setVersion('2.0'));
+        $this->assertAttributeEquals('2.0', 'version', $this->swagger);
+        $this->assertEquals('2.0', $this->swagger->getVersion());
     }
 
     /**
