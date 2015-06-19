@@ -18,6 +18,7 @@ class ExternalDocumentation
 {
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("description")
      * @var string
@@ -25,6 +26,7 @@ class ExternalDocumentation
     protected $description;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("url")
      * @var string

@@ -20,6 +20,7 @@ trait ArrayPrimitiveTrait
     use AnyPrimitiveTrait;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("ERP\Swagger\Entity\Schemas\AbstractSchema")
      * @JMS\SerializedName("items")
      * @var SchemaInterface
@@ -27,6 +28,7 @@ trait ArrayPrimitiveTrait
     protected $items;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("boolean")
      * @JMS\SerializedName("additionalItems")
      * @var boolean
@@ -34,6 +36,7 @@ trait ArrayPrimitiveTrait
     protected $additionalItems;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("integer")
      * @JMS\SerializedName("maxItems")
      * @var integer
@@ -41,6 +44,7 @@ trait ArrayPrimitiveTrait
     protected $maxItems;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("integer")
      * @JMS\SerializedName("minItems")
      * @var integer
@@ -48,6 +52,7 @@ trait ArrayPrimitiveTrait
     protected $minItems;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("boolean")
      * @JMS\SerializedName("uniqueItems")
      * @var boolean
@@ -55,6 +60,7 @@ trait ArrayPrimitiveTrait
     protected $uniqueItems;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("collectionFormat")
      * @var string

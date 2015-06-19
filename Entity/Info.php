@@ -18,6 +18,7 @@ class Info
 {
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("title")
      * @var string
@@ -25,6 +26,7 @@ class Info
     protected $title;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("description")
      * @var string
@@ -32,6 +34,7 @@ class Info
     protected $description;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("termsOfService")
      * @var string
@@ -39,6 +42,7 @@ class Info
     protected $termsOfService;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("ERP\Swagger\Entity\Contact")
      * @JMS\SerializedName("contact")
      * @var Contact
@@ -46,6 +50,7 @@ class Info
     protected $contact;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("ERP\Swagger\Entity\License")
      * @JMS\SerializedName("license")
      * @var License
@@ -53,6 +58,7 @@ class Info
     protected $license;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("version")
      * @var string

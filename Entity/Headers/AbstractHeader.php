@@ -35,6 +35,7 @@ abstract class AbstractHeader
     const ARRAY_TYPE   = AbstractSchema::ARRAY_TYPE;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("type")
      * @var string
@@ -42,6 +43,7 @@ abstract class AbstractHeader
     protected $type;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("description")
      * @var string
@@ -49,6 +51,7 @@ abstract class AbstractHeader
     protected $description;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("format")
      * @var string
@@ -56,6 +59,7 @@ abstract class AbstractHeader
     protected $format;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("default")
      * @var array

@@ -22,6 +22,7 @@ class Path
 
     /**
      * @JMS\Inline()
+     * @JMS\Since("2.0")
      * @JMS\SerializedName("data")
      * @JMS\Type("ArrayCollection<string,ERP\Swagger\Entity\Operation>")
      *

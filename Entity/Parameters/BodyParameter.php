@@ -19,6 +19,7 @@ class BodyParameter extends AbstractParameter
 {
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("ERP\Swagger\Entity\Schemas\AbstractSchema")
      * @JMS\SerializedName("schema")
      * @var SchemaInterface

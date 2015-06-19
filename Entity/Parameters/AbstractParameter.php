@@ -49,6 +49,7 @@ abstract class AbstractParameter
     const IN_FORM_DATA = 'formData';
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("in")
      * @var string
@@ -56,6 +57,7 @@ abstract class AbstractParameter
     protected $in;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("name")
      * @var string
@@ -63,6 +65,7 @@ abstract class AbstractParameter
     protected $name;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("description")
      * @var string
@@ -70,6 +73,7 @@ abstract class AbstractParameter
     protected $description;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("boolean")
      * @JMS\SerializedName("required")
      * @var boolean
