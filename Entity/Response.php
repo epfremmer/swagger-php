@@ -21,6 +21,7 @@ class Response
 {
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("description")
      * @var string
@@ -28,6 +29,7 @@ class Response
     protected $description;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("ERP\Swagger\Entity\Schemas\AbstractSchema")
      * @JMS\SerializedName("schema")
      * @var SchemaInterface
@@ -35,6 +37,7 @@ class Response
     protected $schema;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("ArrayCollection<string,ERP\Swagger\Entity\Headers\AbstractHeader>")
      * @JMS\SerializedName("headers")
      * @var AbstractHeader[]|ArrayCollection
@@ -42,6 +45,7 @@ class Response
     protected $headers;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("ERP\Swagger\Entity\Examples")
      * @JMS\SerializedName("examples")
      * @var string

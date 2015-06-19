@@ -18,6 +18,7 @@ class Contact
 {
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("name")
      * @var string
@@ -25,6 +26,7 @@ class Contact
     protected $name;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("url")
      * @var string
@@ -32,6 +34,7 @@ class Contact
     protected $url;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("email")
      * @var string

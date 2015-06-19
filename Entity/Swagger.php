@@ -28,6 +28,7 @@ class Swagger
     protected $version;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("ERP\Swagger\Entity\Info")
      * @JMS\SerializedName("info")
      * @var Info
@@ -35,6 +36,7 @@ class Swagger
     protected $info;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("host")
      * @var string
@@ -42,6 +44,7 @@ class Swagger
     protected $host;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("basePath")
      * @var string
@@ -49,6 +52,7 @@ class Swagger
     protected $basePath;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("array")
      * @JMS\SerializedName("schemes")
      * @var array
@@ -56,6 +60,7 @@ class Swagger
     protected $schemes;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("array")
      * @JMS\SerializedName("consumes")
      * @var string[]
@@ -63,6 +68,7 @@ class Swagger
     protected $consumes;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("array")
      * @JMS\SerializedName("produces")
      * @var string[]
@@ -70,6 +76,7 @@ class Swagger
     protected $produces;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("ArrayCollection<string,ERP\Swagger\Entity\Path>")
      * @JMS\SerializedName("paths")
      * @var ArrayCollection|Path[]
@@ -77,6 +84,7 @@ class Swagger
     protected $paths;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("ArrayCollection<string,ERP\Swagger\Entity\Schemas\AbstractSchema>")
      * @JMS\SerializedName("definitions")
      * @var ArrayCollection|SchemaInterface[]
@@ -84,6 +92,7 @@ class Swagger
     protected $definitions;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("ArrayCollection<string,ERP\Swagger\Entity\Parameters\AbstractParameter>")
      * @JMS\SerializedName("parameters")
      * @var ArrayCollection|AbstractParameter[]
@@ -91,6 +100,7 @@ class Swagger
     protected $parameters;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("ArrayCollection<string,ERP\Swagger\Entity\Response>")
      * @JMS\SerializedName("responses")
      * @var ArrayCollection|Response[]
@@ -98,6 +108,7 @@ class Swagger
     protected $responses;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("ArrayCollection<string,ERP\Swagger\Entity\SecurityDefinition>")
      * @JMS\SerializedName("securityDefinitions")
      * @var ArrayCollection|SecurityDefinition[]
@@ -105,6 +116,7 @@ class Swagger
     protected $securityDefinitions;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("ArrayCollection<string,array>")
      * @JMS\SerializedName("security")
      * @var ArrayCollection|string[]
@@ -112,6 +124,7 @@ class Swagger
     protected $security;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("ArrayCollection<string,ERP\Swagger\Entity\Tag>")
      * @JMS\SerializedName("tags")
      * @var ArrayCollection|Tag[]
@@ -119,6 +132,7 @@ class Swagger
     protected $tags;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("ERP\Swagger\Entity\ExternalDocumentation")
      * @JMS\SerializedName("externalDocs")
      * @var ExternalDocumentation
@@ -130,6 +144,12 @@ class Swagger
      */
     public function getVersion()
     {
+        if ($this->version && !version_compare($this->version, '2.0', '>=')) {
+            throw new \OutOfBoundsException(sprintf(
+                "Swagger version '%s' is not supported. Please upgrade to version 2.0 or higher",
+                $this->version
+            ));
+        }
         return $this->version;
     }
 

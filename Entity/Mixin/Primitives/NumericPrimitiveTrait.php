@@ -19,6 +19,7 @@ trait NumericPrimitiveTrait
     use AnyPrimitiveTrait;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("float")
      * @JMS\SerializedName("multipleOf")
      * @var integer
@@ -26,6 +27,7 @@ trait NumericPrimitiveTrait
     protected $multipleOf;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("float")
      * @JMS\SerializedName("maximum")
      * @var integer
@@ -33,6 +35,7 @@ trait NumericPrimitiveTrait
     protected $maximum;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("float")
      * @JMS\SerializedName("exclusiveMaximum")
      * @var integer
@@ -40,6 +43,7 @@ trait NumericPrimitiveTrait
     protected $exclusiveMaximum;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("float")
      * @JMS\SerializedName("minimum")
      * @var integer
@@ -47,6 +51,7 @@ trait NumericPrimitiveTrait
     protected $minimum;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("float")
      * @JMS\SerializedName("exclusiveMinimum")
      * @var integer

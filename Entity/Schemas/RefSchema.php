@@ -21,6 +21,7 @@ class RefSchema implements SchemaInterface
     const REF_TYPE = 'ref';
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("$ref")
      * @var string
@@ -28,6 +29,7 @@ class RefSchema implements SchemaInterface
     protected $ref;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("title")
      * @var string
@@ -35,6 +37,7 @@ class RefSchema implements SchemaInterface
     protected $title;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("description")
      * @var string

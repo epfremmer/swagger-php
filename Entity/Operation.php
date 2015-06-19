@@ -21,6 +21,7 @@ class Operation
 {
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("array")
      * @JMS\SerializedName("tags")
      * @var string[]
@@ -28,6 +29,7 @@ class Operation
     protected $tags;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("summary")
      * @var string
@@ -35,6 +37,7 @@ class Operation
     protected $summary;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("description")
      * @var string
@@ -42,6 +45,7 @@ class Operation
     protected $description;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("ERP\Swagger\Entity\ExternalDocumentation")
      * @JMS\SerializedName("externalDocs")
      * @var ExternalDocumentation
@@ -49,6 +53,7 @@ class Operation
     protected $externalDocs;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("operationId")
      * @var string
@@ -56,6 +61,7 @@ class Operation
     protected $operationId;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("array")
      * @JMS\SerializedName("consumes")
      * @var array
@@ -63,6 +69,7 @@ class Operation
     protected $consumes;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("array")
      * @JMS\SerializedName("produces")
      * @var string[]|array
@@ -70,6 +77,7 @@ class Operation
     protected $produces;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("ArrayCollection<string,ERP\Swagger\Entity\Parameters\AbstractParameter>")
      * @JMS\SerializedName("parameters")
      * @var ArrayCollection|AbstractParameter[]
@@ -77,6 +85,7 @@ class Operation
     protected $parameters;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("ArrayCollection<string,ERP\Swagger\Entity\Response>")
      * @JMS\SerializedName("responses")
      * @var SchemaInterface[]|ArrayCollection
@@ -84,6 +93,7 @@ class Operation
     protected $responses;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("array")
      * @JMS\SerializedName("schemes")
      * @var string[]
@@ -91,6 +101,7 @@ class Operation
     protected $schemes;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("boolean")
      * @JMS\SerializedName("deprecated")
      * @var boolean
@@ -98,6 +109,7 @@ class Operation
     protected $deprecated;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("ArrayCollection<string,array>")
      * @JMS\SerializedName("security")
      * @var ArrayCollection|string[]

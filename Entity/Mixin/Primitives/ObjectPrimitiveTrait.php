@@ -21,6 +21,7 @@ trait ObjectPrimitiveTrait
     use AnyPrimitiveTrait;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("integer")
      * @JMS\SerializedName("maxProperties")
      * @var integer
@@ -28,6 +29,7 @@ trait ObjectPrimitiveTrait
     protected $maxProperties;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("integer")
      * @JMS\SerializedName("minProperties")
      * @var integer
@@ -35,6 +37,7 @@ trait ObjectPrimitiveTrait
     protected $minProperties;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("array")
      * @JMS\SerializedName("required")
      * @var string[]
@@ -42,6 +45,7 @@ trait ObjectPrimitiveTrait
     protected $required;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("ArrayCollection<string,ERP\Swagger\Entity\Schemas\AbstractSchema>")
      * @JMS\SerializedName("properties")
      * @var SchemaInterface[]|ArrayCollection
@@ -49,6 +53,7 @@ trait ObjectPrimitiveTrait
     protected $properties;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("boolean")
      * @JMS\SerializedName("additionalProperties")
      * @var boolean
@@ -56,6 +61,7 @@ trait ObjectPrimitiveTrait
     protected $additionalProperties;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("patternProperties")
      * @var string
@@ -63,6 +69,7 @@ trait ObjectPrimitiveTrait
     protected $patternProperties;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("array")
      * @JMS\SerializedName("dependencies")
      * @var array

@@ -27,6 +27,7 @@ abstract class AbstractTypedParameter extends AbstractParameter
     const ARRAY_TYPE   = AbstractSchema::ARRAY_TYPE;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("type")
      * @var string
@@ -34,6 +35,7 @@ abstract class AbstractTypedParameter extends AbstractParameter
     protected $type;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("format")
      * @var string
@@ -41,6 +43,7 @@ abstract class AbstractTypedParameter extends AbstractParameter
     protected $format;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("boolean")
      * @JMS\SerializedName("allowEmptyValues")
      * @var boolean
@@ -48,6 +51,7 @@ abstract class AbstractTypedParameter extends AbstractParameter
     protected $allowEmptyValues;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("default")
      * @var string

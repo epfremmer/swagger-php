@@ -38,6 +38,7 @@ abstract class AbstractSchema implements SchemaInterface
     const OBJECT_TYPE  = 'object';
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("type")
      * @var string
@@ -45,6 +46,7 @@ abstract class AbstractSchema implements SchemaInterface
     protected $type;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("format")
      * @var string
@@ -52,6 +54,7 @@ abstract class AbstractSchema implements SchemaInterface
     protected $format;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("title")
      * @var string
@@ -59,6 +62,7 @@ abstract class AbstractSchema implements SchemaInterface
     protected $title;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("description")
      * @var string
@@ -66,6 +70,7 @@ abstract class AbstractSchema implements SchemaInterface
     protected $description;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("default")
      * @var array
@@ -73,6 +78,7 @@ abstract class AbstractSchema implements SchemaInterface
     protected $default;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("example")
      * @var string
@@ -80,6 +86,7 @@ abstract class AbstractSchema implements SchemaInterface
     protected $example;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("ERP\Swagger\Entity\ExternalDocumentation")
      * @JMS\SerializedName("externalDocs")
      * @var ExternalDocumentation
