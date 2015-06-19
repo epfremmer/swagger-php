@@ -64,6 +64,14 @@ class SwaggerFactoryTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * @expectedException \ERP\Swagger\Exception\InvalidVersionException
+     */
+    public function testBuildUnsupportedVersion()
+    {
+        $this->getFactory()->build($this->getFile(SwaggerParserTest::SWAGGER_V1_FILE));
+    }
+
+    /**
      * @covers ERP\Swagger\Factory\SwaggerFactory::build
      */
     public function testBuildJson()
@@ -94,5 +102,17 @@ class SwaggerFactoryTest extends \PHPUnit_Framework_TestCase
 
         $this->assertJson($json);
         $this->assertJsonStringEqualsJsonString(file_get_contents($this->getFile(SwaggerParserTest::SWAGGER_JSON_FILE)), $json);
+    }
+
+    /**
+     * @expectedException \ERP\Swagger\Exception\InvalidVersionException
+     */
+    public function testSerializeUnsupportedVersion()
+    {
+        $swagger = $this->getFactory()->build($this->getFile(SwaggerParserTest::SWAGGER_JSON_FILE));
+
+        $swagger->setVersion('1.0');
+
+        $this->getFactory()->serialize($swagger);
     }
 }
