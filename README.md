@@ -14,8 +14,8 @@ Add vcs repository to composer json:
         }
     ]
     
-Require package `composer require epfremmer/swagger:dev-develop`
-Install packages `composer install`
+* Require package `composer require epfremmer/swagger:dev-develop`
+* Install packages `composer install`
 
 ## Basic Usage
 
