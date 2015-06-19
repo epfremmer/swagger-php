@@ -20,6 +20,7 @@ class SwaggerParserTest extends \PHPUnit_Framework_TestCase
     // swagger files
     const SWAGGER_JSON_FILE            = 'swagger.json';
     const SWAGGER_YAML_FILE            = 'swagger.yaml';
+    const SWAGGER_V1_FILE              = 'swagger_v1.json';
     const SWAGGER_MISSING_FILE         = 'swagger_missing.json';
     const SWAGGER_WO_VERSION_JSON_FILE = 'swagger_wo_version.json';
     const SWAGGER_WO_VERSION_YAML_FILE = 'swagger_wo_version.yaml';
