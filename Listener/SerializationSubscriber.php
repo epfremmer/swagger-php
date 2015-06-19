@@ -6,10 +6,11 @@
  */
 namespace Epfremmer\SwaggerBundle\Listener;
 
+use Doctrine\Common\Annotations\AnnotationReader;
+use Epfremmer\SwaggerBundle\Annotations\Discriminator;
 use Epfremmer\SwaggerBundle\Entity\Examples;
 use Epfremmer\SwaggerBundle\Entity\Headers\AbstractHeader;
 use Epfremmer\SwaggerBundle\Entity\Parameters\AbstractParameter;
-use Epfremmer\SwaggerBundle\Entity\Parameters\AbstractTypedParameter;
 use Epfremmer\SwaggerBundle\Entity\Path;
 use Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema;
 use Epfremmer\SwaggerBundle\Entity\Schemas\RefSchema;
@@ -28,6 +29,19 @@ class SerializationSubscriber implements EventSubscriberInterface
 {
 
     /**
+     * @var AnnotationReader
+     */
+    protected $reader;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->reader = new AnnotationReader();
+    }
+
+    /**
      * {@inheritdoc
      */
     public static function getSubscribedEvents()
@@ -37,14 +51,15 @@ class SerializationSubscriber implements EventSubscriberInterface
             ['event' => Events::PRE_SERIALIZE, 'class' => AbstractSchema::class, 'method' => 'onPreSerialize'],
             ['event' => Events::PRE_SERIALIZE, 'class' => AbstractHeader::class, 'method' => 'onPreSerialize'],
             ['event' => Events::PRE_SERIALIZE, 'class' => AbstractParameter::class, 'method' => 'onPreSerialize'],
-            ['event' => Events::PRE_SERIALIZE, 'method' => 'onParameterPreSerialize'],
 
             // deserialization listeners (prepare data types for proper deserialization)
-            ['event' => Events::PRE_DESERIALIZE, 'class' => Path::class, 'method' => 'onPreDeserialize'],
-            ['event' => Events::PRE_DESERIALIZE, 'class' => Examples::class, 'method' => 'onPreDeserialize'],
+            ['event' => Events::PRE_DESERIALIZE, 'class' => Path::class, 'method' => 'onPreDeserializeCollection'],
+            ['event' => Events::PRE_DESERIALIZE, 'class' => Examples::class, 'method' => 'onPreDeserializeCollection'],
             ['event' => Events::PRE_DESERIALIZE, 'class' => AbstractSchema::class, 'method' => 'onSchemaPreDeserialize'],
-            ['event' => Events::PRE_DESERIALIZE, 'class' => AbstractHeader::class, 'method' => 'onSchemaPreDeserialize'],
             ['event' => Events::PRE_DESERIALIZE, 'class' => AbstractParameter::class, 'method' => 'onParameterPreDeserialize'],
+
+            // discriminator deserialization listener (must be execute last)
+            ['event' => Events::PRE_DESERIALIZE, 'method' => 'onPreDeserialize'],
         ];
     }
 
@@ -65,52 +80,50 @@ class SerializationSubscriber implements EventSubscriberInterface
     }
 
     /**
-     * Remove injected class field from parameter entities
-     * during serialization
-     *
-     * @param PreSerializeEvent $event
-     */
-    public function onParameterPreSerialize(PreSerializeEvent $event)
-    {
-        if ($event->getObject() instanceof AbstractParameter) {
-            $event->setType(AbstractTypedParameter::class);
-        }
-    }
-
-    /**
-     * Set top level data key when deserializing
-     * inline collections
+     * Checks for the existence of a discriminator annotation and sets the
+     * corresponding mapped deserialization class
      *
      * @param PreDeserializeEvent $event
      */
     public function onPreDeserialize(PreDeserializeEvent $event)
     {
-        $data = $event->getData();
+        $class = $event->getType()['name'];
 
-        $event->setData([
-            'data' => $data
-        ]);
+        if (!class_exists($class)) {
+            return; // skip custom JMS types
+        }
+
+        $data   = $event->getData();
+        $object = new \ReflectionClass($class);
+
+        $discriminator = $this->reader->getClassAnnotation($object, Discriminator::class);
+
+        if ($discriminator) {
+            $event->setType($discriminator->getClass($data));
+        }
     }
 
     /**
-     * Set default schema type if none preset
+     * Catches special $ref type schema objects during deserialization
+     * and sets the correct schema entity type
+     *
+     * This is because $ref schema objects do not have a "type" field
+     * specified in their json spec
      *
      * @param PreDeserializeEvent $event
      */
     public function onSchemaPreDeserialize(PreDeserializeEvent $event)
     {
         $data = $event->getData();
-        $data = $this->normalizeSchemaType($data);
 
         if (array_key_exists('$ref', $data)) {
             $event->setType(RefSchema::class);
         }
-
-        $event->setData($data);
     }
 
     /**
-     * Set default parameter schema type if none preset
+     * Set custom composite discriminator key based on multiple parameter fields
+     * before deserialization to ensure proper discrimination mapping
      *
      * @param PreDeserializeEvent $event
      */
@@ -124,30 +137,20 @@ class SerializationSubscriber implements EventSubscriberInterface
             $data['class'] = sprintf('%s.%s', $data['in'], $data['type']);
         }
 
-        if (array_key_exists('schema', $data)) {
-            $schema = $this->normalizeSchemaType($data['schema']);
-
-            $data['schema'] = $schema;
-        }
-
         $event->setData($data);
     }
 
     /**
-     * Return schema data with required deserialization type values
+     * Set top level data key when deserializing inline collections
      *
-     * Used by JMS Serializer to map schema type to
-     * the corresponding schema class
-     *
-     * @param array $data
-     * @return array
+     * @param PreDeserializeEvent $event
      */
-    protected function normalizeSchemaType(array $data)
+    public function onPreDeserializeCollection(PreDeserializeEvent $event)
     {
-        if (!array_key_exists('type', $data)) {
-            $data['type'] = AbstractSchema::OBJECT_TYPE;
-        }
+        $data = $event->getData();
 
-        return $data;
+        $event->setData([
+            'data' => $data
+        ]);
     }
 }
