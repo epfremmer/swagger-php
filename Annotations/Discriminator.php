@@ -19,12 +19,8 @@ use JMS\Serializer\Annotation as JMS;
  * @package Epfremmer\SwaggerBundle
  * @subpackage Annotations
  */
-class Discriminator extends Annotation
+class Discriminator extends JMS\Discriminator
 {
-    /**
-     * @var string[]
-     */
-    public $map;
 
     /**
      * @var string
@@ -32,9 +28,9 @@ class Discriminator extends Annotation
     public $default;
 
     /**
-     * @var string
+     * @var bool
      */
-    public $field = 'type';
+    public $disabled = true;
 
     /**
      * Return default kay
