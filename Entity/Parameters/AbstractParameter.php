@@ -6,12 +6,13 @@
  */
 namespace Epfremmer\SwaggerBundle\Entity\Parameters;
 
+use Epfremmer\SwaggerBundle\Annotations as EP;
 use JMS\Serializer\Annotation as JMS;
 
 /**
  * Class AbstractParameter
  *
- * @JMS\Discriminator(field = "class", map = {
+ * @EP\Discriminator(field = "class", default="body", map = {
  *   "body"            : "Epfremmer\SwaggerBundle\Entity\Parameters\BodyParameter",
  *   "path.string"     : "Epfremmer\SwaggerBundle\Entity\Parameters\PathParameter\StringType",
  *   "path.integer"    : "Epfremmer\SwaggerBundle\Entity\Parameters\PathParameter\IntegerType",
