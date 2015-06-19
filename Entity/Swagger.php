@@ -9,6 +9,8 @@ namespace ERP\Swagger\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use ERP\Swagger\Entity\Schemas\SchemaInterface;
 use ERP\Swagger\Entity\Parameters\AbstractParameter;
+use ERP\Swagger\Exception\InvalidVersionException;
+use ERP\Swagger\Parser\SwaggerParser;
 use JMS\Serializer\Annotation as JMS;
 
 /**
@@ -144,12 +146,10 @@ class Swagger
      */
     public function getVersion()
     {
-        if ($this->version && !version_compare($this->version, '2.0', '>=')) {
-            throw new \OutOfBoundsException(sprintf(
-                "Swagger version '%s' is not supported. Please upgrade to version 2.0 or higher",
-                $this->version
-            ));
+        if (!version_compare($this->version, SwaggerParser::MINIMUM_VERSION, '>=')) {
+            throw new InvalidVersionException($this->version);
         }
+
         return $this->version;
     }
 
