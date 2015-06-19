@@ -4,14 +4,14 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Entity;
+namespace ERP\Swagger\Entity;
 
 use JMS\Serializer\Annotation as JMS;
 
 /**
  * Class Info
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Entity
  */
 class Info
@@ -39,14 +39,14 @@ class Info
     protected $termsOfService;
 
     /**
-     * @JMS\Type("Epfremmer\SwaggerBundle\Entity\Contact")
+     * @JMS\Type("ERP\Swagger\Entity\Contact")
      * @JMS\SerializedName("contact")
      * @var Contact
      */
     protected $contact;
 
     /**
-     * @JMS\Type("Epfremmer\SwaggerBundle\Entity\License")
+     * @JMS\Type("ERP\Swagger\Entity\License")
      * @JMS\SerializedName("license")
      * @var License
      */

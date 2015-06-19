@@ -4,7 +4,7 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Entity;
+namespace ERP\Swagger\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use JMS\Serializer\Annotation as JMS;
@@ -14,7 +14,7 @@ use JMS\Serializer\VisitorInterface;
 /**
  * Class Path
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Entity
  */
 class Path
@@ -23,7 +23,7 @@ class Path
     /**
      * @JMS\Inline()
      * @JMS\SerializedName("data")
-     * @JMS\Type("ArrayCollection<string,Epfremmer\SwaggerBundle\Entity\Operation>")
+     * @JMS\Type("ArrayCollection<string,ERP\Swagger\Entity\Operation>")
      *
      * @var Operation[]|ArrayCollection
      */

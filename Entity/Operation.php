@@ -4,17 +4,17 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Entity;
+namespace ERP\Swagger\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
-use Epfremmer\SwaggerBundle\Entity\Schemas\SchemaInterface;
-use Epfremmer\SwaggerBundle\Entity\Parameters\AbstractParameter;
+use ERP\Swagger\Entity\Schemas\SchemaInterface;
+use ERP\Swagger\Entity\Parameters\AbstractParameter;
 use JMS\Serializer\Annotation as JMS;
 
 /**
  * Class Operation
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Entity
  */
 class Operation
@@ -42,7 +42,7 @@ class Operation
     protected $description;
 
     /**
-     * @JMS\Type("Epfremmer\SwaggerBundle\Entity\ExternalDocumentation")
+     * @JMS\Type("ERP\Swagger\Entity\ExternalDocumentation")
      * @JMS\SerializedName("externalDocs")
      * @var ExternalDocumentation
      */
@@ -70,14 +70,14 @@ class Operation
     protected $produces;
 
     /**
-     * @JMS\Type("ArrayCollection<string,Epfremmer\SwaggerBundle\Entity\Parameters\AbstractParameter>")
+     * @JMS\Type("ArrayCollection<string,ERP\Swagger\Entity\Parameters\AbstractParameter>")
      * @JMS\SerializedName("parameters")
      * @var ArrayCollection|AbstractParameter[]
      */
     protected $parameters;
 
     /**
-     * @JMS\Type("ArrayCollection<string,Epfremmer\SwaggerBundle\Entity\Response>")
+     * @JMS\Type("ArrayCollection<string,ERP\Swagger\Entity\Response>")
      * @JMS\SerializedName("responses")
      * @var SchemaInterface[]|ArrayCollection
      */

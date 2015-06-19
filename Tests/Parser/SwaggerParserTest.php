@@ -4,14 +4,14 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Tests\Parser;
+namespace ERP\Swagger\Tests\Parser;
 
-use Epfremmer\SwaggerBundle\Parser\SwaggerParser;
+use ERP\Swagger\Parser\SwaggerParser;
 
 /**
  * Class SwaggerParserTest
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Tests\Parser
  */
 class SwaggerParserTest extends \PHPUnit_Framework_TestCase
@@ -33,7 +33,7 @@ class SwaggerParserTest extends \PHPUnit_Framework_TestCase
      * Return new SwaggerParser
      *
      * @param string $file
-     * @return \Epfremmer\SwaggerBundle\Parser\SwaggerParser
+     * @return \ERP\Swagger\Parser\SwaggerParser
      */
     protected function getSwagger($file)
     {
@@ -57,7 +57,7 @@ class SwaggerParserTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Parser\SwaggerParser::__construct
+     * @covers ERP\Swagger\Parser\SwaggerParser::__construct
      */
     public function testConstructJsonFile()
     {
@@ -68,7 +68,7 @@ class SwaggerParserTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Parser\SwaggerParser::__construct
+     * @covers ERP\Swagger\Parser\SwaggerParser::__construct
      */
     public function testConstructYamlFile()
     {
@@ -79,7 +79,7 @@ class SwaggerParserTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Parser\SwaggerParser::getVersion
+     * @covers ERP\Swagger\Parser\SwaggerParser::getVersion
      * @depends testConstructJsonFile
      */
     public function testGetVersion()
@@ -91,7 +91,7 @@ class SwaggerParserTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Parser\SwaggerParser::getVersion
+     * @covers ERP\Swagger\Parser\SwaggerParser::getVersion
      * @depends testConstructJsonFile
      */
     public function testGetMissingVersion()
@@ -106,7 +106,7 @@ class SwaggerParserTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Parser\SwaggerParser::getData
+     * @covers ERP\Swagger\Parser\SwaggerParser::getData
      * @depends testConstructJsonFile
      */
     public function testGetData()
@@ -118,7 +118,7 @@ class SwaggerParserTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Parser\SwaggerParser::getData
+     * @covers ERP\Swagger\Parser\SwaggerParser::getData
      * @depends testConstructJsonFile
      */
     public function testToString()

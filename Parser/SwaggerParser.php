@@ -4,14 +4,14 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Parser;
+namespace ERP\Swagger\Parser;
 
 use Symfony\Component\Yaml\Yaml;
 
 /**
  * Class SwaggerParser
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Parser
  */
 class SwaggerParser

@@ -4,14 +4,14 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Tests\Entity\Headers;
+namespace ERP\Swagger\Tests\Entity\Headers;
 
-use Epfremmer\SwaggerBundle\Entity\Headers\AbstractHeader;
+use ERP\Swagger\Entity\Headers\AbstractHeader;
 
 /**
  * Class AbstractHeaderTest
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Tests\Entity\Headers
  */
 class AbstractHeaderTest extends \PHPUnit_Framework_TestCase
@@ -31,8 +31,8 @@ class AbstractHeaderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Headers\AbstractHeader::getDescription
-     * @covers Epfremmer\SwaggerBundle\Entity\Headers\AbstractHeader::setDescription
+     * @covers ERP\Swagger\Entity\Headers\AbstractHeader::getDescription
+     * @covers ERP\Swagger\Entity\Headers\AbstractHeader::setDescription
      */
     public function testDescription()
     {
@@ -43,8 +43,8 @@ class AbstractHeaderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Headers\AbstractHeader::getFormat
-     * @covers Epfremmer\SwaggerBundle\Entity\Headers\AbstractHeader::setFormat
+     * @covers ERP\Swagger\Entity\Headers\AbstractHeader::getFormat
+     * @covers ERP\Swagger\Entity\Headers\AbstractHeader::setFormat
      */
     public function testFormat()
     {
@@ -55,8 +55,8 @@ class AbstractHeaderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Headers\AbstractHeader::getDefault
-     * @covers Epfremmer\SwaggerBundle\Entity\Headers\AbstractHeader::setDefault
+     * @covers ERP\Swagger\Entity\Headers\AbstractHeader::getDefault
+     * @covers ERP\Swagger\Entity\Headers\AbstractHeader::setDefault
      */
     public function testDefault()
     {

@@ -4,21 +4,21 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Tests\Entity;
+namespace ERP\Swagger\Tests\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
-use Epfremmer\SwaggerBundle\Entity\Examples;
-use Epfremmer\SwaggerBundle\Entity\Headers;
-use Epfremmer\SwaggerBundle\Entity\Response;
-use Epfremmer\SwaggerBundle\Entity\Parameters;
-use Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema;
-use Epfremmer\SwaggerBundle\Entity\Schemas\ObjectSchema;
-use Epfremmer\SwaggerBundle\Tests\Mixin\SerializerContextTrait;
+use ERP\Swagger\Entity\Examples;
+use ERP\Swagger\Entity\Headers;
+use ERP\Swagger\Entity\Response;
+use ERP\Swagger\Entity\Parameters;
+use ERP\Swagger\Entity\Schemas\AbstractSchema;
+use ERP\Swagger\Entity\Schemas\ObjectSchema;
+use ERP\Swagger\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class ResponseTest
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Tests\Entity
  */
 class ResponseTest extends \PHPUnit_Framework_TestCase
@@ -39,8 +39,8 @@ class ResponseTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Response::getDescription
-     * @covers Epfremmer\SwaggerBundle\Entity\Response::setDescription
+     * @covers ERP\Swagger\Entity\Response::getDescription
+     * @covers ERP\Swagger\Entity\Response::setDescription
      */
     public function testDescription()
     {
@@ -51,8 +51,8 @@ class ResponseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Response::getSchema
-     * @covers Epfremmer\SwaggerBundle\Entity\Response::setSchema
+     * @covers ERP\Swagger\Entity\Response::getSchema
+     * @covers ERP\Swagger\Entity\Response::setSchema
      */
     public function testSchema()
     {
@@ -66,8 +66,8 @@ class ResponseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Response::getHeaders
-     * @covers Epfremmer\SwaggerBundle\Entity\Response::setHeaders
+     * @covers ERP\Swagger\Entity\Response::getHeaders
+     * @covers ERP\Swagger\Entity\Response::setHeaders
      */
     public function testHeaders()
     {
@@ -86,8 +86,8 @@ class ResponseTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Response::getExamples
-     * @covers Epfremmer\SwaggerBundle\Entity\Response::setExamples
+     * @covers ERP\Swagger\Entity\Response::getExamples
+     * @covers ERP\Swagger\Entity\Response::setExamples
      */
     public function testExamples()
     {
@@ -101,7 +101,7 @@ class ResponseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Response
+     * @covers ERP\Swagger\Entity\Response
      */
     public function testSerialize()
     {

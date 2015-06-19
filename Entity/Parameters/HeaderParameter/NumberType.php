@@ -4,15 +4,15 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Entity\Parameters\HeaderParameter;
+namespace ERP\Swagger\Entity\Parameters\HeaderParameter;
 
-use Epfremmer\SwaggerBundle\Entity\Mixin\Primitives;
-use Epfremmer\SwaggerBundle\Entity\Parameters\AbstractTypedParameter;
+use ERP\Swagger\Entity\Mixin\Primitives;
+use ERP\Swagger\Entity\Parameters\AbstractTypedParameter;
 
 /**
  * Class NumberType
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Entity\Parameters\HeaderParameter
  */
 class NumberType extends AbstractTypedParameter

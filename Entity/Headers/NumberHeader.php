@@ -4,14 +4,14 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Entity\Headers;
+namespace ERP\Swagger\Entity\Headers;
 
-use Epfremmer\SwaggerBundle\Entity\Mixin\Primitives;
+use ERP\Swagger\Entity\Mixin\Primitives;
 
 /**
  * Class NumberHeader
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Entity\Headers
  */
 class NumberHeader extends AbstractHeader

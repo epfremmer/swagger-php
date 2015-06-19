@@ -4,17 +4,17 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Entity;
+namespace ERP\Swagger\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
-use Epfremmer\SwaggerBundle\Entity\Schemas\SchemaInterface;
-use Epfremmer\SwaggerBundle\Entity\Parameters\AbstractParameter;
+use ERP\Swagger\Entity\Schemas\SchemaInterface;
+use ERP\Swagger\Entity\Parameters\AbstractParameter;
 use JMS\Serializer\Annotation as JMS;
 
 /**
  * Class Swagger
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Entity
  */
 class Swagger
@@ -28,7 +28,7 @@ class Swagger
     protected $version;
 
     /**
-     * @JMS\Type("Epfremmer\SwaggerBundle\Entity\Info")
+     * @JMS\Type("ERP\Swagger\Entity\Info")
      * @JMS\SerializedName("info")
      * @var Info
      */
@@ -70,35 +70,35 @@ class Swagger
     protected $produces;
 
     /**
-     * @JMS\Type("ArrayCollection<string,Epfremmer\SwaggerBundle\Entity\Path>")
+     * @JMS\Type("ArrayCollection<string,ERP\Swagger\Entity\Path>")
      * @JMS\SerializedName("paths")
      * @var ArrayCollection|Path[]
      */
     protected $paths;
 
     /**
-     * @JMS\Type("ArrayCollection<string,Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema>")
+     * @JMS\Type("ArrayCollection<string,ERP\Swagger\Entity\Schemas\AbstractSchema>")
      * @JMS\SerializedName("definitions")
      * @var ArrayCollection|SchemaInterface[]
      */
     protected $definitions;
 
     /**
-     * @JMS\Type("ArrayCollection<string,Epfremmer\SwaggerBundle\Entity\Parameters\AbstractParameter>")
+     * @JMS\Type("ArrayCollection<string,ERP\Swagger\Entity\Parameters\AbstractParameter>")
      * @JMS\SerializedName("parameters")
      * @var ArrayCollection|AbstractParameter[]
      */
     protected $parameters;
 
     /**
-     * @JMS\Type("ArrayCollection<string,Epfremmer\SwaggerBundle\Entity\Response>")
+     * @JMS\Type("ArrayCollection<string,ERP\Swagger\Entity\Response>")
      * @JMS\SerializedName("responses")
      * @var ArrayCollection|Response[]
      */
     protected $responses;
 
     /**
-     * @JMS\Type("ArrayCollection<string,Epfremmer\SwaggerBundle\Entity\SecurityDefinition>")
+     * @JMS\Type("ArrayCollection<string,ERP\Swagger\Entity\SecurityDefinition>")
      * @JMS\SerializedName("securityDefinitions")
      * @var ArrayCollection|SecurityDefinition[]
      */
@@ -112,14 +112,14 @@ class Swagger
     protected $security;
 
     /**
-     * @JMS\Type("ArrayCollection<string,Epfremmer\SwaggerBundle\Entity\Tag>")
+     * @JMS\Type("ArrayCollection<string,ERP\Swagger\Entity\Tag>")
      * @JMS\SerializedName("tags")
      * @var ArrayCollection|Tag[]
      */
     protected $tags;
 
     /**
-     * @JMS\Type("Epfremmer\SwaggerBundle\Entity\ExternalDocumentation")
+     * @JMS\Type("ERP\Swagger\Entity\ExternalDocumentation")
      * @JMS\SerializedName("externalDocs")
      * @var ExternalDocumentation
      */

@@ -4,24 +4,24 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Entity\Headers;
+namespace ERP\Swagger\Entity\Headers;
 
-use Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema;
-use Epfremmer\SwaggerBundle\Annotations as EP;
+use ERP\Swagger\Entity\Schemas\AbstractSchema;
+use ERP\Swagger\Annotations as EP;
 use JMS\Serializer\Annotation as JMS;
 
 /**
  * Class AbstractHeader
  *
  * @EP\Discriminator(field = "type", default="array", map = {
- *   "boolean": "Epfremmer\SwaggerBundle\Entity\Headers\BooleanHeader",
- *   "integer": "Epfremmer\SwaggerBundle\Entity\Headers\IntegerHeader",
- *   "number" : "Epfremmer\SwaggerBundle\Entity\Headers\NumberHeader",
- *   "string" : "Epfremmer\SwaggerBundle\Entity\Headers\StringHeader",
- *   "array"  : "Epfremmer\SwaggerBundle\Entity\Headers\ArrayHeader"
+ *   "boolean": "ERP\Swagger\Entity\Headers\BooleanHeader",
+ *   "integer": "ERP\Swagger\Entity\Headers\IntegerHeader",
+ *   "number" : "ERP\Swagger\Entity\Headers\NumberHeader",
+ *   "string" : "ERP\Swagger\Entity\Headers\StringHeader",
+ *   "array"  : "ERP\Swagger\Entity\Headers\ArrayHeader"
  * })
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Entity\Headers
  */
 abstract class AbstractHeader

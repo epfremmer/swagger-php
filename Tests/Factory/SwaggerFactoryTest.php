@@ -4,16 +4,16 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Tests\Factory;
+namespace ERP\Swagger\Tests\Factory;
 
-use Epfremmer\SwaggerBundle\Entity\Swagger;
-use Epfremmer\SwaggerBundle\Factory\SwaggerFactory;
-use Epfremmer\SwaggerBundle\Tests\Parser\SwaggerParserTest;
+use ERP\Swagger\Entity\Swagger;
+use ERP\Swagger\Factory\SwaggerFactory;
+use ERP\Swagger\Tests\Parser\SwaggerParserTest;
 
 /**
  * Class SwaggerFactoryTest
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Tests\Parser
  */
 class SwaggerFactoryTest extends \PHPUnit_Framework_TestCase
@@ -64,7 +64,7 @@ class SwaggerFactoryTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Factory\SwaggerFactory::build
+     * @covers ERP\Swagger\Factory\SwaggerFactory::build
      */
     public function testBuildJson()
     {
@@ -74,7 +74,7 @@ class SwaggerFactoryTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Factory\SwaggerFactory::build
+     * @covers ERP\Swagger\Factory\SwaggerFactory::build
      */
     public function testBuildYaml()
     {
@@ -84,7 +84,7 @@ class SwaggerFactoryTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Factory\SwaggerFactory::serialize
+     * @covers ERP\Swagger\Factory\SwaggerFactory::serialize
      */
     public function testSerialize()
     {

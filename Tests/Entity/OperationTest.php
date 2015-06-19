@@ -4,19 +4,19 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Tests\Entity;
+namespace ERP\Swagger\Tests\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
-use Epfremmer\SwaggerBundle\Entity\ExternalDocumentation;
-use Epfremmer\SwaggerBundle\Entity\Operation;
-use Epfremmer\SwaggerBundle\Entity\Parameters;
-use Epfremmer\SwaggerBundle\Entity\Response;
-use Epfremmer\SwaggerBundle\Tests\Mixin\SerializerContextTrait;
+use ERP\Swagger\Entity\ExternalDocumentation;
+use ERP\Swagger\Entity\Operation;
+use ERP\Swagger\Entity\Parameters;
+use ERP\Swagger\Entity\Response;
+use ERP\Swagger\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class OperationTest
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Tests\Entity
  */
 class OperationTest extends \PHPUnit_Framework_TestCase
@@ -37,8 +37,8 @@ class OperationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Operation::getTags
-     * @covers Epfremmer\SwaggerBundle\Entity\Operation::setTags
+     * @covers ERP\Swagger\Entity\Operation::getTags
+     * @covers ERP\Swagger\Entity\Operation::setTags
      */
     public function testTags()
     {
@@ -51,8 +51,8 @@ class OperationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Operation::getSummary
-     * @covers Epfremmer\SwaggerBundle\Entity\Operation::setSummary
+     * @covers ERP\Swagger\Entity\Operation::getSummary
+     * @covers ERP\Swagger\Entity\Operation::setSummary
      */
     public function testSummary()
     {
@@ -63,8 +63,8 @@ class OperationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Operation::getDescription
-     * @covers Epfremmer\SwaggerBundle\Entity\Operation::setDescription
+     * @covers ERP\Swagger\Entity\Operation::getDescription
+     * @covers ERP\Swagger\Entity\Operation::setDescription
      */
     public function testDescription()
     {
@@ -75,8 +75,8 @@ class OperationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Operation::getExternalDocs
-     * @covers Epfremmer\SwaggerBundle\Entity\Operation::setExternalDocs
+     * @covers ERP\Swagger\Entity\Operation::getExternalDocs
+     * @covers ERP\Swagger\Entity\Operation::setExternalDocs
      */
     public function testExternalDocs()
     {
@@ -90,8 +90,8 @@ class OperationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Operation::getOperationId
-     * @covers Epfremmer\SwaggerBundle\Entity\Operation::setOperationId
+     * @covers ERP\Swagger\Entity\Operation::getOperationId
+     * @covers ERP\Swagger\Entity\Operation::setOperationId
      */
     public function testOperationId()
     {
@@ -102,8 +102,8 @@ class OperationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Operation::getConsumes
-     * @covers Epfremmer\SwaggerBundle\Entity\Operation::setConsumes
+     * @covers ERP\Swagger\Entity\Operation::getConsumes
+     * @covers ERP\Swagger\Entity\Operation::setConsumes
      */
     public function testConsumes()
     {
@@ -116,8 +116,8 @@ class OperationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Operation::getProduces
-     * @covers Epfremmer\SwaggerBundle\Entity\Operation::setProduces
+     * @covers ERP\Swagger\Entity\Operation::getProduces
+     * @covers ERP\Swagger\Entity\Operation::setProduces
      */
     public function testProduces()
     {
@@ -130,8 +130,8 @@ class OperationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Operation::getParameters
-     * @covers Epfremmer\SwaggerBundle\Entity\Operation::setParameters
+     * @covers ERP\Swagger\Entity\Operation::getParameters
+     * @covers ERP\Swagger\Entity\Operation::setParameters
      */
     public function testParameters()
     {
@@ -150,8 +150,8 @@ class OperationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Operation::getResponses
-     * @covers Epfremmer\SwaggerBundle\Entity\Operation::setResponses
+     * @covers ERP\Swagger\Entity\Operation::getResponses
+     * @covers ERP\Swagger\Entity\Operation::setResponses
      */
     public function testResponses()
     {
@@ -169,8 +169,8 @@ class OperationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Operation::getSchemes
-     * @covers Epfremmer\SwaggerBundle\Entity\Operation::setSchemes
+     * @covers ERP\Swagger\Entity\Operation::getSchemes
+     * @covers ERP\Swagger\Entity\Operation::setSchemes
      */
     public function testSchemes()
     {
@@ -183,8 +183,8 @@ class OperationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Operation::isDeprecated
-     * @covers Epfremmer\SwaggerBundle\Entity\Operation::setDeprecated
+     * @covers ERP\Swagger\Entity\Operation::isDeprecated
+     * @covers ERP\Swagger\Entity\Operation::setDeprecated
      */
     public function testDeprecated()
     {
@@ -197,8 +197,8 @@ class OperationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Operation::getSecurity
-     * @covers Epfremmer\SwaggerBundle\Entity\Operation::setSecurity
+     * @covers ERP\Swagger\Entity\Operation::getSecurity
+     * @covers ERP\Swagger\Entity\Operation::setSecurity
      */
     public function testSecurity()
     {
@@ -216,7 +216,7 @@ class OperationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Operation
+     * @covers ERP\Swagger\Entity\Operation
      */
     public function testSerialize()
     {
