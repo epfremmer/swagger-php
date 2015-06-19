@@ -56,7 +56,7 @@ class SwaggerFactoryTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Factory\SwaggerFactory
+     * @covers ERP\Swagger\Factory\SwaggerFactory::__construct
      */
     public function testFactoryConstructor()
     {
