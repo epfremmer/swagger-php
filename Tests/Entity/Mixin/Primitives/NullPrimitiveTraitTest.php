@@ -4,17 +4,17 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Tests\Entity\Mixin;
+namespace ERP\Swagger\Tests\Entity\Mixin;
 
-use Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\NullPrimitiveTrait;
-use Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema;
-use Epfremmer\SwaggerBundle\Entity\Schemas\NullSchema;
-use Epfremmer\SwaggerBundle\Tests\Mixin\SerializerContextTrait;
+use ERP\Swagger\Entity\Mixin\Primitives\NullPrimitiveTrait;
+use ERP\Swagger\Entity\Schemas\AbstractSchema;
+use ERP\Swagger\Entity\Schemas\NullSchema;
+use ERP\Swagger\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class NullPrimitiveTraitTest
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Tests\Entity\Schemas\Primitives
  */
 class NullPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
@@ -42,7 +42,7 @@ class NullPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\NullPrimitiveTrait
+     * @covers ERP\Swagger\Entity\Mixin\Primitives\NullPrimitiveTrait
      */
     public function testSerialization()
     {
@@ -50,11 +50,11 @@ class NullPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
             'type' => AbstractSchema::NULL_TYPE
         ]);
 
-        $primitive = self::$serializer->deserialize($data, AbstractSchema::class, 'json');
+        $primitive = $this->getSerializer()->deserialize($data, AbstractSchema::class, 'json');
 
         $this->assertInstanceOf(NullSchema::class, $primitive);
 
-        $json = self::$serializer->serialize($primitive, 'json');
+        $json = $this->getSerializer()->serialize($primitive, 'json');
 
         $this->assertJson($json);
         $this->assertJsonStringEqualsJsonString($data, $json);

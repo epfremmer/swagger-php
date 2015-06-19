@@ -4,17 +4,17 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Tests\Entity\Mixin;
+namespace ERP\Swagger\Tests\Entity\Mixin;
 
-use Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\BooleanPrimitiveTrait;
-use Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema;
-use Epfremmer\SwaggerBundle\Entity\Schemas\BooleanSchema;
-use Epfremmer\SwaggerBundle\Tests\Mixin\SerializerContextTrait;
+use ERP\Swagger\Entity\Mixin\Primitives\BooleanPrimitiveTrait;
+use ERP\Swagger\Entity\Schemas\AbstractSchema;
+use ERP\Swagger\Entity\Schemas\BooleanSchema;
+use ERP\Swagger\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class BooleanPrimitiveTraitTest
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Tests\Entity\Schemas\Primitives
  */
 class BooleanPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
@@ -42,7 +42,7 @@ class BooleanPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\BooleanPrimitiveTrait
+     * @covers ERP\Swagger\Entity\Mixin\Primitives\BooleanPrimitiveTrait
      */
     public function testSerialization()
     {
@@ -50,11 +50,11 @@ class BooleanPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
             'type' => AbstractSchema::BOOLEAN_TYPE
         ]);
 
-        $primitive = self::$serializer->deserialize($data, AbstractSchema::class, 'json');
+        $primitive = $this->getSerializer()->deserialize($data, AbstractSchema::class, 'json');
 
         $this->assertInstanceOf(BooleanSchema::class, $primitive);
 
-        $json = self::$serializer->serialize($primitive, 'json');
+        $json = $this->getSerializer()->serialize($primitive, 'json');
 
         $this->assertJson($json);
         $this->assertJsonStringEqualsJsonString($data, $json);

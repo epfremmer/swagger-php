@@ -4,17 +4,17 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Tests\Entity;
+namespace ERP\Swagger\Tests\Entity;
 
-use Epfremmer\SwaggerBundle\Entity\Contact;
-use Epfremmer\SwaggerBundle\Entity\Info;
-use Epfremmer\SwaggerBundle\Entity\License;
-use Epfremmer\SwaggerBundle\Tests\Mixin\SerializerContextTrait;
+use ERP\Swagger\Entity\Contact;
+use ERP\Swagger\Entity\Info;
+use ERP\Swagger\Entity\License;
+use ERP\Swagger\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class InfoTest
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Tests\Entity
  */
 class InfoTest extends \PHPUnit_Framework_TestCase
@@ -35,8 +35,8 @@ class InfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Info::getTitle
-     * @covers Epfremmer\SwaggerBundle\Entity\Info::setTitle
+     * @covers ERP\Swagger\Entity\Info::getTitle
+     * @covers ERP\Swagger\Entity\Info::setTitle
      */
     public function testTitle()
     {
@@ -47,8 +47,8 @@ class InfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Info::getDescription
-     * @covers Epfremmer\SwaggerBundle\Entity\Info::setDescription
+     * @covers ERP\Swagger\Entity\Info::getDescription
+     * @covers ERP\Swagger\Entity\Info::setDescription
      */
     public function testDescription()
     {
@@ -59,8 +59,8 @@ class InfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Info::getTermsOfService
-     * @covers Epfremmer\SwaggerBundle\Entity\Info::setTermsOfService
+     * @covers ERP\Swagger\Entity\Info::getTermsOfService
+     * @covers ERP\Swagger\Entity\Info::setTermsOfService
      */
     public function testTermsOfService()
     {
@@ -71,8 +71,8 @@ class InfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Info::getContact
-     * @covers Epfremmer\SwaggerBundle\Entity\Info::setContact
+     * @covers ERP\Swagger\Entity\Info::getContact
+     * @covers ERP\Swagger\Entity\Info::setContact
      */
     public function testContact()
     {
@@ -86,8 +86,8 @@ class InfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Info::getLicense
-     * @covers Epfremmer\SwaggerBundle\Entity\Info::setLicense
+     * @covers ERP\Swagger\Entity\Info::getLicense
+     * @covers ERP\Swagger\Entity\Info::setLicense
      */
     public function testLicense()
     {
@@ -101,8 +101,8 @@ class InfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Info::getVersion
-     * @covers Epfremmer\SwaggerBundle\Entity\Info::setVersion
+     * @covers ERP\Swagger\Entity\Info::getVersion
+     * @covers ERP\Swagger\Entity\Info::setVersion
      */
     public function testVersion()
     {
@@ -113,7 +113,7 @@ class InfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Info
+     * @covers ERP\Swagger\Entity\Info
      */
     public function testSerialize()
     {
@@ -126,7 +126,7 @@ class InfoTest extends \PHPUnit_Framework_TestCase
             'version' => '1.0.0'
         ]);
 
-        $info = self::$serializer->deserialize($data, Info::class, 'json');
+        $info = $this->getSerializer()->deserialize($data, Info::class, 'json');
 
         $this->assertInstanceOf(Info::class, $info);
         $this->assertAttributeEquals('foo', 'title', $info);
@@ -136,7 +136,7 @@ class InfoTest extends \PHPUnit_Framework_TestCase
         $this->assertAttributeInstanceOf(License::class, 'license', $info);
         $this->assertAttributeEquals('1.0.0', 'version', $info);
 
-        $json = self::$serializer->serialize($info, 'json');
+        $json = $this->getSerializer()->serialize($info, 'json');
 
         $this->assertJson($json);
         $this->assertJsonStringEqualsJsonString($data, $json);

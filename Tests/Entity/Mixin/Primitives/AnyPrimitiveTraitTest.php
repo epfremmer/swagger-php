@@ -4,18 +4,18 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Tests\Entity\Mixin;
+namespace ERP\Swagger\Tests\Entity\Mixin;
 
 use Doctrine\Common\Collections\ArrayCollection;
-use Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema;
-use Epfremmer\SwaggerBundle\Entity\Schemas\ObjectSchema;
-use Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\AnyPrimitiveTrait;
-use Epfremmer\SwaggerBundle\Tests\Mixin\SerializerContextTrait;
+use ERP\Swagger\Entity\Schemas\AbstractSchema;
+use ERP\Swagger\Entity\Schemas\ObjectSchema;
+use ERP\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait;
+use ERP\Swagger\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class AnyPrimitiveTraitTest
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Tests\Entity\Schemas\Primitives
  */
 class AnyPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
@@ -43,8 +43,8 @@ class AnyPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\AnyPrimitiveTrait::getEnum
-     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\AnyPrimitiveTrait::setEnum
+     * @covers ERP\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::getEnum
+     * @covers ERP\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::setEnum
      */
     public function testEnum()
     {
@@ -58,8 +58,8 @@ class AnyPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\AnyPrimitiveTrait::getAllOf
-     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\AnyPrimitiveTrait::setAllOf
+     * @covers ERP\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::getAllOf
+     * @covers ERP\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::setAllOf
      */
     public function testAllOf()
     {
@@ -73,8 +73,8 @@ class AnyPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\AnyPrimitiveTrait::getAnyOf
-     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\AnyPrimitiveTrait::setAnyOf
+     * @covers ERP\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::getAnyOf
+     * @covers ERP\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::setAnyOf
      */
     public function testAnyOf()
     {
@@ -88,8 +88,8 @@ class AnyPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\AnyPrimitiveTrait::getOneOf
-     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\AnyPrimitiveTrait::setOneOf
+     * @covers ERP\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::getOneOf
+     * @covers ERP\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::setOneOf
      */
     public function testOneOf()
     {
@@ -103,8 +103,8 @@ class AnyPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\AnyPrimitiveTrait::getNot
-     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\AnyPrimitiveTrait::setNot
+     * @covers ERP\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::getNot
+     * @covers ERP\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::setNot
      */
     public function testNot()
     {
@@ -118,8 +118,8 @@ class AnyPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\AnyPrimitiveTrait::getDefinitions
-     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\AnyPrimitiveTrait::setDefinitions
+     * @covers ERP\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::getDefinitions
+     * @covers ERP\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::setDefinitions
      */
     public function testDefinitions()
     {
@@ -137,7 +137,7 @@ class AnyPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\AnyPrimitiveTrait
+     * @covers ERP\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait
      */
     public function testSerialization()
     {
@@ -160,7 +160,7 @@ class AnyPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
             ],
         ]);
 
-        $primitive = self::$serializer->deserialize($data, AbstractSchema::class, 'json');
+        $primitive = $this->getSerializer()->deserialize($data, AbstractSchema::class, 'json');
 
         $this->assertInstanceOf(ObjectSchema::class, $primitive);
         $this->assertAttributeEquals(['foo', 'bar'], 'enum', $primitive);
@@ -172,7 +172,7 @@ class AnyPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
         $this->assertContainsOnlyInstancesOf(ObjectSchema::class, $primitive->getDefinitions());
         $this->assertInstanceOf(ObjectSchema::class, $primitive->getDefinitions()->get('def'));
 
-        $json = self::$serializer->serialize($primitive, 'json');
+        $json = $this->getSerializer()->serialize($primitive, 'json');
 
         $this->assertJson($json);
         $this->assertJsonStringEqualsJsonString($data, $json);

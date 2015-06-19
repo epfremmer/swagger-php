@@ -4,22 +4,23 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Entity\Parameters;
+namespace ERP\Swagger\Entity\Parameters;
 
-use Epfremmer\SwaggerBundle\Entity\Schemas\SchemaInterface;
+use ERP\Swagger\Entity\Schemas\SchemaInterface;
 use JMS\Serializer\Annotation as JMS;
 
 /**
  * Class BodyParameter
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Entity\Parameters
  */
 class BodyParameter extends AbstractParameter
 {
 
     /**
-     * @JMS\Type("Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema")
+     * @JMS\Since("2.0")
+     * @JMS\Type("ERP\Swagger\Entity\Schemas\AbstractSchema")
      * @JMS\SerializedName("schema")
      * @var SchemaInterface
      */

@@ -4,23 +4,24 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Entity;
+namespace ERP\Swagger\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
-use Epfremmer\SwaggerBundle\Entity\Schemas\SchemaInterface;
-use Epfremmer\SwaggerBundle\Entity\Headers\AbstractHeader;
+use ERP\Swagger\Entity\Schemas\SchemaInterface;
+use ERP\Swagger\Entity\Headers\AbstractHeader;
 use JMS\Serializer\Annotation as JMS;
 
 /**
  * Class Response
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Entity
  */
 class Response
 {
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("description")
      * @var string
@@ -28,21 +29,24 @@ class Response
     protected $description;
 
     /**
-     * @JMS\Type("Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema")
+     * @JMS\Since("2.0")
+     * @JMS\Type("ERP\Swagger\Entity\Schemas\AbstractSchema")
      * @JMS\SerializedName("schema")
      * @var SchemaInterface
      */
     protected $schema;
 
     /**
-     * @JMS\Type("ArrayCollection<string,Epfremmer\SwaggerBundle\Entity\Headers\AbstractHeader>")
+     * @JMS\Since("2.0")
+     * @JMS\Type("ArrayCollection<string,ERP\Swagger\Entity\Headers\AbstractHeader>")
      * @JMS\SerializedName("headers")
      * @var AbstractHeader[]|ArrayCollection
      */
     protected $headers;
 
     /**
-     * @JMS\Type("Epfremmer\SwaggerBundle\Entity\Examples")
+     * @JMS\Since("2.0")
+     * @JMS\Type("ERP\Swagger\Entity\Examples")
      * @JMS\SerializedName("examples")
      * @var string
      */

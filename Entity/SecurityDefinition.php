@@ -4,20 +4,21 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Entity;
+namespace ERP\Swagger\Entity;
 
 use JMS\Serializer\Annotation as JMS;
 
 /**
  * Class SecurityDefinition
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Entity
  */
 class SecurityDefinition
 {
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("type")
      * @var string
@@ -25,6 +26,7 @@ class SecurityDefinition
     protected $type;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("description")
      * @var string
@@ -32,6 +34,7 @@ class SecurityDefinition
     protected $description;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("name")
      * @var string
@@ -39,6 +42,7 @@ class SecurityDefinition
     protected $name;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("in")
      * @var string
@@ -46,6 +50,7 @@ class SecurityDefinition
     protected $in;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("flow")
      * @var string
@@ -53,6 +58,7 @@ class SecurityDefinition
     protected $flow;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("authorizationUrl")
      * @var string
@@ -60,6 +66,7 @@ class SecurityDefinition
     protected $authorizationUrl;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("tokenUrl")
      * @var string
@@ -67,6 +74,7 @@ class SecurityDefinition
     protected $tokenUrl;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("array")
      * @JMS\SerializedName("scopes")
      * @var array

@@ -4,17 +4,17 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Tests\Entity\Mixin;
+namespace ERP\Swagger\Tests\Entity\Mixin;
 
-use Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\StringPrimitiveTrait;
-use Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema;
-use Epfremmer\SwaggerBundle\Entity\Schemas\StringSchema;
-use Epfremmer\SwaggerBundle\Tests\Mixin\SerializerContextTrait;
+use ERP\Swagger\Entity\Mixin\Primitives\StringPrimitiveTrait;
+use ERP\Swagger\Entity\Schemas\AbstractSchema;
+use ERP\Swagger\Entity\Schemas\StringSchema;
+use ERP\Swagger\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class StringPrimitiveTraitTest
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Tests\Entity\Schemas\Primitives
  */
 class StringPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
@@ -42,8 +42,8 @@ class StringPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\StringPrimitiveTrait::getMaxLength
-     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\StringPrimitiveTrait::setMaxLength
+     * @covers ERP\Swagger\Entity\Mixin\Primitives\StringPrimitiveTrait::getMaxLength
+     * @covers ERP\Swagger\Entity\Mixin\Primitives\StringPrimitiveTrait::setMaxLength
      */
     public function testMaxLength()
     {
@@ -55,8 +55,8 @@ class StringPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\StringPrimitiveTrait::getMinLength
-     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\StringPrimitiveTrait::setMinLength
+     * @covers ERP\Swagger\Entity\Mixin\Primitives\StringPrimitiveTrait::getMinLength
+     * @covers ERP\Swagger\Entity\Mixin\Primitives\StringPrimitiveTrait::setMinLength
      */
     public function testMinLength()
     {
@@ -68,8 +68,8 @@ class StringPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\StringPrimitiveTrait::getPattern
-     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\StringPrimitiveTrait::setPattern
+     * @covers ERP\Swagger\Entity\Mixin\Primitives\StringPrimitiveTrait::getPattern
+     * @covers ERP\Swagger\Entity\Mixin\Primitives\StringPrimitiveTrait::setPattern
      */
     public function testPattern()
     {
@@ -81,7 +81,7 @@ class StringPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\StringPrimitiveTrait
+     * @covers ERP\Swagger\Entity\Mixin\Primitives\StringPrimitiveTrait
      */
     public function testSerialization()
     {
@@ -92,14 +92,14 @@ class StringPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
             'pattern'   => 'foo',
         ]);
 
-        $primitive = self::$serializer->deserialize($data, AbstractSchema::class, 'json');
+        $primitive = $this->getSerializer()->deserialize($data, AbstractSchema::class, 'json');
 
         $this->assertInstanceOf(StringSchema::class, $primitive);
         $this->assertAttributeEquals(10, 'maxLength', $primitive);
         $this->assertAttributeEquals(1, 'minLength', $primitive);
         $this->assertAttributeEquals('foo', 'pattern', $primitive);
 
-        $json = self::$serializer->serialize($primitive, 'json');
+        $json = $this->getSerializer()->serialize($primitive, 'json');
 
         $this->assertJson($json);
         $this->assertJsonStringEqualsJsonString($data, $json);

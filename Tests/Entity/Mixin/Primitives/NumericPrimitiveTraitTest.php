@@ -4,17 +4,17 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Tests\Entity\Mixin;
+namespace ERP\Swagger\Tests\Entity\Mixin;
 
-use Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\NumericPrimitiveTrait;
-use Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema;
-use Epfremmer\SwaggerBundle\Entity\Schemas\NumberSchema;
-use Epfremmer\SwaggerBundle\Tests\Mixin\SerializerContextTrait;
+use ERP\Swagger\Entity\Mixin\Primitives\NumericPrimitiveTrait;
+use ERP\Swagger\Entity\Schemas\AbstractSchema;
+use ERP\Swagger\Entity\Schemas\NumberSchema;
+use ERP\Swagger\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class NumericPrimitiveTraitTest
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Tests\Entity\Schemas\Primitives
  */
 class NumericPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
@@ -42,8 +42,8 @@ class NumericPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\NumericPrimitiveTrait::getMultipleOf
-     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\NumericPrimitiveTrait::setMultipleOf
+     * @covers ERP\Swagger\Entity\Mixin\Primitives\NumericPrimitiveTrait::getMultipleOf
+     * @covers ERP\Swagger\Entity\Mixin\Primitives\NumericPrimitiveTrait::setMultipleOf
      */
     public function testMultipleOf()
     {
@@ -55,8 +55,8 @@ class NumericPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\NumericPrimitiveTrait::getMaximum
-     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\NumericPrimitiveTrait::setMaximum
+     * @covers ERP\Swagger\Entity\Mixin\Primitives\NumericPrimitiveTrait::getMaximum
+     * @covers ERP\Swagger\Entity\Mixin\Primitives\NumericPrimitiveTrait::setMaximum
      */
     public function testMaximum()
     {
@@ -68,8 +68,8 @@ class NumericPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\NumericPrimitiveTrait::getExclusiveMaximum
-     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\NumericPrimitiveTrait::setExclusiveMaximum
+     * @covers ERP\Swagger\Entity\Mixin\Primitives\NumericPrimitiveTrait::getExclusiveMaximum
+     * @covers ERP\Swagger\Entity\Mixin\Primitives\NumericPrimitiveTrait::setExclusiveMaximum
      */
     public function testExclusiveMaximum()
     {
@@ -81,8 +81,8 @@ class NumericPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\NumericPrimitiveTrait::getMinimum
-     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\NumericPrimitiveTrait::setMinimum
+     * @covers ERP\Swagger\Entity\Mixin\Primitives\NumericPrimitiveTrait::getMinimum
+     * @covers ERP\Swagger\Entity\Mixin\Primitives\NumericPrimitiveTrait::setMinimum
      */
     public function testMinimum()
     {
@@ -94,8 +94,8 @@ class NumericPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\NumericPrimitiveTrait::getExclusiveMinimum
-     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\NumericPrimitiveTrait::setExclusiveMinimum
+     * @covers ERP\Swagger\Entity\Mixin\Primitives\NumericPrimitiveTrait::getExclusiveMinimum
+     * @covers ERP\Swagger\Entity\Mixin\Primitives\NumericPrimitiveTrait::setExclusiveMinimum
      */
     public function testExclusiveMinimum()
     {
@@ -107,7 +107,7 @@ class NumericPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Mixin\Primitives\NumericPrimitiveTrait
+     * @covers ERP\Swagger\Entity\Mixin\Primitives\NumericPrimitiveTrait
      */
     public function testSerialization()
     {
@@ -120,7 +120,7 @@ class NumericPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
             'exclusiveMinimum' => 10,
         ]);
 
-        $primitive = self::$serializer->deserialize($data, AbstractSchema::class, 'json');
+        $primitive = $this->getSerializer()->deserialize($data, AbstractSchema::class, 'json');
 
         $this->assertInstanceOf(NumberSchema::class, $primitive);
         $this->assertAttributeEquals(1, 'multipleOf', $primitive);
@@ -129,7 +129,7 @@ class NumericPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
         $this->assertAttributeEquals(10.5, 'minimum', $primitive);
         $this->assertAttributeEquals(10, 'exclusiveMinimum', $primitive);
 
-        $json = self::$serializer->serialize($primitive, 'json');
+        $json = $this->getSerializer()->serialize($primitive, 'json');
 
         $this->assertJson($json);
         $this->assertJsonStringEqualsJsonString($data, $json);

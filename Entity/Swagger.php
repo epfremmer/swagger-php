@@ -4,17 +4,19 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Entity;
+namespace ERP\Swagger\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
-use Epfremmer\SwaggerBundle\Entity\Schemas\SchemaInterface;
-use Epfremmer\SwaggerBundle\Entity\Parameters\AbstractParameter;
+use ERP\Swagger\Entity\Schemas\SchemaInterface;
+use ERP\Swagger\Entity\Parameters\AbstractParameter;
+use ERP\Swagger\Exception\InvalidVersionException;
+use ERP\Swagger\Parser\SwaggerParser;
 use JMS\Serializer\Annotation as JMS;
 
 /**
  * Class Swagger
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Entity
  */
 class Swagger
@@ -28,13 +30,15 @@ class Swagger
     protected $version;
 
     /**
-     * @JMS\Type("Epfremmer\SwaggerBundle\Entity\Info")
+     * @JMS\Since("2.0")
+     * @JMS\Type("ERP\Swagger\Entity\Info")
      * @JMS\SerializedName("info")
      * @var Info
      */
     protected $info;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("host")
      * @var string
@@ -42,6 +46,7 @@ class Swagger
     protected $host;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("basePath")
      * @var string
@@ -49,6 +54,7 @@ class Swagger
     protected $basePath;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("array")
      * @JMS\SerializedName("schemes")
      * @var array
@@ -56,6 +62,7 @@ class Swagger
     protected $schemes;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("array")
      * @JMS\SerializedName("consumes")
      * @var string[]
@@ -63,6 +70,7 @@ class Swagger
     protected $consumes;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("array")
      * @JMS\SerializedName("produces")
      * @var string[]
@@ -70,41 +78,47 @@ class Swagger
     protected $produces;
 
     /**
-     * @JMS\Type("ArrayCollection<string,Epfremmer\SwaggerBundle\Entity\Path>")
+     * @JMS\Since("2.0")
+     * @JMS\Type("ArrayCollection<string,ERP\Swagger\Entity\Path>")
      * @JMS\SerializedName("paths")
      * @var ArrayCollection|Path[]
      */
     protected $paths;
 
     /**
-     * @JMS\Type("ArrayCollection<string,Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema>")
+     * @JMS\Since("2.0")
+     * @JMS\Type("ArrayCollection<string,ERP\Swagger\Entity\Schemas\AbstractSchema>")
      * @JMS\SerializedName("definitions")
      * @var ArrayCollection|SchemaInterface[]
      */
     protected $definitions;
 
     /**
-     * @JMS\Type("ArrayCollection<string,Epfremmer\SwaggerBundle\Entity\Parameters\AbstractParameter>")
+     * @JMS\Since("2.0")
+     * @JMS\Type("ArrayCollection<string,ERP\Swagger\Entity\Parameters\AbstractParameter>")
      * @JMS\SerializedName("parameters")
      * @var ArrayCollection|AbstractParameter[]
      */
     protected $parameters;
 
     /**
-     * @JMS\Type("ArrayCollection<string,Epfremmer\SwaggerBundle\Entity\Response>")
+     * @JMS\Since("2.0")
+     * @JMS\Type("ArrayCollection<string,ERP\Swagger\Entity\Response>")
      * @JMS\SerializedName("responses")
      * @var ArrayCollection|Response[]
      */
     protected $responses;
 
     /**
-     * @JMS\Type("ArrayCollection<string,Epfremmer\SwaggerBundle\Entity\SecurityDefinition>")
+     * @JMS\Since("2.0")
+     * @JMS\Type("ArrayCollection<string,ERP\Swagger\Entity\SecurityDefinition>")
      * @JMS\SerializedName("securityDefinitions")
      * @var ArrayCollection|SecurityDefinition[]
      */
     protected $securityDefinitions;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("ArrayCollection<string,array>")
      * @JMS\SerializedName("security")
      * @var ArrayCollection|string[]
@@ -112,14 +126,16 @@ class Swagger
     protected $security;
 
     /**
-     * @JMS\Type("ArrayCollection<string,Epfremmer\SwaggerBundle\Entity\Tag>")
+     * @JMS\Since("2.0")
+     * @JMS\Type("ArrayCollection<string,ERP\Swagger\Entity\Tag>")
      * @JMS\SerializedName("tags")
      * @var ArrayCollection|Tag[]
      */
     protected $tags;
 
     /**
-     * @JMS\Type("Epfremmer\SwaggerBundle\Entity\ExternalDocumentation")
+     * @JMS\Since("2.0")
+     * @JMS\Type("ERP\Swagger\Entity\ExternalDocumentation")
      * @JMS\SerializedName("externalDocs")
      * @var ExternalDocumentation
      */
@@ -130,6 +146,10 @@ class Swagger
      */
     public function getVersion()
     {
+        if (!version_compare($this->version, SwaggerParser::MINIMUM_VERSION, '>=')) {
+            throw new InvalidVersionException($this->version);
+        }
+
         return $this->version;
     }
 

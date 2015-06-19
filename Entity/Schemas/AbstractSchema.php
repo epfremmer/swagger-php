@@ -4,25 +4,26 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Entity\Schemas;
+namespace ERP\Swagger\Entity\Schemas;
 
-use Epfremmer\SwaggerBundle\Entity\ExternalDocumentation;
+use ERP\Swagger\Annotations as EP;
+use ERP\Swagger\Entity\ExternalDocumentation;
 use JMS\Serializer\Annotation as JMS;
 
 /**
  * Class AbstractSchema
  *
- * @JMS\Discriminator(field = "type", map = {
- *   "null"   : "Epfremmer\SwaggerBundle\Entity\Schemas\NullSchema",
- *   "boolean": "Epfremmer\SwaggerBundle\Entity\Schemas\BooleanSchema",
- *   "integer": "Epfremmer\SwaggerBundle\Entity\Schemas\IntegerSchema",
- *   "number" : "Epfremmer\SwaggerBundle\Entity\Schemas\NumberSchema",
- *   "string" : "Epfremmer\SwaggerBundle\Entity\Schemas\StringSchema",
- *   "array"  : "Epfremmer\SwaggerBundle\Entity\Schemas\ArraySchema",
- *   "object" : "Epfremmer\SwaggerBundle\Entity\Schemas\ObjectSchema"
+ * @EP\Discriminator(field = "type", default="object", map = {
+ *   "null"   : "ERP\Swagger\Entity\Schemas\NullSchema",
+ *   "boolean": "ERP\Swagger\Entity\Schemas\BooleanSchema",
+ *   "integer": "ERP\Swagger\Entity\Schemas\IntegerSchema",
+ *   "number" : "ERP\Swagger\Entity\Schemas\NumberSchema",
+ *   "string" : "ERP\Swagger\Entity\Schemas\StringSchema",
+ *   "array"  : "ERP\Swagger\Entity\Schemas\ArraySchema",
+ *   "object" : "ERP\Swagger\Entity\Schemas\ObjectSchema"
  * })
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Entity\Schemas
  */
 abstract class AbstractSchema implements SchemaInterface
@@ -37,6 +38,15 @@ abstract class AbstractSchema implements SchemaInterface
     const OBJECT_TYPE  = 'object';
 
     /**
+     * @JMS\Since("2.0")
+     * @JMS\Type("string")
+     * @JMS\SerializedName("type")
+     * @var string
+     */
+    protected $type;
+
+    /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("format")
      * @var string
@@ -44,6 +54,7 @@ abstract class AbstractSchema implements SchemaInterface
     protected $format;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("title")
      * @var string
@@ -51,6 +62,7 @@ abstract class AbstractSchema implements SchemaInterface
     protected $title;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("description")
      * @var string
@@ -58,6 +70,7 @@ abstract class AbstractSchema implements SchemaInterface
     protected $description;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("default")
      * @var array
@@ -65,6 +78,7 @@ abstract class AbstractSchema implements SchemaInterface
     protected $default;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("example")
      * @var string
@@ -72,7 +86,8 @@ abstract class AbstractSchema implements SchemaInterface
     protected $example;
 
     /**
-     * @JMS\Type("Epfremmer\SwaggerBundle\Entity\ExternalDocumentation")
+     * @JMS\Since("2.0")
+     * @JMS\Type("ERP\Swagger\Entity\ExternalDocumentation")
      * @JMS\SerializedName("externalDocs")
      * @var ExternalDocumentation
      */

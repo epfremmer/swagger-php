@@ -4,14 +4,14 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Entity\Mixin\Primitives;
+namespace ERP\Swagger\Entity\Mixin\Primitives;
 
 use JMS\Serializer\Annotation as JMS;
 
 /**
  * Trait StringPrimitiveTrait
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Entity\Schemas\Primitives
  */
 trait StringPrimitiveTrait
@@ -19,6 +19,7 @@ trait StringPrimitiveTrait
     use AnyPrimitiveTrait;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("integer")
      * @JMS\SerializedName("maxLength")
      * @var integer
@@ -26,6 +27,7 @@ trait StringPrimitiveTrait
     protected $maxLength;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("integer")
      * @JMS\SerializedName("minLength")
      * @var integer
@@ -33,6 +35,7 @@ trait StringPrimitiveTrait
     protected $minLength;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("pattern")
      * @var string

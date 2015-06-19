@@ -4,20 +4,21 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Entity;
+namespace ERP\Swagger\Entity;
 
 use JMS\Serializer\Annotation as JMS;
 
 /**
  * Class License
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Entity
  */
 class License
 {
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("name")
      * @var string
@@ -25,6 +26,7 @@ class License
     protected $name;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("url")
      * @var string

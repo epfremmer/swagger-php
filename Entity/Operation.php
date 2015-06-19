@@ -4,23 +4,24 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Entity;
+namespace ERP\Swagger\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
-use Epfremmer\SwaggerBundle\Entity\Schemas\SchemaInterface;
-use Epfremmer\SwaggerBundle\Entity\Parameters\AbstractParameter;
+use ERP\Swagger\Entity\Schemas\SchemaInterface;
+use ERP\Swagger\Entity\Parameters\AbstractParameter;
 use JMS\Serializer\Annotation as JMS;
 
 /**
  * Class Operation
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Entity
  */
 class Operation
 {
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("array")
      * @JMS\SerializedName("tags")
      * @var string[]
@@ -28,6 +29,7 @@ class Operation
     protected $tags;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("summary")
      * @var string
@@ -35,6 +37,7 @@ class Operation
     protected $summary;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("description")
      * @var string
@@ -42,13 +45,15 @@ class Operation
     protected $description;
 
     /**
-     * @JMS\Type("Epfremmer\SwaggerBundle\Entity\ExternalDocumentation")
+     * @JMS\Since("2.0")
+     * @JMS\Type("ERP\Swagger\Entity\ExternalDocumentation")
      * @JMS\SerializedName("externalDocs")
      * @var ExternalDocumentation
      */
     protected $externalDocs;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("operationId")
      * @var string
@@ -56,6 +61,7 @@ class Operation
     protected $operationId;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("array")
      * @JMS\SerializedName("consumes")
      * @var array
@@ -63,6 +69,7 @@ class Operation
     protected $consumes;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("array")
      * @JMS\SerializedName("produces")
      * @var string[]|array
@@ -70,20 +77,23 @@ class Operation
     protected $produces;
 
     /**
-     * @JMS\Type("ArrayCollection<string,Epfremmer\SwaggerBundle\Entity\Parameters\AbstractParameter>")
+     * @JMS\Since("2.0")
+     * @JMS\Type("ArrayCollection<string,ERP\Swagger\Entity\Parameters\AbstractParameter>")
      * @JMS\SerializedName("parameters")
      * @var ArrayCollection|AbstractParameter[]
      */
     protected $parameters;
 
     /**
-     * @JMS\Type("ArrayCollection<string,Epfremmer\SwaggerBundle\Entity\Response>")
+     * @JMS\Since("2.0")
+     * @JMS\Type("ArrayCollection<string,ERP\Swagger\Entity\Response>")
      * @JMS\SerializedName("responses")
      * @var SchemaInterface[]|ArrayCollection
      */
     protected $responses;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("array")
      * @JMS\SerializedName("schemes")
      * @var string[]
@@ -91,6 +101,7 @@ class Operation
     protected $schemes;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("boolean")
      * @JMS\SerializedName("deprecated")
      * @var boolean
@@ -98,6 +109,7 @@ class Operation
     protected $deprecated;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("ArrayCollection<string,array>")
      * @JMS\SerializedName("security")
      * @var ArrayCollection|string[]

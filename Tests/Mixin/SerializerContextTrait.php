@@ -4,9 +4,9 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Tests\Mixin;
+namespace ERP\Swagger\Tests\Mixin;
 
-use Epfremmer\SwaggerBundle\Listener\SerializationSubscriber;
+use ERP\Swagger\Listener\SerializationSubscriber;
 use JMS\Serializer\EventDispatcher\EventDispatcher;
 use JMS\Serializer\Serializer;
 use JMS\Serializer\SerializerBuilder;
@@ -16,7 +16,7 @@ use JMS\Serializer\SerializerBuilder;
  *
  * Adds static pre-configured JMS serializer to test class.
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Tests\Entity
  */
 trait SerializerContextTrait
@@ -39,5 +39,17 @@ trait SerializerContextTrait
         });
 
         self::$serializer = $builder->build();
+    }
+
+    /**
+     * Return the serializer
+     *
+     * @return Serializer
+     */
+    public function getSerializer()
+    {
+        if (!self::$serializer) self::setUpBeforeClass();
+
+        return self::$serializer;
     }
 }

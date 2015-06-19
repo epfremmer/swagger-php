@@ -4,16 +4,16 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Tests\Entity\Headers;
+namespace ERP\Swagger\Tests\Entity\Headers;
 
-use Epfremmer\SwaggerBundle\Entity\Headers\AbstractHeader;
-use Epfremmer\SwaggerBundle\Entity\Headers\ArrayHeader;
-use Epfremmer\SwaggerBundle\Tests\Mixin\SerializerContextTrait;
+use ERP\Swagger\Entity\Headers\AbstractHeader;
+use ERP\Swagger\Entity\Headers\ArrayHeader;
+use ERP\Swagger\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class ArrayHeaderTest
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Tests\Entity\Headers
  */
 class ArrayHeaderTest extends \PHPUnit_Framework_TestCase
@@ -34,7 +34,7 @@ class ArrayHeaderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Headers\ArrayHeader::getType
+     * @covers ERP\Swagger\Entity\Headers\ArrayHeader::getType
      */
     public function testType()
     {
@@ -43,8 +43,8 @@ class ArrayHeaderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Headers\ArrayHeader::getCollectionFormat
-     * @covers Epfremmer\SwaggerBundle\Entity\Headers\ArrayHeader::setCollectionFormat
+     * @covers ERP\Swagger\Entity\Headers\ArrayHeader::getCollectionFormat
+     * @covers ERP\Swagger\Entity\Headers\ArrayHeader::setCollectionFormat
      */
     public function testCollectionFormat()
     {
@@ -55,7 +55,7 @@ class ArrayHeaderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Headers\ArrayHeader
+     * @covers ERP\Swagger\Entity\Headers\ArrayHeader
      */
     public function testSerialization()
     {
@@ -67,7 +67,7 @@ class ArrayHeaderTest extends \PHPUnit_Framework_TestCase
             'collectionFormat' => 'csv',
         ]);
 
-        $schema = self::$serializer->deserialize($data, AbstractHeader::class, 'json');
+        $schema = $this->getSerializer()->deserialize($data, AbstractHeader::class, 'json');
 
         $this->assertInstanceOf(ArrayHeader::class, $schema);
         $this->assertAttributeEquals('foo', 'format', $schema);
@@ -75,7 +75,7 @@ class ArrayHeaderTest extends \PHPUnit_Framework_TestCase
         $this->assertAttributeEquals('baz', 'default', $schema);
         $this->assertAttributeEquals('csv', 'collectionFormat', $schema);
 
-        $json = self::$serializer->serialize($schema, 'json');
+        $json = $this->getSerializer()->serialize($schema, 'json');
 
         $this->assertJson($json);
         $this->assertJsonStringEqualsJsonString($data, $json);

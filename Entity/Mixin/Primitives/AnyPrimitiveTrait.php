@@ -4,22 +4,23 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Entity\Mixin\Primitives;
+namespace ERP\Swagger\Entity\Mixin\Primitives;
 
 use Doctrine\Common\Collections\ArrayCollection;
-use Epfremmer\SwaggerBundle\Entity\Schemas\SchemaInterface;
+use ERP\Swagger\Entity\Schemas\SchemaInterface;
 use JMS\Serializer\Annotation as JMS;
 
 /**
  * Trait AnyPrimitive
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Entity\Schemas\Primitives
  */
 trait AnyPrimitiveTrait
 {
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("array")
      * @JMS\SerializedName("enum")
      * @var array
@@ -27,6 +28,7 @@ trait AnyPrimitiveTrait
     protected $enum;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("array")
      * @JMS\SerializedName("allOf")
      * @var array
@@ -34,6 +36,7 @@ trait AnyPrimitiveTrait
     protected $allOf;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("array")
      * @JMS\SerializedName("anyOf")
      * @var array
@@ -41,6 +44,7 @@ trait AnyPrimitiveTrait
     protected $anyOf;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("array")
      * @JMS\SerializedName("oneOf")
      * @var array
@@ -48,6 +52,7 @@ trait AnyPrimitiveTrait
     protected $oneOf;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("array")
      * @JMS\SerializedName("not")
      * @var array
@@ -55,7 +60,8 @@ trait AnyPrimitiveTrait
     protected $not;
 
     /**
-     * @JMS\Type("ArrayCollection<string,Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema>")
+     * @JMS\Since("2.0")
+     * @JMS\Type("ArrayCollection<string,ERP\Swagger\Entity\Schemas\AbstractSchema>")
      * @JMS\Accessor(setter="setDefinitions")
      * @JMS\SerializedName("definitions")
      *

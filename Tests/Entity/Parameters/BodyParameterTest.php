@@ -4,17 +4,17 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Tests\Entity\Parameters;
+namespace ERP\Swagger\Tests\Entity\Parameters;
 
-use Epfremmer\SwaggerBundle\Entity\Parameters\AbstractParameter;
-use Epfremmer\SwaggerBundle\Entity\Parameters\BodyParameter;
-use Epfremmer\SwaggerBundle\Entity\Schemas\ObjectSchema;
-use Epfremmer\SwaggerBundle\Tests\Mixin\SerializerContextTrait;
+use ERP\Swagger\Entity\Parameters\AbstractParameter;
+use ERP\Swagger\Entity\Parameters\BodyParameter;
+use ERP\Swagger\Entity\Schemas\ObjectSchema;
+use ERP\Swagger\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class BodyParameterTest
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Tests\Entity\Parameters
  */
 class BodyParameterTest extends \PHPUnit_Framework_TestCase
@@ -35,8 +35,8 @@ class BodyParameterTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Parameters\BodyParameter::getSchema
-     * @covers Epfremmer\SwaggerBundle\Entity\Parameters\BodyParameter::setSchema
+     * @covers ERP\Swagger\Entity\Parameters\BodyParameter::getSchema
+     * @covers ERP\Swagger\Entity\Parameters\BodyParameter::setSchema
      */
     public function testSchema()
     {
@@ -50,7 +50,7 @@ class BodyParameterTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Parameters\BodyParameter
+     * @covers ERP\Swagger\Entity\Parameters\BodyParameter
      */
     public function testSerialization()
     {
@@ -59,9 +59,12 @@ class BodyParameterTest extends \PHPUnit_Framework_TestCase
             'name'        => 'foo',
             'description' => 'bar',
             'required'    => false,
+            'schema'      => [
+                'type' => 'string'
+            ]
         ]);
 
-        $parameter = self::$serializer->deserialize($data, AbstractParameter::class, 'json');
+        $parameter = $this->getSerializer()->deserialize($data, AbstractParameter::class, 'json');
 
         $this->assertInstanceOf(BodyParameter::class, $parameter);
         $this->assertAttributeEquals('body', 'in', $parameter);
@@ -69,7 +72,7 @@ class BodyParameterTest extends \PHPUnit_Framework_TestCase
         $this->assertAttributeEquals('bar', 'description', $parameter);
         $this->assertAttributeEquals(false, 'required', $parameter);
 
-        $json = self::$serializer->serialize($parameter, 'json');
+        $json = $this->getSerializer()->serialize($parameter, 'json');
 
         $this->assertJson($json);
         $this->assertJsonStringEqualsJsonString($data, $json);

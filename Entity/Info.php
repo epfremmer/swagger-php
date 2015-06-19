@@ -4,20 +4,21 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Entity;
+namespace ERP\Swagger\Entity;
 
 use JMS\Serializer\Annotation as JMS;
 
 /**
  * Class Info
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Entity
  */
 class Info
 {
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("title")
      * @var string
@@ -25,6 +26,7 @@ class Info
     protected $title;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("description")
      * @var string
@@ -32,6 +34,7 @@ class Info
     protected $description;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("termsOfService")
      * @var string
@@ -39,20 +42,23 @@ class Info
     protected $termsOfService;
 
     /**
-     * @JMS\Type("Epfremmer\SwaggerBundle\Entity\Contact")
+     * @JMS\Since("2.0")
+     * @JMS\Type("ERP\Swagger\Entity\Contact")
      * @JMS\SerializedName("contact")
      * @var Contact
      */
     protected $contact;
 
     /**
-     * @JMS\Type("Epfremmer\SwaggerBundle\Entity\License")
+     * @JMS\Since("2.0")
+     * @JMS\Type("ERP\Swagger\Entity\License")
      * @JMS\SerializedName("license")
      * @var License
      */
     protected $license;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("version")
      * @var string

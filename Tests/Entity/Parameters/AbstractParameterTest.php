@@ -4,15 +4,15 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Tests\Entity\Parameters;
+namespace ERP\Swagger\Tests\Entity\Parameters;
 
-use Epfremmer\SwaggerBundle\Entity\Parameters\AbstractParameter;
-use Epfremmer\SwaggerBundle\Entity\Schemas\ObjectSchema;
+use ERP\Swagger\Entity\Parameters\AbstractParameter;
+use ERP\Swagger\Entity\Schemas\ObjectSchema;
 
 /**
  * Class AbstractParameterTest
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Tests\Entity\Parameters
  */
 class AbstractParameterTest extends \PHPUnit_Framework_TestCase
@@ -32,8 +32,8 @@ class AbstractParameterTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Parameters\AbstractParameter::getIn
-     * @covers Epfremmer\SwaggerBundle\Entity\Parameters\AbstractParameter::setIn
+     * @covers ERP\Swagger\Entity\Parameters\AbstractParameter::getIn
+     * @covers ERP\Swagger\Entity\Parameters\AbstractParameter::setIn
      */
     public function testIn()
     {
@@ -44,8 +44,8 @@ class AbstractParameterTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Parameters\AbstractParameter::getName
-     * @covers Epfremmer\SwaggerBundle\Entity\Parameters\AbstractParameter::setName
+     * @covers ERP\Swagger\Entity\Parameters\AbstractParameter::getName
+     * @covers ERP\Swagger\Entity\Parameters\AbstractParameter::setName
      */
     public function testName()
     {
@@ -56,8 +56,8 @@ class AbstractParameterTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Parameters\AbstractParameter::getDescription
-     * @covers Epfremmer\SwaggerBundle\Entity\Parameters\AbstractParameter::setDescription
+     * @covers ERP\Swagger\Entity\Parameters\AbstractParameter::getDescription
+     * @covers ERP\Swagger\Entity\Parameters\AbstractParameter::setDescription
      */
     public function testDescription()
     {
@@ -68,8 +68,8 @@ class AbstractParameterTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Parameters\AbstractParameter::isRequired
-     * @covers Epfremmer\SwaggerBundle\Entity\Parameters\AbstractParameter::setRequired
+     * @covers ERP\Swagger\Entity\Parameters\AbstractParameter::isRequired
+     * @covers ERP\Swagger\Entity\Parameters\AbstractParameter::setRequired
      */
     public function testRequired()
     {

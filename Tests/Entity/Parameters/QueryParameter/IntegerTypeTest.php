@@ -4,17 +4,17 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Tests\Entity\Parameters\QueryParameter;
+namespace ERP\Swagger\Tests\Entity\Parameters\QueryParameter;
 
-use Epfremmer\SwaggerBundle\Entity\Parameters\AbstractParameter;
-use Epfremmer\SwaggerBundle\Entity\Parameters\AbstractTypedParameter;
-use Epfremmer\SwaggerBundle\Entity\Parameters\QueryParameter;
-use Epfremmer\SwaggerBundle\Tests\Mixin\SerializerContextTrait;
+use ERP\Swagger\Entity\Parameters\AbstractParameter;
+use ERP\Swagger\Entity\Parameters\AbstractTypedParameter;
+use ERP\Swagger\Entity\Parameters\QueryParameter;
+use ERP\Swagger\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class IntegerTypeTest
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Tests\Entity\Parameters\QueryParameter
  */
 class IntegerTypeTest extends \PHPUnit_Framework_TestCase
@@ -35,7 +35,7 @@ class IntegerTypeTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Parameters\QueryParameter\IntegerType
+     * @covers ERP\Swagger\Entity\Parameters\QueryParameter\IntegerType
      */
     public function testSerialization()
     {
@@ -50,7 +50,7 @@ class IntegerTypeTest extends \PHPUnit_Framework_TestCase
             'default'          => false,
         ]);
 
-        $parameter = self::$serializer->deserialize($data, AbstractParameter::class, 'json');
+        $parameter = $this->getSerializer()->deserialize($data, AbstractParameter::class, 'json');
 
         $this->assertInstanceOf(QueryParameter\IntegerType::class, $parameter);
         $this->assertAttributeEquals(AbstractParameter::IN_QUERY, 'in', $parameter);
@@ -62,7 +62,7 @@ class IntegerTypeTest extends \PHPUnit_Framework_TestCase
         $this->assertAttributeEquals(true, 'allowEmptyValues', $parameter);
         $this->assertAttributeEquals(false, 'default', $parameter);
 
-        $json = self::$serializer->serialize($parameter, 'json');
+        $json = $this->getSerializer()->serialize($parameter, 'json');
 
         $this->assertJson($json);
         $this->assertJsonStringEqualsJsonString($data, $json);

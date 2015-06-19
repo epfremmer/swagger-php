@@ -4,15 +4,15 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Entity\Mixin\Primitives;
+namespace ERP\Swagger\Entity\Mixin\Primitives;
 
-use Epfremmer\SwaggerBundle\Entity\Schemas\SchemaInterface;
+use ERP\Swagger\Entity\Schemas\SchemaInterface;
 use JMS\Serializer\Annotation as JMS;
 
 /**
  * Trait ArrayPrimitiveTrait
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Entity\Schemas\Primitives
  */
 trait ArrayPrimitiveTrait
@@ -20,13 +20,15 @@ trait ArrayPrimitiveTrait
     use AnyPrimitiveTrait;
 
     /**
-     * @JMS\Type("Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema")
+     * @JMS\Since("2.0")
+     * @JMS\Type("ERP\Swagger\Entity\Schemas\AbstractSchema")
      * @JMS\SerializedName("items")
      * @var SchemaInterface
      */
     protected $items;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("boolean")
      * @JMS\SerializedName("additionalItems")
      * @var boolean
@@ -34,6 +36,7 @@ trait ArrayPrimitiveTrait
     protected $additionalItems;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("integer")
      * @JMS\SerializedName("maxItems")
      * @var integer
@@ -41,6 +44,7 @@ trait ArrayPrimitiveTrait
     protected $maxItems;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("integer")
      * @JMS\SerializedName("minItems")
      * @var integer
@@ -48,6 +52,7 @@ trait ArrayPrimitiveTrait
     protected $minItems;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("boolean")
      * @JMS\SerializedName("uniqueItems")
      * @var boolean
@@ -55,6 +60,7 @@ trait ArrayPrimitiveTrait
     protected $uniqueItems;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("collectionFormat")
      * @var string

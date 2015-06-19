@@ -4,17 +4,17 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Tests\Entity\Schemas;
+namespace ERP\Swagger\Tests\Entity\Schemas;
 
-use Epfremmer\SwaggerBundle\Entity\ExternalDocumentation;
-use Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema;
-use Epfremmer\SwaggerBundle\Entity\Schemas\NumberSchema;
-use Epfremmer\SwaggerBundle\Tests\Mixin\SerializerContextTrait;
+use ERP\Swagger\Entity\ExternalDocumentation;
+use ERP\Swagger\Entity\Schemas\AbstractSchema;
+use ERP\Swagger\Entity\Schemas\NumberSchema;
+use ERP\Swagger\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class NumberSchemaTest
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Tests\Entity\Schemas
  */
 class NumberSchemaTest extends \PHPUnit_Framework_TestCase
@@ -35,7 +35,7 @@ class NumberSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\NumberSchema::getType
+     * @covers ERP\Swagger\Entity\Schemas\NumberSchema::getType
      */
     public function testType()
     {
@@ -44,7 +44,7 @@ class NumberSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Schemas\NumberSchema
+     * @covers ERP\Swagger\Entity\Schemas\NumberSchema
      */
     public function testSerialization()
     {
@@ -57,7 +57,7 @@ class NumberSchemaTest extends \PHPUnit_Framework_TestCase
             'externalDocs' => (object)[],
         ]);
 
-        $schema = self::$serializer->deserialize($data, AbstractSchema::class, 'json');
+        $schema = $this->getSerializer()->deserialize($data, AbstractSchema::class, 'json');
 
         $this->assertInstanceOf(NumberSchema::class, $schema);
         $this->assertAttributeEquals('foo', 'format', $schema);
@@ -66,7 +66,7 @@ class NumberSchemaTest extends \PHPUnit_Framework_TestCase
         $this->assertAttributeEquals('qux', 'example', $schema);
         $this->assertAttributeInstanceOf(ExternalDocumentation::class, 'externalDocs', $schema);
 
-        $json = self::$serializer->serialize($schema, 'json');
+        $json = $this->getSerializer()->serialize($schema, 'json');
 
         $this->assertJson($json);
         $this->assertJsonStringEqualsJsonString($data, $json);

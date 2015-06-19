@@ -4,23 +4,24 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Entity\Headers;
+namespace ERP\Swagger\Entity\Headers;
 
-use Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema;
+use ERP\Swagger\Entity\Schemas\AbstractSchema;
+use ERP\Swagger\Annotations as EP;
 use JMS\Serializer\Annotation as JMS;
 
 /**
  * Class AbstractHeader
  *
- * @JMS\Discriminator(field = "type", map = {
- *   "boolean": "Epfremmer\SwaggerBundle\Entity\Headers\BooleanHeader",
- *   "integer": "Epfremmer\SwaggerBundle\Entity\Headers\IntegerHeader",
- *   "number" : "Epfremmer\SwaggerBundle\Entity\Headers\NumberHeader",
- *   "string" : "Epfremmer\SwaggerBundle\Entity\Headers\StringHeader",
- *   "array"  : "Epfremmer\SwaggerBundle\Entity\Headers\ArrayHeader"
+ * @EP\Discriminator(field = "type", default="array", map = {
+ *   "boolean": "ERP\Swagger\Entity\Headers\BooleanHeader",
+ *   "integer": "ERP\Swagger\Entity\Headers\IntegerHeader",
+ *   "number" : "ERP\Swagger\Entity\Headers\NumberHeader",
+ *   "string" : "ERP\Swagger\Entity\Headers\StringHeader",
+ *   "array"  : "ERP\Swagger\Entity\Headers\ArrayHeader"
  * })
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Entity\Headers
  */
 abstract class AbstractHeader
@@ -34,6 +35,15 @@ abstract class AbstractHeader
     const ARRAY_TYPE   = AbstractSchema::ARRAY_TYPE;
 
     /**
+     * @JMS\Since("2.0")
+     * @JMS\Type("string")
+     * @JMS\SerializedName("type")
+     * @var string
+     */
+    protected $type;
+
+    /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("description")
      * @var string
@@ -41,6 +51,7 @@ abstract class AbstractHeader
     protected $description;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("format")
      * @var string
@@ -48,6 +59,7 @@ abstract class AbstractHeader
     protected $format;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("default")
      * @var array

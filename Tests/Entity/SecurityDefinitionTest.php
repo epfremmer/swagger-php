@@ -4,15 +4,15 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Tests\Entity;
+namespace ERP\Swagger\Tests\Entity;
 
-use Epfremmer\SwaggerBundle\Entity\SecurityDefinition;
-use Epfremmer\SwaggerBundle\Tests\Mixin\SerializerContextTrait;
+use ERP\Swagger\Entity\SecurityDefinition;
+use ERP\Swagger\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class SecurityDefinitionTest
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Tests\Entity
  */
 class SecurityDefinitionTest extends \PHPUnit_Framework_TestCase
@@ -33,8 +33,8 @@ class SecurityDefinitionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\SecurityDefinition::getType
-     * @covers Epfremmer\SwaggerBundle\Entity\SecurityDefinition::setType
+     * @covers ERP\Swagger\Entity\SecurityDefinition::getType
+     * @covers ERP\Swagger\Entity\SecurityDefinition::setType
      */
     public function testType()
     {
@@ -45,8 +45,8 @@ class SecurityDefinitionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\SecurityDefinition::getDescription
-     * @covers Epfremmer\SwaggerBundle\Entity\SecurityDefinition::setDescription
+     * @covers ERP\Swagger\Entity\SecurityDefinition::getDescription
+     * @covers ERP\Swagger\Entity\SecurityDefinition::setDescription
      */
     public function testDescription()
     {
@@ -57,8 +57,8 @@ class SecurityDefinitionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\SecurityDefinition::getName
-     * @covers Epfremmer\SwaggerBundle\Entity\SecurityDefinition::setName
+     * @covers ERP\Swagger\Entity\SecurityDefinition::getName
+     * @covers ERP\Swagger\Entity\SecurityDefinition::setName
      */
     public function testName()
     {
@@ -69,8 +69,8 @@ class SecurityDefinitionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\SecurityDefinition::getIn
-     * @covers Epfremmer\SwaggerBundle\Entity\SecurityDefinition::setIn
+     * @covers ERP\Swagger\Entity\SecurityDefinition::getIn
+     * @covers ERP\Swagger\Entity\SecurityDefinition::setIn
      */
     public function testIn()
     {
@@ -81,8 +81,8 @@ class SecurityDefinitionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\SecurityDefinition::getFlow
-     * @covers Epfremmer\SwaggerBundle\Entity\SecurityDefinition::setFlow
+     * @covers ERP\Swagger\Entity\SecurityDefinition::getFlow
+     * @covers ERP\Swagger\Entity\SecurityDefinition::setFlow
      */
     public function testFlow()
     {
@@ -93,8 +93,8 @@ class SecurityDefinitionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\SecurityDefinition::getAuthorizationUrl
-     * @covers Epfremmer\SwaggerBundle\Entity\SecurityDefinition::setAuthorizationUrl
+     * @covers ERP\Swagger\Entity\SecurityDefinition::getAuthorizationUrl
+     * @covers ERP\Swagger\Entity\SecurityDefinition::setAuthorizationUrl
      */
     public function testAuthorizationUrl()
     {
@@ -105,8 +105,8 @@ class SecurityDefinitionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\SecurityDefinition::getTokenUrl
-     * @covers Epfremmer\SwaggerBundle\Entity\SecurityDefinition::setTokenUrl
+     * @covers ERP\Swagger\Entity\SecurityDefinition::getTokenUrl
+     * @covers ERP\Swagger\Entity\SecurityDefinition::setTokenUrl
      */
     public function testTokenUrl()
     {
@@ -117,8 +117,8 @@ class SecurityDefinitionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\SecurityDefinition::getScopes
-     * @covers Epfremmer\SwaggerBundle\Entity\SecurityDefinition::setScopes
+     * @covers ERP\Swagger\Entity\SecurityDefinition::getScopes
+     * @covers ERP\Swagger\Entity\SecurityDefinition::setScopes
      */
     public function testScopes()
     {
@@ -132,7 +132,7 @@ class SecurityDefinitionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\SecurityDefinition
+     * @covers ERP\Swagger\Entity\SecurityDefinition
      */
     public function testSerialize()
     {
@@ -151,7 +151,7 @@ class SecurityDefinitionTest extends \PHPUnit_Framework_TestCase
             ],
         ]);
 
-        $securityDefinition = self::$serializer->deserialize($data, SecurityDefinition::class, 'json');
+        $securityDefinition = $this->getSerializer()->deserialize($data, SecurityDefinition::class, 'json');
 
         $this->assertInstanceOf(SecurityDefinition::class, $securityDefinition);
         $this->assertAttributeEquals('foo', 'type', $securityDefinition);
@@ -163,7 +163,7 @@ class SecurityDefinitionTest extends \PHPUnit_Framework_TestCase
         $this->assertAttributeEquals('grault', 'tokenUrl', $securityDefinition);
         $this->assertAttributeEquals(['foo', 'bar', 'baz'], 'scopes', $securityDefinition);
 
-        $json = self::$serializer->serialize($securityDefinition, 'json');
+        $json = $this->getSerializer()->serialize($securityDefinition, 'json');
 
         $this->assertJson($json);
         $this->assertJsonStringEqualsJsonString($data, $json);

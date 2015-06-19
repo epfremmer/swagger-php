@@ -4,15 +4,15 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Entity\Parameters\PathParameter;
+namespace ERP\Swagger\Entity\Parameters\PathParameter;
 
-use Epfremmer\SwaggerBundle\Entity\Mixin\Primitives;
-use Epfremmer\SwaggerBundle\Entity\Parameters\AbstractTypedParameter;
+use ERP\Swagger\Entity\Mixin\Primitives;
+use ERP\Swagger\Entity\Parameters\AbstractTypedParameter;
 
 /**
  * Class BooleanType
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Entity\Parameters\PathParameter
  */
 class BooleanType extends AbstractTypedParameter

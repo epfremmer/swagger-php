@@ -4,14 +4,14 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Entity\Schemas;
+namespace ERP\Swagger\Entity\Schemas;
 
-use Epfremmer\SwaggerBundle\Entity\Mixin\Primitives;
+use ERP\Swagger\Entity\Mixin\Primitives;
 
 /**
  * Class IntegerSchema
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Entity\Schemas
  */
 class IntegerSchema extends AbstractSchema

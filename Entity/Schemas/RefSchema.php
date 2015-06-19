@@ -4,15 +4,15 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Entity\Schemas;
+namespace ERP\Swagger\Entity\Schemas;
 
-use Epfremmer\SwaggerBundle\Entity\Mixin\Primitives;
+use ERP\Swagger\Entity\Mixin\Primitives;
 use JMS\Serializer\Annotation as JMS;
 
 /**
  * Class RefSchema
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Entity\Schemas
  */
 class RefSchema implements SchemaInterface
@@ -21,6 +21,7 @@ class RefSchema implements SchemaInterface
     const REF_TYPE = 'ref';
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("$ref")
      * @var string
@@ -28,6 +29,7 @@ class RefSchema implements SchemaInterface
     protected $ref;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("title")
      * @var string
@@ -35,6 +37,7 @@ class RefSchema implements SchemaInterface
     protected $title;
 
     /**
+     * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("description")
      * @var string

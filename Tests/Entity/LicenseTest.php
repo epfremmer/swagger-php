@@ -4,15 +4,15 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Tests\Entity;
+namespace ERP\Swagger\Tests\Entity;
 
-use Epfremmer\SwaggerBundle\Entity\License;
-use Epfremmer\SwaggerBundle\Tests\Mixin\SerializerContextTrait;
+use ERP\Swagger\Entity\License;
+use ERP\Swagger\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class LicenseTest
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Tests\Entity
  */
 class LicenseTest extends \PHPUnit_Framework_TestCase
@@ -33,8 +33,8 @@ class LicenseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\License::getName
-     * @covers Epfremmer\SwaggerBundle\Entity\License::setName
+     * @covers ERP\Swagger\Entity\License::getName
+     * @covers ERP\Swagger\Entity\License::setName
      */
     public function testName()
     {
@@ -45,8 +45,8 @@ class LicenseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\License::getUrl
-     * @covers Epfremmer\SwaggerBundle\Entity\License::setUrl
+     * @covers ERP\Swagger\Entity\License::getUrl
+     * @covers ERP\Swagger\Entity\License::setUrl
      */
     public function testUrl()
     {
@@ -57,7 +57,7 @@ class LicenseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\License
+     * @covers ERP\Swagger\Entity\License
      */
     public function testSerialize()
     {
@@ -66,13 +66,13 @@ class LicenseTest extends \PHPUnit_Framework_TestCase
             'url'  => 'bar',
         ]);
 
-        $license = self::$serializer->deserialize($data, License::class, 'json');
+        $license = $this->getSerializer()->deserialize($data, License::class, 'json');
 
         $this->assertInstanceOf(License::class, $license);
         $this->assertAttributeEquals('foo', 'name', $license);
         $this->assertAttributeEquals('bar', 'url', $license);
 
-        $json = self::$serializer->serialize($license, 'json');
+        $json = $this->getSerializer()->serialize($license, 'json');
 
         $this->assertJson($json);
         $this->assertJsonStringEqualsJsonString($data, $json);

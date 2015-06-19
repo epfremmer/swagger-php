@@ -4,27 +4,27 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Epfremmer\SwaggerBundle\Tests\Entity;
+namespace ERP\Swagger\Tests\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
-use Epfremmer\SwaggerBundle\Entity\ExternalDocumentation;
-use Epfremmer\SwaggerBundle\Entity\Headers;
-use Epfremmer\SwaggerBundle\Entity\Info;
-use Epfremmer\SwaggerBundle\Entity\Path;
-use Epfremmer\SwaggerBundle\Entity\Response;
-use Epfremmer\SwaggerBundle\Entity\Schemas\SchemaInterface;
-use Epfremmer\SwaggerBundle\Entity\SecurityDefinition;
-use Epfremmer\SwaggerBundle\Entity\Swagger;
-use Epfremmer\SwaggerBundle\Entity\Parameters;
-use Epfremmer\SwaggerBundle\Entity\Schemas\AbstractSchema;
-use Epfremmer\SwaggerBundle\Entity\Schemas\ObjectSchema;
-use Epfremmer\SwaggerBundle\Entity\Tag;
-use Epfremmer\SwaggerBundle\Tests\Mixin\SerializerContextTrait;
+use ERP\Swagger\Entity\ExternalDocumentation;
+use ERP\Swagger\Entity\Headers;
+use ERP\Swagger\Entity\Info;
+use ERP\Swagger\Entity\Path;
+use ERP\Swagger\Entity\Response;
+use ERP\Swagger\Entity\Schemas\SchemaInterface;
+use ERP\Swagger\Entity\SecurityDefinition;
+use ERP\Swagger\Entity\Swagger;
+use ERP\Swagger\Entity\Parameters;
+use ERP\Swagger\Entity\Schemas\AbstractSchema;
+use ERP\Swagger\Entity\Schemas\ObjectSchema;
+use ERP\Swagger\Entity\Tag;
+use ERP\Swagger\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class SwaggerTest
  *
- * @package Epfremmer\SwaggerBundle
+ * @package ERP\Swagger
  * @subpackage Tests\Entity
  */
 class SwaggerTest extends \PHPUnit_Framework_TestCase
@@ -45,20 +45,20 @@ class SwaggerTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Swagger::getVersion
-     * @covers Epfremmer\SwaggerBundle\Entity\Swagger::setVersion
+     * @covers ERP\Swagger\Entity\Swagger::getVersion
+     * @covers ERP\Swagger\Entity\Swagger::setVersion
      */
     public function testVersion()
     {
         $this->assertClassHasAttribute('version', Swagger::class);
-        $this->assertInstanceOf(Swagger::class, $this->swagger->setVersion('1.0'));
-        $this->assertAttributeEquals('1.0', 'version', $this->swagger);
-        $this->assertEquals('1.0', $this->swagger->getVersion());
+        $this->assertInstanceOf(Swagger::class, $this->swagger->setVersion('2.0'));
+        $this->assertAttributeEquals('2.0', 'version', $this->swagger);
+        $this->assertEquals('2.0', $this->swagger->getVersion());
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Swagger::getInfo
-     * @covers Epfremmer\SwaggerBundle\Entity\Swagger::setInfo
+     * @covers ERP\Swagger\Entity\Swagger::getInfo
+     * @covers ERP\Swagger\Entity\Swagger::setInfo
      */
     public function testInfo()
     {
@@ -72,8 +72,8 @@ class SwaggerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Swagger::getHost
-     * @covers Epfremmer\SwaggerBundle\Entity\Swagger::setHost
+     * @covers ERP\Swagger\Entity\Swagger::getHost
+     * @covers ERP\Swagger\Entity\Swagger::setHost
      */
     public function testHost()
     {
@@ -84,8 +84,8 @@ class SwaggerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Swagger::getBasePath
-     * @covers Epfremmer\SwaggerBundle\Entity\Swagger::setBasePath
+     * @covers ERP\Swagger\Entity\Swagger::getBasePath
+     * @covers ERP\Swagger\Entity\Swagger::setBasePath
      */
     public function testBasePath()
     {
@@ -96,8 +96,8 @@ class SwaggerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Swagger::getSchemes
-     * @covers Epfremmer\SwaggerBundle\Entity\Swagger::setSchemes
+     * @covers ERP\Swagger\Entity\Swagger::getSchemes
+     * @covers ERP\Swagger\Entity\Swagger::setSchemes
      */
     public function testSchemes()
     {
@@ -110,8 +110,8 @@ class SwaggerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Swagger::getConsumes
-     * @covers Epfremmer\SwaggerBundle\Entity\Swagger::setConsumes
+     * @covers ERP\Swagger\Entity\Swagger::getConsumes
+     * @covers ERP\Swagger\Entity\Swagger::setConsumes
      */
     public function testConsumes()
     {
@@ -124,8 +124,8 @@ class SwaggerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Swagger::getProduces
-     * @covers Epfremmer\SwaggerBundle\Entity\Swagger::setProduces
+     * @covers ERP\Swagger\Entity\Swagger::getProduces
+     * @covers ERP\Swagger\Entity\Swagger::setProduces
      */
     public function testProduces()
     {
@@ -138,8 +138,8 @@ class SwaggerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Swagger::getPaths
-     * @covers Epfremmer\SwaggerBundle\Entity\Swagger::setPaths
+     * @covers ERP\Swagger\Entity\Swagger::getPaths
+     * @covers ERP\Swagger\Entity\Swagger::setPaths
      */
     public function testPaths()
     {
@@ -158,8 +158,8 @@ class SwaggerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Swagger::getDefinitions
-     * @covers Epfremmer\SwaggerBundle\Entity\Swagger::setDefinitions
+     * @covers ERP\Swagger\Entity\Swagger::getDefinitions
+     * @covers ERP\Swagger\Entity\Swagger::setDefinitions
      */
     public function testDefinitions()
     {
@@ -176,8 +176,8 @@ class SwaggerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Swagger::getParameters
-     * @covers Epfremmer\SwaggerBundle\Entity\Swagger::setParameters
+     * @covers ERP\Swagger\Entity\Swagger::getParameters
+     * @covers ERP\Swagger\Entity\Swagger::setParameters
      */
     public function testParameters()
     {
@@ -196,8 +196,8 @@ class SwaggerTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Swagger::getResponses
-     * @covers Epfremmer\SwaggerBundle\Entity\Swagger::setResponses
+     * @covers ERP\Swagger\Entity\Swagger::getResponses
+     * @covers ERP\Swagger\Entity\Swagger::setResponses
      */
     public function testResponses()
     {
@@ -215,8 +215,8 @@ class SwaggerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Swagger::getSecurityDefinitions
-     * @covers Epfremmer\SwaggerBundle\Entity\Swagger::setSecurityDefinitions
+     * @covers ERP\Swagger\Entity\Swagger::getSecurityDefinitions
+     * @covers ERP\Swagger\Entity\Swagger::setSecurityDefinitions
      */
     public function testSecurityDefinitions()
     {
@@ -234,8 +234,8 @@ class SwaggerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Swagger::getSecurity
-     * @covers Epfremmer\SwaggerBundle\Entity\Swagger::setSecurity
+     * @covers ERP\Swagger\Entity\Swagger::getSecurity
+     * @covers ERP\Swagger\Entity\Swagger::setSecurity
      */
     public function testSecurity()
     {
@@ -253,8 +253,8 @@ class SwaggerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Swagger::getTags
-     * @covers Epfremmer\SwaggerBundle\Entity\Swagger::setTags
+     * @covers ERP\Swagger\Entity\Swagger::getTags
+     * @covers ERP\Swagger\Entity\Swagger::setTags
      */
     public function testTags()
     {
@@ -272,8 +272,8 @@ class SwaggerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Swagger::getExternalDocs
-     * @covers Epfremmer\SwaggerBundle\Entity\Swagger::setExternalDocs
+     * @covers ERP\Swagger\Entity\Swagger::getExternalDocs
+     * @covers ERP\Swagger\Entity\Swagger::setExternalDocs
      */
     public function testExternalDocs()
     {
@@ -287,7 +287,7 @@ class SwaggerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremmer\SwaggerBundle\Entity\Swagger
+     * @covers ERP\Swagger\Entity\Swagger
      */
     public function testSerialize()
     {
@@ -470,7 +470,7 @@ class SwaggerTest extends \PHPUnit_Framework_TestCase
             ],
         ]);
 
-        $swagger = self::$serializer->deserialize($data, Swagger::class, 'json');
+        $swagger = $this->getSerializer()->deserialize($data, Swagger::class, 'json');
 
         $this->assertInstanceOf(Swagger::class, $swagger);
         $this->assertAttributeInstanceOf(Info::class, 'info', $swagger);
@@ -497,7 +497,7 @@ class SwaggerTest extends \PHPUnit_Framework_TestCase
         $this->assertAttributeContainsOnly(Tag::class, 'tags', $swagger);
         $this->assertAttributeInstanceOf(ExternalDocumentation::class, 'externalDocs', $swagger);
 
-        $json = self::$serializer->serialize($swagger, 'json');
+        $json = $this->getSerializer()->serialize($swagger, 'json');
 
         $this->assertJson($json);
         $this->assertJsonStringEqualsJsonString($data, $json);
