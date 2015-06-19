@@ -1,11 +1,9 @@
 <?php
 /**
- * Created by IntelliJ IDEA.
- * User: epfremme
- * Date: 6/18/15
- * Time: 5:31 PM
+ * File Discriminator.php
+ *
+ * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-
 namespace Epfremmer\SwaggerBundle\Annotations;
 
 use Doctrine\Common\Annotations\Annotation;
@@ -18,7 +16,8 @@ use JMS\Serializer\Annotation as JMS;
  * @Annotation
  * @Target("CLASS")
  *
- * @package Epfremmer\SwaggerBundle\Annotations
+ * @package Epfremmer\SwaggerBundle
+ * @subpackage Annotations
  */
 class Discriminator extends Annotation
 {
