@@ -32,7 +32,7 @@ Instantiate the swagger factory and pass it a valid swagger documentation file t
 
 Visit the swagger specification for more information on creating valid swagger json/yaml documentation
 
-[[swagger.io](http://swagger.io/specification)
+[swagger.io](http://swagger.io/specification)
 
 ## Support
 
