@@ -1,34 +1,29 @@
 {
-    "name": "epfremmer/swagger",
-    "license": "MIT",
-    "description": "Library for parsing swagger documentation into PHP entities for use in testing and code generation",
-    "authors" : [
-        {
-        "name" : "Edward Pfremmer",
-        "email" : "epfremme@nerdery.com"
-        }
-    ],
-    "autoload": {
-        "psr-4": {
-            "ERP\\Swagger\\": "src/",
-            "ERP\\Swagger\\Tests\\": "tests/"
-        }
-    },
-    "require": {
-        "php": ">=5.5",
-        "symfony/symfony": "2.7.*",
-        "jms/di-extra-bundle": "1.4.*",
-        "jms/security-extra-bundle": "1.5.*",
-        "jms/serializer-bundle": "0.13.*"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "~4.1",
-        "sensio/generator-bundle": "~2.3",
-        "behat/behat": "~3.0",
-        "behat/symfony2-extension": "~2.0",
-        "behat/mink": "~1.6",
-        "behat/mink-extension": "~2.0",
-        "behat/mink-browserkit-driver": "~1.2",
-        "justinrainbow/json-schema": "~1.3"
+  "name": "epfremmer/swagger",
+  "license": "MIT",
+  "type": "package",
+  "description": "Library for parsing swagger documentation into PHP entities for use in testing and code generation",
+  "authors" : [
+    {
+      "name" : "Edward Pfremmer",
+      "email" : "epfremme@nerdery.com"
     }
+  ],
+  "autoload": {
+    "psr-4": {
+      "ERP\\Swagger\\": "src/",
+      "ERP\\Swagger\\Tests\\": "tests/"
+    }
+  },
+  "require": {
+    "php": ">=5.5",
+    "jms/di-extra-bundle": "~1.4",
+    "jms/security-extra-bundle": "~1.5",
+    "jms/serializer-bundle": "~0.13",
+    "symfony/validator": "^2.7",
+    "symfony/yaml": "^2.7"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4.1"
+  }
 }
