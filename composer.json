@@ -19,7 +19,7 @@
     "php": ">=5.5",
     "jms/di-extra-bundle": "~1.4",
     "jms/security-extra-bundle": "~1.5",
-    "jms/serializer-bundle": "~0.13",
+    "jms/serializer-bundle": "^1.0",
     "symfony/validator": "^2.7",
     "symfony/yaml": "^2.7"
   },
