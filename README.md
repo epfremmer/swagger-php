@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.org/epfremmer/swagger.svg?branch=master)](https://travis-ci.org/epfremmer/swagger)
-
 # swagger-bundle
 Library for parsing swagger documentation into PHP entities for use in testing and code generation 
 
@@ -10,11 +8,11 @@ Add vcs repository to composer json:
     "repositories": [
         {
             "type": "git",
-            "url": "git@github.com:epfremmer/swagger.git"
+            "url": "https://git.nerderylabs.com/FI.swagger-php"
         }
     ]
     
-* Require package `composer require epfremmer/swagger:dev-develop`
+* Require package `composer require nerdery/swagger-php:dev-develop`
 * Install packages `composer install`
 
 ## Basic Usage
