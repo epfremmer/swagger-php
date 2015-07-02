@@ -4,15 +4,15 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace ERP\Swagger\Tests\Entity\Parameters;
+namespace Nerdery\Swagger\Tests\Entity\Parameters;
 
-use ERP\Swagger\Entity\Parameters\AbstractParameter;
-use ERP\Swagger\Entity\Schemas\ObjectSchema;
+use Nerdery\Swagger\Entity\Parameters\AbstractParameter;
+use Nerdery\Swagger\Entity\Schemas\ObjectSchema;
 
 /**
  * Class AbstractParameterTest
  *
- * @package ERP\Swagger
+ * @package Nerdery\Swagger
  * @subpackage Tests\Entity\Parameters
  */
 class AbstractParameterTest extends \PHPUnit_Framework_TestCase
@@ -32,8 +32,8 @@ class AbstractParameterTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Parameters\AbstractParameter::getIn
-     * @covers ERP\Swagger\Entity\Parameters\AbstractParameter::setIn
+     * @covers Nerdery\Swagger\Entity\Parameters\AbstractParameter::getIn
+     * @covers Nerdery\Swagger\Entity\Parameters\AbstractParameter::setIn
      */
     public function testIn()
     {
@@ -44,8 +44,8 @@ class AbstractParameterTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Parameters\AbstractParameter::getName
-     * @covers ERP\Swagger\Entity\Parameters\AbstractParameter::setName
+     * @covers Nerdery\Swagger\Entity\Parameters\AbstractParameter::getName
+     * @covers Nerdery\Swagger\Entity\Parameters\AbstractParameter::setName
      */
     public function testName()
     {
@@ -56,8 +56,8 @@ class AbstractParameterTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Parameters\AbstractParameter::getDescription
-     * @covers ERP\Swagger\Entity\Parameters\AbstractParameter::setDescription
+     * @covers Nerdery\Swagger\Entity\Parameters\AbstractParameter::getDescription
+     * @covers Nerdery\Swagger\Entity\Parameters\AbstractParameter::setDescription
      */
     public function testDescription()
     {
@@ -68,8 +68,8 @@ class AbstractParameterTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Parameters\AbstractParameter::isRequired
-     * @covers ERP\Swagger\Entity\Parameters\AbstractParameter::setRequired
+     * @covers Nerdery\Swagger\Entity\Parameters\AbstractParameter::isRequired
+     * @covers Nerdery\Swagger\Entity\Parameters\AbstractParameter::setRequired
      */
     public function testRequired()
     {

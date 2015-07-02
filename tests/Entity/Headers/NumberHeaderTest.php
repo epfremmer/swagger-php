@@ -4,16 +4,16 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace ERP\Swagger\Tests\Entity\Headers;
+namespace Nerdery\Swagger\Tests\Entity\Headers;
 
-use ERP\Swagger\Entity\Headers\AbstractHeader;
-use ERP\Swagger\Entity\Headers\NumberHeader;
-use ERP\Swagger\Tests\Mixin\SerializerContextTrait;
+use Nerdery\Swagger\Entity\Headers\AbstractHeader;
+use Nerdery\Swagger\Entity\Headers\NumberHeader;
+use Nerdery\Swagger\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class NumberHeaderTest
  *
- * @package ERP\Swagger
+ * @package Nerdery\Swagger
  * @subpackage Tests\Entity\Headers
  */
 class NumberHeaderTest extends \PHPUnit_Framework_TestCase
@@ -34,7 +34,7 @@ class NumberHeaderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Headers\NumberHeader::getType
+     * @covers Nerdery\Swagger\Entity\Headers\NumberHeader::getType
      */
     public function testType()
     {
@@ -43,7 +43,7 @@ class NumberHeaderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Headers\NumberHeader
+     * @covers Nerdery\Swagger\Entity\Headers\NumberHeader
      */
     public function testSerialization()
     {

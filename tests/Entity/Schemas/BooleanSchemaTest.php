@@ -4,17 +4,17 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace ERP\Swagger\Tests\Entity\Schemas;
+namespace Nerdery\Swagger\Tests\Entity\Schemas;
 
-use ERP\Swagger\Entity\ExternalDocumentation;
-use ERP\Swagger\Entity\Schemas\AbstractSchema;
-use ERP\Swagger\Entity\Schemas\BooleanSchema;
-use ERP\Swagger\Tests\Mixin\SerializerContextTrait;
+use Nerdery\Swagger\Entity\ExternalDocumentation;
+use Nerdery\Swagger\Entity\Schemas\AbstractSchema;
+use Nerdery\Swagger\Entity\Schemas\BooleanSchema;
+use Nerdery\Swagger\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class BooleanSchemaTest
  *
- * @package ERP\Swagger
+ * @package Nerdery\Swagger
  * @subpackage Tests\Entity\Schemas
  */
 class BooleanSchemaTest extends \PHPUnit_Framework_TestCase
@@ -35,7 +35,7 @@ class BooleanSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Schemas\BooleanSchema::getType
+     * @covers Nerdery\Swagger\Entity\Schemas\BooleanSchema::getType
      */
     public function testType()
     {
@@ -44,7 +44,7 @@ class BooleanSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Schemas\BooleanSchema
+     * @covers Nerdery\Swagger\Entity\Schemas\BooleanSchema
      */
     public function testSerialization()
     {

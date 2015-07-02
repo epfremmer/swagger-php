@@ -4,14 +4,14 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace ERP\Swagger\Tests\Entity\Headers;
+namespace Nerdery\Swagger\Tests\Entity\Headers;
 
-use ERP\Swagger\Entity\Headers\AbstractHeader;
+use Nerdery\Swagger\Entity\Headers\AbstractHeader;
 
 /**
  * Class AbstractHeaderTest
  *
- * @package ERP\Swagger
+ * @package Nerdery\Swagger
  * @subpackage Tests\Entity\Headers
  */
 class AbstractHeaderTest extends \PHPUnit_Framework_TestCase
@@ -31,8 +31,8 @@ class AbstractHeaderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Headers\AbstractHeader::getDescription
-     * @covers ERP\Swagger\Entity\Headers\AbstractHeader::setDescription
+     * @covers Nerdery\Swagger\Entity\Headers\AbstractHeader::getDescription
+     * @covers Nerdery\Swagger\Entity\Headers\AbstractHeader::setDescription
      */
     public function testDescription()
     {
@@ -43,8 +43,8 @@ class AbstractHeaderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Headers\AbstractHeader::getFormat
-     * @covers ERP\Swagger\Entity\Headers\AbstractHeader::setFormat
+     * @covers Nerdery\Swagger\Entity\Headers\AbstractHeader::getFormat
+     * @covers Nerdery\Swagger\Entity\Headers\AbstractHeader::setFormat
      */
     public function testFormat()
     {
@@ -55,8 +55,8 @@ class AbstractHeaderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Headers\AbstractHeader::getDefault
-     * @covers ERP\Swagger\Entity\Headers\AbstractHeader::setDefault
+     * @covers Nerdery\Swagger\Entity\Headers\AbstractHeader::getDefault
+     * @covers Nerdery\Swagger\Entity\Headers\AbstractHeader::setDefault
      */
     public function testDefault()
     {

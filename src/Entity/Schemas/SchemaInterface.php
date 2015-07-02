@@ -4,12 +4,12 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace ERP\Swagger\Entity\Schemas;
+namespace Nerdery\Swagger\Entity\Schemas;
 
 /**
  * Class SchemaInterface
  *
- * @package ERP\Swagger
+ * @package Nerdery\Swagger
  * @subpackage Entity\Schemas
  */
 interface SchemaInterface

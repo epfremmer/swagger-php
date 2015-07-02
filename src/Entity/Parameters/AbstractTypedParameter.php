@@ -4,15 +4,15 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace ERP\Swagger\Entity\Parameters;
+namespace Nerdery\Swagger\Entity\Parameters;
 
-use ERP\Swagger\Entity\Schemas\AbstractSchema;
+use Nerdery\Swagger\Entity\Schemas\AbstractSchema;
 use JMS\Serializer\Annotation as JMS;
 
 /**
  * Class AbstractParameter
  *
- * @package ERP\Swagger
+ * @package Nerdery\Swagger
  * @subpackage Entity\Parameters
  */
 abstract class AbstractTypedParameter extends AbstractParameter

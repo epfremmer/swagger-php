@@ -4,19 +4,19 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace ERP\Swagger\Tests\Entity;
+namespace Nerdery\Swagger\Tests\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
-use ERP\Swagger\Entity\ExternalDocumentation;
-use ERP\Swagger\Entity\Operation;
-use ERP\Swagger\Entity\Parameters;
-use ERP\Swagger\Entity\Response;
-use ERP\Swagger\Tests\Mixin\SerializerContextTrait;
+use Nerdery\Swagger\Entity\ExternalDocumentation;
+use Nerdery\Swagger\Entity\Operation;
+use Nerdery\Swagger\Entity\Parameters;
+use Nerdery\Swagger\Entity\Response;
+use Nerdery\Swagger\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class OperationTest
  *
- * @package ERP\Swagger
+ * @package Nerdery\Swagger
  * @subpackage Tests\Entity
  */
 class OperationTest extends \PHPUnit_Framework_TestCase
@@ -37,8 +37,8 @@ class OperationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Operation::getTags
-     * @covers ERP\Swagger\Entity\Operation::setTags
+     * @covers Nerdery\Swagger\Entity\Operation::getTags
+     * @covers Nerdery\Swagger\Entity\Operation::setTags
      */
     public function testTags()
     {
@@ -51,8 +51,8 @@ class OperationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Operation::getSummary
-     * @covers ERP\Swagger\Entity\Operation::setSummary
+     * @covers Nerdery\Swagger\Entity\Operation::getSummary
+     * @covers Nerdery\Swagger\Entity\Operation::setSummary
      */
     public function testSummary()
     {
@@ -63,8 +63,8 @@ class OperationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Operation::getDescription
-     * @covers ERP\Swagger\Entity\Operation::setDescription
+     * @covers Nerdery\Swagger\Entity\Operation::getDescription
+     * @covers Nerdery\Swagger\Entity\Operation::setDescription
      */
     public function testDescription()
     {
@@ -75,8 +75,8 @@ class OperationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Operation::getExternalDocs
-     * @covers ERP\Swagger\Entity\Operation::setExternalDocs
+     * @covers Nerdery\Swagger\Entity\Operation::getExternalDocs
+     * @covers Nerdery\Swagger\Entity\Operation::setExternalDocs
      */
     public function testExternalDocs()
     {
@@ -90,8 +90,8 @@ class OperationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Operation::getOperationId
-     * @covers ERP\Swagger\Entity\Operation::setOperationId
+     * @covers Nerdery\Swagger\Entity\Operation::getOperationId
+     * @covers Nerdery\Swagger\Entity\Operation::setOperationId
      */
     public function testOperationId()
     {
@@ -102,8 +102,8 @@ class OperationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Operation::getConsumes
-     * @covers ERP\Swagger\Entity\Operation::setConsumes
+     * @covers Nerdery\Swagger\Entity\Operation::getConsumes
+     * @covers Nerdery\Swagger\Entity\Operation::setConsumes
      */
     public function testConsumes()
     {
@@ -116,8 +116,8 @@ class OperationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Operation::getProduces
-     * @covers ERP\Swagger\Entity\Operation::setProduces
+     * @covers Nerdery\Swagger\Entity\Operation::getProduces
+     * @covers Nerdery\Swagger\Entity\Operation::setProduces
      */
     public function testProduces()
     {
@@ -130,8 +130,8 @@ class OperationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Operation::getParameters
-     * @covers ERP\Swagger\Entity\Operation::setParameters
+     * @covers Nerdery\Swagger\Entity\Operation::getParameters
+     * @covers Nerdery\Swagger\Entity\Operation::setParameters
      */
     public function testParameters()
     {
@@ -150,8 +150,8 @@ class OperationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Operation::getResponses
-     * @covers ERP\Swagger\Entity\Operation::setResponses
+     * @covers Nerdery\Swagger\Entity\Operation::getResponses
+     * @covers Nerdery\Swagger\Entity\Operation::setResponses
      */
     public function testResponses()
     {
@@ -169,8 +169,8 @@ class OperationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Operation::getSchemes
-     * @covers ERP\Swagger\Entity\Operation::setSchemes
+     * @covers Nerdery\Swagger\Entity\Operation::getSchemes
+     * @covers Nerdery\Swagger\Entity\Operation::setSchemes
      */
     public function testSchemes()
     {
@@ -183,8 +183,8 @@ class OperationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Operation::isDeprecated
-     * @covers ERP\Swagger\Entity\Operation::setDeprecated
+     * @covers Nerdery\Swagger\Entity\Operation::isDeprecated
+     * @covers Nerdery\Swagger\Entity\Operation::setDeprecated
      */
     public function testDeprecated()
     {
@@ -197,8 +197,8 @@ class OperationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Operation::getSecurity
-     * @covers ERP\Swagger\Entity\Operation::setSecurity
+     * @covers Nerdery\Swagger\Entity\Operation::getSecurity
+     * @covers Nerdery\Swagger\Entity\Operation::setSecurity
      */
     public function testSecurity()
     {
@@ -216,7 +216,7 @@ class OperationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Operation
+     * @covers Nerdery\Swagger\Entity\Operation
      */
     public function testSerialize()
     {

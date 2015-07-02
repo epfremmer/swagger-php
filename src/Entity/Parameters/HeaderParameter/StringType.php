@@ -4,15 +4,15 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace ERP\Swagger\Entity\Parameters\HeaderParameter;
+namespace Nerdery\Swagger\Entity\Parameters\HeaderParameter;
 
-use ERP\Swagger\Entity\Mixin\Primitives;
-use ERP\Swagger\Entity\Parameters\AbstractTypedParameter;
+use Nerdery\Swagger\Entity\Mixin\Primitives;
+use Nerdery\Swagger\Entity\Parameters\AbstractTypedParameter;
 
 /**
  * Class StringType
  *
- * @package ERP\Swagger
+ * @package Nerdery\Swagger
  * @subpackage Entity\Parameters\HeaderParameter
  */
 class StringType extends AbstractTypedParameter

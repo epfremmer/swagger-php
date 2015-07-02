@@ -4,14 +4,14 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace ERP\Swagger\Entity;
+namespace Nerdery\Swagger\Entity;
 
 use JMS\Serializer\Annotation as JMS;
 
 /**
  * Class Info
  *
- * @package ERP\Swagger
+ * @package Nerdery\Swagger
  * @subpackage Entity
  */
 class Info
@@ -43,7 +43,7 @@ class Info
 
     /**
      * @JMS\Since("2.0")
-     * @JMS\Type("ERP\Swagger\Entity\Contact")
+     * @JMS\Type("Nerdery\Swagger\Entity\Contact")
      * @JMS\SerializedName("contact")
      * @var Contact
      */
@@ -51,7 +51,7 @@ class Info
 
     /**
      * @JMS\Since("2.0")
-     * @JMS\Type("ERP\Swagger\Entity\License")
+     * @JMS\Type("Nerdery\Swagger\Entity\License")
      * @JMS\SerializedName("license")
      * @var License
      */

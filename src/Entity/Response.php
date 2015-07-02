@@ -4,17 +4,17 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace ERP\Swagger\Entity;
+namespace Nerdery\Swagger\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
-use ERP\Swagger\Entity\Schemas\SchemaInterface;
-use ERP\Swagger\Entity\Headers\AbstractHeader;
+use Nerdery\Swagger\Entity\Schemas\SchemaInterface;
+use Nerdery\Swagger\Entity\Headers\AbstractHeader;
 use JMS\Serializer\Annotation as JMS;
 
 /**
  * Class Response
  *
- * @package ERP\Swagger
+ * @package Nerdery\Swagger
  * @subpackage Entity
  */
 class Response
@@ -30,7 +30,7 @@ class Response
 
     /**
      * @JMS\Since("2.0")
-     * @JMS\Type("ERP\Swagger\Entity\Schemas\AbstractSchema")
+     * @JMS\Type("Nerdery\Swagger\Entity\Schemas\AbstractSchema")
      * @JMS\SerializedName("schema")
      * @var SchemaInterface
      */
@@ -38,7 +38,7 @@ class Response
 
     /**
      * @JMS\Since("2.0")
-     * @JMS\Type("ArrayCollection<string,ERP\Swagger\Entity\Headers\AbstractHeader>")
+     * @JMS\Type("ArrayCollection<string,Nerdery\Swagger\Entity\Headers\AbstractHeader>")
      * @JMS\SerializedName("headers")
      * @var AbstractHeader[]|ArrayCollection
      */
@@ -46,7 +46,7 @@ class Response
 
     /**
      * @JMS\Since("2.0")
-     * @JMS\Type("ERP\Swagger\Entity\Examples")
+     * @JMS\Type("Nerdery\Swagger\Entity\Examples")
      * @JMS\SerializedName("examples")
      * @var string
      */

@@ -4,17 +4,17 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace ERP\Swagger\Tests\Entity\Schemas;
+namespace Nerdery\Swagger\Tests\Entity\Schemas;
 
-use ERP\Swagger\Entity\ExternalDocumentation;
-use ERP\Swagger\Entity\Schemas\AbstractSchema;
-use ERP\Swagger\Entity\Schemas\NumberSchema;
-use ERP\Swagger\Tests\Mixin\SerializerContextTrait;
+use Nerdery\Swagger\Entity\ExternalDocumentation;
+use Nerdery\Swagger\Entity\Schemas\AbstractSchema;
+use Nerdery\Swagger\Entity\Schemas\NumberSchema;
+use Nerdery\Swagger\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class NumberSchemaTest
  *
- * @package ERP\Swagger
+ * @package Nerdery\Swagger
  * @subpackage Tests\Entity\Schemas
  */
 class NumberSchemaTest extends \PHPUnit_Framework_TestCase
@@ -35,7 +35,7 @@ class NumberSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Schemas\NumberSchema::getType
+     * @covers Nerdery\Swagger\Entity\Schemas\NumberSchema::getType
      */
     public function testType()
     {
@@ -44,7 +44,7 @@ class NumberSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Schemas\NumberSchema
+     * @covers Nerdery\Swagger\Entity\Schemas\NumberSchema
      */
     public function testSerialization()
     {

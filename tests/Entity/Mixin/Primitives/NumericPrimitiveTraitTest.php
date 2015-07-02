@@ -4,17 +4,17 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace ERP\Swagger\Tests\Entity\Mixin;
+namespace Nerdery\Swagger\Tests\Entity\Mixin;
 
-use ERP\Swagger\Entity\Mixin\Primitives\NumericPrimitiveTrait;
-use ERP\Swagger\Entity\Schemas\AbstractSchema;
-use ERP\Swagger\Entity\Schemas\NumberSchema;
-use ERP\Swagger\Tests\Mixin\SerializerContextTrait;
+use Nerdery\Swagger\Entity\Mixin\Primitives\NumericPrimitiveTrait;
+use Nerdery\Swagger\Entity\Schemas\AbstractSchema;
+use Nerdery\Swagger\Entity\Schemas\NumberSchema;
+use Nerdery\Swagger\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class NumericPrimitiveTraitTest
  *
- * @package ERP\Swagger
+ * @package Nerdery\Swagger
  * @subpackage Tests\Entity\Schemas\Primitives
  */
 class NumericPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
@@ -42,8 +42,8 @@ class NumericPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Mixin\Primitives\NumericPrimitiveTrait::getMultipleOf
-     * @covers ERP\Swagger\Entity\Mixin\Primitives\NumericPrimitiveTrait::setMultipleOf
+     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\NumericPrimitiveTrait::getMultipleOf
+     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\NumericPrimitiveTrait::setMultipleOf
      */
     public function testMultipleOf()
     {
@@ -55,8 +55,8 @@ class NumericPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Mixin\Primitives\NumericPrimitiveTrait::getMaximum
-     * @covers ERP\Swagger\Entity\Mixin\Primitives\NumericPrimitiveTrait::setMaximum
+     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\NumericPrimitiveTrait::getMaximum
+     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\NumericPrimitiveTrait::setMaximum
      */
     public function testMaximum()
     {
@@ -68,8 +68,8 @@ class NumericPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Mixin\Primitives\NumericPrimitiveTrait::getExclusiveMaximum
-     * @covers ERP\Swagger\Entity\Mixin\Primitives\NumericPrimitiveTrait::setExclusiveMaximum
+     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\NumericPrimitiveTrait::getExclusiveMaximum
+     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\NumericPrimitiveTrait::setExclusiveMaximum
      */
     public function testExclusiveMaximum()
     {
@@ -81,8 +81,8 @@ class NumericPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Mixin\Primitives\NumericPrimitiveTrait::getMinimum
-     * @covers ERP\Swagger\Entity\Mixin\Primitives\NumericPrimitiveTrait::setMinimum
+     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\NumericPrimitiveTrait::getMinimum
+     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\NumericPrimitiveTrait::setMinimum
      */
     public function testMinimum()
     {
@@ -94,8 +94,8 @@ class NumericPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Mixin\Primitives\NumericPrimitiveTrait::getExclusiveMinimum
-     * @covers ERP\Swagger\Entity\Mixin\Primitives\NumericPrimitiveTrait::setExclusiveMinimum
+     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\NumericPrimitiveTrait::getExclusiveMinimum
+     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\NumericPrimitiveTrait::setExclusiveMinimum
      */
     public function testExclusiveMinimum()
     {
@@ -107,7 +107,7 @@ class NumericPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Mixin\Primitives\NumericPrimitiveTrait
+     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\NumericPrimitiveTrait
      */
     public function testSerialization()
     {

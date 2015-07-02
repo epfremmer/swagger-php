@@ -4,15 +4,15 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace ERP\Swagger\Tests\Entity;
+namespace Nerdery\Swagger\Tests\Entity;
 
-use ERP\Swagger\Entity\ExternalDocumentation;
-use ERP\Swagger\Tests\Mixin\SerializerContextTrait;
+use Nerdery\Swagger\Entity\ExternalDocumentation;
+use Nerdery\Swagger\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class ExternalDocumentationTest
  *
- * @package ERP\Swagger
+ * @package Nerdery\Swagger
  * @subpackage Tests\Entity
  */
 class ExternalDocumentationTest extends \PHPUnit_Framework_TestCase
@@ -33,8 +33,8 @@ class ExternalDocumentationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\ExternalDocumentation::getDescription
-     * @covers ERP\Swagger\Entity\ExternalDocumentation::setDescription
+     * @covers Nerdery\Swagger\Entity\ExternalDocumentation::getDescription
+     * @covers Nerdery\Swagger\Entity\ExternalDocumentation::setDescription
      */
     public function testDescription()
     {
@@ -45,8 +45,8 @@ class ExternalDocumentationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\ExternalDocumentation::getUrl
-     * @covers ERP\Swagger\Entity\ExternalDocumentation::setUrl
+     * @covers Nerdery\Swagger\Entity\ExternalDocumentation::getUrl
+     * @covers Nerdery\Swagger\Entity\ExternalDocumentation::setUrl
      */
     public function testUrl()
     {
@@ -57,7 +57,7 @@ class ExternalDocumentationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\ExternalDocumentation
+     * @covers Nerdery\Swagger\Entity\ExternalDocumentation
      */
     public function testSerialize()
     {

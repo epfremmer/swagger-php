@@ -4,26 +4,26 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace ERP\Swagger\Entity\Schemas;
+namespace Nerdery\Swagger\Entity\Schemas;
 
-use ERP\Swagger\Annotations as EP;
-use ERP\Swagger\Entity\ExternalDocumentation;
+use Nerdery\Swagger\Annotations as EP;
+use Nerdery\Swagger\Entity\ExternalDocumentation;
 use JMS\Serializer\Annotation as JMS;
 
 /**
  * Class AbstractSchema
  *
  * @EP\Discriminator(field = "type", default="object", map = {
- *   "null"   : "ERP\Swagger\Entity\Schemas\NullSchema",
- *   "boolean": "ERP\Swagger\Entity\Schemas\BooleanSchema",
- *   "integer": "ERP\Swagger\Entity\Schemas\IntegerSchema",
- *   "number" : "ERP\Swagger\Entity\Schemas\NumberSchema",
- *   "string" : "ERP\Swagger\Entity\Schemas\StringSchema",
- *   "array"  : "ERP\Swagger\Entity\Schemas\ArraySchema",
- *   "object" : "ERP\Swagger\Entity\Schemas\ObjectSchema"
+ *   "null"   : "Nerdery\Swagger\Entity\Schemas\NullSchema",
+ *   "boolean": "Nerdery\Swagger\Entity\Schemas\BooleanSchema",
+ *   "integer": "Nerdery\Swagger\Entity\Schemas\IntegerSchema",
+ *   "number" : "Nerdery\Swagger\Entity\Schemas\NumberSchema",
+ *   "string" : "Nerdery\Swagger\Entity\Schemas\StringSchema",
+ *   "array"  : "Nerdery\Swagger\Entity\Schemas\ArraySchema",
+ *   "object" : "Nerdery\Swagger\Entity\Schemas\ObjectSchema"
  * })
  *
- * @package ERP\Swagger
+ * @package Nerdery\Swagger
  * @subpackage Entity\Schemas
  */
 abstract class AbstractSchema implements SchemaInterface
@@ -87,7 +87,7 @@ abstract class AbstractSchema implements SchemaInterface
 
     /**
      * @JMS\Since("2.0")
-     * @JMS\Type("ERP\Swagger\Entity\ExternalDocumentation")
+     * @JMS\Type("Nerdery\Swagger\Entity\ExternalDocumentation")
      * @JMS\SerializedName("externalDocs")
      * @var ExternalDocumentation
      */

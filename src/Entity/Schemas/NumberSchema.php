@@ -4,14 +4,14 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace ERP\Swagger\Entity\Schemas;
+namespace Nerdery\Swagger\Entity\Schemas;
 
-use ERP\Swagger\Entity\Mixin\Primitives;
+use Nerdery\Swagger\Entity\Mixin\Primitives;
 
 /**
  * Class NumberSchema
  *
- * @package ERP\Swagger
+ * @package Nerdery\Swagger
  * @subpackage Entity\Schemas
  */
 class NumberSchema extends AbstractSchema

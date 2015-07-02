@@ -4,14 +4,14 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace ERP\Swagger\Tests\Entity\Parameters;
+namespace Nerdery\Swagger\Tests\Entity\Parameters;
 
-use ERP\Swagger\Entity\Parameters\AbstractTypedParameter;
+use Nerdery\Swagger\Entity\Parameters\AbstractTypedParameter;
 
 /**
  * Class AbstractTypedParameterTest
  *
- * @package ERP\Swagger
+ * @package Nerdery\Swagger
  * @subpackage Tests\Entity\Parameters
  */
 class AbstractTypedParameterTest extends \PHPUnit_Framework_TestCase
@@ -31,8 +31,8 @@ class AbstractTypedParameterTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Parameters\AbstractTypedParameter::getType
-     * @covers ERP\Swagger\Entity\Parameters\AbstractTypedParameter::setType
+     * @covers Nerdery\Swagger\Entity\Parameters\AbstractTypedParameter::getType
+     * @covers Nerdery\Swagger\Entity\Parameters\AbstractTypedParameter::setType
      */
     public function testType()
     {
@@ -43,8 +43,8 @@ class AbstractTypedParameterTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Parameters\AbstractTypedParameter::getFormat
-     * @covers ERP\Swagger\Entity\Parameters\AbstractTypedParameter::setFormat
+     * @covers Nerdery\Swagger\Entity\Parameters\AbstractTypedParameter::getFormat
+     * @covers Nerdery\Swagger\Entity\Parameters\AbstractTypedParameter::setFormat
      */
     public function testFormat()
     {
@@ -55,8 +55,8 @@ class AbstractTypedParameterTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Parameters\AbstractTypedParameter::isAllowEmptyValues
-     * @covers ERP\Swagger\Entity\Parameters\AbstractTypedParameter::setAllowEmptyValues
+     * @covers Nerdery\Swagger\Entity\Parameters\AbstractTypedParameter::isAllowEmptyValues
+     * @covers Nerdery\Swagger\Entity\Parameters\AbstractTypedParameter::setAllowEmptyValues
      */
     public function testAllowEmptyValues()
     {
@@ -68,8 +68,8 @@ class AbstractTypedParameterTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Parameters\AbstractTypedParameter::getDefault
-     * @covers ERP\Swagger\Entity\Parameters\AbstractTypedParameter::setDefault
+     * @covers Nerdery\Swagger\Entity\Parameters\AbstractTypedParameter::getDefault
+     * @covers Nerdery\Swagger\Entity\Parameters\AbstractTypedParameter::setDefault
      */
     public function testDefault()
     {

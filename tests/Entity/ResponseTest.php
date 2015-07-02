@@ -4,21 +4,21 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace ERP\Swagger\Tests\Entity;
+namespace Nerdery\Swagger\Tests\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
-use ERP\Swagger\Entity\Examples;
-use ERP\Swagger\Entity\Headers;
-use ERP\Swagger\Entity\Response;
-use ERP\Swagger\Entity\Parameters;
-use ERP\Swagger\Entity\Schemas\AbstractSchema;
-use ERP\Swagger\Entity\Schemas\ObjectSchema;
-use ERP\Swagger\Tests\Mixin\SerializerContextTrait;
+use Nerdery\Swagger\Entity\Examples;
+use Nerdery\Swagger\Entity\Headers;
+use Nerdery\Swagger\Entity\Response;
+use Nerdery\Swagger\Entity\Parameters;
+use Nerdery\Swagger\Entity\Schemas\AbstractSchema;
+use Nerdery\Swagger\Entity\Schemas\ObjectSchema;
+use Nerdery\Swagger\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class ResponseTest
  *
- * @package ERP\Swagger
+ * @package Nerdery\Swagger
  * @subpackage Tests\Entity
  */
 class ResponseTest extends \PHPUnit_Framework_TestCase
@@ -39,8 +39,8 @@ class ResponseTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers ERP\Swagger\Entity\Response::getDescription
-     * @covers ERP\Swagger\Entity\Response::setDescription
+     * @covers Nerdery\Swagger\Entity\Response::getDescription
+     * @covers Nerdery\Swagger\Entity\Response::setDescription
      */
     public function testDescription()
     {
@@ -51,8 +51,8 @@ class ResponseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Response::getSchema
-     * @covers ERP\Swagger\Entity\Response::setSchema
+     * @covers Nerdery\Swagger\Entity\Response::getSchema
+     * @covers Nerdery\Swagger\Entity\Response::setSchema
      */
     public function testSchema()
     {
@@ -66,8 +66,8 @@ class ResponseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Response::getHeaders
-     * @covers ERP\Swagger\Entity\Response::setHeaders
+     * @covers Nerdery\Swagger\Entity\Response::getHeaders
+     * @covers Nerdery\Swagger\Entity\Response::setHeaders
      */
     public function testHeaders()
     {
@@ -86,8 +86,8 @@ class ResponseTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers ERP\Swagger\Entity\Response::getExamples
-     * @covers ERP\Swagger\Entity\Response::setExamples
+     * @covers Nerdery\Swagger\Entity\Response::getExamples
+     * @covers Nerdery\Swagger\Entity\Response::setExamples
      */
     public function testExamples()
     {
@@ -101,7 +101,7 @@ class ResponseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Response
+     * @covers Nerdery\Swagger\Entity\Response
      */
     public function testSerialize()
     {
