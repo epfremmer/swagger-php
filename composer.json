@@ -1,6 +1,6 @@
 {
-  "name": "epfremmer/swagger",
-  "license": "MIT",
+  "name": "nerdery/swagger-php",
+  "license": "Nerdery",
   "type": "package",
   "description": "Library for parsing swagger documentation into PHP entities for use in testing and code generation",
   "authors" : [
@@ -11,8 +11,8 @@
   ],
   "autoload": {
     "psr-4": {
-      "ERP\\Swagger\\": "src/",
-      "ERP\\Swagger\\Tests\\": "tests/"
+      "Nerdery\\Swagger\\": "src/",
+      "Nerdery\\Swagger\\Tests\\": "tests/"
     }
   },
   "require": {

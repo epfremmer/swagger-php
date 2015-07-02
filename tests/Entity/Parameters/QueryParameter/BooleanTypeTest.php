@@ -4,17 +4,17 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace ERP\Swagger\Tests\Entity\Parameters\QueryParameter;
+namespace Nerdery\Swagger\Tests\Entity\Parameters\QueryParameter;
 
-use ERP\Swagger\Entity\Parameters\AbstractParameter;
-use ERP\Swagger\Entity\Parameters\AbstractTypedParameter;
-use ERP\Swagger\Entity\Parameters\QueryParameter;
-use ERP\Swagger\Tests\Mixin\SerializerContextTrait;
+use Nerdery\Swagger\Entity\Parameters\AbstractParameter;
+use Nerdery\Swagger\Entity\Parameters\AbstractTypedParameter;
+use Nerdery\Swagger\Entity\Parameters\QueryParameter;
+use Nerdery\Swagger\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class BooleanTypeTest
  *
- * @package ERP\Swagger
+ * @package Nerdery\Swagger
  * @subpackage Tests\Entity\Parameters\QueryParameter
  */
 class BooleanTypeTest extends \PHPUnit_Framework_TestCase
@@ -35,7 +35,7 @@ class BooleanTypeTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Parameters\QueryParameter\BooleanType
+     * @covers Nerdery\Swagger\Entity\Parameters\QueryParameter\BooleanType
      */
     public function testSerialization()
     {

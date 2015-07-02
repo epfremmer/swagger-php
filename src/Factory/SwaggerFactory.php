@@ -4,21 +4,21 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace ERP\Swagger\Factory;
+namespace Nerdery\Swagger\Factory;
 
-use ERP\Swagger\Entity\Swagger;
-use ERP\Swagger\Parser\SwaggerParser;
+use Nerdery\Swagger\Entity\Swagger;
+use Nerdery\Swagger\Parser\SwaggerParser;
 use JMS\Serializer\DeserializationContext;
 use JMS\Serializer\SerializationContext;
 use JMS\Serializer\Serializer;
 use JMS\Serializer\SerializerBuilder;
 use JMS\Serializer\EventDispatcher\EventDispatcher;
-use ERP\Swagger\Listener\SerializationSubscriber;
+use Nerdery\Swagger\Listener\SerializationSubscriber;
 
 /**
  * Class SwaggerFactory
  *
- * @package ERP\Swagger
+ * @package Nerdery\Swagger
  * @subpackage Factory
  */
 class SwaggerFactory

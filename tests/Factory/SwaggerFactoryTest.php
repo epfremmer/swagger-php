@@ -4,16 +4,16 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace ERP\Swagger\Tests\Factory;
+namespace Nerdery\Swagger\Tests\Factory;
 
-use ERP\Swagger\Entity\Swagger;
-use ERP\Swagger\Factory\SwaggerFactory;
-use ERP\Swagger\Tests\Parser\SwaggerParserTest;
+use Nerdery\Swagger\Entity\Swagger;
+use Nerdery\Swagger\Factory\SwaggerFactory;
+use Nerdery\Swagger\Tests\Parser\SwaggerParserTest;
 
 /**
  * Class SwaggerFactoryTest
  *
- * @package ERP\Swagger
+ * @package Nerdery\Swagger
  * @subpackage Tests\Parser
  */
 class SwaggerFactoryTest extends \PHPUnit_Framework_TestCase
@@ -56,7 +56,7 @@ class SwaggerFactoryTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Factory\SwaggerFactory::__construct
+     * @covers Nerdery\Swagger\Factory\SwaggerFactory::__construct
      */
     public function testFactoryConstructor()
     {
@@ -72,7 +72,7 @@ class SwaggerFactoryTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException \ERP\Swagger\Exception\InvalidVersionException
+     * @expectedException \Nerdery\Swagger\Exception\InvalidVersionException
      */
     public function testBuildUnsupportedVersion()
     {
@@ -80,7 +80,7 @@ class SwaggerFactoryTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Factory\SwaggerFactory::build
+     * @covers Nerdery\Swagger\Factory\SwaggerFactory::build
      */
     public function testBuildJson()
     {
@@ -90,7 +90,7 @@ class SwaggerFactoryTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Factory\SwaggerFactory::build
+     * @covers Nerdery\Swagger\Factory\SwaggerFactory::build
      */
     public function testBuildYaml()
     {
@@ -100,7 +100,7 @@ class SwaggerFactoryTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Factory\SwaggerFactory::serialize
+     * @covers Nerdery\Swagger\Factory\SwaggerFactory::serialize
      */
     public function testSerialize()
     {
@@ -113,7 +113,7 @@ class SwaggerFactoryTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException \ERP\Swagger\Exception\InvalidVersionException
+     * @expectedException \Nerdery\Swagger\Exception\InvalidVersionException
      */
     public function testSerializeUnsupportedVersion()
     {

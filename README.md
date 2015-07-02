@@ -21,7 +21,7 @@ Add vcs repository to composer json:
 
 Instantiate the swagger factory and pass it a valid swagger documentation file to parse:
 
-    use ERP\Swagger\Factory\SwaggerFactory;
+    use Nerdery\Swagger\Factory\SwaggerFactory;
     
     $factory = new SwaggerFactory();
     $swagger = $factory->build('/path/to/swagger/file.json');

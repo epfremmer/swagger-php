@@ -4,24 +4,24 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace ERP\Swagger\Entity\Headers;
+namespace Nerdery\Swagger\Entity\Headers;
 
-use ERP\Swagger\Entity\Schemas\AbstractSchema;
-use ERP\Swagger\Annotations as EP;
+use Nerdery\Swagger\Entity\Schemas\AbstractSchema;
+use Nerdery\Swagger\Annotations as EP;
 use JMS\Serializer\Annotation as JMS;
 
 /**
  * Class AbstractHeader
  *
  * @EP\Discriminator(field = "type", default="array", map = {
- *   "boolean": "ERP\Swagger\Entity\Headers\BooleanHeader",
- *   "integer": "ERP\Swagger\Entity\Headers\IntegerHeader",
- *   "number" : "ERP\Swagger\Entity\Headers\NumberHeader",
- *   "string" : "ERP\Swagger\Entity\Headers\StringHeader",
- *   "array"  : "ERP\Swagger\Entity\Headers\ArrayHeader"
+ *   "boolean": "Nerdery\Swagger\Entity\Headers\BooleanHeader",
+ *   "integer": "Nerdery\Swagger\Entity\Headers\IntegerHeader",
+ *   "number" : "Nerdery\Swagger\Entity\Headers\NumberHeader",
+ *   "string" : "Nerdery\Swagger\Entity\Headers\StringHeader",
+ *   "array"  : "Nerdery\Swagger\Entity\Headers\ArrayHeader"
  * })
  *
- * @package ERP\Swagger
+ * @package Nerdery\Swagger
  * @subpackage Entity\Headers
  */
 abstract class AbstractHeader

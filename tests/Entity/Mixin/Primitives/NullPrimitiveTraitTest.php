@@ -4,17 +4,17 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace ERP\Swagger\Tests\Entity\Mixin;
+namespace Nerdery\Swagger\Tests\Entity\Mixin;
 
-use ERP\Swagger\Entity\Mixin\Primitives\NullPrimitiveTrait;
-use ERP\Swagger\Entity\Schemas\AbstractSchema;
-use ERP\Swagger\Entity\Schemas\NullSchema;
-use ERP\Swagger\Tests\Mixin\SerializerContextTrait;
+use Nerdery\Swagger\Entity\Mixin\Primitives\NullPrimitiveTrait;
+use Nerdery\Swagger\Entity\Schemas\AbstractSchema;
+use Nerdery\Swagger\Entity\Schemas\NullSchema;
+use Nerdery\Swagger\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class NullPrimitiveTraitTest
  *
- * @package ERP\Swagger
+ * @package Nerdery\Swagger
  * @subpackage Tests\Entity\Schemas\Primitives
  */
 class NullPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
@@ -42,7 +42,7 @@ class NullPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Mixin\Primitives\NullPrimitiveTrait
+     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\NullPrimitiveTrait
      */
     public function testSerialization()
     {

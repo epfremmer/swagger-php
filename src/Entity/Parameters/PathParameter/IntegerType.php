@@ -4,15 +4,15 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace ERP\Swagger\Entity\Parameters\PathParameter;
+namespace Nerdery\Swagger\Entity\Parameters\PathParameter;
 
-use ERP\Swagger\Entity\Mixin\Primitives;
-use ERP\Swagger\Entity\Parameters\AbstractTypedParameter;
+use Nerdery\Swagger\Entity\Mixin\Primitives;
+use Nerdery\Swagger\Entity\Parameters\AbstractTypedParameter;
 
 /**
  * Class IntegerType
  *
- * @package ERP\Swagger
+ * @package Nerdery\Swagger
  * @subpackage Entity\Parameters\PathParameter
  */
 class IntegerType extends AbstractTypedParameter

@@ -4,18 +4,18 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace ERP\Swagger\Tests\Entity;
+namespace Nerdery\Swagger\Tests\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
-use ERP\Swagger\Entity\Operation;
-use ERP\Swagger\Entity\Parameters;
-use ERP\Swagger\Entity\Path;
-use ERP\Swagger\Tests\Mixin\SerializerContextTrait;
+use Nerdery\Swagger\Entity\Operation;
+use Nerdery\Swagger\Entity\Parameters;
+use Nerdery\Swagger\Entity\Path;
+use Nerdery\Swagger\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class PathTest
  *
- * @package ERP\Swagger
+ * @package Nerdery\Swagger
  * @subpackage Tests\Entity
  */
 class PathTest extends \PHPUnit_Framework_TestCase
@@ -36,8 +36,8 @@ class PathTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers ERP\Swagger\Entity\Path::getOperations
-     * @covers ERP\Swagger\Entity\Path::setOperations
+     * @covers Nerdery\Swagger\Entity\Path::getOperations
+     * @covers Nerdery\Swagger\Entity\Path::setOperations
      */
     public function testOperations()
     {
@@ -56,7 +56,7 @@ class PathTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Path
+     * @covers Nerdery\Swagger\Entity\Path
      */
     public function testSerialize()
     {

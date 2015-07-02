@@ -4,17 +4,17 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace ERP\Swagger\Tests\Entity\Schemas;
+namespace Nerdery\Swagger\Tests\Entity\Schemas;
 
-use ERP\Swagger\Entity\ExternalDocumentation;
-use ERP\Swagger\Entity\Schemas\AbstractSchema;
-use ERP\Swagger\Entity\Schemas\RefSchema;
-use ERP\Swagger\Tests\Mixin\SerializerContextTrait;
+use Nerdery\Swagger\Entity\ExternalDocumentation;
+use Nerdery\Swagger\Entity\Schemas\AbstractSchema;
+use Nerdery\Swagger\Entity\Schemas\RefSchema;
+use Nerdery\Swagger\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class RefSchemaTest
  *
- * @package ERP\Swagger
+ * @package Nerdery\Swagger
  * @subpackage Tests\Entity\Schemas
  */
 class RefSchemaTest extends \PHPUnit_Framework_TestCase
@@ -35,7 +35,7 @@ class RefSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Schemas\RefSchema::getType
+     * @covers Nerdery\Swagger\Entity\Schemas\RefSchema::getType
      */
     public function testType()
     {
@@ -44,8 +44,8 @@ class RefSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Schemas\RefSchema::getRef
-     * @covers ERP\Swagger\Entity\Schemas\RefSchema::setRef
+     * @covers Nerdery\Swagger\Entity\Schemas\RefSchema::getRef
+     * @covers Nerdery\Swagger\Entity\Schemas\RefSchema::setRef
      */
     public function testRef()
     {
@@ -56,8 +56,8 @@ class RefSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Schemas\RefSchema::getTitle
-     * @covers ERP\Swagger\Entity\Schemas\RefSchema::setTitle
+     * @covers Nerdery\Swagger\Entity\Schemas\RefSchema::getTitle
+     * @covers Nerdery\Swagger\Entity\Schemas\RefSchema::setTitle
      */
     public function testTitle()
     {
@@ -68,8 +68,8 @@ class RefSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Schemas\RefSchema::getDescription
-     * @covers ERP\Swagger\Entity\Schemas\RefSchema::setDescription
+     * @covers Nerdery\Swagger\Entity\Schemas\RefSchema::getDescription
+     * @covers Nerdery\Swagger\Entity\Schemas\RefSchema::setDescription
      */
     public function testDescription()
     {
@@ -80,7 +80,7 @@ class RefSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Schemas\RefSchema
+     * @covers Nerdery\Swagger\Entity\Schemas\RefSchema
      */
     public function testSerialization()
     {

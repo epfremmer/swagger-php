@@ -4,14 +4,14 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace ERP\Swagger\Entity\Mixin\Primitives;
+namespace Nerdery\Swagger\Entity\Mixin\Primitives;
 
 use JMS\Serializer\Annotation as JMS;
 
 /**
  * Trait StringPrimitiveTrait
  *
- * @package ERP\Swagger
+ * @package Nerdery\Swagger
  * @subpackage Entity\Schemas\Primitives
  */
 trait StringPrimitiveTrait

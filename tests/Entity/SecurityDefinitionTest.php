@@ -4,15 +4,15 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace ERP\Swagger\Tests\Entity;
+namespace Nerdery\Swagger\Tests\Entity;
 
-use ERP\Swagger\Entity\SecurityDefinition;
-use ERP\Swagger\Tests\Mixin\SerializerContextTrait;
+use Nerdery\Swagger\Entity\SecurityDefinition;
+use Nerdery\Swagger\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class SecurityDefinitionTest
  *
- * @package ERP\Swagger
+ * @package Nerdery\Swagger
  * @subpackage Tests\Entity
  */
 class SecurityDefinitionTest extends \PHPUnit_Framework_TestCase
@@ -33,8 +33,8 @@ class SecurityDefinitionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\SecurityDefinition::getType
-     * @covers ERP\Swagger\Entity\SecurityDefinition::setType
+     * @covers Nerdery\Swagger\Entity\SecurityDefinition::getType
+     * @covers Nerdery\Swagger\Entity\SecurityDefinition::setType
      */
     public function testType()
     {
@@ -45,8 +45,8 @@ class SecurityDefinitionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\SecurityDefinition::getDescription
-     * @covers ERP\Swagger\Entity\SecurityDefinition::setDescription
+     * @covers Nerdery\Swagger\Entity\SecurityDefinition::getDescription
+     * @covers Nerdery\Swagger\Entity\SecurityDefinition::setDescription
      */
     public function testDescription()
     {
@@ -57,8 +57,8 @@ class SecurityDefinitionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\SecurityDefinition::getName
-     * @covers ERP\Swagger\Entity\SecurityDefinition::setName
+     * @covers Nerdery\Swagger\Entity\SecurityDefinition::getName
+     * @covers Nerdery\Swagger\Entity\SecurityDefinition::setName
      */
     public function testName()
     {
@@ -69,8 +69,8 @@ class SecurityDefinitionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\SecurityDefinition::getIn
-     * @covers ERP\Swagger\Entity\SecurityDefinition::setIn
+     * @covers Nerdery\Swagger\Entity\SecurityDefinition::getIn
+     * @covers Nerdery\Swagger\Entity\SecurityDefinition::setIn
      */
     public function testIn()
     {
@@ -81,8 +81,8 @@ class SecurityDefinitionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\SecurityDefinition::getFlow
-     * @covers ERP\Swagger\Entity\SecurityDefinition::setFlow
+     * @covers Nerdery\Swagger\Entity\SecurityDefinition::getFlow
+     * @covers Nerdery\Swagger\Entity\SecurityDefinition::setFlow
      */
     public function testFlow()
     {
@@ -93,8 +93,8 @@ class SecurityDefinitionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\SecurityDefinition::getAuthorizationUrl
-     * @covers ERP\Swagger\Entity\SecurityDefinition::setAuthorizationUrl
+     * @covers Nerdery\Swagger\Entity\SecurityDefinition::getAuthorizationUrl
+     * @covers Nerdery\Swagger\Entity\SecurityDefinition::setAuthorizationUrl
      */
     public function testAuthorizationUrl()
     {
@@ -105,8 +105,8 @@ class SecurityDefinitionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\SecurityDefinition::getTokenUrl
-     * @covers ERP\Swagger\Entity\SecurityDefinition::setTokenUrl
+     * @covers Nerdery\Swagger\Entity\SecurityDefinition::getTokenUrl
+     * @covers Nerdery\Swagger\Entity\SecurityDefinition::setTokenUrl
      */
     public function testTokenUrl()
     {
@@ -117,8 +117,8 @@ class SecurityDefinitionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\SecurityDefinition::getScopes
-     * @covers ERP\Swagger\Entity\SecurityDefinition::setScopes
+     * @covers Nerdery\Swagger\Entity\SecurityDefinition::getScopes
+     * @covers Nerdery\Swagger\Entity\SecurityDefinition::setScopes
      */
     public function testScopes()
     {
@@ -132,7 +132,7 @@ class SecurityDefinitionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\SecurityDefinition
+     * @covers Nerdery\Swagger\Entity\SecurityDefinition
      */
     public function testSerialize()
     {
