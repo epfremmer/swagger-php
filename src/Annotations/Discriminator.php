@@ -4,7 +4,7 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace ERP\Swagger\Annotations;
+namespace Nerdery\Swagger\Annotations;
 
 use Doctrine\Common\Annotations\Annotation;
 use Doctrine\Common\Annotations\AnnotationException;
@@ -16,7 +16,7 @@ use JMS\Serializer\Annotation as JMS;
  * @Annotation
  * @Target("CLASS")
  *
- * @package ERP\Swagger
+ * @package Nerdery\Swagger
  * @subpackage Annotations
  */
 class Discriminator extends JMS\Discriminator

@@ -4,16 +4,16 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace ERP\Swagger\Entity\Mixin\Primitives;
+namespace Nerdery\Swagger\Entity\Mixin\Primitives;
 
 use Doctrine\Common\Collections\ArrayCollection;
-use ERP\Swagger\Entity\Schemas\SchemaInterface;
+use Nerdery\Swagger\Entity\Schemas\SchemaInterface;
 use JMS\Serializer\Annotation as JMS;
 
 /**
  * Trait ObjectPrimitiveTrait
  *
- * @package ERP\Swagger
+ * @package Nerdery\Swagger
  * @subpackage Entity\Schemas\Primitives
  */
 trait ObjectPrimitiveTrait
@@ -46,7 +46,7 @@ trait ObjectPrimitiveTrait
 
     /**
      * @JMS\Since("2.0")
-     * @JMS\Type("ArrayCollection<string,ERP\Swagger\Entity\Schemas\AbstractSchema>")
+     * @JMS\Type("ArrayCollection<string,Nerdery\Swagger\Entity\Schemas\AbstractSchema>")
      * @JMS\SerializedName("properties")
      * @var SchemaInterface[]|ArrayCollection
      */

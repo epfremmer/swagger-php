@@ -4,14 +4,14 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace ERP\Swagger\Entity\Headers;
+namespace Nerdery\Swagger\Entity\Headers;
 
-use ERP\Swagger\Entity\Mixin\Primitives;
+use Nerdery\Swagger\Entity\Mixin\Primitives;
 
 /**
  * Class ArrayHeader
  *
- * @package ERP\Swagger
+ * @package Nerdery\Swagger
  * @subpackage Entity\Headers
  */
 class ArrayHeader extends AbstractHeader

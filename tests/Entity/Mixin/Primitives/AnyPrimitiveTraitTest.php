@@ -4,18 +4,18 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace ERP\Swagger\Tests\Entity\Mixin;
+namespace Nerdery\Swagger\Tests\Entity\Mixin;
 
 use Doctrine\Common\Collections\ArrayCollection;
-use ERP\Swagger\Entity\Schemas\AbstractSchema;
-use ERP\Swagger\Entity\Schemas\ObjectSchema;
-use ERP\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait;
-use ERP\Swagger\Tests\Mixin\SerializerContextTrait;
+use Nerdery\Swagger\Entity\Schemas\AbstractSchema;
+use Nerdery\Swagger\Entity\Schemas\ObjectSchema;
+use Nerdery\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait;
+use Nerdery\Swagger\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class AnyPrimitiveTraitTest
  *
- * @package ERP\Swagger
+ * @package Nerdery\Swagger
  * @subpackage Tests\Entity\Schemas\Primitives
  */
 class AnyPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
@@ -43,8 +43,8 @@ class AnyPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::getEnum
-     * @covers ERP\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::setEnum
+     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::getEnum
+     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::setEnum
      */
     public function testEnum()
     {
@@ -58,8 +58,8 @@ class AnyPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::getAllOf
-     * @covers ERP\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::setAllOf
+     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::getAllOf
+     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::setAllOf
      */
     public function testAllOf()
     {
@@ -73,8 +73,8 @@ class AnyPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::getAnyOf
-     * @covers ERP\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::setAnyOf
+     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::getAnyOf
+     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::setAnyOf
      */
     public function testAnyOf()
     {
@@ -88,8 +88,8 @@ class AnyPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::getOneOf
-     * @covers ERP\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::setOneOf
+     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::getOneOf
+     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::setOneOf
      */
     public function testOneOf()
     {
@@ -103,8 +103,8 @@ class AnyPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::getNot
-     * @covers ERP\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::setNot
+     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::getNot
+     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::setNot
      */
     public function testNot()
     {
@@ -118,8 +118,8 @@ class AnyPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::getDefinitions
-     * @covers ERP\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::setDefinitions
+     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::getDefinitions
+     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::setDefinitions
      */
     public function testDefinitions()
     {
@@ -137,7 +137,7 @@ class AnyPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait
+     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait
      */
     public function testSerialization()
     {

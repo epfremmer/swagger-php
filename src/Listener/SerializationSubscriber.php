@@ -4,16 +4,16 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace ERP\Swagger\Listener;
+namespace Nerdery\Swagger\Listener;
 
 use Doctrine\Common\Annotations\AnnotationReader;
-use ERP\Swagger\Annotations\Discriminator;
-use ERP\Swagger\Entity\Examples;
-use ERP\Swagger\Entity\Headers\AbstractHeader;
-use ERP\Swagger\Entity\Parameters\AbstractParameter;
-use ERP\Swagger\Entity\Path;
-use ERP\Swagger\Entity\Schemas\AbstractSchema;
-use ERP\Swagger\Entity\Schemas\RefSchema;
+use Nerdery\Swagger\Annotations\Discriminator;
+use Nerdery\Swagger\Entity\Examples;
+use Nerdery\Swagger\Entity\Headers\AbstractHeader;
+use Nerdery\Swagger\Entity\Parameters\AbstractParameter;
+use Nerdery\Swagger\Entity\Path;
+use Nerdery\Swagger\Entity\Schemas\AbstractSchema;
+use Nerdery\Swagger\Entity\Schemas\RefSchema;
 use JMS\Serializer\EventDispatcher\Events;
 use JMS\Serializer\EventDispatcher\PreDeserializeEvent;
 use JMS\Serializer\EventDispatcher\EventSubscriberInterface;
@@ -22,7 +22,7 @@ use JMS\Serializer\EventDispatcher\PreSerializeEvent;
 /**
  * Class SerializationSubscriber
  *
- * @package ERP\Swagger
+ * @package Nerdery\Swagger
  * @subpackage Listener
  */
 class SerializationSubscriber implements EventSubscriberInterface

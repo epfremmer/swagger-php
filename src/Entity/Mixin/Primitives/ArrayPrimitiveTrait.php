@@ -4,15 +4,15 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace ERP\Swagger\Entity\Mixin\Primitives;
+namespace Nerdery\Swagger\Entity\Mixin\Primitives;
 
-use ERP\Swagger\Entity\Schemas\SchemaInterface;
+use Nerdery\Swagger\Entity\Schemas\SchemaInterface;
 use JMS\Serializer\Annotation as JMS;
 
 /**
  * Trait ArrayPrimitiveTrait
  *
- * @package ERP\Swagger
+ * @package Nerdery\Swagger
  * @subpackage Entity\Schemas\Primitives
  */
 trait ArrayPrimitiveTrait
@@ -21,7 +21,7 @@ trait ArrayPrimitiveTrait
 
     /**
      * @JMS\Since("2.0")
-     * @JMS\Type("ERP\Swagger\Entity\Schemas\AbstractSchema")
+     * @JMS\Type("Nerdery\Swagger\Entity\Schemas\AbstractSchema")
      * @JMS\SerializedName("items")
      * @var SchemaInterface
      */

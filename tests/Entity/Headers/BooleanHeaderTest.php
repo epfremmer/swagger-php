@@ -4,16 +4,16 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace ERP\Swagger\Tests\Entity\Headers;
+namespace Nerdery\Swagger\Tests\Entity\Headers;
 
-use ERP\Swagger\Entity\Headers\AbstractHeader;
-use ERP\Swagger\Entity\Headers\BooleanHeader;
-use ERP\Swagger\Tests\Mixin\SerializerContextTrait;
+use Nerdery\Swagger\Entity\Headers\AbstractHeader;
+use Nerdery\Swagger\Entity\Headers\BooleanHeader;
+use Nerdery\Swagger\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class BooleanHeaderTest
  *
- * @package ERP\Swagger
+ * @package Nerdery\Swagger
  * @subpackage Tests\Entity\Headers
  */
 class BooleanHeaderTest extends \PHPUnit_Framework_TestCase
@@ -34,7 +34,7 @@ class BooleanHeaderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Headers\BooleanHeader::getType
+     * @covers Nerdery\Swagger\Entity\Headers\BooleanHeader::getType
      */
     public function testType()
     {
@@ -43,7 +43,7 @@ class BooleanHeaderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Headers\BooleanHeader
+     * @covers Nerdery\Swagger\Entity\Headers\BooleanHeader
      */
     public function testSerialization()
     {

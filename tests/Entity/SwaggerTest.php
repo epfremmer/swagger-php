@@ -4,27 +4,27 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace ERP\Swagger\Tests\Entity;
+namespace Nerdery\Swagger\Tests\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
-use ERP\Swagger\Entity\ExternalDocumentation;
-use ERP\Swagger\Entity\Headers;
-use ERP\Swagger\Entity\Info;
-use ERP\Swagger\Entity\Path;
-use ERP\Swagger\Entity\Response;
-use ERP\Swagger\Entity\Schemas\SchemaInterface;
-use ERP\Swagger\Entity\SecurityDefinition;
-use ERP\Swagger\Entity\Swagger;
-use ERP\Swagger\Entity\Parameters;
-use ERP\Swagger\Entity\Schemas\AbstractSchema;
-use ERP\Swagger\Entity\Schemas\ObjectSchema;
-use ERP\Swagger\Entity\Tag;
-use ERP\Swagger\Tests\Mixin\SerializerContextTrait;
+use Nerdery\Swagger\Entity\ExternalDocumentation;
+use Nerdery\Swagger\Entity\Headers;
+use Nerdery\Swagger\Entity\Info;
+use Nerdery\Swagger\Entity\Path;
+use Nerdery\Swagger\Entity\Response;
+use Nerdery\Swagger\Entity\Schemas\SchemaInterface;
+use Nerdery\Swagger\Entity\SecurityDefinition;
+use Nerdery\Swagger\Entity\Swagger;
+use Nerdery\Swagger\Entity\Parameters;
+use Nerdery\Swagger\Entity\Schemas\AbstractSchema;
+use Nerdery\Swagger\Entity\Schemas\ObjectSchema;
+use Nerdery\Swagger\Entity\Tag;
+use Nerdery\Swagger\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class SwaggerTest
  *
- * @package ERP\Swagger
+ * @package Nerdery\Swagger
  * @subpackage Tests\Entity
  */
 class SwaggerTest extends \PHPUnit_Framework_TestCase
@@ -45,8 +45,8 @@ class SwaggerTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers ERP\Swagger\Entity\Swagger::getVersion
-     * @covers ERP\Swagger\Entity\Swagger::setVersion
+     * @covers Nerdery\Swagger\Entity\Swagger::getVersion
+     * @covers Nerdery\Swagger\Entity\Swagger::setVersion
      */
     public function testVersion()
     {
@@ -57,8 +57,8 @@ class SwaggerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Swagger::getInfo
-     * @covers ERP\Swagger\Entity\Swagger::setInfo
+     * @covers Nerdery\Swagger\Entity\Swagger::getInfo
+     * @covers Nerdery\Swagger\Entity\Swagger::setInfo
      */
     public function testInfo()
     {
@@ -72,8 +72,8 @@ class SwaggerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Swagger::getHost
-     * @covers ERP\Swagger\Entity\Swagger::setHost
+     * @covers Nerdery\Swagger\Entity\Swagger::getHost
+     * @covers Nerdery\Swagger\Entity\Swagger::setHost
      */
     public function testHost()
     {
@@ -84,8 +84,8 @@ class SwaggerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Swagger::getBasePath
-     * @covers ERP\Swagger\Entity\Swagger::setBasePath
+     * @covers Nerdery\Swagger\Entity\Swagger::getBasePath
+     * @covers Nerdery\Swagger\Entity\Swagger::setBasePath
      */
     public function testBasePath()
     {
@@ -96,8 +96,8 @@ class SwaggerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Swagger::getSchemes
-     * @covers ERP\Swagger\Entity\Swagger::setSchemes
+     * @covers Nerdery\Swagger\Entity\Swagger::getSchemes
+     * @covers Nerdery\Swagger\Entity\Swagger::setSchemes
      */
     public function testSchemes()
     {
@@ -110,8 +110,8 @@ class SwaggerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Swagger::getConsumes
-     * @covers ERP\Swagger\Entity\Swagger::setConsumes
+     * @covers Nerdery\Swagger\Entity\Swagger::getConsumes
+     * @covers Nerdery\Swagger\Entity\Swagger::setConsumes
      */
     public function testConsumes()
     {
@@ -124,8 +124,8 @@ class SwaggerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Swagger::getProduces
-     * @covers ERP\Swagger\Entity\Swagger::setProduces
+     * @covers Nerdery\Swagger\Entity\Swagger::getProduces
+     * @covers Nerdery\Swagger\Entity\Swagger::setProduces
      */
     public function testProduces()
     {
@@ -138,8 +138,8 @@ class SwaggerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Swagger::getPaths
-     * @covers ERP\Swagger\Entity\Swagger::setPaths
+     * @covers Nerdery\Swagger\Entity\Swagger::getPaths
+     * @covers Nerdery\Swagger\Entity\Swagger::setPaths
      */
     public function testPaths()
     {
@@ -158,8 +158,8 @@ class SwaggerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Swagger::getDefinitions
-     * @covers ERP\Swagger\Entity\Swagger::setDefinitions
+     * @covers Nerdery\Swagger\Entity\Swagger::getDefinitions
+     * @covers Nerdery\Swagger\Entity\Swagger::setDefinitions
      */
     public function testDefinitions()
     {
@@ -176,8 +176,8 @@ class SwaggerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Swagger::getParameters
-     * @covers ERP\Swagger\Entity\Swagger::setParameters
+     * @covers Nerdery\Swagger\Entity\Swagger::getParameters
+     * @covers Nerdery\Swagger\Entity\Swagger::setParameters
      */
     public function testParameters()
     {
@@ -196,8 +196,8 @@ class SwaggerTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers ERP\Swagger\Entity\Swagger::getResponses
-     * @covers ERP\Swagger\Entity\Swagger::setResponses
+     * @covers Nerdery\Swagger\Entity\Swagger::getResponses
+     * @covers Nerdery\Swagger\Entity\Swagger::setResponses
      */
     public function testResponses()
     {
@@ -215,8 +215,8 @@ class SwaggerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Swagger::getSecurityDefinitions
-     * @covers ERP\Swagger\Entity\Swagger::setSecurityDefinitions
+     * @covers Nerdery\Swagger\Entity\Swagger::getSecurityDefinitions
+     * @covers Nerdery\Swagger\Entity\Swagger::setSecurityDefinitions
      */
     public function testSecurityDefinitions()
     {
@@ -234,8 +234,8 @@ class SwaggerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Swagger::getSecurity
-     * @covers ERP\Swagger\Entity\Swagger::setSecurity
+     * @covers Nerdery\Swagger\Entity\Swagger::getSecurity
+     * @covers Nerdery\Swagger\Entity\Swagger::setSecurity
      */
     public function testSecurity()
     {
@@ -253,8 +253,8 @@ class SwaggerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Swagger::getTags
-     * @covers ERP\Swagger\Entity\Swagger::setTags
+     * @covers Nerdery\Swagger\Entity\Swagger::getTags
+     * @covers Nerdery\Swagger\Entity\Swagger::setTags
      */
     public function testTags()
     {
@@ -272,8 +272,8 @@ class SwaggerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Swagger::getExternalDocs
-     * @covers ERP\Swagger\Entity\Swagger::setExternalDocs
+     * @covers Nerdery\Swagger\Entity\Swagger::getExternalDocs
+     * @covers Nerdery\Swagger\Entity\Swagger::setExternalDocs
      */
     public function testExternalDocs()
     {
@@ -287,7 +287,7 @@ class SwaggerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Swagger
+     * @covers Nerdery\Swagger\Entity\Swagger
      */
     public function testSerialize()
     {

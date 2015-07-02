@@ -4,9 +4,9 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace ERP\Swagger\Tests\Mixin;
+namespace Nerdery\Swagger\Tests\Mixin;
 
-use ERP\Swagger\Listener\SerializationSubscriber;
+use Nerdery\Swagger\Listener\SerializationSubscriber;
 use JMS\Serializer\EventDispatcher\EventDispatcher;
 use JMS\Serializer\Serializer;
 use JMS\Serializer\SerializerBuilder;
@@ -16,7 +16,7 @@ use JMS\Serializer\SerializerBuilder;
  *
  * Adds static pre-configured JMS serializer to test class.
  *
- * @package ERP\Swagger
+ * @package Nerdery\Swagger
  * @subpackage Tests\Entity
  */
 trait SerializerContextTrait

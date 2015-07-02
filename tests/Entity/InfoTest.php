@@ -4,17 +4,17 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace ERP\Swagger\Tests\Entity;
+namespace Nerdery\Swagger\Tests\Entity;
 
-use ERP\Swagger\Entity\Contact;
-use ERP\Swagger\Entity\Info;
-use ERP\Swagger\Entity\License;
-use ERP\Swagger\Tests\Mixin\SerializerContextTrait;
+use Nerdery\Swagger\Entity\Contact;
+use Nerdery\Swagger\Entity\Info;
+use Nerdery\Swagger\Entity\License;
+use Nerdery\Swagger\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class InfoTest
  *
- * @package ERP\Swagger
+ * @package Nerdery\Swagger
  * @subpackage Tests\Entity
  */
 class InfoTest extends \PHPUnit_Framework_TestCase
@@ -35,8 +35,8 @@ class InfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Info::getTitle
-     * @covers ERP\Swagger\Entity\Info::setTitle
+     * @covers Nerdery\Swagger\Entity\Info::getTitle
+     * @covers Nerdery\Swagger\Entity\Info::setTitle
      */
     public function testTitle()
     {
@@ -47,8 +47,8 @@ class InfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Info::getDescription
-     * @covers ERP\Swagger\Entity\Info::setDescription
+     * @covers Nerdery\Swagger\Entity\Info::getDescription
+     * @covers Nerdery\Swagger\Entity\Info::setDescription
      */
     public function testDescription()
     {
@@ -59,8 +59,8 @@ class InfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Info::getTermsOfService
-     * @covers ERP\Swagger\Entity\Info::setTermsOfService
+     * @covers Nerdery\Swagger\Entity\Info::getTermsOfService
+     * @covers Nerdery\Swagger\Entity\Info::setTermsOfService
      */
     public function testTermsOfService()
     {
@@ -71,8 +71,8 @@ class InfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Info::getContact
-     * @covers ERP\Swagger\Entity\Info::setContact
+     * @covers Nerdery\Swagger\Entity\Info::getContact
+     * @covers Nerdery\Swagger\Entity\Info::setContact
      */
     public function testContact()
     {
@@ -86,8 +86,8 @@ class InfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Info::getLicense
-     * @covers ERP\Swagger\Entity\Info::setLicense
+     * @covers Nerdery\Swagger\Entity\Info::getLicense
+     * @covers Nerdery\Swagger\Entity\Info::setLicense
      */
     public function testLicense()
     {
@@ -101,8 +101,8 @@ class InfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Info::getVersion
-     * @covers ERP\Swagger\Entity\Info::setVersion
+     * @covers Nerdery\Swagger\Entity\Info::getVersion
+     * @covers Nerdery\Swagger\Entity\Info::setVersion
      */
     public function testVersion()
     {
@@ -113,7 +113,7 @@ class InfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Info
+     * @covers Nerdery\Swagger\Entity\Info
      */
     public function testSerialize()
     {

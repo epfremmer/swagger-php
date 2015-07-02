@@ -4,20 +4,20 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace ERP\Swagger\Tests\Entity\Mixin;
+namespace Nerdery\Swagger\Tests\Entity\Mixin;
 
 use Doctrine\Common\Collections\ArrayCollection;
-use ERP\Swagger\Entity\Schemas\AbstractSchema;
-use ERP\Swagger\Entity\Schemas\ObjectSchema;
-use ERP\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait;
-use ERP\Swagger\Entity\Schemas\RefSchema;
-use ERP\Swagger\Entity\Schemas\SchemaInterface;
-use ERP\Swagger\Tests\Mixin\SerializerContextTrait;
+use Nerdery\Swagger\Entity\Schemas\AbstractSchema;
+use Nerdery\Swagger\Entity\Schemas\ObjectSchema;
+use Nerdery\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait;
+use Nerdery\Swagger\Entity\Schemas\RefSchema;
+use Nerdery\Swagger\Entity\Schemas\SchemaInterface;
+use Nerdery\Swagger\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class ObjectPrimitiveTraitTest
  *
- * @package ERP\Swagger
+ * @package Nerdery\Swagger
  * @subpackage Tests\Entity\Schemas\Primitives
  */
 class ObjectPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
@@ -45,8 +45,8 @@ class ObjectPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait::getMaxProperties
-     * @covers ERP\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait::setMaxProperties
+     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait::getMaxProperties
+     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait::setMaxProperties
      */
     public function testMaxProperties()
     {
@@ -58,8 +58,8 @@ class ObjectPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait::getMinProperties
-     * @covers ERP\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait::setMinProperties
+     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait::getMinProperties
+     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait::setMinProperties
      */
     public function testMinProperties()
     {
@@ -71,8 +71,8 @@ class ObjectPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait::getRequired
-     * @covers ERP\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait::setRequired
+     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait::getRequired
+     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait::setRequired
      */
     public function testRequired()
     {
@@ -86,8 +86,8 @@ class ObjectPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait::getProperties
-     * @covers ERP\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait::setProperties
+     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait::getProperties
+     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait::setProperties
      */
     public function testProperties()
     {
@@ -105,8 +105,8 @@ class ObjectPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait::isAdditionalProperties
-     * @covers ERP\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait::setAdditionalProperties
+     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait::isAdditionalProperties
+     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait::setAdditionalProperties
      */
     public function testAdditionalProperties()
     {
@@ -118,8 +118,8 @@ class ObjectPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait::getPatternProperties
-     * @covers ERP\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait::setPatternProperties
+     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait::getPatternProperties
+     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait::setPatternProperties
      */
     public function testPatternProperties()
     {
@@ -131,8 +131,8 @@ class ObjectPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait::getDependencies
-     * @covers ERP\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait::setDependencies
+     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait::getDependencies
+     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait::setDependencies
      */
     public function testDependencies()
     {
@@ -146,7 +146,7 @@ class ObjectPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ERP\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait
+     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait
      */
     public function testSerialization()
     {
