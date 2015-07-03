@@ -11,6 +11,7 @@ use Nerdery\Swagger\Annotations\Discriminator;
 use Nerdery\Swagger\Entity\Examples;
 use Nerdery\Swagger\Entity\Headers\AbstractHeader;
 use Nerdery\Swagger\Entity\Parameters\AbstractParameter;
+use Nerdery\Swagger\Entity\Parameters\RefParameter;
 use Nerdery\Swagger\Entity\Path;
 use Nerdery\Swagger\Entity\Schemas\AbstractSchema;
 use Nerdery\Swagger\Entity\Schemas\RefSchema;
@@ -130,6 +131,11 @@ class SerializationSubscriber implements EventSubscriberInterface
     public function onParameterPreDeserialize(PreDeserializeEvent $event)
     {
         $data = $event->getData();
+
+        if (array_key_exists('$ref', $data)) {
+            $event->setType(RefParameter::class);
+            return;
+        }
 
         $data['class'] = $data['in'];
 
