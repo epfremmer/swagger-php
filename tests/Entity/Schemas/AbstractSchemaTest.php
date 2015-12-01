@@ -32,6 +32,18 @@ class AbstractSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * @covers Nerdery\Swagger\Entity\Schemas\AbstractSchema::getDefault
+     * @covers Nerdery\Swagger\Entity\Schemas\AbstractSchema::setDefault
+     */
+    public function testDefault()
+    {
+        $this->assertClassHasAttribute('default', AbstractSchema::class);
+        $this->assertInstanceOf(AbstractSchema::class, $this->mockSchema->setDefault('foo'));
+        $this->assertAttributeEquals('foo', 'default', $this->mockSchema);
+        $this->assertEquals('foo', $this->mockSchema->getDefault());
+    }
+
+    /**
      * @covers Nerdery\Swagger\Entity\Schemas\AbstractSchema::getFormat
      * @covers Nerdery\Swagger\Entity\Schemas\AbstractSchema::setFormat
      */

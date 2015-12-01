@@ -14,6 +14,7 @@ use Nerdery\Swagger\Entity\Parameters\AbstractParameter;
 use Nerdery\Swagger\Entity\Parameters\RefParameter;
 use Nerdery\Swagger\Entity\Path;
 use Nerdery\Swagger\Entity\Schemas\AbstractSchema;
+use Nerdery\Swagger\Entity\Schemas\MultiSchema;
 use Nerdery\Swagger\Entity\Schemas\RefSchema;
 use JMS\Serializer\EventDispatcher\Events;
 use JMS\Serializer\EventDispatcher\PreDeserializeEvent;
@@ -116,6 +117,10 @@ class SerializationSubscriber implements EventSubscriberInterface
     public function onSchemaPreDeserialize(PreDeserializeEvent $event)
     {
         $data = $event->getData();
+
+        if (array_key_exists('type', $data) && is_array($data['type'])) {
+            $event->setType(MultiSchema::class);
+        }
 
         if (array_key_exists('$ref', $data)) {
             $event->setType(RefSchema::class);
