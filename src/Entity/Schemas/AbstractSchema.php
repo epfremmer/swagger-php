@@ -36,6 +36,7 @@ abstract class AbstractSchema implements SchemaInterface
     const STRING_TYPE  = 'string';
     const ARRAY_TYPE   = 'array';
     const OBJECT_TYPE  = 'object';
+    const MULTI_TYPE   = 'multi';
 
     /**
      * @JMS\Since("2.0")
@@ -73,7 +74,7 @@ abstract class AbstractSchema implements SchemaInterface
      * @JMS\Since("2.0")
      * @JMS\Type("string")
      * @JMS\SerializedName("default")
-     * @var array
+     * @var string
      */
     protected $default;
 
