@@ -6,6 +6,7 @@
  */
 namespace Nerdery\Swagger\Tests\Factory;
 
+use JMS\Serializer\Serializer;
 use Nerdery\Swagger\Entity\Swagger;
 use Nerdery\Swagger\Factory\SwaggerFactory;
 use Nerdery\Swagger\Tests\Parser\SwaggerParserTest;
@@ -60,7 +61,10 @@ class SwaggerFactoryTest extends \PHPUnit_Framework_TestCase
      */
     public function testFactoryConstructor()
     {
-        $this->assertInstanceOf(SwaggerFactory::class, $this->getFactory());
+        $factory = new SwaggerFactory();
+
+        $this->assertInstanceOf(SwaggerFactory::class, $factory);
+        $this->assertAttributeInstanceOf(Serializer::class, 'serializer', $factory);
     }
 
     /**

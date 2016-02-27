@@ -64,6 +64,11 @@ class Discriminator extends JMS\Discriminator
 
         $type = $data[$this->field];
 
+        // fallback to default if type not found in map
+        if (!isset($this->map[$type])) {
+            $type = $this->getDefault();
+        }
+
         return $this->map[$type];
     }
 }
