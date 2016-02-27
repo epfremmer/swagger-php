@@ -16,10 +16,10 @@
             <directory>./tests</directory>
         </testsuite>
     </testsuites>
-    
-    <groups>
-        <exclude>
-            <group>performance</group>
-        </exclude>
-    </groups>
+
+    <filter>
+        <whitelist>
+            <directory>./src</directory>
+        </whitelist>
+    </filter>
 </phpunit>
