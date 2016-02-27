@@ -1,18 +1,10 @@
-# swagger-bundle
+# Swagger PHP
+
 Library for parsing swagger documentation into PHP entities for use in testing and code generation 
 
 ## Installation
-
-Add vcs repository to composer json:
     
-    "repositories": [
-        {
-            "type": "git",
-            "url": "https://git.nerderylabs.com/FI.swagger-php"
-        }
-    ]
-    
-* Require package `composer require nerdery/swagger-php:dev-develop`
+* Require package `composer require nerdery/swagger-php`
 * Install packages `composer install`
 
 ## Basic Usage
