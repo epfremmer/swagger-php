@@ -4,7 +4,7 @@ Library for parsing swagger documentation into PHP entities for use in testing a
 
 ## Installation
     
-* Require package `composer require nerdery/swagger-php`
+* Require package `composer require epfremme/swagger-php`
 * Install packages `composer install`
 
 ## Basic Usage
