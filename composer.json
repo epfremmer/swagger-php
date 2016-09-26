@@ -23,10 +23,12 @@
     "php": ">=5.5",
     "jms/serializer": "^1.1",
     "doctrine/collections": "^1.3",
-    "symfony/yaml": "^2.7|^3.1"
+    "doctrine/annotations": "^1.2",
+    "symfony/yaml": "^2.7|^3.1",
+    "phpoption/phpoption": "^1.1"
   },
   "require-dev": {
-    "phpunit/phpunit": "~4.1|~5.0",
+    "phpunit/phpunit": "~4.8|~5.0",
     "mockery/mockery": "^0.9.4",
     "satooshi/php-coveralls": "^1.0"
   },
