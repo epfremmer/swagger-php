@@ -11,7 +11,7 @@ Library for parsing swagger documentation into PHP entities for use in testing a
 
 Instantiate the swagger factory and pass it a valid swagger documentation file to parse:
 
-    use Nerdery\Swagger\Factory\SwaggerFactory;
+    use Epfremme\Swagger\Factory\SwaggerFactory;
     
     $factory = new SwaggerFactory();
     $swagger = $factory->build('/path/to/swagger/file.json');
