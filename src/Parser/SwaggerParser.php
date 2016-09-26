@@ -4,15 +4,15 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Nerdery\Swagger\Parser;
+namespace Epfremme\Swagger\Parser;
 
-use Nerdery\Swagger\Exception\InvalidVersionException;
+use Epfremme\Swagger\Exception\InvalidVersionException;
 use Symfony\Component\Yaml\Yaml;
 
 /**
  * Class SwaggerParser
  *
- * @package Nerdery\Swagger
+ * @package Epfremme\Swagger
  * @subpackage Parser
  */
 class SwaggerParser

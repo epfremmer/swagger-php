@@ -4,12 +4,12 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Nerdery\Swagger\Exception;
+namespace Epfremme\Swagger\Exception;
 
 /**
  * Class InvalidVersionException
  *
- * @package Nerdery\Swagger
+ * @package Epfremme\Swagger
  * @subpackage Exception
  */
 class InvalidVersionException extends \OutOfBoundsException

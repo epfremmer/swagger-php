@@ -4,15 +4,15 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Nerdery\Swagger\Tests\Entity\Parameters;
+namespace Epfremme\Swagger\Tests\Entity\Parameters;
 
-use Nerdery\Swagger\Entity\Parameters\AbstractParameter;
-use Nerdery\Swagger\Entity\Schemas\ObjectSchema;
+use Epfremme\Swagger\Entity\Parameters\AbstractParameter;
+use Epfremme\Swagger\Entity\Schemas\ObjectSchema;
 
 /**
  * Class AbstractParameterTest
  *
- * @package Nerdery\Swagger
+ * @package Epfremme\Swagger
  * @subpackage Tests\Entity\Parameters
  */
 class AbstractParameterTest extends \PHPUnit_Framework_TestCase
@@ -32,8 +32,8 @@ class AbstractParameterTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Parameters\AbstractParameter::getIn
-     * @covers Nerdery\Swagger\Entity\Parameters\AbstractParameter::setIn
+     * @covers Epfremme\Swagger\Entity\Parameters\AbstractParameter::getIn
+     * @covers Epfremme\Swagger\Entity\Parameters\AbstractParameter::setIn
      */
     public function testIn()
     {
@@ -44,8 +44,8 @@ class AbstractParameterTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Parameters\AbstractParameter::getName
-     * @covers Nerdery\Swagger\Entity\Parameters\AbstractParameter::setName
+     * @covers Epfremme\Swagger\Entity\Parameters\AbstractParameter::getName
+     * @covers Epfremme\Swagger\Entity\Parameters\AbstractParameter::setName
      */
     public function testName()
     {
@@ -56,8 +56,8 @@ class AbstractParameterTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Parameters\AbstractParameter::getDescription
-     * @covers Nerdery\Swagger\Entity\Parameters\AbstractParameter::setDescription
+     * @covers Epfremme\Swagger\Entity\Parameters\AbstractParameter::getDescription
+     * @covers Epfremme\Swagger\Entity\Parameters\AbstractParameter::setDescription
      */
     public function testDescription()
     {
@@ -68,8 +68,8 @@ class AbstractParameterTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Parameters\AbstractParameter::isRequired
-     * @covers Nerdery\Swagger\Entity\Parameters\AbstractParameter::setRequired
+     * @covers Epfremme\Swagger\Entity\Parameters\AbstractParameter::isRequired
+     * @covers Epfremme\Swagger\Entity\Parameters\AbstractParameter::setRequired
      */
     public function testRequired()
     {

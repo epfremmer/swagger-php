@@ -4,15 +4,15 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Nerdery\Swagger\Entity\Parameters;
+namespace Epfremme\Swagger\Entity\Parameters;
 
-use Nerdery\Swagger\Entity\Schemas\SchemaInterface;
+use Epfremme\Swagger\Entity\Schemas\SchemaInterface;
 use JMS\Serializer\Annotation as JMS;
 
 /**
  * Class BodyParameter
  *
- * @package Nerdery\Swagger
+ * @package Epfremme\Swagger
  * @subpackage Entity\Parameters
  */
 class BodyParameter extends AbstractParameter
@@ -20,7 +20,7 @@ class BodyParameter extends AbstractParameter
 
     /**
      * @JMS\Since("2.0")
-     * @JMS\Type("Nerdery\Swagger\Entity\Schemas\AbstractSchema")
+     * @JMS\Type("Epfremme\Swagger\Entity\Schemas\AbstractSchema")
      * @JMS\SerializedName("schema")
      * @var SchemaInterface
      */

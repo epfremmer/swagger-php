@@ -4,15 +4,15 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Nerdery\Swagger\Tests\Entity;
+namespace Epfremme\Swagger\Tests\Entity;
 
-use Nerdery\Swagger\Entity\License;
-use Nerdery\Swagger\Tests\Mixin\SerializerContextTrait;
+use Epfremme\Swagger\Entity\License;
+use Epfremme\Swagger\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class LicenseTest
  *
- * @package Nerdery\Swagger
+ * @package Epfremme\Swagger
  * @subpackage Tests\Entity
  */
 class LicenseTest extends \PHPUnit_Framework_TestCase
@@ -33,8 +33,8 @@ class LicenseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\License::getName
-     * @covers Nerdery\Swagger\Entity\License::setName
+     * @covers Epfremme\Swagger\Entity\License::getName
+     * @covers Epfremme\Swagger\Entity\License::setName
      */
     public function testName()
     {
@@ -45,8 +45,8 @@ class LicenseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\License::getUrl
-     * @covers Nerdery\Swagger\Entity\License::setUrl
+     * @covers Epfremme\Swagger\Entity\License::getUrl
+     * @covers Epfremme\Swagger\Entity\License::setUrl
      */
     public function testUrl()
     {
@@ -57,7 +57,7 @@ class LicenseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\License
+     * @covers Epfremme\Swagger\Entity\License
      */
     public function testSerialize()
     {

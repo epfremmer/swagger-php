@@ -4,15 +4,15 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Nerdery\Swagger\Entity\Parameters\FormParameter;
+namespace Epfremme\Swagger\Entity\Parameters\FormParameter;
 
-use Nerdery\Swagger\Entity\Mixin\Primitives;
-use Nerdery\Swagger\Entity\Parameters\AbstractTypedParameter;
+use Epfremme\Swagger\Entity\Mixin\Primitives;
+use Epfremme\Swagger\Entity\Parameters\AbstractTypedParameter;
 
 /**
  * Class BooleanType
  *
- * @package Nerdery\Swagger
+ * @package Epfremme\Swagger
  * @subpackage Entity\Parameters\FormParameter
  */
 class BooleanType extends AbstractTypedParameter

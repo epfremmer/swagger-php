@@ -4,19 +4,19 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Nerdery\Swagger\Entity;
+namespace Epfremme\Swagger\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
-use Nerdery\Swagger\Entity\Schemas\SchemaInterface;
-use Nerdery\Swagger\Entity\Parameters\AbstractParameter;
-use Nerdery\Swagger\Exception\InvalidVersionException;
-use Nerdery\Swagger\Parser\SwaggerParser;
+use Epfremme\Swagger\Entity\Schemas\SchemaInterface;
+use Epfremme\Swagger\Entity\Parameters\AbstractParameter;
+use Epfremme\Swagger\Exception\InvalidVersionException;
+use Epfremme\Swagger\Parser\SwaggerParser;
 use JMS\Serializer\Annotation as JMS;
 
 /**
  * Class Swagger
  *
- * @package Nerdery\Swagger
+ * @package Epfremme\Swagger
  * @subpackage Entity
  */
 class Swagger
@@ -31,7 +31,7 @@ class Swagger
 
     /**
      * @JMS\Since("2.0")
-     * @JMS\Type("Nerdery\Swagger\Entity\Info")
+     * @JMS\Type("Epfremme\Swagger\Entity\Info")
      * @JMS\SerializedName("info")
      * @var Info
      */
@@ -79,7 +79,7 @@ class Swagger
 
     /**
      * @JMS\Since("2.0")
-     * @JMS\Type("ArrayCollection<string,Nerdery\Swagger\Entity\Path>")
+     * @JMS\Type("ArrayCollection<string,Epfremme\Swagger\Entity\Path>")
      * @JMS\SerializedName("paths")
      * @var ArrayCollection|Path[]
      */
@@ -87,7 +87,7 @@ class Swagger
 
     /**
      * @JMS\Since("2.0")
-     * @JMS\Type("ArrayCollection<string,Nerdery\Swagger\Entity\Schemas\AbstractSchema>")
+     * @JMS\Type("ArrayCollection<string,Epfremme\Swagger\Entity\Schemas\AbstractSchema>")
      * @JMS\SerializedName("definitions")
      * @var ArrayCollection|SchemaInterface[]
      */
@@ -95,7 +95,7 @@ class Swagger
 
     /**
      * @JMS\Since("2.0")
-     * @JMS\Type("ArrayCollection<string,Nerdery\Swagger\Entity\Parameters\AbstractParameter>")
+     * @JMS\Type("ArrayCollection<string,Epfremme\Swagger\Entity\Parameters\AbstractParameter>")
      * @JMS\SerializedName("parameters")
      * @var ArrayCollection|AbstractParameter[]
      */
@@ -103,7 +103,7 @@ class Swagger
 
     /**
      * @JMS\Since("2.0")
-     * @JMS\Type("ArrayCollection<string,Nerdery\Swagger\Entity\Response>")
+     * @JMS\Type("ArrayCollection<string,Epfremme\Swagger\Entity\Response>")
      * @JMS\SerializedName("responses")
      * @var ArrayCollection|Response[]
      */
@@ -111,7 +111,7 @@ class Swagger
 
     /**
      * @JMS\Since("2.0")
-     * @JMS\Type("ArrayCollection<string,Nerdery\Swagger\Entity\SecurityDefinition>")
+     * @JMS\Type("ArrayCollection<string,Epfremme\Swagger\Entity\SecurityDefinition>")
      * @JMS\SerializedName("securityDefinitions")
      * @var ArrayCollection|SecurityDefinition[]
      */
@@ -127,7 +127,7 @@ class Swagger
 
     /**
      * @JMS\Since("2.0")
-     * @JMS\Type("ArrayCollection<string,Nerdery\Swagger\Entity\Tag>")
+     * @JMS\Type("ArrayCollection<string,Epfremme\Swagger\Entity\Tag>")
      * @JMS\SerializedName("tags")
      * @var ArrayCollection|Tag[]
      */
@@ -135,7 +135,7 @@ class Swagger
 
     /**
      * @JMS\Since("2.0")
-     * @JMS\Type("Nerdery\Swagger\Entity\ExternalDocumentation")
+     * @JMS\Type("Epfremme\Swagger\Entity\ExternalDocumentation")
      * @JMS\SerializedName("externalDocs")
      * @var ExternalDocumentation
      */

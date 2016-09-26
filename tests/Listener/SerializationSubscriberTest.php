@@ -4,24 +4,24 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Nerdery\Swagger\Listener;
+namespace Epfremme\Swagger\Listener;
 
 use Doctrine\Common\Annotations\AnnotationReader;
 use JMS\Serializer\EventDispatcher\Events;
 use JMS\Serializer\EventDispatcher\PreDeserializeEvent;
 use JMS\Serializer\EventDispatcher\PreSerializeEvent;
 use \Mockery as m;
-use Nerdery\Swagger\Entity\Parameters\RefParameter;
-use Nerdery\Swagger\Entity\Path;
-use Nerdery\Swagger\Entity\Schemas\AbstractSchema;
-use Nerdery\Swagger\Entity\Schemas\MultiSchema;
-use Nerdery\Swagger\Entity\Schemas\ObjectSchema;
-use Nerdery\Swagger\Entity\Schemas\RefSchema;
+use Epfremme\Swagger\Entity\Parameters\RefParameter;
+use Epfremme\Swagger\Entity\Path;
+use Epfremme\Swagger\Entity\Schemas\AbstractSchema;
+use Epfremme\Swagger\Entity\Schemas\MultiSchema;
+use Epfremme\Swagger\Entity\Schemas\ObjectSchema;
+use Epfremme\Swagger\Entity\Schemas\RefSchema;
 
 /**
  * Class SerializationSubscriberTest
  *
- * @package Nerdery\Swagger
+ * @package Epfremme\Swagger
  * @subPackage Listener
  */
 class SerializationSubscriberTest extends \PHPUnit_Framework_TestCase

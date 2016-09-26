@@ -4,16 +4,16 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Nerdery\Swagger\Tests\Entity;
+namespace Epfremme\Swagger\Tests\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
-use Nerdery\Swagger\Entity\Examples;
-use Nerdery\Swagger\Tests\Mixin\SerializerContextTrait;
+use Epfremme\Swagger\Entity\Examples;
+use Epfremme\Swagger\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class ExamplesTest
  *
- * @package Nerdery\Swagger
+ * @package Epfremme\Swagger
  * @subpackage Tests\Entity
  */
 class ExamplesTest extends \PHPUnit_Framework_TestCase
@@ -34,8 +34,8 @@ class ExamplesTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Examples::getExamples
-     * @covers Nerdery\Swagger\Entity\Examples::setExamples
+     * @covers Epfremme\Swagger\Entity\Examples::getExamples
+     * @covers Epfremme\Swagger\Entity\Examples::setExamples
      */
     public function testExamples()
     {
@@ -59,7 +59,7 @@ class ExamplesTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Examples
+     * @covers Epfremme\Swagger\Entity\Examples
      */
     public function testSerialize()
     {

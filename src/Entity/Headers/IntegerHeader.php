@@ -4,14 +4,14 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Nerdery\Swagger\Entity\Headers;
+namespace Epfremme\Swagger\Entity\Headers;
 
-use Nerdery\Swagger\Entity\Mixin\Primitives;
+use Epfremme\Swagger\Entity\Mixin\Primitives;
 
 /**
  * Class IntegerHeader
  *
- * @package Nerdery\Swagger
+ * @package Epfremme\Swagger
  * @subpackage Entity\Headers
  */
 class IntegerHeader extends AbstractHeader

@@ -4,21 +4,21 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Nerdery\Swagger\Tests\Annotations;
+namespace Epfremme\Swagger\Tests\Annotations;
 
-use Nerdery\Swagger\Annotations\Discriminator;
+use Epfremme\Swagger\Annotations\Discriminator;
 
 /**
  * Class DiscriminatorTest
  *
- * @package Nerdery\Swagger
+ * @package Epfremme\Swagger
  * @subPackage Tests\Annotations
  */
 class DiscriminatorTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
-     * @covers Nerdery\Swagger\Annotations\Discriminator::getClass
+     * @covers Epfremme\Swagger\Annotations\Discriminator::getClass
      */
     public function testGetClass()
     {
@@ -38,8 +38,8 @@ class DiscriminatorTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Annotations\Discriminator::getClass
-     * @covers Nerdery\Swagger\Annotations\Discriminator::getDefault
+     * @covers Epfremme\Swagger\Annotations\Discriminator::getClass
+     * @covers Epfremme\Swagger\Annotations\Discriminator::getDefault
      */
     public function testGetClassDefault()
     {

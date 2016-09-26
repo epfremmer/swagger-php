@@ -4,16 +4,16 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Nerdery\Swagger\Tests\Entity\Headers;
+namespace Epfremme\Swagger\Tests\Entity\Headers;
 
-use Nerdery\Swagger\Entity\Headers\AbstractHeader;
-use Nerdery\Swagger\Entity\Headers\ArrayHeader;
-use Nerdery\Swagger\Tests\Mixin\SerializerContextTrait;
+use Epfremme\Swagger\Entity\Headers\AbstractHeader;
+use Epfremme\Swagger\Entity\Headers\ArrayHeader;
+use Epfremme\Swagger\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class ArrayHeaderTest
  *
- * @package Nerdery\Swagger
+ * @package Epfremme\Swagger
  * @subpackage Tests\Entity\Headers
  */
 class ArrayHeaderTest extends \PHPUnit_Framework_TestCase
@@ -34,7 +34,7 @@ class ArrayHeaderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Headers\ArrayHeader::getType
+     * @covers Epfremme\Swagger\Entity\Headers\ArrayHeader::getType
      */
     public function testType()
     {
@@ -43,8 +43,8 @@ class ArrayHeaderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Headers\ArrayHeader::getCollectionFormat
-     * @covers Nerdery\Swagger\Entity\Headers\ArrayHeader::setCollectionFormat
+     * @covers Epfremme\Swagger\Entity\Headers\ArrayHeader::getCollectionFormat
+     * @covers Epfremme\Swagger\Entity\Headers\ArrayHeader::setCollectionFormat
      */
     public function testCollectionFormat()
     {
@@ -55,7 +55,7 @@ class ArrayHeaderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Headers\ArrayHeader
+     * @covers Epfremme\Swagger\Entity\Headers\ArrayHeader
      */
     public function testSerialization()
     {

@@ -4,17 +4,17 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Nerdery\Swagger\Entity;
+namespace Epfremme\Swagger\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
-use Nerdery\Swagger\Entity\Schemas\SchemaInterface;
-use Nerdery\Swagger\Entity\Parameters\AbstractParameter;
+use Epfremme\Swagger\Entity\Schemas\SchemaInterface;
+use Epfremme\Swagger\Entity\Parameters\AbstractParameter;
 use JMS\Serializer\Annotation as JMS;
 
 /**
  * Class Operation
  *
- * @package Nerdery\Swagger
+ * @package Epfremme\Swagger
  * @subpackage Entity
  */
 class Operation
@@ -46,7 +46,7 @@ class Operation
 
     /**
      * @JMS\Since("2.0")
-     * @JMS\Type("Nerdery\Swagger\Entity\ExternalDocumentation")
+     * @JMS\Type("Epfremme\Swagger\Entity\ExternalDocumentation")
      * @JMS\SerializedName("externalDocs")
      * @var ExternalDocumentation
      */
@@ -78,7 +78,7 @@ class Operation
 
     /**
      * @JMS\Since("2.0")
-     * @JMS\Type("ArrayCollection<string,Nerdery\Swagger\Entity\Parameters\AbstractParameter>")
+     * @JMS\Type("ArrayCollection<string,Epfremme\Swagger\Entity\Parameters\AbstractParameter>")
      * @JMS\SerializedName("parameters")
      * @var ArrayCollection|AbstractParameter[]
      */
@@ -86,7 +86,7 @@ class Operation
 
     /**
      * @JMS\Since("2.0")
-     * @JMS\Type("ArrayCollection<string,Nerdery\Swagger\Entity\Response>")
+     * @JMS\Type("ArrayCollection<string,Epfremme\Swagger\Entity\Response>")
      * @JMS\SerializedName("responses")
      * @var SchemaInterface[]|ArrayCollection
      */

@@ -4,17 +4,17 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Nerdery\Swagger\Tests\Entity\Parameters\HeaderParameter;
+namespace Epfremme\Swagger\Tests\Entity\Parameters\HeaderParameter;
 
-use Nerdery\Swagger\Entity\Parameters\AbstractParameter;
-use Nerdery\Swagger\Entity\Parameters\AbstractTypedParameter;
-use Nerdery\Swagger\Entity\Parameters\HeaderParameter;
-use Nerdery\Swagger\Tests\Mixin\SerializerContextTrait;
+use Epfremme\Swagger\Entity\Parameters\AbstractParameter;
+use Epfremme\Swagger\Entity\Parameters\AbstractTypedParameter;
+use Epfremme\Swagger\Entity\Parameters\HeaderParameter;
+use Epfremme\Swagger\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class ArrayTypeTest
  *
- * @package Nerdery\Swagger
+ * @package Epfremme\Swagger
  * @subpackage Tests\Entity\Parameters\HeaderParameter
  */
 class ArrayTypeTest extends \PHPUnit_Framework_TestCase
@@ -35,7 +35,7 @@ class ArrayTypeTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Parameters\HeaderParameter\ArrayType
+     * @covers Epfremme\Swagger\Entity\Parameters\HeaderParameter\ArrayType
      */
     public function testSerialization()
     {

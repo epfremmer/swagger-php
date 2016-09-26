@@ -4,21 +4,21 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Nerdery\Swagger\Tests\Entity;
+namespace Epfremme\Swagger\Tests\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
-use Nerdery\Swagger\Entity\Examples;
-use Nerdery\Swagger\Entity\Headers;
-use Nerdery\Swagger\Entity\Response;
-use Nerdery\Swagger\Entity\Parameters;
-use Nerdery\Swagger\Entity\Schemas\AbstractSchema;
-use Nerdery\Swagger\Entity\Schemas\ObjectSchema;
-use Nerdery\Swagger\Tests\Mixin\SerializerContextTrait;
+use Epfremme\Swagger\Entity\Examples;
+use Epfremme\Swagger\Entity\Headers;
+use Epfremme\Swagger\Entity\Response;
+use Epfremme\Swagger\Entity\Parameters;
+use Epfremme\Swagger\Entity\Schemas\AbstractSchema;
+use Epfremme\Swagger\Entity\Schemas\ObjectSchema;
+use Epfremme\Swagger\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class ResponseTest
  *
- * @package Nerdery\Swagger
+ * @package Epfremme\Swagger
  * @subpackage Tests\Entity
  */
 class ResponseTest extends \PHPUnit_Framework_TestCase
@@ -39,8 +39,8 @@ class ResponseTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers Nerdery\Swagger\Entity\Response::getDescription
-     * @covers Nerdery\Swagger\Entity\Response::setDescription
+     * @covers Epfremme\Swagger\Entity\Response::getDescription
+     * @covers Epfremme\Swagger\Entity\Response::setDescription
      */
     public function testDescription()
     {
@@ -51,8 +51,8 @@ class ResponseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Response::getSchema
-     * @covers Nerdery\Swagger\Entity\Response::setSchema
+     * @covers Epfremme\Swagger\Entity\Response::getSchema
+     * @covers Epfremme\Swagger\Entity\Response::setSchema
      */
     public function testSchema()
     {
@@ -66,8 +66,8 @@ class ResponseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Response::getHeaders
-     * @covers Nerdery\Swagger\Entity\Response::setHeaders
+     * @covers Epfremme\Swagger\Entity\Response::getHeaders
+     * @covers Epfremme\Swagger\Entity\Response::setHeaders
      */
     public function testHeaders()
     {
@@ -86,8 +86,8 @@ class ResponseTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers Nerdery\Swagger\Entity\Response::getExamples
-     * @covers Nerdery\Swagger\Entity\Response::setExamples
+     * @covers Epfremme\Swagger\Entity\Response::getExamples
+     * @covers Epfremme\Swagger\Entity\Response::setExamples
      */
     public function testExamples()
     {
@@ -101,7 +101,7 @@ class ResponseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Response
+     * @covers Epfremme\Swagger\Entity\Response
      */
     public function testSerialize()
     {

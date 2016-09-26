@@ -4,14 +4,14 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Nerdery\Swagger\Tests\Entity\Parameters;
+namespace Epfremme\Swagger\Tests\Entity\Parameters;
 
-use Nerdery\Swagger\Entity\Parameters\AbstractTypedParameter;
+use Epfremme\Swagger\Entity\Parameters\AbstractTypedParameter;
 
 /**
  * Class AbstractTypedParameterTest
  *
- * @package Nerdery\Swagger
+ * @package Epfremme\Swagger
  * @subpackage Tests\Entity\Parameters
  */
 class AbstractTypedParameterTest extends \PHPUnit_Framework_TestCase
@@ -31,8 +31,8 @@ class AbstractTypedParameterTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Parameters\AbstractTypedParameter::getType
-     * @covers Nerdery\Swagger\Entity\Parameters\AbstractTypedParameter::setType
+     * @covers Epfremme\Swagger\Entity\Parameters\AbstractTypedParameter::getType
+     * @covers Epfremme\Swagger\Entity\Parameters\AbstractTypedParameter::setType
      */
     public function testType()
     {
@@ -43,8 +43,8 @@ class AbstractTypedParameterTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Parameters\AbstractTypedParameter::getFormat
-     * @covers Nerdery\Swagger\Entity\Parameters\AbstractTypedParameter::setFormat
+     * @covers Epfremme\Swagger\Entity\Parameters\AbstractTypedParameter::getFormat
+     * @covers Epfremme\Swagger\Entity\Parameters\AbstractTypedParameter::setFormat
      */
     public function testFormat()
     {
@@ -55,8 +55,8 @@ class AbstractTypedParameterTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Parameters\AbstractTypedParameter::isAllowEmptyValues
-     * @covers Nerdery\Swagger\Entity\Parameters\AbstractTypedParameter::setAllowEmptyValues
+     * @covers Epfremme\Swagger\Entity\Parameters\AbstractTypedParameter::isAllowEmptyValues
+     * @covers Epfremme\Swagger\Entity\Parameters\AbstractTypedParameter::setAllowEmptyValues
      */
     public function testAllowEmptyValues()
     {
@@ -68,8 +68,8 @@ class AbstractTypedParameterTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Parameters\AbstractTypedParameter::getDefault
-     * @covers Nerdery\Swagger\Entity\Parameters\AbstractTypedParameter::setDefault
+     * @covers Epfremme\Swagger\Entity\Parameters\AbstractTypedParameter::getDefault
+     * @covers Epfremme\Swagger\Entity\Parameters\AbstractTypedParameter::setDefault
      */
     public function testDefault()
     {

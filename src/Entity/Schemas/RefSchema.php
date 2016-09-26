@@ -4,15 +4,15 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Nerdery\Swagger\Entity\Schemas;
+namespace Epfremme\Swagger\Entity\Schemas;
 
-use Nerdery\Swagger\Entity\Mixin\Primitives;
+use Epfremme\Swagger\Entity\Mixin\Primitives;
 use JMS\Serializer\Annotation as JMS;
 
 /**
  * Class RefSchema
  *
- * @package Nerdery\Swagger
+ * @package Epfremme\Swagger
  * @subpackage Entity\Schemas
  */
 class RefSchema implements SchemaInterface

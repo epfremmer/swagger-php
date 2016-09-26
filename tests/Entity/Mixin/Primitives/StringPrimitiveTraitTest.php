@@ -4,17 +4,17 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Nerdery\Swagger\Tests\Entity\Mixin;
+namespace Epfremme\Swagger\Tests\Entity\Mixin;
 
-use Nerdery\Swagger\Entity\Mixin\Primitives\StringPrimitiveTrait;
-use Nerdery\Swagger\Entity\Schemas\AbstractSchema;
-use Nerdery\Swagger\Entity\Schemas\StringSchema;
-use Nerdery\Swagger\Tests\Mixin\SerializerContextTrait;
+use Epfremme\Swagger\Entity\Mixin\Primitives\StringPrimitiveTrait;
+use Epfremme\Swagger\Entity\Schemas\AbstractSchema;
+use Epfremme\Swagger\Entity\Schemas\StringSchema;
+use Epfremme\Swagger\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class StringPrimitiveTraitTest
  *
- * @package Nerdery\Swagger
+ * @package Epfremme\Swagger
  * @subpackage Tests\Entity\Schemas\Primitives
  */
 class StringPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
@@ -42,8 +42,8 @@ class StringPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\StringPrimitiveTrait::getMaxLength
-     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\StringPrimitiveTrait::setMaxLength
+     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\StringPrimitiveTrait::getMaxLength
+     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\StringPrimitiveTrait::setMaxLength
      */
     public function testMaxLength()
     {
@@ -55,8 +55,8 @@ class StringPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\StringPrimitiveTrait::getMinLength
-     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\StringPrimitiveTrait::setMinLength
+     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\StringPrimitiveTrait::getMinLength
+     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\StringPrimitiveTrait::setMinLength
      */
     public function testMinLength()
     {
@@ -68,8 +68,8 @@ class StringPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\StringPrimitiveTrait::getPattern
-     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\StringPrimitiveTrait::setPattern
+     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\StringPrimitiveTrait::getPattern
+     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\StringPrimitiveTrait::setPattern
      */
     public function testPattern()
     {
@@ -81,7 +81,7 @@ class StringPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\StringPrimitiveTrait
+     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\StringPrimitiveTrait
      */
     public function testSerialization()
     {
