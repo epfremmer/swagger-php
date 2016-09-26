@@ -4,29 +4,28 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Nerdery\Swagger\Entity\Headers;
+namespace Epfremme\Swagger\Entity\Headers;
 
-use Nerdery\Swagger\Entity\Schemas\AbstractSchema;
-use Nerdery\Swagger\Annotations as EP;
+use Epfremme\Swagger\Entity\Schemas\AbstractSchema;
+use Epfremme\Swagger\Annotations as EP;
 use JMS\Serializer\Annotation as JMS;
 
 /**
  * Class AbstractHeader
  *
  * @EP\Discriminator(field = "type", default="array", map = {
- *   "boolean": "Nerdery\Swagger\Entity\Headers\BooleanHeader",
- *   "integer": "Nerdery\Swagger\Entity\Headers\IntegerHeader",
- *   "number" : "Nerdery\Swagger\Entity\Headers\NumberHeader",
- *   "string" : "Nerdery\Swagger\Entity\Headers\StringHeader",
- *   "array"  : "Nerdery\Swagger\Entity\Headers\ArrayHeader"
+ *   "boolean": "Epfremme\Swagger\Entity\Headers\BooleanHeader",
+ *   "integer": "Epfremme\Swagger\Entity\Headers\IntegerHeader",
+ *   "number" : "Epfremme\Swagger\Entity\Headers\NumberHeader",
+ *   "string" : "Epfremme\Swagger\Entity\Headers\StringHeader",
+ *   "array"  : "Epfremme\Swagger\Entity\Headers\ArrayHeader"
  * })
  *
- * @package Nerdery\Swagger
+ * @package Epfremme\Swagger
  * @subpackage Entity\Headers
  */
 abstract class AbstractHeader
 {
-
     // header types
     const BOOLEAN_TYPE = AbstractSchema::BOOLEAN_TYPE;
     const INTEGER_TYPE = AbstractSchema::INTEGER_TYPE;

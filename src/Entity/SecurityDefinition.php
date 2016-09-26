@@ -4,19 +4,18 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Nerdery\Swagger\Entity;
+namespace Epfremme\Swagger\Entity;
 
 use JMS\Serializer\Annotation as JMS;
 
 /**
  * Class SecurityDefinition
  *
- * @package Nerdery\Swagger
+ * @package Epfremme\Swagger
  * @subpackage Entity
  */
 class SecurityDefinition
 {
-
     /**
      * @JMS\Since("2.0")
      * @JMS\Type("string")

@@ -1,6 +1,6 @@
 {
   "name": "epfremme/swagger-php",
-  "license": "Nerdery",
+  "license": "MIT",
   "type": "package",
   "description": "Library for parsing swagger documentation into PHP entities for use in testing and code generation",
   "authors" : [
@@ -11,18 +11,28 @@
   ],
   "autoload": {
     "psr-4": {
-      "Nerdery\\Swagger\\": "src/",
-      "Nerdery\\Swagger\\Tests\\": "tests/"
+      "Epfremme\\Swagger\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Epfremme\\Swagger\\Tests\\": "tests/"
     }
   },
   "require": {
     "php": ">=5.5",
     "jms/serializer": "^1.1",
     "doctrine/collections": "^1.3",
-    "symfony/validator": "^2.4|^3.0"
+    "doctrine/annotations": "^1.2",
+    "symfony/yaml": "^2.7|^3.1",
+    "phpoption/phpoption": "^1.1"
   },
   "require-dev": {
-    "phpunit/phpunit": "~4.1",
-    "mockery/mockery": "^0.9.4"
+    "phpunit/phpunit": "~4.8|~5.0",
+    "mockery/mockery": "^0.9.4",
+    "satooshi/php-coveralls": "^1.0"
+  },
+  "config": {
+    "bin-dir": "bin"
   }
 }

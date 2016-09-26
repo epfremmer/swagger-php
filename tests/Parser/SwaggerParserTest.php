@@ -4,19 +4,18 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Nerdery\Swagger\Tests\Parser;
+namespace Epfremme\Swagger\Tests\Parser;
 
-use Nerdery\Swagger\Parser\SwaggerParser;
+use Epfremme\Swagger\Parser\SwaggerParser;
 
 /**
  * Class SwaggerParserTest
  *
- * @package Nerdery\Swagger
+ * @package Epfremme\Swagger
  * @subpackage Tests\Parser
  */
 class SwaggerParserTest extends \PHPUnit_Framework_TestCase
 {
-
     // swagger files
     const SWAGGER_JSON_FILE            = 'swagger.json';
     const SWAGGER_YAML_FILE            = 'swagger.yaml';
@@ -34,7 +33,7 @@ class SwaggerParserTest extends \PHPUnit_Framework_TestCase
      * Return new SwaggerParser
      *
      * @param string $file
-     * @return \Nerdery\Swagger\Parser\SwaggerParser
+     * @return \Epfremme\Swagger\Parser\SwaggerParser
      */
     protected function getSwagger($file)
     {
@@ -58,7 +57,7 @@ class SwaggerParserTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Parser\SwaggerParser::__construct
+     * @covers Epfremme\Swagger\Parser\SwaggerParser::__construct
      */
     public function testConstructJsonFile()
     {
@@ -69,7 +68,7 @@ class SwaggerParserTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Parser\SwaggerParser::__construct
+     * @covers Epfremme\Swagger\Parser\SwaggerParser::__construct
      */
     public function testConstructYamlFile()
     {
@@ -80,7 +79,7 @@ class SwaggerParserTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Parser\SwaggerParser::getVersion
+     * @covers Epfremme\Swagger\Parser\SwaggerParser::getVersion
      * @depends testConstructJsonFile
      */
     public function testGetVersion()
@@ -92,7 +91,7 @@ class SwaggerParserTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Parser\SwaggerParser::getVersion
+     * @covers Epfremme\Swagger\Parser\SwaggerParser::getVersion
      * @depends testConstructJsonFile
      */
     public function testGetMissingVersion()
@@ -107,7 +106,7 @@ class SwaggerParserTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Parser\SwaggerParser::getData
+     * @covers Epfremme\Swagger\Parser\SwaggerParser::getData
      * @depends testConstructJsonFile
      */
     public function testGetData()
@@ -119,7 +118,7 @@ class SwaggerParserTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Parser\SwaggerParser::getData
+     * @covers Epfremme\Swagger\Parser\SwaggerParser::getData
      * @depends testConstructJsonFile
      */
     public function testToString()

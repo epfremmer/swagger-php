@@ -4,26 +4,25 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Nerdery\Swagger\Factory;
+namespace Epfremme\Swagger\Factory;
 
-use Nerdery\Swagger\Entity\Swagger;
-use Nerdery\Swagger\Parser\SwaggerParser;
+use Epfremme\Swagger\Entity\Swagger;
+use Epfremme\Swagger\Parser\SwaggerParser;
 use JMS\Serializer\DeserializationContext;
 use JMS\Serializer\SerializationContext;
 use JMS\Serializer\Serializer;
 use JMS\Serializer\SerializerBuilder;
 use JMS\Serializer\EventDispatcher\EventDispatcher;
-use Nerdery\Swagger\Listener\SerializationSubscriber;
+use Epfremme\Swagger\Listener\SerializationSubscriber;
 
 /**
  * Class SwaggerFactory
  *
- * @package Nerdery\Swagger
+ * @package Epfremme\Swagger
  * @subpackage Factory
  */
 class SwaggerFactory
 {
-
     /**
      * @var Serializer
      */

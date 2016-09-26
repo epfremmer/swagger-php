@@ -4,16 +4,16 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Nerdery\Swagger\Tests\Entity;
+namespace Epfremme\Swagger\Tests\Entity;
 
-use Nerdery\Swagger\Entity\ExternalDocumentation;
-use Nerdery\Swagger\Entity\Tag;
-use Nerdery\Swagger\Tests\Mixin\SerializerContextTrait;
+use Epfremme\Swagger\Entity\ExternalDocumentation;
+use Epfremme\Swagger\Entity\Tag;
+use Epfremme\Swagger\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class TagTest
  *
- * @package Nerdery\Swagger
+ * @package Epfremme\Swagger
  * @subpackage Tests\Entity
  */
 class TagTest extends \PHPUnit_Framework_TestCase
@@ -34,8 +34,8 @@ class TagTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Tag::getName
-     * @covers Nerdery\Swagger\Entity\Tag::setName
+     * @covers Epfremme\Swagger\Entity\Tag::getName
+     * @covers Epfremme\Swagger\Entity\Tag::setName
      */
     public function testName()
     {
@@ -46,8 +46,8 @@ class TagTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Tag::getDescription
-     * @covers Nerdery\Swagger\Entity\Tag::setDescription
+     * @covers Epfremme\Swagger\Entity\Tag::getDescription
+     * @covers Epfremme\Swagger\Entity\Tag::setDescription
      */
     public function testDescription()
     {
@@ -58,8 +58,8 @@ class TagTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Tag::getExternalDocs
-     * @covers Nerdery\Swagger\Entity\Tag::setExternalDocs
+     * @covers Epfremme\Swagger\Entity\Tag::getExternalDocs
+     * @covers Epfremme\Swagger\Entity\Tag::setExternalDocs
      */
     public function testExternalDocs()
     {
@@ -73,7 +73,7 @@ class TagTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Tag
+     * @covers Epfremme\Swagger\Entity\Tag
      */
     public function testSerialize()
     {

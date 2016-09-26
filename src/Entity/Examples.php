@@ -4,7 +4,7 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Nerdery\Swagger\Entity;
+namespace Epfremme\Swagger\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use JMS\Serializer\Annotation as JMS;
@@ -12,12 +12,11 @@ use JMS\Serializer\Annotation as JMS;
 /**
  * Class Examples
  *
- * @package Nerdery\Swagger
+ * @package Epfremme\Swagger
  * @subpackage Entity
  */
 class Examples
 {
-
     /**
      * @JMS\Inline()
      * @JMS\Since("2.0")

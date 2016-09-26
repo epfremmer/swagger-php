@@ -4,17 +4,17 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Nerdery\Swagger\Tests\Entity\Parameters\PathParameter;
+namespace Epfremme\Swagger\Tests\Entity\Parameters\PathParameter;
 
-use Nerdery\Swagger\Entity\Parameters\AbstractParameter;
-use Nerdery\Swagger\Entity\Parameters\AbstractTypedParameter;
-use Nerdery\Swagger\Entity\Parameters\PathParameter;
-use Nerdery\Swagger\Tests\Mixin\SerializerContextTrait;
+use Epfremme\Swagger\Entity\Parameters\AbstractParameter;
+use Epfremme\Swagger\Entity\Parameters\AbstractTypedParameter;
+use Epfremme\Swagger\Entity\Parameters\PathParameter;
+use Epfremme\Swagger\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class BooleanTypeTest
  *
- * @package Nerdery\Swagger
+ * @package Epfremme\Swagger
  * @subpackage Tests\Entity\Parameters\PathParameter
  */
 class BooleanTypeTest extends \PHPUnit_Framework_TestCase
@@ -35,7 +35,7 @@ class BooleanTypeTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Parameters\PathParameter\BooleanType
+     * @covers Epfremme\Swagger\Entity\Parameters\PathParameter\BooleanType
      */
     public function testSerialization()
     {

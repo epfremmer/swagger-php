@@ -4,17 +4,17 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Nerdery\Swagger\Tests\Entity\Parameters;
+namespace Epfremme\Swagger\Tests\Entity\Parameters;
 
-use Nerdery\Swagger\Entity\Parameters\AbstractParameter;
-use Nerdery\Swagger\Entity\Parameters\BodyParameter;
-use Nerdery\Swagger\Entity\Schemas\ObjectSchema;
-use Nerdery\Swagger\Tests\Mixin\SerializerContextTrait;
+use Epfremme\Swagger\Entity\Parameters\AbstractParameter;
+use Epfremme\Swagger\Entity\Parameters\BodyParameter;
+use Epfremme\Swagger\Entity\Schemas\ObjectSchema;
+use Epfremme\Swagger\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class BodyParameterTest
  *
- * @package Nerdery\Swagger
+ * @package Epfremme\Swagger
  * @subpackage Tests\Entity\Parameters
  */
 class BodyParameterTest extends \PHPUnit_Framework_TestCase
@@ -35,8 +35,8 @@ class BodyParameterTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Parameters\BodyParameter::getSchema
-     * @covers Nerdery\Swagger\Entity\Parameters\BodyParameter::setSchema
+     * @covers Epfremme\Swagger\Entity\Parameters\BodyParameter::getSchema
+     * @covers Epfremme\Swagger\Entity\Parameters\BodyParameter::setSchema
      */
     public function testSchema()
     {
@@ -50,7 +50,7 @@ class BodyParameterTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Parameters\BodyParameter
+     * @covers Epfremme\Swagger\Entity\Parameters\BodyParameter
      */
     public function testSerialization()
     {

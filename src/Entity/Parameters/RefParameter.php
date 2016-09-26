@@ -4,15 +4,15 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Nerdery\Swagger\Entity\Parameters;
+namespace Epfremme\Swagger\Entity\Parameters;
 
-use Nerdery\Swagger\Entity\Schemas\RefSchema;
+use Epfremme\Swagger\Entity\Schemas\RefSchema;
 use JMS\Serializer\Annotation as JMS;
 
 /**
  * Class RefParameter
  *
- * @package Nerdery\Swagger
+ * @package Epfremme\Swagger
  * @subpackage Entity\Parameters
  */
 class RefParameter extends RefSchema

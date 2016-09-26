@@ -4,15 +4,15 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Nerdery\Swagger\Entity\Parameters\QueryParameter;
+namespace Epfremme\Swagger\Entity\Parameters\QueryParameter;
 
-use Nerdery\Swagger\Entity\Mixin\Primitives;
-use Nerdery\Swagger\Entity\Parameters\AbstractTypedParameter;
+use Epfremme\Swagger\Entity\Mixin\Primitives;
+use Epfremme\Swagger\Entity\Parameters\AbstractTypedParameter;
 
 /**
  * Class NumberType
  *
- * @package Nerdery\Swagger
+ * @package Epfremme\Swagger
  * @subpackage Entity\Parameters\QueryParameter
  */
 class NumberType extends AbstractTypedParameter

@@ -4,17 +4,17 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Nerdery\Swagger\Tests\Entity\Mixin;
+namespace Epfremme\Swagger\Tests\Entity\Mixin;
 
-use Nerdery\Swagger\Entity\Mixin\Primitives\BooleanPrimitiveTrait;
-use Nerdery\Swagger\Entity\Schemas\AbstractSchema;
-use Nerdery\Swagger\Entity\Schemas\BooleanSchema;
-use Nerdery\Swagger\Tests\Mixin\SerializerContextTrait;
+use Epfremme\Swagger\Entity\Mixin\Primitives\BooleanPrimitiveTrait;
+use Epfremme\Swagger\Entity\Schemas\AbstractSchema;
+use Epfremme\Swagger\Entity\Schemas\BooleanSchema;
+use Epfremme\Swagger\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class BooleanPrimitiveTraitTest
  *
- * @package Nerdery\Swagger
+ * @package Epfremme\Swagger
  * @subpackage Tests\Entity\Schemas\Primitives
  */
 class BooleanPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
@@ -42,7 +42,7 @@ class BooleanPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\BooleanPrimitiveTrait
+     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\BooleanPrimitiveTrait
      */
     public function testSerialization()
     {

@@ -4,20 +4,19 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Nerdery\Swagger\Entity\Parameters;
+namespace Epfremme\Swagger\Entity\Parameters;
 
-use Nerdery\Swagger\Entity\Schemas\AbstractSchema;
+use Epfremme\Swagger\Entity\Schemas\AbstractSchema;
 use JMS\Serializer\Annotation as JMS;
 
 /**
  * Class AbstractParameter
  *
- * @package Nerdery\Swagger
+ * @package Epfremme\Swagger
  * @subpackage Entity\Parameters
  */
 abstract class AbstractTypedParameter extends AbstractParameter
 {
-
     // parameter types
     const FILE_TYPE    = 'file';
     const BOOLEAN_TYPE = AbstractSchema::BOOLEAN_TYPE;

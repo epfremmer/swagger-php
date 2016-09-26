@@ -4,19 +4,18 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Nerdery\Swagger\Entity;
+namespace Epfremme\Swagger\Entity;
 
 use JMS\Serializer\Annotation as JMS;
 
 /**
  * Class Info
  *
- * @package Nerdery\Swagger
+ * @package Epfremme\Swagger
  * @subpackage Entity
  */
 class Info
 {
-
     /**
      * @JMS\Since("2.0")
      * @JMS\Type("string")
@@ -43,7 +42,7 @@ class Info
 
     /**
      * @JMS\Since("2.0")
-     * @JMS\Type("Nerdery\Swagger\Entity\Contact")
+     * @JMS\Type("Epfremme\Swagger\Entity\Contact")
      * @JMS\SerializedName("contact")
      * @var Contact
      */
@@ -51,7 +50,7 @@ class Info
 
     /**
      * @JMS\Since("2.0")
-     * @JMS\Type("Nerdery\Swagger\Entity\License")
+     * @JMS\Type("Epfremme\Swagger\Entity\License")
      * @JMS\SerializedName("license")
      * @var License
      */

@@ -4,26 +4,26 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Nerdery\Swagger\Entity\Schemas;
+namespace Epfremme\Swagger\Entity\Schemas;
 
-use Nerdery\Swagger\Annotations as EP;
-use Nerdery\Swagger\Entity\ExternalDocumentation;
+use Epfremme\Swagger\Annotations as EP;
+use Epfremme\Swagger\Entity\ExternalDocumentation;
 use JMS\Serializer\Annotation as JMS;
 
 /**
  * Class AbstractSchema
  *
  * @EP\Discriminator(field = "type", default="object", map = {
- *   "null"   : "Nerdery\Swagger\Entity\Schemas\NullSchema",
- *   "boolean": "Nerdery\Swagger\Entity\Schemas\BooleanSchema",
- *   "integer": "Nerdery\Swagger\Entity\Schemas\IntegerSchema",
- *   "number" : "Nerdery\Swagger\Entity\Schemas\NumberSchema",
- *   "string" : "Nerdery\Swagger\Entity\Schemas\StringSchema",
- *   "array"  : "Nerdery\Swagger\Entity\Schemas\ArraySchema",
- *   "object" : "Nerdery\Swagger\Entity\Schemas\ObjectSchema"
+ *   "null"   : "Epfremme\Swagger\Entity\Schemas\NullSchema",
+ *   "boolean": "Epfremme\Swagger\Entity\Schemas\BooleanSchema",
+ *   "integer": "Epfremme\Swagger\Entity\Schemas\IntegerSchema",
+ *   "number" : "Epfremme\Swagger\Entity\Schemas\NumberSchema",
+ *   "string" : "Epfremme\Swagger\Entity\Schemas\StringSchema",
+ *   "array"  : "Epfremme\Swagger\Entity\Schemas\ArraySchema",
+ *   "object" : "Epfremme\Swagger\Entity\Schemas\ObjectSchema"
  * })
  *
- * @package Nerdery\Swagger
+ * @package Epfremme\Swagger
  * @subpackage Entity\Schemas
  */
 abstract class AbstractSchema implements SchemaInterface
@@ -88,7 +88,7 @@ abstract class AbstractSchema implements SchemaInterface
 
     /**
      * @JMS\Since("2.0")
-     * @JMS\Type("Nerdery\Swagger\Entity\ExternalDocumentation")
+     * @JMS\Type("Epfremme\Swagger\Entity\ExternalDocumentation")
      * @JMS\SerializedName("externalDocs")
      * @var ExternalDocumentation
      */

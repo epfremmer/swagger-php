@@ -4,43 +4,42 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Nerdery\Swagger\Entity\Parameters;
+namespace Epfremme\Swagger\Entity\Parameters;
 
-use Nerdery\Swagger\Annotations as EP;
+use Epfremme\Swagger\Annotations as EP;
 use JMS\Serializer\Annotation as JMS;
 
 /**
  * Class AbstractParameter
  *
  * @EP\Discriminator(field = "class", default="body", map = {
- *   "body"            : "Nerdery\Swagger\Entity\Parameters\BodyParameter",
- *   "path.string"     : "Nerdery\Swagger\Entity\Parameters\PathParameter\StringType",
- *   "path.integer"    : "Nerdery\Swagger\Entity\Parameters\PathParameter\IntegerType",
- *   "path.boolean"    : "Nerdery\Swagger\Entity\Parameters\PathParameter\BooleanType",
- *   "query.string"    : "Nerdery\Swagger\Entity\Parameters\QueryParameter\StringType",
- *   "query.number"    : "Nerdery\Swagger\Entity\Parameters\QueryParameter\NumberType",
- *   "query.integer"   : "Nerdery\Swagger\Entity\Parameters\QueryParameter\IntegerType",
- *   "query.boolean"   : "Nerdery\Swagger\Entity\Parameters\QueryParameter\BooleanType",
- *   "query.array"     : "Nerdery\Swagger\Entity\Parameters\QueryParameter\ArrayType",
- *   "header.string"   : "Nerdery\Swagger\Entity\Parameters\HeaderParameter\StringType",
- *   "header.number"   : "Nerdery\Swagger\Entity\Parameters\HeaderParameter\NumberType",
- *   "header.integer"  : "Nerdery\Swagger\Entity\Parameters\HeaderParameter\IntegerType",
- *   "header.boolean"  : "Nerdery\Swagger\Entity\Parameters\HeaderParameter\BooleanType",
- *   "header.array"    : "Nerdery\Swagger\Entity\Parameters\HeaderParameter\ArrayType",
- *   "formData.string" : "Nerdery\Swagger\Entity\Parameters\FormParameter\StringType",
- *   "formData.number" : "Nerdery\Swagger\Entity\Parameters\FormParameter\NumberType",
- *   "formData.integer": "Nerdery\Swagger\Entity\Parameters\FormParameter\IntegerType",
- *   "formData.boolean": "Nerdery\Swagger\Entity\Parameters\FormParameter\BooleanType",
- *   "formData.array"  : "Nerdery\Swagger\Entity\Parameters\FormParameter\ArrayType",
- *   "formData.file"   : "Nerdery\Swagger\Entity\Parameters\FormParameter\FileType"
+ *   "body"            : "Epfremme\Swagger\Entity\Parameters\BodyParameter",
+ *   "path.string"     : "Epfremme\Swagger\Entity\Parameters\PathParameter\StringType",
+ *   "path.integer"    : "Epfremme\Swagger\Entity\Parameters\PathParameter\IntegerType",
+ *   "path.boolean"    : "Epfremme\Swagger\Entity\Parameters\PathParameter\BooleanType",
+ *   "query.string"    : "Epfremme\Swagger\Entity\Parameters\QueryParameter\StringType",
+ *   "query.number"    : "Epfremme\Swagger\Entity\Parameters\QueryParameter\NumberType",
+ *   "query.integer"   : "Epfremme\Swagger\Entity\Parameters\QueryParameter\IntegerType",
+ *   "query.boolean"   : "Epfremme\Swagger\Entity\Parameters\QueryParameter\BooleanType",
+ *   "query.array"     : "Epfremme\Swagger\Entity\Parameters\QueryParameter\ArrayType",
+ *   "header.string"   : "Epfremme\Swagger\Entity\Parameters\HeaderParameter\StringType",
+ *   "header.number"   : "Epfremme\Swagger\Entity\Parameters\HeaderParameter\NumberType",
+ *   "header.integer"  : "Epfremme\Swagger\Entity\Parameters\HeaderParameter\IntegerType",
+ *   "header.boolean"  : "Epfremme\Swagger\Entity\Parameters\HeaderParameter\BooleanType",
+ *   "header.array"    : "Epfremme\Swagger\Entity\Parameters\HeaderParameter\ArrayType",
+ *   "formData.string" : "Epfremme\Swagger\Entity\Parameters\FormParameter\StringType",
+ *   "formData.number" : "Epfremme\Swagger\Entity\Parameters\FormParameter\NumberType",
+ *   "formData.integer": "Epfremme\Swagger\Entity\Parameters\FormParameter\IntegerType",
+ *   "formData.boolean": "Epfremme\Swagger\Entity\Parameters\FormParameter\BooleanType",
+ *   "formData.array"  : "Epfremme\Swagger\Entity\Parameters\FormParameter\ArrayType",
+ *   "formData.file"   : "Epfremme\Swagger\Entity\Parameters\FormParameter\FileType"
  * })
  *
- * @package Nerdery\Swagger
+ * @package Epfremme\Swagger
  * @subpackage Entity\Parameters
  */
 abstract class AbstractParameter
 {
-
     // parameter in constants
     const IN_BODY      = 'body';
     const IN_PATH      = 'path';

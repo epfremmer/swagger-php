@@ -4,22 +4,21 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Nerdery\Swagger\Tests\Factory;
+namespace Epfremme\Swagger\Tests\Factory;
 
 use JMS\Serializer\Serializer;
-use Nerdery\Swagger\Entity\Swagger;
-use Nerdery\Swagger\Factory\SwaggerFactory;
-use Nerdery\Swagger\Tests\Parser\SwaggerParserTest;
+use Epfremme\Swagger\Entity\Swagger;
+use Epfremme\Swagger\Factory\SwaggerFactory;
+use Epfremme\Swagger\Tests\Parser\SwaggerParserTest;
 
 /**
  * Class SwaggerFactoryTest
  *
- * @package Nerdery\Swagger
+ * @package Epfremme\Swagger
  * @subpackage Tests\Parser
  */
 class SwaggerFactoryTest extends \PHPUnit_Framework_TestCase
 {
-
     /**
      * @var SwaggerFactory
      */
@@ -57,7 +56,7 @@ class SwaggerFactoryTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Factory\SwaggerFactory::__construct
+     * @covers Epfremme\Swagger\Factory\SwaggerFactory::__construct
      */
     public function testFactoryConstructor()
     {
@@ -76,7 +75,7 @@ class SwaggerFactoryTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException \Nerdery\Swagger\Exception\InvalidVersionException
+     * @expectedException \Epfremme\Swagger\Exception\InvalidVersionException
      */
     public function testBuildUnsupportedVersion()
     {
@@ -84,7 +83,7 @@ class SwaggerFactoryTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Factory\SwaggerFactory::build
+     * @covers Epfremme\Swagger\Factory\SwaggerFactory::build
      */
     public function testBuildJson()
     {
@@ -94,7 +93,7 @@ class SwaggerFactoryTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Factory\SwaggerFactory::build
+     * @covers Epfremme\Swagger\Factory\SwaggerFactory::build
      */
     public function testBuildYaml()
     {
@@ -104,7 +103,7 @@ class SwaggerFactoryTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Factory\SwaggerFactory::serialize
+     * @covers Epfremme\Swagger\Factory\SwaggerFactory::serialize
      */
     public function testSerialize()
     {
@@ -117,7 +116,7 @@ class SwaggerFactoryTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException \Nerdery\Swagger\Exception\InvalidVersionException
+     * @expectedException \Epfremme\Swagger\Exception\InvalidVersionException
      */
     public function testSerializeUnsupportedVersion()
     {

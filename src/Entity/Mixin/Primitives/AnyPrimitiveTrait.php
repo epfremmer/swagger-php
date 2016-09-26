@@ -4,21 +4,20 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Nerdery\Swagger\Entity\Mixin\Primitives;
+namespace Epfremme\Swagger\Entity\Mixin\Primitives;
 
 use Doctrine\Common\Collections\ArrayCollection;
-use Nerdery\Swagger\Entity\Schemas\SchemaInterface;
+use Epfremme\Swagger\Entity\Schemas\SchemaInterface;
 use JMS\Serializer\Annotation as JMS;
 
 /**
  * Trait AnyPrimitive
  *
- * @package Nerdery\Swagger
+ * @package Epfremme\Swagger
  * @subpackage Entity\Schemas\Primitives
  */
 trait AnyPrimitiveTrait
 {
-
     /**
      * @JMS\Since("2.0")
      * @JMS\Type("array")
@@ -61,7 +60,7 @@ trait AnyPrimitiveTrait
 
     /**
      * @JMS\Since("2.0")
-     * @JMS\Type("ArrayCollection<string,Nerdery\Swagger\Entity\Schemas\AbstractSchema>")
+     * @JMS\Type("ArrayCollection<string,Epfremme\Swagger\Entity\Schemas\AbstractSchema>")
      * @JMS\Accessor(setter="setDefinitions")
      * @JMS\SerializedName("definitions")
      *

@@ -4,29 +4,32 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Nerdery\Swagger\Listener;
+namespace Epfremme\Swagger\Tests\Listener;
 
 use Doctrine\Common\Annotations\AnnotationReader;
+use Epfremme\Swagger\Listener\SerializationSubscriber;
 use JMS\Serializer\EventDispatcher\Events;
 use JMS\Serializer\EventDispatcher\PreDeserializeEvent;
 use JMS\Serializer\EventDispatcher\PreSerializeEvent;
 use \Mockery as m;
-use Nerdery\Swagger\Entity\Parameters\RefParameter;
-use Nerdery\Swagger\Entity\Path;
-use Nerdery\Swagger\Entity\Schemas\AbstractSchema;
-use Nerdery\Swagger\Entity\Schemas\MultiSchema;
-use Nerdery\Swagger\Entity\Schemas\ObjectSchema;
-use Nerdery\Swagger\Entity\Schemas\RefSchema;
+use Epfremme\Swagger\Entity\Parameters\RefParameter;
+use Epfremme\Swagger\Entity\Path;
+use Epfremme\Swagger\Entity\Schemas\AbstractSchema;
+use Epfremme\Swagger\Entity\Schemas\MultiSchema;
+use Epfremme\Swagger\Entity\Schemas\ObjectSchema;
+use Epfremme\Swagger\Entity\Schemas\RefSchema;
 
 /**
  * Class SerializationSubscriberTest
  *
- * @package Nerdery\Swagger
+ * @package Epfremme\Swagger
  * @subPackage Listener
  */
 class SerializationSubscriberTest extends \PHPUnit_Framework_TestCase
 {
-
+    /**
+     * @covers Epfremme\Swagger\Listener\SerializationSubscriber::__construct
+     */
     public function testConstruct()
     {
         $subscriber = new SerializationSubscriber();
@@ -35,6 +38,9 @@ class SerializationSubscriberTest extends \PHPUnit_Framework_TestCase
         $this->assertAttributeInstanceOf(AnnotationReader::class, 'reader', $subscriber);
     }
 
+    /**
+     * @covers Epfremme\Swagger\Listener\SerializationSubscriber::getSubscribedEvents
+     */
     public function testGetSubscribedEvents()
     {
         $subscriber = new SerializationSubscriber();
@@ -48,6 +54,9 @@ class SerializationSubscriberTest extends \PHPUnit_Framework_TestCase
         }
     }
 
+    /**
+     * @covers Epfremme\Swagger\Listener\SerializationSubscriber::onPreSerialize
+     */
     public function testOnPreSerialize()
     {
         $subscriber = new SerializationSubscriber();
@@ -60,6 +69,9 @@ class SerializationSubscriberTest extends \PHPUnit_Framework_TestCase
         $subscriber->onPreSerialize($event);
     }
 
+    /**
+     * @covers Epfremme\Swagger\Listener\SerializationSubscriber::onPreDeserialize
+     */
     public function testOnPreDeserialize()
     {
         $subscriber = new SerializationSubscriber();
@@ -72,6 +84,9 @@ class SerializationSubscriberTest extends \PHPUnit_Framework_TestCase
         $subscriber->onPreDeserialize($event);
     }
 
+    /**
+     * @covers Epfremme\Swagger\Listener\SerializationSubscriber::onPreDeserialize
+     */
     public function testOnPreDeserializeCustomJmsType()
     {
         $subscriber = new SerializationSubscriber();
@@ -82,6 +97,9 @@ class SerializationSubscriberTest extends \PHPUnit_Framework_TestCase
         $subscriber->onPreDeserialize($event);
     }
 
+    /**
+     * @covers Epfremme\Swagger\Listener\SerializationSubscriber::onSchemaPreDeserialize
+     */
     public function testOnSchemaPreDeserialize()
     {
         $subscriber = new SerializationSubscriber();
@@ -93,6 +111,9 @@ class SerializationSubscriberTest extends \PHPUnit_Framework_TestCase
         $subscriber->onSchemaPreDeserialize($event);
     }
 
+    /**
+     * @covers Epfremme\Swagger\Listener\SerializationSubscriber::onSchemaPreDeserialize
+     */
     public function testOnSchemaPreDeserializeRefType()
     {
         $subscriber = new SerializationSubscriber();
@@ -104,6 +125,9 @@ class SerializationSubscriberTest extends \PHPUnit_Framework_TestCase
         $subscriber->onSchemaPreDeserialize($event);
     }
 
+    /**
+     * @covers Epfremme\Swagger\Listener\SerializationSubscriber::onSchemaPreDeserialize
+     */
     public function testOnSchemaPreDeserializeMultiType()
     {
         $subscriber = new SerializationSubscriber();
@@ -115,6 +139,9 @@ class SerializationSubscriberTest extends \PHPUnit_Framework_TestCase
         $subscriber->onSchemaPreDeserialize($event);
     }
 
+    /**
+     * @covers Epfremme\Swagger\Listener\SerializationSubscriber::onParameterPreDeserialize
+     */
     public function testOnParameterPreDeserialize()
     {
         $subscriber = new SerializationSubscriber();
@@ -127,6 +154,9 @@ class SerializationSubscriberTest extends \PHPUnit_Framework_TestCase
         $subscriber->onParameterPreDeserialize($event);
     }
 
+    /**
+     * @covers Epfremme\Swagger\Listener\SerializationSubscriber::onParameterPreDeserialize
+     */
     public function testOnParameterPreDeserializeTyped()
     {
         $subscriber = new SerializationSubscriber();
@@ -140,6 +170,9 @@ class SerializationSubscriberTest extends \PHPUnit_Framework_TestCase
         $subscriber->onParameterPreDeserialize($event);
     }
 
+    /**
+     * @covers Epfremme\Swagger\Listener\SerializationSubscriber::onParameterPreDeserialize
+     */
     public function testOnParameterPreDeserializeRef()
     {
         $subscriber = new SerializationSubscriber();
@@ -152,6 +185,9 @@ class SerializationSubscriberTest extends \PHPUnit_Framework_TestCase
         $subscriber->onParameterPreDeserialize($event);
     }
 
+    /**
+     * @covers Epfremme\Swagger\Listener\SerializationSubscriber::onPreDeserializeCollection
+     */
     public function testOnPreDeserializeCollection()
     {
         $subscriber = new SerializationSubscriber();

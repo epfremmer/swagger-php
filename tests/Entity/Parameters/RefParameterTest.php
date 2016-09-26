@@ -4,17 +4,17 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Nerdery\Swagger\Tests\Entity\Schemas;
+namespace Epfremme\Swagger\Tests\Entity\Schemas;
 
-use Nerdery\Swagger\Entity\Parameters\AbstractParameter;
-use Nerdery\Swagger\Entity\Parameters\RefParameter;
-use Nerdery\Swagger\Entity\Schemas\AbstractSchema;
-use Nerdery\Swagger\Tests\Mixin\SerializerContextTrait;
+use Epfremme\Swagger\Entity\Parameters\AbstractParameter;
+use Epfremme\Swagger\Entity\Parameters\RefParameter;
+use Epfremme\Swagger\Entity\Schemas\AbstractSchema;
+use Epfremme\Swagger\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class RefParameterTest
  *
- * @package Nerdery\Swagger
+ * @package Epfremme\Swagger
  * @subpackage Tests\Entity\Schemas
  */
 class RefParameterTest extends \PHPUnit_Framework_TestCase
@@ -35,7 +35,7 @@ class RefParameterTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Parameters\RefParameter::getType
+     * @covers Epfremme\Swagger\Entity\Parameters\RefParameter::getType
      */
     public function testType()
     {
@@ -44,8 +44,8 @@ class RefParameterTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Parameters\RefParameter::getRef
-     * @covers Nerdery\Swagger\Entity\Parameters\RefParameter::setRef
+     * @covers Epfremme\Swagger\Entity\Parameters\RefParameter::getRef
+     * @covers Epfremme\Swagger\Entity\Parameters\RefParameter::setRef
      */
     public function testRef()
     {
@@ -56,8 +56,8 @@ class RefParameterTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Parameters\RefParameter::getTitle
-     * @covers Nerdery\Swagger\Entity\Parameters\RefParameter::setTitle
+     * @covers Epfremme\Swagger\Entity\Parameters\RefParameter::getTitle
+     * @covers Epfremme\Swagger\Entity\Parameters\RefParameter::setTitle
      */
     public function testTitle()
     {
@@ -68,8 +68,8 @@ class RefParameterTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Parameters\RefParameter::getDescription
-     * @covers Nerdery\Swagger\Entity\Parameters\RefParameter::setDescription
+     * @covers Epfremme\Swagger\Entity\Parameters\RefParameter::getDescription
+     * @covers Epfremme\Swagger\Entity\Parameters\RefParameter::setDescription
      */
     public function testDescription()
     {
@@ -80,7 +80,7 @@ class RefParameterTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Parameters\RefParameter
+     * @covers Epfremme\Swagger\Entity\Parameters\RefParameter
      */
     public function testSerialization()
     {

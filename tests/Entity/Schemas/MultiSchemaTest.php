@@ -4,17 +4,17 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Nerdery\Swagger\Tests\Entity\Schemas;
+namespace Epfremme\Swagger\Tests\Entity\Schemas;
 
-use Nerdery\Swagger\Entity\ExternalDocumentation;
-use Nerdery\Swagger\Entity\Schemas\AbstractSchema;
-use Nerdery\Swagger\Entity\Schemas\MultiSchema;
-use Nerdery\Swagger\Tests\Mixin\SerializerContextTrait;
+use Epfremme\Swagger\Entity\ExternalDocumentation;
+use Epfremme\Swagger\Entity\Schemas\AbstractSchema;
+use Epfremme\Swagger\Entity\Schemas\MultiSchema;
+use Epfremme\Swagger\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class MultiSchemaTest
  *
- * @package Nerdery\Swagger
+ * @package Epfremme\Swagger
  * @subpackage Tests\Entity\Schemas
  */
 class MultiSchemaTest extends \PHPUnit_Framework_TestCase
@@ -35,7 +35,7 @@ class MultiSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Schemas\multiSchema::getType
+     * @covers Epfremme\Swagger\Entity\Schemas\multiSchema::getType
      */
     public function testType()
     {
@@ -44,7 +44,7 @@ class MultiSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Schemas\multiSchema
+     * @covers Epfremme\Swagger\Entity\Schemas\multiSchema
      */
     public function testSerialization()
     {

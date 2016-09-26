@@ -4,20 +4,19 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Nerdery\Swagger\Tests\Entity\Schemas;
+namespace Epfremme\Swagger\Tests\Entity\Schemas;
 
-use Nerdery\Swagger\Entity\ExternalDocumentation;
-use Nerdery\Swagger\Entity\Schemas\AbstractSchema;
+use Epfremme\Swagger\Entity\ExternalDocumentation;
+use Epfremme\Swagger\Entity\Schemas\AbstractSchema;
 
 /**
  * Class AbstractSchemaTest
  *
- * @package Nerdery\Swagger
+ * @package Epfremme\Swagger
  * @subpackage Tests\Entity\Schemas
  */
 class AbstractSchemaTest extends \PHPUnit_Framework_TestCase
 {
-
     /**
      * @var AbstractSchema|\PHPUnit_Framework_MockObject_MockObject
      */
@@ -32,8 +31,8 @@ class AbstractSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Schemas\AbstractSchema::getDefault
-     * @covers Nerdery\Swagger\Entity\Schemas\AbstractSchema::setDefault
+     * @covers Epfremme\Swagger\Entity\Schemas\AbstractSchema::getDefault
+     * @covers Epfremme\Swagger\Entity\Schemas\AbstractSchema::setDefault
      */
     public function testDefault()
     {
@@ -44,8 +43,8 @@ class AbstractSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Schemas\AbstractSchema::getFormat
-     * @covers Nerdery\Swagger\Entity\Schemas\AbstractSchema::setFormat
+     * @covers Epfremme\Swagger\Entity\Schemas\AbstractSchema::getFormat
+     * @covers Epfremme\Swagger\Entity\Schemas\AbstractSchema::setFormat
      */
     public function testFormat()
     {
@@ -56,8 +55,8 @@ class AbstractSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Schemas\AbstractSchema::getTitle
-     * @covers Nerdery\Swagger\Entity\Schemas\AbstractSchema::setTitle
+     * @covers Epfremme\Swagger\Entity\Schemas\AbstractSchema::getTitle
+     * @covers Epfremme\Swagger\Entity\Schemas\AbstractSchema::setTitle
      */
     public function testTitle()
     {
@@ -68,8 +67,8 @@ class AbstractSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Schemas\AbstractSchema::getDescription
-     * @covers Nerdery\Swagger\Entity\Schemas\AbstractSchema::setDescription
+     * @covers Epfremme\Swagger\Entity\Schemas\AbstractSchema::getDescription
+     * @covers Epfremme\Swagger\Entity\Schemas\AbstractSchema::setDescription
      */
     public function testDescription()
     {
@@ -80,8 +79,8 @@ class AbstractSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Schemas\AbstractSchema::getExample
-     * @covers Nerdery\Swagger\Entity\Schemas\AbstractSchema::setExample
+     * @covers Epfremme\Swagger\Entity\Schemas\AbstractSchema::getExample
+     * @covers Epfremme\Swagger\Entity\Schemas\AbstractSchema::setExample
      */
     public function testExample()
     {
@@ -92,8 +91,8 @@ class AbstractSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Schemas\AbstractSchema::getExternalDocs
-     * @covers Nerdery\Swagger\Entity\Schemas\AbstractSchema::setExternalDocs
+     * @covers Epfremme\Swagger\Entity\Schemas\AbstractSchema::getExternalDocs
+     * @covers Epfremme\Swagger\Entity\Schemas\AbstractSchema::setExternalDocs
      */
     public function testExternalDocs()
     {

@@ -4,18 +4,18 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Nerdery\Swagger\Listener;
+namespace Epfremme\Swagger\Listener;
 
 use Doctrine\Common\Annotations\AnnotationReader;
-use Nerdery\Swagger\Annotations\Discriminator;
-use Nerdery\Swagger\Entity\Examples;
-use Nerdery\Swagger\Entity\Headers\AbstractHeader;
-use Nerdery\Swagger\Entity\Parameters\AbstractParameter;
-use Nerdery\Swagger\Entity\Parameters\RefParameter;
-use Nerdery\Swagger\Entity\Path;
-use Nerdery\Swagger\Entity\Schemas\AbstractSchema;
-use Nerdery\Swagger\Entity\Schemas\MultiSchema;
-use Nerdery\Swagger\Entity\Schemas\RefSchema;
+use Epfremme\Swagger\Annotations\Discriminator;
+use Epfremme\Swagger\Entity\Examples;
+use Epfremme\Swagger\Entity\Headers\AbstractHeader;
+use Epfremme\Swagger\Entity\Parameters\AbstractParameter;
+use Epfremme\Swagger\Entity\Parameters\RefParameter;
+use Epfremme\Swagger\Entity\Path;
+use Epfremme\Swagger\Entity\Schemas\AbstractSchema;
+use Epfremme\Swagger\Entity\Schemas\MultiSchema;
+use Epfremme\Swagger\Entity\Schemas\RefSchema;
 use JMS\Serializer\EventDispatcher\Events;
 use JMS\Serializer\EventDispatcher\PreDeserializeEvent;
 use JMS\Serializer\EventDispatcher\EventSubscriberInterface;
@@ -24,12 +24,11 @@ use JMS\Serializer\EventDispatcher\PreSerializeEvent;
 /**
  * Class SerializationSubscriber
  *
- * @package Nerdery\Swagger
+ * @package Epfremme\Swagger
  * @subpackage Listener
  */
 class SerializationSubscriber implements EventSubscriberInterface
 {
-
     /**
      * @var AnnotationReader
      */

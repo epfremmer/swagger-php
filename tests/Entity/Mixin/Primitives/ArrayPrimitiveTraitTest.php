@@ -4,18 +4,18 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Nerdery\Swagger\Tests\Entity\Mixin;
+namespace Epfremme\Swagger\Tests\Entity\Mixin;
 
-use Nerdery\Swagger\Entity\Mixin\Primitives\ArrayPrimitiveTrait;
-use Nerdery\Swagger\Entity\Schemas\AbstractSchema;
-use Nerdery\Swagger\Entity\Schemas\ArraySchema;
-use Nerdery\Swagger\Entity\Schemas\RefSchema;
-use Nerdery\Swagger\Tests\Mixin\SerializerContextTrait;
+use Epfremme\Swagger\Entity\Mixin\Primitives\ArrayPrimitiveTrait;
+use Epfremme\Swagger\Entity\Schemas\AbstractSchema;
+use Epfremme\Swagger\Entity\Schemas\ArraySchema;
+use Epfremme\Swagger\Entity\Schemas\RefSchema;
+use Epfremme\Swagger\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class ArrayPrimitiveTraitTest
  *
- * @package Nerdery\Swagger
+ * @package Epfremme\Swagger
  * @subpackage Tests\Entity\Schemas\Primitives
  */
 class ArrayPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
@@ -43,8 +43,8 @@ class ArrayPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\ArrayPrimitiveTrait::getItems
-     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\ArrayPrimitiveTrait::setItems
+     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\ArrayPrimitiveTrait::getItems
+     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\ArrayPrimitiveTrait::setItems
      */
     public function testItems()
     {
@@ -58,8 +58,8 @@ class ArrayPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\ArrayPrimitiveTrait::isAdditionalItems
-     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\ArrayPrimitiveTrait::setAdditionalItems
+     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\ArrayPrimitiveTrait::isAdditionalItems
+     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\ArrayPrimitiveTrait::setAdditionalItems
      */
     public function testAdditionalItems()
     {
@@ -71,8 +71,8 @@ class ArrayPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\ArrayPrimitiveTrait::getMaxItems
-     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\ArrayPrimitiveTrait::setMaxItems
+     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\ArrayPrimitiveTrait::getMaxItems
+     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\ArrayPrimitiveTrait::setMaxItems
      */
     public function testMaxItems()
     {
@@ -84,8 +84,8 @@ class ArrayPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\ArrayPrimitiveTrait::getMinItems
-     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\ArrayPrimitiveTrait::setMinItems
+     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\ArrayPrimitiveTrait::getMinItems
+     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\ArrayPrimitiveTrait::setMinItems
      */
     public function testMinItems()
     {
@@ -97,8 +97,8 @@ class ArrayPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\ArrayPrimitiveTrait::isUniqueItems
-     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\ArrayPrimitiveTrait::setUniqueItems
+     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\ArrayPrimitiveTrait::isUniqueItems
+     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\ArrayPrimitiveTrait::setUniqueItems
      */
     public function testUniqueItems()
     {
@@ -110,7 +110,7 @@ class ArrayPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Mixin\Primitives\ArrayPrimitiveTrait
+     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\ArrayPrimitiveTrait
      */
     public function testSerialization()
     {

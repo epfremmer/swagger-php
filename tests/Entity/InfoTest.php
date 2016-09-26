@@ -4,17 +4,17 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Nerdery\Swagger\Tests\Entity;
+namespace Epfremme\Swagger\Tests\Entity;
 
-use Nerdery\Swagger\Entity\Contact;
-use Nerdery\Swagger\Entity\Info;
-use Nerdery\Swagger\Entity\License;
-use Nerdery\Swagger\Tests\Mixin\SerializerContextTrait;
+use Epfremme\Swagger\Entity\Contact;
+use Epfremme\Swagger\Entity\Info;
+use Epfremme\Swagger\Entity\License;
+use Epfremme\Swagger\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class InfoTest
  *
- * @package Nerdery\Swagger
+ * @package Epfremme\Swagger
  * @subpackage Tests\Entity
  */
 class InfoTest extends \PHPUnit_Framework_TestCase
@@ -35,8 +35,8 @@ class InfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Info::getTitle
-     * @covers Nerdery\Swagger\Entity\Info::setTitle
+     * @covers Epfremme\Swagger\Entity\Info::getTitle
+     * @covers Epfremme\Swagger\Entity\Info::setTitle
      */
     public function testTitle()
     {
@@ -47,8 +47,8 @@ class InfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Info::getDescription
-     * @covers Nerdery\Swagger\Entity\Info::setDescription
+     * @covers Epfremme\Swagger\Entity\Info::getDescription
+     * @covers Epfremme\Swagger\Entity\Info::setDescription
      */
     public function testDescription()
     {
@@ -59,8 +59,8 @@ class InfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Info::getTermsOfService
-     * @covers Nerdery\Swagger\Entity\Info::setTermsOfService
+     * @covers Epfremme\Swagger\Entity\Info::getTermsOfService
+     * @covers Epfremme\Swagger\Entity\Info::setTermsOfService
      */
     public function testTermsOfService()
     {
@@ -71,8 +71,8 @@ class InfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Info::getContact
-     * @covers Nerdery\Swagger\Entity\Info::setContact
+     * @covers Epfremme\Swagger\Entity\Info::getContact
+     * @covers Epfremme\Swagger\Entity\Info::setContact
      */
     public function testContact()
     {
@@ -86,8 +86,8 @@ class InfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Info::getLicense
-     * @covers Nerdery\Swagger\Entity\Info::setLicense
+     * @covers Epfremme\Swagger\Entity\Info::getLicense
+     * @covers Epfremme\Swagger\Entity\Info::setLicense
      */
     public function testLicense()
     {
@@ -101,8 +101,8 @@ class InfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Info::getVersion
-     * @covers Nerdery\Swagger\Entity\Info::setVersion
+     * @covers Epfremme\Swagger\Entity\Info::getVersion
+     * @covers Epfremme\Swagger\Entity\Info::setVersion
      */
     public function testVersion()
     {
@@ -113,7 +113,7 @@ class InfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Info
+     * @covers Epfremme\Swagger\Entity\Info
      */
     public function testSerialize()
     {

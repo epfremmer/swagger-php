@@ -4,15 +4,15 @@
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
-namespace Nerdery\Swagger\Tests\Entity;
+namespace Epfremme\Swagger\Tests\Entity;
 
-use Nerdery\Swagger\Entity\Contact;
-use Nerdery\Swagger\Tests\Mixin\SerializerContextTrait;
+use Epfremme\Swagger\Entity\Contact;
+use Epfremme\Swagger\Tests\Mixin\SerializerContextTrait;
 
 /**
  * Class ContactTest
  *
- * @package Nerdery\Swagger
+ * @package Epfremme\Swagger
  * @subpackage Tests\Entity
  */
 class ContactTest extends \PHPUnit_Framework_TestCase
@@ -33,8 +33,8 @@ class ContactTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Contact::getName
-     * @covers Nerdery\Swagger\Entity\Contact::setName
+     * @covers Epfremme\Swagger\Entity\Contact::getName
+     * @covers Epfremme\Swagger\Entity\Contact::setName
      */
     public function testName()
     {
@@ -45,8 +45,8 @@ class ContactTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Contact::getUrl
-     * @covers Nerdery\Swagger\Entity\Contact::setUrl
+     * @covers Epfremme\Swagger\Entity\Contact::getUrl
+     * @covers Epfremme\Swagger\Entity\Contact::setUrl
      */
     public function testUrl()
     {
@@ -57,8 +57,8 @@ class ContactTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Contact::getEmail
-     * @covers Nerdery\Swagger\Entity\Contact::setEmail
+     * @covers Epfremme\Swagger\Entity\Contact::getEmail
+     * @covers Epfremme\Swagger\Entity\Contact::setEmail
      */
     public function testEmail()
     {
@@ -69,7 +69,7 @@ class ContactTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Nerdery\Swagger\Entity\Contact
+     * @covers Epfremme\Swagger\Entity\Contact
      */
     public function testSerialize()
     {
