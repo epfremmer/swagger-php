@@ -17,7 +17,6 @@ use JMS\Serializer\Annotation as JMS;
  */
 class Examples
 {
-
     /**
      * @JMS\Inline()
      * @JMS\Since("2.0")

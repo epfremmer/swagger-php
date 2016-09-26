@@ -29,7 +29,6 @@ use JMS\Serializer\EventDispatcher\PreSerializeEvent;
  */
 class SerializationSubscriber implements EventSubscriberInterface
 {
-
     /**
      * @var AnnotationReader
      */

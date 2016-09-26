@@ -14,7 +14,6 @@ namespace Epfremme\Swagger\Exception;
  */
 class InvalidVersionException extends \OutOfBoundsException
 {
-
     // custom exception message
     const EXCEPTION_MESSAGE = "Swagger version '%s' is not supported. Please upgrade to version 2.0 or higher";
 

@@ -16,7 +16,6 @@ use Epfremme\Swagger\Annotations\Discriminator;
  */
 class DiscriminatorTest extends \PHPUnit_Framework_TestCase
 {
-
     /**
      * @covers Epfremme\Swagger\Annotations\Discriminator::getClass
      */

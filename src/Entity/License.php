@@ -16,7 +16,6 @@ use JMS\Serializer\Annotation as JMS;
  */
 class License
 {
-
     /**
      * @JMS\Since("2.0")
      * @JMS\Type("string")

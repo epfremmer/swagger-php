@@ -16,7 +16,6 @@ use Epfremme\Swagger\Parser\SwaggerParser;
  */
 class SwaggerParserTest extends \PHPUnit_Framework_TestCase
 {
-
     // swagger files
     const SWAGGER_JSON_FILE            = 'swagger.json';
     const SWAGGER_YAML_FILE            = 'swagger.yaml';

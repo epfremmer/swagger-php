@@ -18,7 +18,6 @@ use JMS\Serializer\Annotation as JMS;
  */
 trait AnyPrimitiveTrait
 {
-
     /**
      * @JMS\Since("2.0")
      * @JMS\Type("array")

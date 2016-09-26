@@ -16,7 +16,6 @@ use JMS\Serializer\Annotation as JMS;
  */
 class Info
 {
-
     /**
      * @JMS\Since("2.0")
      * @JMS\Type("string")

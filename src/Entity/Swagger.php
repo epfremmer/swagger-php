@@ -21,7 +21,6 @@ use JMS\Serializer\Annotation as JMS;
  */
 class Swagger
 {
-
     /**
      * @JMS\Type("string")
      * @JMS\SerializedName("swagger")

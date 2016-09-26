@@ -40,7 +40,6 @@ use JMS\Serializer\Annotation as JMS;
  */
 abstract class AbstractParameter
 {
-
     // parameter in constants
     const IN_BODY      = 'body';
     const IN_PATH      = 'path';

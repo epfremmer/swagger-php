@@ -16,7 +16,6 @@ use Epfremme\Swagger\Entity\Parameters\AbstractTypedParameter;
  */
 class AbstractTypedParameterTest extends \PHPUnit_Framework_TestCase
 {
-
     /**
      * @var AbstractTypedParameter|\PHPUnit_Framework_MockObject_MockObject
      */

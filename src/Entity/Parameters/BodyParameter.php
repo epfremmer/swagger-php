@@ -17,7 +17,6 @@ use JMS\Serializer\Annotation as JMS;
  */
 class BodyParameter extends AbstractParameter
 {
-
     /**
      * @JMS\Since("2.0")
      * @JMS\Type("Epfremme\Swagger\Entity\Schemas\AbstractSchema")

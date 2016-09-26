@@ -19,7 +19,6 @@ use JMS\Serializer\VisitorInterface;
  */
 class Path
 {
-
     /**
      * @JMS\Inline()
      * @JMS\Since("2.0")

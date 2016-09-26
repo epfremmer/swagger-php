@@ -19,7 +19,6 @@ use JMS\Serializer\Annotation as JMS;
  */
 class Operation
 {
-
     /**
      * @JMS\Since("2.0")
      * @JMS\Type("array")

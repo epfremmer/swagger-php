@@ -17,7 +17,6 @@ use Symfony\Component\Yaml\Yaml;
  */
 class SwaggerParser
 {
-
     // default swagger version
     const MINIMUM_VERSION = '2.0';
     const VERSION_KEY = 'swagger';

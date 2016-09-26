@@ -19,7 +19,6 @@ use Epfremme\Swagger\Tests\Parser\SwaggerParserTest;
  */
 class SwaggerFactoryTest extends \PHPUnit_Framework_TestCase
 {
-
     /**
      * @var SwaggerFactory
      */

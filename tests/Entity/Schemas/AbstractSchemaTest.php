@@ -17,7 +17,6 @@ use Epfremme\Swagger\Entity\Schemas\AbstractSchema;
  */
 class AbstractSchemaTest extends \PHPUnit_Framework_TestCase
 {
-
     /**
      * @var AbstractSchema|\PHPUnit_Framework_MockObject_MockObject
      */

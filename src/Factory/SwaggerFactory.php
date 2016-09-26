@@ -23,7 +23,6 @@ use Epfremme\Swagger\Listener\SerializationSubscriber;
  */
 class SwaggerFactory
 {
-
     /**
      * @var Serializer
      */

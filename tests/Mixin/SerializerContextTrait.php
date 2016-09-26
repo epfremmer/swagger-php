@@ -21,7 +21,6 @@ use JMS\Serializer\SerializerBuilder;
  */
 trait SerializerContextTrait
 {
-
     /**
      * @var Serializer
      */

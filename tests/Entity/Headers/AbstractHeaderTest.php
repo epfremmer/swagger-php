@@ -16,7 +16,6 @@ use Epfremme\Swagger\Entity\Headers\AbstractHeader;
  */
 class AbstractHeaderTest extends \PHPUnit_Framework_TestCase
 {
-
     /**
      * @var AbstractHeader|\PHPUnit_Framework_MockObject_MockObject
      */

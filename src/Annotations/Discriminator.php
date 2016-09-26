@@ -21,7 +21,6 @@ use JMS\Serializer\Annotation as JMS;
  */
 class Discriminator extends JMS\Discriminator
 {
-
     /**
      * @var string
      */

@@ -26,7 +26,6 @@ use JMS\Serializer\Annotation as JMS;
  */
 abstract class AbstractHeader
 {
-
     // header types
     const BOOLEAN_TYPE = AbstractSchema::BOOLEAN_TYPE;
     const INTEGER_TYPE = AbstractSchema::INTEGER_TYPE;

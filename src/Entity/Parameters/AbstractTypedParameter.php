@@ -17,7 +17,6 @@ use JMS\Serializer\Annotation as JMS;
  */
 abstract class AbstractTypedParameter extends AbstractParameter
 {
-
     // parameter types
     const FILE_TYPE    = 'file';
     const BOOLEAN_TYPE = AbstractSchema::BOOLEAN_TYPE;

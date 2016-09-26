@@ -17,7 +17,6 @@ use Epfremme\Swagger\Entity\Schemas\ObjectSchema;
  */
 class AbstractParameterTest extends \PHPUnit_Framework_TestCase
 {
-
     /**
      * @var AbstractParameter|\PHPUnit_Framework_MockObject_MockObject
      */
