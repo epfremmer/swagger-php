@@ -6,6 +6,7 @@
  */
 namespace Epfremme\Swagger\Entity;
 
+use Epfremme\Swagger\Entity\Mixin\VendorExtensionsTrait;
 use JMS\Serializer\Annotation as JMS;
 
 /**
@@ -16,6 +17,8 @@ use JMS\Serializer\Annotation as JMS;
  */
 class Tag
 {
+    use VendorExtensionsTrait;
+
     /**
      * @JMS\Since("2.0")
      * @JMS\Type("string")
@@ -93,4 +96,5 @@ class Tag
         $this->externalDocs = $externalDocs;
         return $this;
     }
+
 }

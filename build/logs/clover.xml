@@ -1,0 +1,1166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1484577679">
+  <project timestamp="1484577679">
+    <package name="Epfremme\Swagger\Annotations">
+      <file name="/opt/src/Annotations/Discriminator.php">
+        <class name="Discriminator" namespace="Epfremme\Swagger\Annotations" fullPackage="Epfremme.Annotations" package="Epfremme" subpackage="Annotations">
+          <metrics methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="13" elements="15" coveredelements="15"/>
+        </class>
+        <line num="40" type="method" name="getDefault" crap="2" count="3"/>
+        <line num="42" type="stmt" count="3"/>
+        <line num="43" type="stmt" count="1"/>
+        <line num="44" type="stmt" count="1"/>
+        <line num="45" type="stmt" count="1"/>
+        <line num="46" type="stmt" count="1"/>
+        <line num="49" type="stmt" count="2"/>
+        <line num="58" type="method" name="getClass" crap="3" count="4"/>
+        <line num="60" type="stmt" count="4"/>
+        <line num="61" type="stmt" count="2"/>
+        <line num="64" type="stmt" count="3"/>
+        <line num="67" type="stmt" count="3"/>
+        <line num="68" type="stmt" count="1"/>
+        <line num="69" type="stmt" count="1"/>
+        <line num="71" type="stmt" count="3"/>
+        <metrics loc="73" ncloc="39" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="13" elements="15" coveredelements="15"/>
+      </file>
+    </package>
+    <package name="Epfremme\Swagger\Entity">
+      <file name="/opt/src/Entity/Contact.php">
+        <class name="Contact" namespace="Epfremme\Swagger\Entity" fullPackage="Epfremme.Entity" package="Epfremme" subpackage="Entity">
+          <metrics methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="15" coveredelements="15"/>
+        </class>
+        <line num="46" type="method" name="getName" crap="1" count="1"/>
+        <line num="48" type="stmt" count="1"/>
+        <line num="55" type="method" name="setName" crap="1" count="1"/>
+        <line num="57" type="stmt" count="1"/>
+        <line num="58" type="stmt" count="1"/>
+        <line num="64" type="method" name="getUrl" crap="1" count="1"/>
+        <line num="66" type="stmt" count="1"/>
+        <line num="73" type="method" name="setUrl" crap="1" count="1"/>
+        <line num="75" type="stmt" count="1"/>
+        <line num="76" type="stmt" count="1"/>
+        <line num="82" type="method" name="getEmail" crap="1" count="1"/>
+        <line num="84" type="stmt" count="1"/>
+        <line num="91" type="method" name="setEmail" crap="1" count="1"/>
+        <line num="93" type="stmt" count="1"/>
+        <line num="94" type="stmt" count="1"/>
+        <metrics loc="96" ncloc="46" classes="1" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="15" coveredelements="15"/>
+      </file>
+      <file name="/opt/src/Entity/Examples.php">
+        <class name="Examples" namespace="Epfremme\Swagger\Entity" fullPackage="Epfremme.Entity" package="Epfremme" subpackage="Entity">
+          <metrics methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="5" coveredelements="5"/>
+        </class>
+        <line num="33" type="method" name="getExamples" crap="1" count="2"/>
+        <line num="35" type="stmt" count="2"/>
+        <line num="42" type="method" name="setExamples" crap="1" count="1"/>
+        <line num="44" type="stmt" count="1"/>
+        <line num="45" type="stmt" count="1"/>
+        <metrics loc="47" ncloc="21" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="5" coveredelements="5"/>
+      </file>
+      <file name="/opt/src/Entity/ExternalDocumentation.php">
+        <class name="ExternalDocumentation" namespace="Epfremme\Swagger\Entity" fullPackage="Epfremme.Entity" package="Epfremme" subpackage="Entity">
+          <metrics methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="10" coveredelements="10"/>
+        </class>
+        <line num="41" type="method" name="getDescription" crap="1" count="1"/>
+        <line num="43" type="stmt" count="1"/>
+        <line num="50" type="method" name="setDescription" crap="1" count="1"/>
+        <line num="52" type="stmt" count="1"/>
+        <line num="53" type="stmt" count="1"/>
+        <line num="59" type="method" name="getUrl" crap="1" count="1"/>
+        <line num="61" type="stmt" count="1"/>
+        <line num="68" type="method" name="setUrl" crap="1" count="1"/>
+        <line num="70" type="stmt" count="1"/>
+        <line num="71" type="stmt" count="1"/>
+        <metrics loc="73" ncloc="36" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="10" coveredelements="10"/>
+      </file>
+      <file name="/opt/src/Entity/Info.php">
+        <class name="Info" namespace="Epfremme\Swagger\Entity" fullPackage="Epfremme.Entity" package="Epfremme" subpackage="Entity">
+          <metrics methods="12" coveredmethods="12" conditionals="0" coveredconditionals="0" statements="18" coveredstatements="18" elements="30" coveredelements="30"/>
+        </class>
+        <line num="73" type="method" name="getTitle" crap="1" count="1"/>
+        <line num="75" type="stmt" count="1"/>
+        <line num="82" type="method" name="setTitle" crap="1" count="1"/>
+        <line num="84" type="stmt" count="1"/>
+        <line num="85" type="stmt" count="1"/>
+        <line num="91" type="method" name="getDescription" crap="1" count="1"/>
+        <line num="93" type="stmt" count="1"/>
+        <line num="100" type="method" name="setDescription" crap="1" count="1"/>
+        <line num="102" type="stmt" count="1"/>
+        <line num="103" type="stmt" count="1"/>
+        <line num="109" type="method" name="getTermsOfService" crap="1" count="1"/>
+        <line num="111" type="stmt" count="1"/>
+        <line num="118" type="method" name="setTermsOfService" crap="1" count="1"/>
+        <line num="120" type="stmt" count="1"/>
+        <line num="121" type="stmt" count="1"/>
+        <line num="127" type="method" name="getContact" crap="1" count="1"/>
+        <line num="129" type="stmt" count="1"/>
+        <line num="136" type="method" name="setContact" crap="1" count="1"/>
+        <line num="138" type="stmt" count="1"/>
+        <line num="139" type="stmt" count="1"/>
+        <line num="145" type="method" name="getLicense" crap="1" count="1"/>
+        <line num="147" type="stmt" count="1"/>
+        <line num="154" type="method" name="setLicense" crap="1" count="1"/>
+        <line num="156" type="stmt" count="1"/>
+        <line num="157" type="stmt" count="1"/>
+        <line num="163" type="method" name="getVersion" crap="1" count="1"/>
+        <line num="165" type="stmt" count="1"/>
+        <line num="172" type="method" name="setVersion" crap="1" count="1"/>
+        <line num="174" type="stmt" count="1"/>
+        <line num="175" type="stmt" count="1"/>
+        <metrics loc="177" ncloc="88" classes="1" methods="12" coveredmethods="12" conditionals="0" coveredconditionals="0" statements="18" coveredstatements="18" elements="30" coveredelements="30"/>
+      </file>
+      <file name="/opt/src/Entity/License.php">
+        <class name="License" namespace="Epfremme\Swagger\Entity" fullPackage="Epfremme.Entity" package="Epfremme" subpackage="Entity">
+          <metrics methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="10" coveredelements="10"/>
+        </class>
+        <line num="41" type="method" name="getName" crap="1" count="1"/>
+        <line num="43" type="stmt" count="1"/>
+        <line num="50" type="method" name="setName" crap="1" count="1"/>
+        <line num="52" type="stmt" count="1"/>
+        <line num="53" type="stmt" count="1"/>
+        <line num="59" type="method" name="getUrl" crap="1" count="1"/>
+        <line num="61" type="stmt" count="1"/>
+        <line num="68" type="method" name="setUrl" crap="1" count="1"/>
+        <line num="70" type="stmt" count="1"/>
+        <line num="71" type="stmt" count="1"/>
+        <metrics loc="73" ncloc="36" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="10" coveredelements="10"/>
+      </file>
+      <file name="/opt/src/Entity/Operation.php">
+        <class name="Operation" namespace="Epfremme\Swagger\Entity" fullPackage="Epfremme.Entity" package="Epfremme" subpackage="Entity">
+          <metrics methods="24" coveredmethods="24" conditionals="0" coveredconditionals="0" statements="36" coveredstatements="36" elements="60" coveredelements="60"/>
+        </class>
+        <line num="125" type="method" name="getTags" crap="1" count="1"/>
+        <line num="127" type="stmt" count="1"/>
+        <line num="134" type="method" name="setTags" crap="1" count="1"/>
+        <line num="136" type="stmt" count="1"/>
+        <line num="137" type="stmt" count="1"/>
+        <line num="143" type="method" name="getSummary" crap="1" count="1"/>
+        <line num="145" type="stmt" count="1"/>
+        <line num="152" type="method" name="setSummary" crap="1" count="1"/>
+        <line num="154" type="stmt" count="1"/>
+        <line num="155" type="stmt" count="1"/>
+        <line num="161" type="method" name="getDescription" crap="1" count="1"/>
+        <line num="163" type="stmt" count="1"/>
+        <line num="170" type="method" name="setDescription" crap="1" count="1"/>
+        <line num="172" type="stmt" count="1"/>
+        <line num="173" type="stmt" count="1"/>
+        <line num="179" type="method" name="getExternalDocs" crap="1" count="1"/>
+        <line num="181" type="stmt" count="1"/>
+        <line num="188" type="method" name="setExternalDocs" crap="1" count="1"/>
+        <line num="190" type="stmt" count="1"/>
+        <line num="191" type="stmt" count="1"/>
+        <line num="197" type="method" name="getOperationId" crap="1" count="1"/>
+        <line num="199" type="stmt" count="1"/>
+        <line num="206" type="method" name="setOperationId" crap="1" count="1"/>
+        <line num="208" type="stmt" count="1"/>
+        <line num="209" type="stmt" count="1"/>
+        <line num="215" type="method" name="getConsumes" crap="1" count="1"/>
+        <line num="217" type="stmt" count="1"/>
+        <line num="224" type="method" name="setConsumes" crap="1" count="1"/>
+        <line num="226" type="stmt" count="1"/>
+        <line num="227" type="stmt" count="1"/>
+        <line num="233" type="method" name="getProduces" crap="1" count="1"/>
+        <line num="235" type="stmt" count="1"/>
+        <line num="242" type="method" name="setProduces" crap="1" count="1"/>
+        <line num="244" type="stmt" count="1"/>
+        <line num="245" type="stmt" count="1"/>
+        <line num="251" type="method" name="getParameters" crap="1" count="1"/>
+        <line num="253" type="stmt" count="1"/>
+        <line num="260" type="method" name="setParameters" crap="1" count="1"/>
+        <line num="262" type="stmt" count="1"/>
+        <line num="263" type="stmt" count="1"/>
+        <line num="269" type="method" name="getResponses" crap="1" count="1"/>
+        <line num="271" type="stmt" count="1"/>
+        <line num="278" type="method" name="setResponses" crap="1" count="1"/>
+        <line num="280" type="stmt" count="1"/>
+        <line num="281" type="stmt" count="1"/>
+        <line num="287" type="method" name="getSchemes" crap="1" count="1"/>
+        <line num="289" type="stmt" count="1"/>
+        <line num="296" type="method" name="setSchemes" crap="1" count="1"/>
+        <line num="298" type="stmt" count="1"/>
+        <line num="299" type="stmt" count="1"/>
+        <line num="305" type="method" name="isDeprecated" crap="1" count="1"/>
+        <line num="307" type="stmt" count="1"/>
+        <line num="314" type="method" name="setDeprecated" crap="1" count="1"/>
+        <line num="316" type="stmt" count="1"/>
+        <line num="317" type="stmt" count="1"/>
+        <line num="323" type="method" name="getSecurity" crap="1" count="1"/>
+        <line num="325" type="stmt" count="1"/>
+        <line num="332" type="method" name="setSecurity" crap="1" count="1"/>
+        <line num="334" type="stmt" count="1"/>
+        <line num="335" type="stmt" count="1"/>
+        <metrics loc="337" ncloc="170" classes="1" methods="24" coveredmethods="24" conditionals="0" coveredconditionals="0" statements="36" coveredstatements="36" elements="60" coveredelements="60"/>
+      </file>
+      <file name="/opt/src/Entity/Path.php">
+        <class name="Path" namespace="Epfremme\Swagger\Entity" fullPackage="Epfremme.Entity" package="Epfremme" subpackage="Entity">
+          <metrics methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="5" coveredelements="5"/>
+        </class>
+        <line num="38" type="method" name="getOperations" crap="1" count="1"/>
+        <line num="40" type="stmt" count="1"/>
+        <line num="47" type="method" name="setOperations" crap="1" count="1"/>
+        <line num="49" type="stmt" count="1"/>
+        <line num="50" type="stmt" count="1"/>
+        <metrics loc="52" ncloc="26" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="5" coveredelements="5"/>
+      </file>
+      <file name="/opt/src/Entity/Response.php">
+        <class name="Response" namespace="Epfremme\Swagger\Entity" fullPackage="Epfremme.Entity" package="Epfremme" subpackage="Entity">
+          <metrics methods="8" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="12" elements="20" coveredelements="20"/>
+        </class>
+        <line num="60" type="method" name="getDescription" crap="1" count="1"/>
+        <line num="62" type="stmt" count="1"/>
+        <line num="69" type="method" name="setDescription" crap="1" count="1"/>
+        <line num="71" type="stmt" count="1"/>
+        <line num="72" type="stmt" count="1"/>
+        <line num="78" type="method" name="getSchema" crap="1" count="1"/>
+        <line num="80" type="stmt" count="1"/>
+        <line num="87" type="method" name="setSchema" crap="1" count="1"/>
+        <line num="89" type="stmt" count="1"/>
+        <line num="90" type="stmt" count="1"/>
+        <line num="96" type="method" name="getHeaders" crap="1" count="1"/>
+        <line num="98" type="stmt" count="1"/>
+        <line num="105" type="method" name="setHeaders" crap="1" count="1"/>
+        <line num="107" type="stmt" count="1"/>
+        <line num="108" type="stmt" count="1"/>
+        <line num="114" type="method" name="getExamples" crap="1" count="1"/>
+        <line num="116" type="stmt" count="1"/>
+        <line num="123" type="method" name="setExamples" crap="1" count="1"/>
+        <line num="125" type="stmt" count="1"/>
+        <line num="126" type="stmt" count="1"/>
+        <metrics loc="128" ncloc="65" classes="1" methods="8" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="12" elements="20" coveredelements="20"/>
+      </file>
+      <file name="/opt/src/Entity/SecurityDefinition.php">
+        <class name="SecurityDefinition" namespace="Epfremme\Swagger\Entity" fullPackage="Epfremme.Entity" package="Epfremme" subpackage="Entity">
+          <metrics methods="16" coveredmethods="16" conditionals="0" coveredconditionals="0" statements="24" coveredstatements="24" elements="40" coveredelements="40"/>
+        </class>
+        <line num="89" type="method" name="getType" crap="1" count="1"/>
+        <line num="91" type="stmt" count="1"/>
+        <line num="98" type="method" name="setType" crap="1" count="1"/>
+        <line num="100" type="stmt" count="1"/>
+        <line num="101" type="stmt" count="1"/>
+        <line num="107" type="method" name="getDescription" crap="1" count="1"/>
+        <line num="109" type="stmt" count="1"/>
+        <line num="116" type="method" name="setDescription" crap="1" count="1"/>
+        <line num="118" type="stmt" count="1"/>
+        <line num="119" type="stmt" count="1"/>
+        <line num="125" type="method" name="getName" crap="1" count="1"/>
+        <line num="127" type="stmt" count="1"/>
+        <line num="134" type="method" name="setName" crap="1" count="1"/>
+        <line num="136" type="stmt" count="1"/>
+        <line num="137" type="stmt" count="1"/>
+        <line num="143" type="method" name="getIn" crap="1" count="1"/>
+        <line num="145" type="stmt" count="1"/>
+        <line num="152" type="method" name="setIn" crap="1" count="1"/>
+        <line num="154" type="stmt" count="1"/>
+        <line num="155" type="stmt" count="1"/>
+        <line num="161" type="method" name="getFlow" crap="1" count="1"/>
+        <line num="163" type="stmt" count="1"/>
+        <line num="170" type="method" name="setFlow" crap="1" count="1"/>
+        <line num="172" type="stmt" count="1"/>
+        <line num="173" type="stmt" count="1"/>
+        <line num="179" type="method" name="getAuthorizationUrl" crap="1" count="1"/>
+        <line num="181" type="stmt" count="1"/>
+        <line num="188" type="method" name="setAuthorizationUrl" crap="1" count="1"/>
+        <line num="190" type="stmt" count="1"/>
+        <line num="191" type="stmt" count="1"/>
+        <line num="197" type="method" name="getTokenUrl" crap="1" count="1"/>
+        <line num="199" type="stmt" count="1"/>
+        <line num="206" type="method" name="setTokenUrl" crap="1" count="1"/>
+        <line num="208" type="stmt" count="1"/>
+        <line num="209" type="stmt" count="1"/>
+        <line num="215" type="method" name="getScopes" crap="1" count="1"/>
+        <line num="217" type="stmt" count="1"/>
+        <line num="224" type="method" name="setScopes" crap="1" count="1"/>
+        <line num="226" type="stmt" count="1"/>
+        <line num="227" type="stmt" count="1"/>
+        <metrics loc="230" ncloc="115" classes="1" methods="16" coveredmethods="16" conditionals="0" coveredconditionals="0" statements="24" coveredstatements="24" elements="40" coveredelements="40"/>
+      </file>
+      <file name="/opt/src/Entity/Swagger.php">
+        <class name="Swagger" namespace="Epfremme\Swagger\Entity" fullPackage="Epfremme.Entity" package="Epfremme" subpackage="Entity">
+          <metrics methods="30" coveredmethods="30" conditionals="0" coveredconditionals="0" statements="47" coveredstatements="47" elements="77" coveredelements="77"/>
+        </class>
+        <line num="146" type="method" name="getVersion" crap="2" count="2"/>
+        <line num="148" type="stmt" count="2"/>
+        <line num="149" type="stmt" count="1"/>
+        <line num="152" type="stmt" count="1"/>
+        <line num="159" type="method" name="setVersion" crap="1" count="2"/>
+        <line num="161" type="stmt" count="2"/>
+        <line num="162" type="stmt" count="2"/>
+        <line num="168" type="method" name="getInfo" crap="1" count="1"/>
+        <line num="170" type="stmt" count="1"/>
+        <line num="177" type="method" name="setInfo" crap="1" count="1"/>
+        <line num="179" type="stmt" count="1"/>
+        <line num="180" type="stmt" count="1"/>
+        <line num="186" type="method" name="getHost" crap="1" count="1"/>
+        <line num="188" type="stmt" count="1"/>
+        <line num="195" type="method" name="setHost" crap="1" count="1"/>
+        <line num="197" type="stmt" count="1"/>
+        <line num="198" type="stmt" count="1"/>
+        <line num="204" type="method" name="getBasePath" crap="1" count="1"/>
+        <line num="206" type="stmt" count="1"/>
+        <line num="213" type="method" name="setBasePath" crap="1" count="1"/>
+        <line num="215" type="stmt" count="1"/>
+        <line num="216" type="stmt" count="1"/>
+        <line num="222" type="method" name="getSchemes" crap="1" count="1"/>
+        <line num="224" type="stmt" count="1"/>
+        <line num="231" type="method" name="setSchemes" crap="1" count="1"/>
+        <line num="233" type="stmt" count="1"/>
+        <line num="234" type="stmt" count="1"/>
+        <line num="240" type="method" name="getConsumes" crap="1" count="1"/>
+        <line num="242" type="stmt" count="1"/>
+        <line num="249" type="method" name="setConsumes" crap="1" count="1"/>
+        <line num="251" type="stmt" count="1"/>
+        <line num="252" type="stmt" count="1"/>
+        <line num="258" type="method" name="getProduces" crap="1" count="1"/>
+        <line num="260" type="stmt" count="1"/>
+        <line num="267" type="method" name="setProduces" crap="1" count="1"/>
+        <line num="269" type="stmt" count="1"/>
+        <line num="270" type="stmt" count="1"/>
+        <line num="276" type="method" name="getPaths" crap="1" count="1"/>
+        <line num="278" type="stmt" count="1"/>
+        <line num="285" type="method" name="setPaths" crap="1" count="1"/>
+        <line num="287" type="stmt" count="1"/>
+        <line num="288" type="stmt" count="1"/>
+        <line num="294" type="method" name="getDefinitions" crap="1" count="1"/>
+        <line num="296" type="stmt" count="1"/>
+        <line num="303" type="method" name="setDefinitions" crap="1" count="1"/>
+        <line num="305" type="stmt" count="1"/>
+        <line num="306" type="stmt" count="1"/>
+        <line num="312" type="method" name="getParameters" crap="1" count="1"/>
+        <line num="314" type="stmt" count="1"/>
+        <line num="321" type="method" name="setParameters" crap="1" count="1"/>
+        <line num="323" type="stmt" count="1"/>
+        <line num="324" type="stmt" count="1"/>
+        <line num="330" type="method" name="getResponses" crap="1" count="1"/>
+        <line num="332" type="stmt" count="1"/>
+        <line num="339" type="method" name="setResponses" crap="1" count="1"/>
+        <line num="341" type="stmt" count="1"/>
+        <line num="342" type="stmt" count="1"/>
+        <line num="348" type="method" name="getSecurityDefinitions" crap="1" count="1"/>
+        <line num="350" type="stmt" count="1"/>
+        <line num="357" type="method" name="setSecurityDefinitions" crap="1" count="1"/>
+        <line num="359" type="stmt" count="1"/>
+        <line num="360" type="stmt" count="1"/>
+        <line num="366" type="method" name="getSecurity" crap="1" count="1"/>
+        <line num="368" type="stmt" count="1"/>
+        <line num="375" type="method" name="setSecurity" crap="1" count="1"/>
+        <line num="377" type="stmt" count="1"/>
+        <line num="378" type="stmt" count="1"/>
+        <line num="384" type="method" name="getTags" crap="1" count="1"/>
+        <line num="386" type="stmt" count="1"/>
+        <line num="393" type="method" name="setTags" crap="1" count="1"/>
+        <line num="395" type="stmt" count="1"/>
+        <line num="396" type="stmt" count="1"/>
+        <line num="402" type="method" name="getExternalDocs" crap="1" count="1"/>
+        <line num="404" type="stmt" count="1"/>
+        <line num="411" type="method" name="setExternalDocs" crap="1" count="1"/>
+        <line num="413" type="stmt" count="1"/>
+        <line num="414" type="stmt" count="1"/>
+        <metrics loc="416" ncloc="211" classes="1" methods="30" coveredmethods="30" conditionals="0" coveredconditionals="0" statements="47" coveredstatements="47" elements="77" coveredelements="77"/>
+      </file>
+      <file name="/opt/src/Entity/Tag.php">
+        <class name="Tag" namespace="Epfremme\Swagger\Entity" fullPackage="Epfremme.Entity" package="Epfremme" subpackage="Entity">
+          <metrics methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="15" coveredelements="15"/>
+        </class>
+        <line num="49" type="method" name="getName" crap="1" count="1"/>
+        <line num="51" type="stmt" count="1"/>
+        <line num="58" type="method" name="setName" crap="1" count="1"/>
+        <line num="60" type="stmt" count="1"/>
+        <line num="61" type="stmt" count="1"/>
+        <line num="67" type="method" name="getDescription" crap="1" count="1"/>
+        <line num="69" type="stmt" count="1"/>
+        <line num="76" type="method" name="setDescription" crap="1" count="1"/>
+        <line num="78" type="stmt" count="1"/>
+        <line num="79" type="stmt" count="1"/>
+        <line num="85" type="method" name="getExternalDocs" crap="1" count="1"/>
+        <line num="87" type="stmt" count="1"/>
+        <line num="94" type="method" name="setExternalDocs" crap="1" count="1"/>
+        <line num="96" type="stmt" count="1"/>
+        <line num="97" type="stmt" count="1"/>
+        <metrics loc="100" ncloc="50" classes="1" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="15" coveredelements="15"/>
+      </file>
+    </package>
+    <package name="Epfremme\Swagger\Entity\Headers">
+      <file name="/opt/src/Entity/Headers/AbstractHeader.php">
+        <class name="AbstractHeader" namespace="Epfremme\Swagger\Entity\Headers" fullPackage="Epfremme.Entity" package="Epfremme" subpackage="Entity">
+          <metrics methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="15" coveredelements="15"/>
+        </class>
+        <line num="81" type="method" name="getDescription" crap="1" count="1"/>
+        <line num="83" type="stmt" count="1"/>
+        <line num="90" type="method" name="setDescription" crap="1" count="1"/>
+        <line num="92" type="stmt" count="1"/>
+        <line num="93" type="stmt" count="1"/>
+        <line num="99" type="method" name="getFormat" crap="1" count="1"/>
+        <line num="101" type="stmt" count="1"/>
+        <line num="108" type="method" name="setFormat" crap="1" count="1"/>
+        <line num="110" type="stmt" count="1"/>
+        <line num="111" type="stmt" count="1"/>
+        <line num="117" type="method" name="getDefault" crap="1" count="1"/>
+        <line num="119" type="stmt" count="1"/>
+        <line num="126" type="method" name="setDefault" crap="1" count="1"/>
+        <line num="128" type="stmt" count="1"/>
+        <line num="129" type="stmt" count="1"/>
+        <metrics loc="131" ncloc="60" classes="1" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="15" coveredelements="15"/>
+      </file>
+      <file name="/opt/src/Entity/Headers/ArrayHeader.php">
+        <class name="ArrayHeader" namespace="Epfremme\Swagger\Entity\Headers" fullPackage="Epfremme.Entity" package="Epfremme" subpackage="Entity">
+          <metrics methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+        </class>
+        <line num="33" type="method" name="getType" crap="1" count="1"/>
+        <line num="35" type="stmt" count="1"/>
+        <metrics loc="37" ncloc="17" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+      </file>
+      <file name="/opt/src/Entity/Headers/BooleanHeader.php">
+        <class name="BooleanHeader" namespace="Epfremme\Swagger\Entity\Headers" fullPackage="Epfremme.Entity" package="Epfremme" subpackage="Entity">
+          <metrics methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+        </class>
+        <line num="33" type="method" name="getType" crap="1" count="1"/>
+        <line num="35" type="stmt" count="1"/>
+        <metrics loc="37" ncloc="17" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+      </file>
+      <file name="/opt/src/Entity/Headers/IntegerHeader.php">
+        <class name="IntegerHeader" namespace="Epfremme\Swagger\Entity\Headers" fullPackage="Epfremme.Entity" package="Epfremme" subpackage="Entity">
+          <metrics methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+        </class>
+        <line num="33" type="method" name="getType" crap="1" count="1"/>
+        <line num="35" type="stmt" count="1"/>
+        <metrics loc="37" ncloc="17" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+      </file>
+      <file name="/opt/src/Entity/Headers/NumberHeader.php">
+        <class name="NumberHeader" namespace="Epfremme\Swagger\Entity\Headers" fullPackage="Epfremme.Entity" package="Epfremme" subpackage="Entity">
+          <metrics methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+        </class>
+        <line num="33" type="method" name="getType" crap="1" count="1"/>
+        <line num="35" type="stmt" count="1"/>
+        <metrics loc="37" ncloc="17" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+      </file>
+      <file name="/opt/src/Entity/Headers/StringHeader.php">
+        <class name="StringHeader" namespace="Epfremme\Swagger\Entity\Headers" fullPackage="Epfremme.Entity" package="Epfremme" subpackage="Entity">
+          <metrics methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+        </class>
+        <line num="33" type="method" name="getType" crap="1" count="1"/>
+        <line num="35" type="stmt" count="1"/>
+        <metrics loc="37" ncloc="17" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+      </file>
+    </package>
+    <package name="Epfremme\Swagger\Entity\Mixin\Primitives">
+      <file name="/opt/src/Entity/Mixin/Primitives/AnyPrimitiveTrait.php">
+        <class name="AnyPrimitiveTrait" namespace="Epfremme\Swagger\Entity\Mixin\Primitives" fullPackage="Epfremme.Entity" package="Epfremme" subpackage="Entity">
+          <metrics methods="12" coveredmethods="12" conditionals="0" coveredconditionals="0" statements="18" coveredstatements="18" elements="30" coveredelements="30"/>
+        </class>
+        <line num="74" type="method" name="getEnum" crap="1" count="1"/>
+        <line num="76" type="stmt" count="1"/>
+        <line num="83" type="method" name="setEnum" crap="1" count="1"/>
+        <line num="85" type="stmt" count="1"/>
+        <line num="86" type="stmt" count="1"/>
+        <line num="92" type="method" name="getAllOf" crap="1" count="1"/>
+        <line num="94" type="stmt" count="1"/>
+        <line num="101" type="method" name="setAllOf" crap="1" count="1"/>
+        <line num="103" type="stmt" count="1"/>
+        <line num="104" type="stmt" count="1"/>
+        <line num="110" type="method" name="getAnyOf" crap="1" count="1"/>
+        <line num="112" type="stmt" count="1"/>
+        <line num="119" type="method" name="setAnyOf" crap="1" count="1"/>
+        <line num="121" type="stmt" count="1"/>
+        <line num="122" type="stmt" count="1"/>
+        <line num="128" type="method" name="getOneOf" crap="1" count="1"/>
+        <line num="130" type="stmt" count="1"/>
+        <line num="137" type="method" name="setOneOf" crap="1" count="1"/>
+        <line num="139" type="stmt" count="1"/>
+        <line num="140" type="stmt" count="1"/>
+        <line num="146" type="method" name="getNot" crap="1" count="1"/>
+        <line num="148" type="stmt" count="1"/>
+        <line num="155" type="method" name="setNot" crap="1" count="1"/>
+        <line num="157" type="stmt" count="1"/>
+        <line num="158" type="stmt" count="1"/>
+        <line num="164" type="method" name="getDefinitions" crap="1" count="2"/>
+        <line num="166" type="stmt" count="2"/>
+        <line num="173" type="method" name="setDefinitions" crap="1" count="2"/>
+        <line num="175" type="stmt" count="2"/>
+        <line num="176" type="stmt" count="2"/>
+        <metrics loc="178" ncloc="87" classes="1" methods="12" coveredmethods="12" conditionals="0" coveredconditionals="0" statements="18" coveredstatements="18" elements="30" coveredelements="30"/>
+      </file>
+      <file name="/opt/src/Entity/Mixin/Primitives/ArrayPrimitiveTrait.php">
+        <class name="ArrayPrimitiveTrait" namespace="Epfremme\Swagger\Entity\Mixin\Primitives" fullPackage="Epfremme.Entity" package="Epfremme" subpackage="Entity">
+          <metrics methods="12" coveredmethods="12" conditionals="0" coveredconditionals="0" statements="18" coveredstatements="18" elements="30" coveredelements="30"/>
+        </class>
+        <line num="73" type="method" name="getItems" crap="1" count="1"/>
+        <line num="75" type="stmt" count="1"/>
+        <line num="82" type="method" name="setItems" crap="1" count="1"/>
+        <line num="84" type="stmt" count="1"/>
+        <line num="85" type="stmt" count="1"/>
+        <line num="91" type="method" name="isAdditionalItems" crap="1" count="1"/>
+        <line num="93" type="stmt" count="1"/>
+        <line num="100" type="method" name="setAdditionalItems" crap="1" count="1"/>
+        <line num="102" type="stmt" count="1"/>
+        <line num="103" type="stmt" count="1"/>
+        <line num="109" type="method" name="getMaxItems" crap="1" count="1"/>
+        <line num="111" type="stmt" count="1"/>
+        <line num="118" type="method" name="setMaxItems" crap="1" count="1"/>
+        <line num="120" type="stmt" count="1"/>
+        <line num="121" type="stmt" count="1"/>
+        <line num="127" type="method" name="getMinItems" crap="1" count="1"/>
+        <line num="129" type="stmt" count="1"/>
+        <line num="136" type="method" name="setMinItems" crap="1" count="1"/>
+        <line num="138" type="stmt" count="1"/>
+        <line num="139" type="stmt" count="1"/>
+        <line num="145" type="method" name="isUniqueItems" crap="1" count="1"/>
+        <line num="147" type="stmt" count="1"/>
+        <line num="154" type="method" name="setUniqueItems" crap="1" count="1"/>
+        <line num="156" type="stmt" count="1"/>
+        <line num="157" type="stmt" count="1"/>
+        <line num="163" type="method" name="getCollectionFormat" crap="1" count="1"/>
+        <line num="165" type="stmt" count="1"/>
+        <line num="172" type="method" name="setCollectionFormat" crap="1" count="1"/>
+        <line num="174" type="stmt" count="1"/>
+        <line num="175" type="stmt" count="1"/>
+        <metrics loc="177" ncloc="88" classes="1" methods="12" coveredmethods="12" conditionals="0" coveredconditionals="0" statements="18" coveredstatements="18" elements="30" coveredelements="30"/>
+      </file>
+      <file name="/opt/src/Entity/Mixin/Primitives/BooleanPrimitiveTrait.php">
+        <class name="BooleanPrimitiveTrait" namespace="Epfremme\Swagger\Entity\Mixin\Primitives" fullPackage="Epfremme.Entity" package="Epfremme" subpackage="Entity">
+          <metrics methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="20" ncloc="9" classes="1" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="/opt/src/Entity/Mixin/Primitives/NullPrimitiveTrait.php">
+        <class name="NullPrimitiveTrait" namespace="Epfremme\Swagger\Entity\Mixin\Primitives" fullPackage="Epfremme.Entity" package="Epfremme" subpackage="Entity">
+          <metrics methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="20" ncloc="9" classes="1" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="/opt/src/Entity/Mixin/Primitives/NumericPrimitiveTrait.php">
+        <class name="NumericPrimitiveTrait" namespace="Epfremme\Swagger\Entity\Mixin\Primitives" fullPackage="Epfremme.Entity" package="Epfremme" subpackage="Entity">
+          <metrics methods="10" coveredmethods="10" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="15" elements="25" coveredelements="25"/>
+        </class>
+        <line num="64" type="method" name="getMultipleOf" crap="1" count="1"/>
+        <line num="66" type="stmt" count="1"/>
+        <line num="73" type="method" name="setMultipleOf" crap="1" count="1"/>
+        <line num="75" type="stmt" count="1"/>
+        <line num="76" type="stmt" count="1"/>
+        <line num="82" type="method" name="getMaximum" crap="1" count="1"/>
+        <line num="84" type="stmt" count="1"/>
+        <line num="91" type="method" name="setMaximum" crap="1" count="1"/>
+        <line num="93" type="stmt" count="1"/>
+        <line num="94" type="stmt" count="1"/>
+        <line num="100" type="method" name="getExclusiveMaximum" crap="1" count="1"/>
+        <line num="102" type="stmt" count="1"/>
+        <line num="109" type="method" name="setExclusiveMaximum" crap="1" count="1"/>
+        <line num="111" type="stmt" count="1"/>
+        <line num="112" type="stmt" count="1"/>
+        <line num="118" type="method" name="getMinimum" crap="1" count="1"/>
+        <line num="120" type="stmt" count="1"/>
+        <line num="127" type="method" name="setMinimum" crap="1" count="1"/>
+        <line num="129" type="stmt" count="1"/>
+        <line num="130" type="stmt" count="1"/>
+        <line num="136" type="method" name="getExclusiveMinimum" crap="1" count="1"/>
+        <line num="138" type="stmt" count="1"/>
+        <line num="145" type="method" name="setExclusiveMinimum" crap="1" count="1"/>
+        <line num="147" type="stmt" count="1"/>
+        <line num="148" type="stmt" count="1"/>
+        <metrics loc="150" ncloc="74" classes="1" methods="10" coveredmethods="10" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="15" elements="25" coveredelements="25"/>
+      </file>
+      <file name="/opt/src/Entity/Mixin/Primitives/ObjectPrimitiveTrait.php">
+        <class name="ObjectPrimitiveTrait" namespace="Epfremme\Swagger\Entity\Mixin\Primitives" fullPackage="Epfremme.Entity" package="Epfremme" subpackage="Entity">
+          <metrics methods="14" coveredmethods="14" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="21" elements="35" coveredelements="35"/>
+        </class>
+        <line num="82" type="method" name="getMaxProperties" crap="1" count="1"/>
+        <line num="84" type="stmt" count="1"/>
+        <line num="91" type="method" name="setMaxProperties" crap="1" count="1"/>
+        <line num="93" type="stmt" count="1"/>
+        <line num="94" type="stmt" count="1"/>
+        <line num="100" type="method" name="getMinProperties" crap="1" count="1"/>
+        <line num="102" type="stmt" count="1"/>
+        <line num="109" type="method" name="setMinProperties" crap="1" count="1"/>
+        <line num="111" type="stmt" count="1"/>
+        <line num="112" type="stmt" count="1"/>
+        <line num="118" type="method" name="getRequired" crap="1" count="1"/>
+        <line num="120" type="stmt" count="1"/>
+        <line num="127" type="method" name="setRequired" crap="1" count="1"/>
+        <line num="129" type="stmt" count="1"/>
+        <line num="130" type="stmt" count="1"/>
+        <line num="136" type="method" name="getProperties" crap="1" count="2"/>
+        <line num="138" type="stmt" count="2"/>
+        <line num="145" type="method" name="setProperties" crap="1" count="1"/>
+        <line num="147" type="stmt" count="1"/>
+        <line num="148" type="stmt" count="1"/>
+        <line num="154" type="method" name="isAdditionalProperties" crap="1" count="1"/>
+        <line num="156" type="stmt" count="1"/>
+        <line num="163" type="method" name="setAdditionalProperties" crap="1" count="1"/>
+        <line num="165" type="stmt" count="1"/>
+        <line num="166" type="stmt" count="1"/>
+        <line num="172" type="method" name="getPatternProperties" crap="1" count="1"/>
+        <line num="174" type="stmt" count="1"/>
+        <line num="181" type="method" name="setPatternProperties" crap="1" count="1"/>
+        <line num="183" type="stmt" count="1"/>
+        <line num="184" type="stmt" count="1"/>
+        <line num="190" type="method" name="getDependencies" crap="1" count="1"/>
+        <line num="192" type="stmt" count="1"/>
+        <line num="199" type="method" name="setDependencies" crap="1" count="1"/>
+        <line num="201" type="stmt" count="1"/>
+        <line num="202" type="stmt" count="1"/>
+        <metrics loc="204" ncloc="102" classes="1" methods="14" coveredmethods="14" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="21" elements="35" coveredelements="35"/>
+      </file>
+      <file name="/opt/src/Entity/Mixin/Primitives/StringPrimitiveTrait.php">
+        <class name="StringPrimitiveTrait" namespace="Epfremme\Swagger\Entity\Mixin\Primitives" fullPackage="Epfremme.Entity" package="Epfremme" subpackage="Entity">
+          <metrics methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="15" coveredelements="15"/>
+        </class>
+        <line num="48" type="method" name="getMaxLength" crap="1" count="1"/>
+        <line num="50" type="stmt" count="1"/>
+        <line num="57" type="method" name="setMaxLength" crap="1" count="1"/>
+        <line num="59" type="stmt" count="1"/>
+        <line num="60" type="stmt" count="1"/>
+        <line num="66" type="method" name="getMinLength" crap="1" count="1"/>
+        <line num="68" type="stmt" count="1"/>
+        <line num="75" type="method" name="setMinLength" crap="1" count="1"/>
+        <line num="77" type="stmt" count="1"/>
+        <line num="78" type="stmt" count="1"/>
+        <line num="84" type="method" name="getPattern" crap="1" count="1"/>
+        <line num="86" type="stmt" count="1"/>
+        <line num="93" type="method" name="setPattern" crap="1" count="1"/>
+        <line num="95" type="stmt" count="1"/>
+        <line num="96" type="stmt" count="1"/>
+        <metrics loc="98" ncloc="48" classes="1" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="15" coveredelements="15"/>
+      </file>
+    </package>
+    <package name="Epfremme\Swagger\Entity\Mixin">
+      <file name="/opt/src/Entity/Mixin/VendorExtensionsTrait.php">
+        <class name="VendorExtensionsTrait" namespace="Epfremme\Swagger\Entity\Mixin" fullPackage="Epfremme" package="Epfremme">
+          <metrics methods="3" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="3" elements="7" coveredelements="5"/>
+        </class>
+        <line num="24" type="method" name="getVendorExtensions" crap="1" count="12"/>
+        <line num="26" type="stmt" count="12"/>
+        <line num="33" type="method" name="getVendorExtensionNull" crap="2" count="0"/>
+        <line num="35" type="stmt" count="0"/>
+        <line num="42" type="method" name="setVendorExtensions" crap="1" count="12"/>
+        <line num="44" type="stmt" count="12"/>
+        <line num="45" type="stmt" count="12"/>
+        <metrics loc="46" ncloc="24" classes="1" methods="3" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="3" elements="7" coveredelements="5"/>
+      </file>
+    </package>
+    <package name="Epfremme\Swagger\Entity\Parameters">
+      <file name="/opt/src/Entity/Parameters/AbstractParameter.php">
+        <class name="AbstractParameter" namespace="Epfremme\Swagger\Entity\Parameters" fullPackage="Epfremme.Entity" package="Epfremme" subpackage="Entity">
+          <metrics methods="8" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="12" elements="20" coveredelements="20"/>
+        </class>
+        <line num="88" type="method" name="getIn" crap="1" count="1"/>
+        <line num="90" type="stmt" count="1"/>
+        <line num="97" type="method" name="setIn" crap="1" count="1"/>
+        <line num="99" type="stmt" count="1"/>
+        <line num="100" type="stmt" count="1"/>
+        <line num="106" type="method" name="getName" crap="1" count="1"/>
+        <line num="108" type="stmt" count="1"/>
+        <line num="115" type="method" name="setName" crap="1" count="1"/>
+        <line num="117" type="stmt" count="1"/>
+        <line num="118" type="stmt" count="1"/>
+        <line num="124" type="method" name="getDescription" crap="1" count="1"/>
+        <line num="126" type="stmt" count="1"/>
+        <line num="133" type="method" name="setDescription" crap="1" count="1"/>
+        <line num="135" type="stmt" count="1"/>
+        <line num="136" type="stmt" count="1"/>
+        <line num="142" type="method" name="isRequired" crap="1" count="1"/>
+        <line num="144" type="stmt" count="1"/>
+        <line num="151" type="method" name="setRequired" crap="1" count="1"/>
+        <line num="153" type="stmt" count="1"/>
+        <line num="154" type="stmt" count="1"/>
+        <metrics loc="156" ncloc="68" classes="1" methods="8" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="12" elements="20" coveredelements="20"/>
+      </file>
+      <file name="/opt/src/Entity/Parameters/AbstractTypedParameter.php">
+        <class name="AbstractTypedParameter" namespace="Epfremme\Swagger\Entity\Parameters" fullPackage="Epfremme.Entity" package="Epfremme" subpackage="Entity">
+          <metrics methods="8" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="12" elements="20" coveredelements="20"/>
+        </class>
+        <line num="63" type="method" name="getType" crap="1" count="1"/>
+        <line num="65" type="stmt" count="1"/>
+        <line num="72" type="method" name="setType" crap="1" count="1"/>
+        <line num="74" type="stmt" count="1"/>
+        <line num="75" type="stmt" count="1"/>
+        <line num="81" type="method" name="getFormat" crap="1" count="1"/>
+        <line num="83" type="stmt" count="1"/>
+        <line num="90" type="method" name="setFormat" crap="1" count="1"/>
+        <line num="92" type="stmt" count="1"/>
+        <line num="93" type="stmt" count="1"/>
+        <line num="99" type="method" name="isAllowEmptyValues" crap="1" count="1"/>
+        <line num="101" type="stmt" count="1"/>
+        <line num="108" type="method" name="setAllowEmptyValues" crap="1" count="1"/>
+        <line num="110" type="stmt" count="1"/>
+        <line num="111" type="stmt" count="1"/>
+        <line num="117" type="method" name="getDefault" crap="1" count="1"/>
+        <line num="119" type="stmt" count="1"/>
+        <line num="126" type="method" name="setDefault" crap="1" count="1"/>
+        <line num="128" type="stmt" count="1"/>
+        <line num="129" type="stmt" count="1"/>
+        <metrics loc="131" ncloc="66" classes="1" methods="8" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="12" elements="20" coveredelements="20"/>
+      </file>
+      <file name="/opt/src/Entity/Parameters/BodyParameter.php">
+        <class name="BodyParameter" namespace="Epfremme\Swagger\Entity\Parameters" fullPackage="Epfremme.Entity" package="Epfremme" subpackage="Entity">
+          <metrics methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="5" coveredelements="5"/>
+        </class>
+        <line num="31" type="method" name="getSchema" crap="1" count="1"/>
+        <line num="33" type="stmt" count="1"/>
+        <line num="40" type="method" name="setSchema" crap="1" count="1"/>
+        <line num="42" type="stmt" count="1"/>
+        <line num="43" type="stmt" count="1"/>
+        <metrics loc="45" ncloc="21" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="5" coveredelements="5"/>
+      </file>
+      <file name="/opt/src/Entity/Parameters/RefParameter.php">
+        <class name="RefParameter" namespace="Epfremme\Swagger\Entity\Parameters" fullPackage="Epfremme.Entity" package="Epfremme" subpackage="Entity">
+          <metrics methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="21" ncloc="10" classes="1" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+    </package>
+    <package name="Epfremme\Swagger\Entity\Parameters\FormParameter">
+      <file name="/opt/src/Entity/Parameters/FormParameter/ArrayType.php">
+        <class name="ArrayType" namespace="Epfremme\Swagger\Entity\Parameters\FormParameter" fullPackage="Epfremme.Entity" package="Epfremme" subpackage="Entity">
+          <metrics methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="21" ncloc="10" classes="1" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="/opt/src/Entity/Parameters/FormParameter/BooleanType.php">
+        <class name="BooleanType" namespace="Epfremme\Swagger\Entity\Parameters\FormParameter" fullPackage="Epfremme.Entity" package="Epfremme" subpackage="Entity">
+          <metrics methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="21" ncloc="10" classes="1" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="/opt/src/Entity/Parameters/FormParameter/FileType.php">
+        <class name="FileType" namespace="Epfremme\Swagger\Entity\Parameters\FormParameter" fullPackage="Epfremme.Entity" package="Epfremme" subpackage="Entity">
+          <metrics methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="21" ncloc="10" classes="1" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="/opt/src/Entity/Parameters/FormParameter/IntegerType.php">
+        <class name="IntegerType" namespace="Epfremme\Swagger\Entity\Parameters\FormParameter" fullPackage="Epfremme.Entity" package="Epfremme" subpackage="Entity">
+          <metrics methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="21" ncloc="10" classes="1" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="/opt/src/Entity/Parameters/FormParameter/NumberType.php">
+        <class name="NumberType" namespace="Epfremme\Swagger\Entity\Parameters\FormParameter" fullPackage="Epfremme.Entity" package="Epfremme" subpackage="Entity">
+          <metrics methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="21" ncloc="10" classes="1" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="/opt/src/Entity/Parameters/FormParameter/StringType.php">
+        <class name="StringType" namespace="Epfremme\Swagger\Entity\Parameters\FormParameter" fullPackage="Epfremme.Entity" package="Epfremme" subpackage="Entity">
+          <metrics methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="21" ncloc="10" classes="1" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+    </package>
+    <package name="Epfremme\Swagger\Entity\Parameters\HeaderParameter">
+      <file name="/opt/src/Entity/Parameters/HeaderParameter/ArrayType.php">
+        <class name="ArrayType" namespace="Epfremme\Swagger\Entity\Parameters\HeaderParameter" fullPackage="Epfremme.Entity" package="Epfremme" subpackage="Entity">
+          <metrics methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="21" ncloc="10" classes="1" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="/opt/src/Entity/Parameters/HeaderParameter/BooleanType.php">
+        <class name="BooleanType" namespace="Epfremme\Swagger\Entity\Parameters\HeaderParameter" fullPackage="Epfremme.Entity" package="Epfremme" subpackage="Entity">
+          <metrics methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="21" ncloc="10" classes="1" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="/opt/src/Entity/Parameters/HeaderParameter/IntegerType.php">
+        <class name="IntegerType" namespace="Epfremme\Swagger\Entity\Parameters\HeaderParameter" fullPackage="Epfremme.Entity" package="Epfremme" subpackage="Entity">
+          <metrics methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="21" ncloc="10" classes="1" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="/opt/src/Entity/Parameters/HeaderParameter/NumberType.php">
+        <class name="NumberType" namespace="Epfremme\Swagger\Entity\Parameters\HeaderParameter" fullPackage="Epfremme.Entity" package="Epfremme" subpackage="Entity">
+          <metrics methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="21" ncloc="10" classes="1" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="/opt/src/Entity/Parameters/HeaderParameter/StringType.php">
+        <class name="StringType" namespace="Epfremme\Swagger\Entity\Parameters\HeaderParameter" fullPackage="Epfremme.Entity" package="Epfremme" subpackage="Entity">
+          <metrics methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="21" ncloc="10" classes="1" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+    </package>
+    <package name="Epfremme\Swagger\Entity\Parameters\PathParameter">
+      <file name="/opt/src/Entity/Parameters/PathParameter/BooleanType.php">
+        <class name="BooleanType" namespace="Epfremme\Swagger\Entity\Parameters\PathParameter" fullPackage="Epfremme.Entity" package="Epfremme" subpackage="Entity">
+          <metrics methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="21" ncloc="10" classes="1" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="/opt/src/Entity/Parameters/PathParameter/IntegerType.php">
+        <class name="IntegerType" namespace="Epfremme\Swagger\Entity\Parameters\PathParameter" fullPackage="Epfremme.Entity" package="Epfremme" subpackage="Entity">
+          <metrics methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="21" ncloc="10" classes="1" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="/opt/src/Entity/Parameters/PathParameter/StringType.php">
+        <class name="StringType" namespace="Epfremme\Swagger\Entity\Parameters\PathParameter" fullPackage="Epfremme.Entity" package="Epfremme" subpackage="Entity">
+          <metrics methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="21" ncloc="10" classes="1" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+    </package>
+    <package name="Epfremme\Swagger\Entity\Parameters\QueryParameter">
+      <file name="/opt/src/Entity/Parameters/QueryParameter/ArrayType.php">
+        <class name="ArrayType" namespace="Epfremme\Swagger\Entity\Parameters\QueryParameter" fullPackage="Epfremme.Entity" package="Epfremme" subpackage="Entity">
+          <metrics methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="21" ncloc="10" classes="1" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="/opt/src/Entity/Parameters/QueryParameter/BooleanType.php">
+        <class name="BooleanType" namespace="Epfremme\Swagger\Entity\Parameters\QueryParameter" fullPackage="Epfremme.Entity" package="Epfremme" subpackage="Entity">
+          <metrics methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="21" ncloc="10" classes="1" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="/opt/src/Entity/Parameters/QueryParameter/IntegerType.php">
+        <class name="IntegerType" namespace="Epfremme\Swagger\Entity\Parameters\QueryParameter" fullPackage="Epfremme.Entity" package="Epfremme" subpackage="Entity">
+          <metrics methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="21" ncloc="10" classes="1" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="/opt/src/Entity/Parameters/QueryParameter/NumberType.php">
+        <class name="NumberType" namespace="Epfremme\Swagger\Entity\Parameters\QueryParameter" fullPackage="Epfremme.Entity" package="Epfremme" subpackage="Entity">
+          <metrics methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="21" ncloc="10" classes="1" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="/opt/src/Entity/Parameters/QueryParameter/StringType.php">
+        <class name="StringType" namespace="Epfremme\Swagger\Entity\Parameters\QueryParameter" fullPackage="Epfremme.Entity" package="Epfremme" subpackage="Entity">
+          <metrics methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="21" ncloc="10" classes="1" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+    </package>
+    <package name="Epfremme\Swagger\Entity\Schemas">
+      <file name="/opt/src/Entity/Schemas/AbstractSchema.php">
+        <class name="AbstractSchema" namespace="Epfremme\Swagger\Entity\Schemas" fullPackage="Epfremme.Entity" package="Epfremme" subpackage="Entity">
+          <metrics methods="12" coveredmethods="12" conditionals="0" coveredconditionals="0" statements="18" coveredstatements="18" elements="30" coveredelements="30"/>
+        </class>
+        <line num="103" type="method" name="getFormat" crap="1" count="1"/>
+        <line num="105" type="stmt" count="1"/>
+        <line num="112" type="method" name="setFormat" crap="1" count="1"/>
+        <line num="114" type="stmt" count="1"/>
+        <line num="115" type="stmt" count="1"/>
+        <line num="121" type="method" name="getTitle" crap="1" count="1"/>
+        <line num="123" type="stmt" count="1"/>
+        <line num="129" type="method" name="setTitle" crap="1" count="1"/>
+        <line num="131" type="stmt" count="1"/>
+        <line num="132" type="stmt" count="1"/>
+        <line num="138" type="method" name="getDescription" crap="1" count="1"/>
+        <line num="140" type="stmt" count="1"/>
+        <line num="146" type="method" name="setDescription" crap="1" count="1"/>
+        <line num="148" type="stmt" count="1"/>
+        <line num="149" type="stmt" count="1"/>
+        <line num="155" type="method" name="getDefault" crap="1" count="1"/>
+        <line num="157" type="stmt" count="1"/>
+        <line num="164" type="method" name="setDefault" crap="1" count="1"/>
+        <line num="166" type="stmt" count="1"/>
+        <line num="167" type="stmt" count="1"/>
+        <line num="173" type="method" name="getExample" crap="1" count="1"/>
+        <line num="175" type="stmt" count="1"/>
+        <line num="182" type="method" name="setExample" crap="1" count="1"/>
+        <line num="184" type="stmt" count="1"/>
+        <line num="185" type="stmt" count="1"/>
+        <line num="191" type="method" name="getExternalDocs" crap="1" count="1"/>
+        <line num="193" type="stmt" count="1"/>
+        <line num="200" type="method" name="setExternalDocs" crap="1" count="1"/>
+        <line num="202" type="stmt" count="1"/>
+        <line num="203" type="stmt" count="1"/>
+        <metrics loc="205" ncloc="100" classes="1" methods="12" coveredmethods="12" conditionals="0" coveredconditionals="0" statements="18" coveredstatements="18" elements="30" coveredelements="30"/>
+      </file>
+      <file name="/opt/src/Entity/Schemas/ArraySchema.php">
+        <class name="ArraySchema" namespace="Epfremme\Swagger\Entity\Schemas" fullPackage="Epfremme.Entity" package="Epfremme" subpackage="Entity">
+          <metrics methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+        </class>
+        <line num="24" type="method" name="getType" crap="1" count="1"/>
+        <line num="26" type="stmt" count="1"/>
+        <metrics loc="28" ncloc="14" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+      </file>
+      <file name="/opt/src/Entity/Schemas/BooleanSchema.php">
+        <class name="BooleanSchema" namespace="Epfremme\Swagger\Entity\Schemas" fullPackage="Epfremme.Entity" package="Epfremme" subpackage="Entity">
+          <metrics methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+        </class>
+        <line num="24" type="method" name="getType" crap="1" count="1"/>
+        <line num="26" type="stmt" count="1"/>
+        <metrics loc="28" ncloc="14" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+      </file>
+      <file name="/opt/src/Entity/Schemas/IntegerSchema.php">
+        <class name="IntegerSchema" namespace="Epfremme\Swagger\Entity\Schemas" fullPackage="Epfremme.Entity" package="Epfremme" subpackage="Entity">
+          <metrics methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+        </class>
+        <line num="24" type="method" name="getType" crap="1" count="1"/>
+        <line num="26" type="stmt" count="1"/>
+        <metrics loc="28" ncloc="14" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+      </file>
+      <file name="/opt/src/Entity/Schemas/MultiSchema.php">
+        <class name="MultiSchema" namespace="Epfremme\Swagger\Entity\Schemas" fullPackage="Epfremme.Entity" package="Epfremme" subpackage="Entity">
+          <metrics methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+        </class>
+        <line num="31" type="method" name="getType" crap="1" count="1"/>
+        <line num="33" type="stmt" count="1"/>
+        <metrics loc="35" ncloc="15" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+      </file>
+      <file name="/opt/src/Entity/Schemas/NullSchema.php">
+        <class name="NullSchema" namespace="Epfremme\Swagger\Entity\Schemas" fullPackage="Epfremme.Entity" package="Epfremme" subpackage="Entity">
+          <metrics methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+        </class>
+        <line num="24" type="method" name="getType" crap="1" count="1"/>
+        <line num="26" type="stmt" count="1"/>
+        <metrics loc="28" ncloc="14" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+      </file>
+      <file name="/opt/src/Entity/Schemas/NumberSchema.php">
+        <class name="NumberSchema" namespace="Epfremme\Swagger\Entity\Schemas" fullPackage="Epfremme.Entity" package="Epfremme" subpackage="Entity">
+          <metrics methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+        </class>
+        <line num="24" type="method" name="getType" crap="1" count="1"/>
+        <line num="26" type="stmt" count="1"/>
+        <metrics loc="28" ncloc="14" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+      </file>
+      <file name="/opt/src/Entity/Schemas/ObjectSchema.php">
+        <class name="ObjectSchema" namespace="Epfremme\Swagger\Entity\Schemas" fullPackage="Epfremme.Entity" package="Epfremme" subpackage="Entity">
+          <metrics methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+        </class>
+        <line num="24" type="method" name="getType" crap="1" count="1"/>
+        <line num="26" type="stmt" count="1"/>
+        <metrics loc="28" ncloc="14" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+      </file>
+      <file name="/opt/src/Entity/Schemas/RefSchema.php">
+        <class name="RefSchema" namespace="Epfremme\Swagger\Entity\Schemas" fullPackage="Epfremme.Entity" package="Epfremme" subpackage="Entity">
+          <metrics methods="7" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="10" elements="17" coveredelements="17"/>
+        </class>
+        <line num="50" type="method" name="getType" crap="1" count="2"/>
+        <line num="52" type="stmt" count="2"/>
+        <line num="58" type="method" name="getRef" crap="1" count="2"/>
+        <line num="60" type="stmt" count="2"/>
+        <line num="67" type="method" name="setRef" crap="1" count="2"/>
+        <line num="69" type="stmt" count="2"/>
+        <line num="70" type="stmt" count="2"/>
+        <line num="76" type="method" name="getTitle" crap="1" count="2"/>
+        <line num="78" type="stmt" count="2"/>
+        <line num="84" type="method" name="setTitle" crap="1" count="2"/>
+        <line num="86" type="stmt" count="2"/>
+        <line num="87" type="stmt" count="2"/>
+        <line num="93" type="method" name="getDescription" crap="1" count="2"/>
+        <line num="95" type="stmt" count="2"/>
+        <line num="101" type="method" name="setDescription" crap="1" count="2"/>
+        <line num="103" type="stmt" count="2"/>
+        <line num="104" type="stmt" count="2"/>
+        <metrics loc="106" ncloc="53" classes="1" methods="7" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="10" elements="17" coveredelements="17"/>
+      </file>
+      <file name="/opt/src/Entity/Schemas/StringSchema.php">
+        <class name="StringSchema" namespace="Epfremme\Swagger\Entity\Schemas" fullPackage="Epfremme.Entity" package="Epfremme" subpackage="Entity">
+          <metrics methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+        </class>
+        <line num="24" type="method" name="getType" crap="1" count="1"/>
+        <line num="26" type="stmt" count="1"/>
+        <metrics loc="28" ncloc="14" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+      </file>
+    </package>
+    <file name="/opt/src/Entity/Schemas/SchemaInterface.php">
+      <metrics loc="49" ncloc="16" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+    </file>
+    <package name="Epfremme\Swagger\Exception">
+      <file name="/opt/src/Exception/InvalidVersionException.php">
+        <class name="InvalidVersionException" namespace="Epfremme\Swagger\Exception" fullPackage="Epfremme.Exception" package="Epfremme" subpackage="Exception">
+          <metrics methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="3" coveredelements="3"/>
+        </class>
+        <line num="24" type="method" name="__construct" crap="1" count="2"/>
+        <line num="26" type="stmt" count="2"/>
+        <line num="27" type="stmt" count="2"/>
+        <metrics loc="28" ncloc="11" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="3" coveredelements="3"/>
+      </file>
+    </package>
+    <package name="Epfremme\Swagger\Factory">
+      <file name="/opt/src/Factory/SwaggerFactory.php">
+        <class name="SwaggerFactory" namespace="Epfremme\Swagger\Factory" fullPackage="Epfremme.Factory" package="Epfremme" subpackage="Factory">
+          <metrics methods="4" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="20" coveredstatements="16" elements="24" coveredelements="19"/>
+        </class>
+        <line num="37" type="method" name="__construct" crap="3" count="1"/>
+        <line num="39" type="stmt" count="1"/>
+        <line num="41" type="method" name="anonymous function" crap="4.12" count="1"/>
+        <line num="42" type="stmt" count="1"/>
+        <line num="43" type="stmt" count="1"/>
+        <line num="44" type="stmt" count="1"/>
+        <line num="45" type="stmt" count="0"/>
+        <line num="46" type="stmt" count="0"/>
+        <line num="47" type="stmt" count="0"/>
+        <line num="48" type="stmt" count="0"/>
+        <line num="49" type="stmt" count="1"/>
+        <line num="51" type="stmt" count="1"/>
+        <line num="52" type="stmt" count="1"/>
+        <line num="61" type="method" name="build" crap="1" count="5"/>
+        <line num="63" type="stmt" count="5"/>
+        <line num="64" type="stmt" count="4"/>
+        <line num="66" type="stmt" count="4"/>
+        <line num="67" type="stmt" count="4"/>
+        <line num="68" type="stmt" count="3"/>
+        <line num="70" type="stmt" count="4"/>
+        <line num="79" type="method" name="serialize" crap="1" count="2"/>
+        <line num="81" type="stmt" count="2"/>
+        <line num="83" type="stmt" count="2"/>
+        <line num="84" type="stmt" count="2"/>
+        <line num="85" type="stmt" count="1"/>
+        <line num="87" type="stmt" count="1"/>
+        <metrics loc="89" ncloc="59" classes="1" methods="4" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="22" coveredstatements="18" elements="26" coveredelements="21"/>
+      </file>
+    </package>
+    <package name="Epfremme\Swagger\Listener">
+      <file name="/opt/src/Listener/SerializationSubscriber.php">
+        <class name="SerializationSubscriber" namespace="Epfremme\Swagger\Listener" fullPackage="Epfremme.Listener" package="Epfremme" subpackage="Listener">
+          <metrics methods="7" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="45" coveredstatements="45" elements="52" coveredelements="52"/>
+        </class>
+        <line num="40" type="method" name="__construct" crap="1" count="1"/>
+        <line num="42" type="stmt" count="1"/>
+        <line num="43" type="stmt" count="1"/>
+        <line num="48" type="method" name="getSubscribedEvents" crap="1" count="1"/>
+        <line num="52" type="stmt" count="1"/>
+        <line num="53" type="stmt" count="1"/>
+        <line num="54" type="stmt" count="1"/>
+        <line num="57" type="stmt" count="1"/>
+        <line num="58" type="stmt" count="1"/>
+        <line num="59" type="stmt" count="1"/>
+        <line num="60" type="stmt" count="1"/>
+        <line num="63" type="stmt" count="1"/>
+        <line num="64" type="stmt" count="1"/>
+        <line num="78" type="method" name="onPreSerialize" crap="1" count="1"/>
+        <line num="80" type="stmt" count="1"/>
+        <line num="81" type="stmt" count="1"/>
+        <line num="89" type="method" name="onPreDeserialize" crap="3" count="3"/>
+        <line num="91" type="stmt" count="3"/>
+        <line num="93" type="stmt" count="3"/>
+        <line num="94" type="stmt" count="2"/>
+        <line num="97" type="stmt" count="2"/>
+        <line num="98" type="stmt" count="2"/>
+        <line num="100" type="stmt" count="2"/>
+        <line num="102" type="stmt" count="2"/>
+        <line num="103" type="stmt" count="2"/>
+        <line num="104" type="stmt" count="2"/>
+        <line num="105" type="stmt" count="2"/>
+        <line num="116" type="method" name="onSchemaPreDeserialize" crap="4" count="4"/>
+        <line num="118" type="stmt" count="4"/>
+        <line num="120" type="stmt" count="4"/>
+        <line num="121" type="stmt" count="1"/>
+        <line num="122" type="stmt" count="1"/>
+        <line num="124" type="stmt" count="4"/>
+        <line num="125" type="stmt" count="2"/>
+        <line num="126" type="stmt" count="2"/>
+        <line num="127" type="stmt" count="4"/>
+        <line num="135" type="method" name="onParameterPreDeserialize" crap="3" count="4"/>
+        <line num="137" type="stmt" count="4"/>
+        <line num="139" type="stmt" count="4"/>
+        <line num="140" type="stmt" count="1"/>
+        <line num="141" type="stmt" count="1"/>
+        <line num="144" type="stmt" count="3"/>
+        <line num="146" type="stmt" count="3"/>
+        <line num="147" type="stmt" count="2"/>
+        <line num="148" type="stmt" count="2"/>
+        <line num="150" type="stmt" count="3"/>
+        <line num="151" type="stmt" count="3"/>
+        <line num="158" type="method" name="onPreDeserializeCollection" crap="1" count="2"/>
+        <line num="160" type="stmt" count="2"/>
+        <line num="162" type="stmt" count="2"/>
+        <line num="164" type="stmt" count="2"/>
+        <line num="165" type="stmt" count="2"/>
+        <metrics loc="166" ncloc="101" classes="1" methods="7" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="45" coveredstatements="45" elements="52" coveredelements="52"/>
+      </file>
+      <file name="/opt/src/Listener/VendorExtensionListener.php">
+        <class name="VendorExtensionListener" namespace="Epfremme\Swagger\Listener" fullPackage="Epfremme" package="Epfremme">
+          <metrics methods="8" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="56" coveredstatements="53" elements="64" coveredelements="60"/>
+        </class>
+        <line num="30" type="method" name="getSubscribedEvents" crap="1" count="1"/>
+        <line num="33" type="stmt" count="1"/>
+        <line num="34" type="stmt" count="1"/>
+        <line num="35" type="stmt" count="1"/>
+        <line num="41" type="method" name="onDePreSerialize" crap="12" count="40"/>
+        <line num="43" type="stmt" count="40"/>
+        <line num="44" type="stmt" count="39"/>
+        <line num="45" type="stmt" count="38"/>
+        <line num="46" type="stmt" count="37"/>
+        <line num="47" type="stmt" count="36"/>
+        <line num="48" type="stmt" count="35"/>
+        <line num="49" type="stmt" count="34"/>
+        <line num="50" type="stmt" count="33"/>
+        <line num="51" type="stmt" count="14"/>
+        <line num="52" type="stmt" count="6"/>
+        <line num="53" type="stmt" count="40"/>
+        <line num="54" type="stmt" count="40"/>
+        <line num="55" type="stmt" count="40"/>
+        <line num="56" type="stmt" count="40"/>
+        <line num="57" type="stmt" count="40"/>
+        <line num="58" type="stmt" count="1"/>
+        <line num="59" type="stmt" count="1"/>
+        <line num="61" type="stmt" count="40"/>
+        <line num="66" type="method" name="onPostSerialize" crap="4" count="2"/>
+        <line num="68" type="stmt" count="2"/>
+        <line num="70" type="stmt" count="2"/>
+        <line num="71" type="stmt" count="2"/>
+        <line num="72" type="stmt" count="1"/>
+        <line num="73" type="stmt" count="1"/>
+        <line num="74" type="stmt" count="1"/>
+        <line num="75" type="stmt" count="1"/>
+        <line num="76" type="stmt" count="1"/>
+        <line num="77" type="stmt" count="1"/>
+        <line num="78" type="stmt" count="1"/>
+        <line num="79" type="stmt" count="2"/>
+        <line num="85" type="method" name="isVendorExtensionField" crap="1" count="40"/>
+        <line num="87" type="stmt" count="40"/>
+        <line num="95" type="method" name="checkExpectedType" crap="1" count="40"/>
+        <line num="97" type="stmt" count="40"/>
+        <line num="105" type="method" name="checkTypeParent" crap="1" count="33"/>
+        <line num="107" type="stmt" count="33"/>
+        <line num="113" type="method" name="updateDeSerializedData" crap="3" count="40"/>
+        <line num="115" type="stmt" count="40"/>
+        <line num="116" type="stmt" count="40"/>
+        <line num="117" type="stmt" count="40"/>
+        <line num="118" type="stmt" count="40"/>
+        <line num="119" type="stmt" count="39"/>
+        <line num="120" type="stmt" count="39"/>
+        <line num="121" type="stmt" count="39"/>
+        <line num="122" type="stmt" count="40"/>
+        <line num="123" type="stmt" count="40"/>
+        <line num="124" type="stmt" count="40"/>
+        <line num="129" type="method" name="updateDeSerializedPathData" crap="3.18" count="1"/>
+        <line num="131" type="stmt" count="1"/>
+        <line num="132" type="stmt" count="1"/>
+        <line num="133" type="stmt" count="1"/>
+        <line num="134" type="stmt" count="1"/>
+        <line num="135" type="stmt" count="1"/>
+        <line num="136" type="stmt" count="0"/>
+        <line num="137" type="stmt" count="0"/>
+        <line num="138" type="stmt" count="0"/>
+        <line num="139" type="stmt" count="1"/>
+        <line num="140" type="stmt" count="1"/>
+        <line num="141" type="stmt" count="1"/>
+        <metrics loc="142" ncloc="108" classes="1" methods="8" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="56" coveredstatements="53" elements="64" coveredelements="60"/>
+      </file>
+    </package>
+    <package name="Epfremme\Swagger\Parser">
+      <file name="/opt/src/Parser/SwaggerParser.php">
+        <class name="SwaggerParser" namespace="Epfremme\Swagger\Parser" fullPackage="Epfremme.Parser" package="Epfremme" subpackage="Parser">
+          <metrics methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="16" coveredstatements="16" elements="21" coveredelements="21"/>
+        </class>
+        <line num="33" type="method" name="__construct" crap="2" count="7"/>
+        <line num="35" type="stmt" count="7"/>
+        <line num="36" type="stmt" count="3"/>
+        <line num="37" type="stmt" count="3"/>
+        <line num="38" type="stmt" count="3"/>
+        <line num="41" type="stmt" count="4"/>
+        <line num="43" type="stmt" count="4"/>
+        <line num="51" type="method" name="parse" crap="2" count="2"/>
+        <line num="53" type="stmt" count="2"/>
+        <line num="55" type="stmt" count="2"/>
+        <line num="63" type="method" name="getVersion" crap="3" count="4"/>
+        <line num="65" type="stmt" count="4"/>
+        <line num="66" type="stmt" count="1"/>
+        <line num="67" type="stmt" count="1"/>
+        <line num="69" type="stmt" count="4"/>
+        <line num="70" type="stmt" count="1"/>
+        <line num="73" type="stmt" count="3"/>
+        <line num="81" type="method" name="getData" crap="1" count="1"/>
+        <line num="83" type="stmt" count="1"/>
+        <line num="91" type="method" name="__toString" crap="1" count="1"/>
+        <line num="93" type="stmt" count="1"/>
+        <metrics loc="95" ncloc="54" classes="1" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="16" coveredstatements="16" elements="21" coveredelements="21"/>
+      </file>
+    </package>
+    <metrics files="65" loc="4874" ncloc="2459" classes="64" methods="254" coveredmethods="251" conditionals="0" coveredconditionals="0" statements="489" coveredstatements="481" elements="743" coveredelements="732"/>
+  </project>
+</coverage>

@@ -7,6 +7,7 @@
 namespace Epfremme\Swagger\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
+use Epfremme\Swagger\Entity\Mixin\VendorExtensionsTrait;
 use JMS\Serializer\Annotation as JMS;
 use JMS\Serializer\DeserializationContext;
 use JMS\Serializer\VisitorInterface;
@@ -19,6 +20,8 @@ use JMS\Serializer\VisitorInterface;
  */
 class Path
 {
+    use VendorExtensionsTrait;
+
     /**
      * @JMS\Inline()
      * @JMS\Since("2.0")
@@ -46,5 +49,4 @@ class Path
         $this->operations = $operations;
         return $this;
     }
-
 }

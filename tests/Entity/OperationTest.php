@@ -216,10 +216,30 @@ class OperationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * @covers Epfremme\Swagger\Entity\Operation::getVendorExtensions
+     * @covers Epfremme\Swagger\Entity\Operation::setVendorExtensions
+     */
+    public function testVendorExtension()
+    {
+        $this->assertClassHasAttribute('vendorExtensions', Operation::class);
+        $vendorExtensions = [
+            'x-foo' => '1',
+            'x-bar' => 'baz'
+        ];
+        $this->assertInstanceOf(Operation::class, $this->operation->setVendorExtensions($vendorExtensions));
+        $this->assertAttributeEquals($vendorExtensions, 'vendorExtensions', $this->operation);
+        $this->assertEquals($vendorExtensions, $this->operation->getVendorExtensions());
+    }
+
+    /**
      * @covers Epfremme\Swagger\Entity\Operation
      */
     public function testSerialize()
     {
+        $vendorExtensions = [
+            'x-foo' => 'bar',
+            'x-baz' => ['baz', 'bar']
+        ];
         $data = json_encode([
             'tags' => [
                 'foo'
@@ -276,6 +296,8 @@ class OperationTest extends \PHPUnit_Framework_TestCase
                 ]
             ],
             'deprecated' => true,
+            'x-foo' => 'bar',
+            'x-baz' => ['baz', 'bar']
         ]);
 
         $operation = $this->getSerializer()->deserialize($data, Operation::class, 'json');
@@ -299,6 +321,7 @@ class OperationTest extends \PHPUnit_Framework_TestCase
         $this->assertAttributeInstanceOf(ArrayCollection::class, 'security', $operation);
         $this->assertAttributeContainsOnly('array', 'security', $operation);
         $this->assertAttributeEquals(true, 'deprecated', $operation);
+        $this->assertAttributeEquals($vendorExtensions, 'vendorExtensions', $operation);
 
         $json = $this->getSerializer()->serialize($operation, 'json');
 

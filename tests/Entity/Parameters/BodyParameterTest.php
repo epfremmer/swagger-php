@@ -54,6 +54,10 @@ class BodyParameterTest extends \PHPUnit_Framework_TestCase
      */
     public function testSerialization()
     {
+        $vendorExtensions = [
+            'x-foo' => 'bar',
+            'x-baz' => ['baz', 'bar']
+        ];
         $data = json_encode([
             'in'          => AbstractParameter::IN_BODY,
             'name'        => 'foo',
@@ -61,7 +65,9 @@ class BodyParameterTest extends \PHPUnit_Framework_TestCase
             'required'    => false,
             'schema'      => [
                 'type' => 'string'
-            ]
+            ],
+            'x-foo' => 'bar',
+            'x-baz' => ['baz', 'bar']
         ]);
 
         $parameter = $this->getSerializer()->deserialize($data, AbstractParameter::class, 'json');
@@ -71,6 +77,7 @@ class BodyParameterTest extends \PHPUnit_Framework_TestCase
         $this->assertAttributeEquals('foo', 'name', $parameter);
         $this->assertAttributeEquals('bar', 'description', $parameter);
         $this->assertAttributeEquals(false, 'required', $parameter);
+        $this->assertAttributeEquals($vendorExtensions, 'vendorExtensions', $parameter);
 
         $json = $this->getSerializer()->serialize($parameter, 'json');
 

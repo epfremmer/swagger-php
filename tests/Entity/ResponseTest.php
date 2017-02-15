@@ -101,10 +101,30 @@ class ResponseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * @covers Epfremme\Swagger\Entity\Response::getVendorExtensions
+     * @covers Epfremme\Swagger\Entity\Response::setVendorExtensions
+     */
+    public function testVendorExtension()
+    {
+        $this->assertClassHasAttribute('vendorExtensions', Response::class);
+        $vendorExtensions = [
+            'x-foo' => '1',
+            'x-bar' => 'baz'
+        ];
+        $this->assertInstanceOf(Response::class, $this->response->setVendorExtensions($vendorExtensions));
+        $this->assertAttributeEquals($vendorExtensions, 'vendorExtensions', $this->response);
+        $this->assertEquals($vendorExtensions, $this->response->getVendorExtensions());
+    }
+
+    /**
      * @covers Epfremme\Swagger\Entity\Response
      */
     public function testSerialize()
     {
+        $vendorExtensions = [
+            'x-foo' => 'bar',
+            'x-baz' => ['baz', 'bar']
+        ];
         $data = json_encode([
             'description' => 'bar',
             'schema' => [
@@ -137,7 +157,9 @@ class ResponseTest extends \PHPUnit_Framework_TestCase
                 'application/json' => [
                     'key' => 'any'
                 ],
-            ]
+            ],
+            'x-foo' => 'bar',
+            'x-baz' => ['baz', 'bar']
         ]);
 
         $response = $this->getSerializer()->deserialize($data, Response::class, 'json');
@@ -148,6 +170,7 @@ class ResponseTest extends \PHPUnit_Framework_TestCase
         $this->assertAttributeInstanceOf(ArrayCollection::class, 'headers', $response);
         $this->assertAttributeContainsOnly(Headers\AbstractHeader::class, 'headers', $response);
         $this->assertAttributeInstanceOf(Examples::class, 'examples', $response);
+        $this->assertAttributeEquals($vendorExtensions, 'vendorExtensions', $response);
 
         $json = $this->getSerializer()->serialize($response, 'json');
 

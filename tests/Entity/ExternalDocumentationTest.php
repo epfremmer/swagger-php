@@ -57,13 +57,35 @@ class ExternalDocumentationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * @covers Epfremme\Swagger\Entity\Path::getVendorExtensions
+     * @covers Epfremme\Swagger\Entity\Path::setVendorExtensions
+     */
+    public function testVendorExtension()
+    {
+        $this->assertClassHasAttribute('vendorExtensions', ExternalDocumentation::class);
+        $vendorExtensions = [
+            'x-foo' => '1',
+            'x-bar' => 'baz'
+        ];
+        $this->assertInstanceOf(ExternalDocumentation::class, $this->externalDocumentation->setVendorExtensions($vendorExtensions));
+        $this->assertAttributeEquals($vendorExtensions, 'vendorExtensions', $this->externalDocumentation);
+        $this->assertEquals($vendorExtensions, $this->externalDocumentation->getVendorExtensions());
+    }
+
+    /**
      * @covers Epfremme\Swagger\Entity\ExternalDocumentation
      */
     public function testSerialize()
     {
+        $vendorExtensions = [
+            'x-foo' => 'bar',
+            'x-baz' => ['baz', 'bar']
+        ];
         $data = json_encode([
             'description' => 'foo',
             'url'         => 'bar',
+            'x-foo' => 'bar',
+            'x-baz' => ['baz', 'bar']
         ]);
 
         $license = $this->getSerializer()->deserialize($data, ExternalDocumentation::class, 'json');
@@ -71,6 +93,7 @@ class ExternalDocumentationTest extends \PHPUnit_Framework_TestCase
         $this->assertInstanceOf(ExternalDocumentation::class, $license);
         $this->assertAttributeEquals('foo', 'description', $license);
         $this->assertAttributeEquals('bar', 'url', $license);
+        $this->assertAttributeEquals($vendorExtensions, 'vendorExtensions', $license);
 
         $json = $this->getSerializer()->serialize($license, 'json');
 

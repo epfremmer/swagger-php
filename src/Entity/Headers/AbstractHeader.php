@@ -6,6 +6,7 @@
  */
 namespace Epfremme\Swagger\Entity\Headers;
 
+use Epfremme\Swagger\Entity\Mixin\VendorExtensionsTrait;
 use Epfremme\Swagger\Entity\Schemas\AbstractSchema;
 use Epfremme\Swagger\Annotations as EP;
 use JMS\Serializer\Annotation as JMS;
@@ -32,6 +33,8 @@ abstract class AbstractHeader
     const NUMBER_TYPE  = AbstractSchema::NUMBER_TYPE;
     const STRING_TYPE  = AbstractSchema::STRING_TYPE;
     const ARRAY_TYPE   = AbstractSchema::ARRAY_TYPE;
+
+    use VendorExtensionsTrait;
 
     /**
      * @JMS\Since("2.0")

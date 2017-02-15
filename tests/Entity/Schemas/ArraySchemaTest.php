@@ -48,6 +48,10 @@ class ArraySchemaTest extends \PHPUnit_Framework_TestCase
      */
     public function testSerialization()
     {
+        $vendorExtensions = [
+            'x-foo' => 'bar',
+            'x-baz' => ['baz', 'bar']
+        ];
         $data = json_encode([
             'type' => AbstractSchema::ARRAY_TYPE,
             'format'      => 'foo',
@@ -55,6 +59,8 @@ class ArraySchemaTest extends \PHPUnit_Framework_TestCase
             'description' => 'baz',
             'example'     => 'qux',
             'externalDocs' => (object)[],
+            'x-foo' => 'bar',
+            'x-baz' => ['baz', 'bar']
         ]);
 
         $schema = $this->getSerializer()->deserialize($data, AbstractSchema::class, 'json');
@@ -65,6 +71,7 @@ class ArraySchemaTest extends \PHPUnit_Framework_TestCase
         $this->assertAttributeEquals('baz', 'description', $schema);
         $this->assertAttributeEquals('qux', 'example', $schema);
         $this->assertAttributeInstanceOf(ExternalDocumentation::class, 'externalDocs', $schema);
+        $this->assertAttributeEquals($vendorExtensions, 'vendorExtensions', $schema);
 
         $json = $this->getSerializer()->serialize($schema, 'json');
 

@@ -73,14 +73,36 @@ class TagTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * @covers Epfremme\Swagger\Entity\Tag::getVendorExtensions
+     * @covers Epfremme\Swagger\Entity\Tag::setVendorExtensions
+     */
+    public function testVendorExtension()
+    {
+        $this->assertClassHasAttribute('vendorExtensions', Tag::class);
+        $vendorExtensions = [
+            'x-foo' => '1',
+            'x-bar' => 'baz'
+        ];
+        $this->assertInstanceOf(Tag::class, $this->tag->setVendorExtensions($vendorExtensions));
+        $this->assertAttributeEquals($vendorExtensions, 'vendorExtensions', $this->tag);
+        $this->assertEquals($vendorExtensions, $this->tag->getVendorExtensions());
+    }
+
+    /**
      * @covers Epfremme\Swagger\Entity\Tag
      */
     public function testSerialize()
     {
+        $vendorExtensions = [
+            'x-foo' => 'bar',
+            'x-baz' => ['baz', 'bar']
+        ];
         $data = json_encode([
             'name'         => 'foo',
             'description'  => 'bar',
             'externalDocs' => (object)[],
+            'x-foo' => 'bar',
+            'x-baz' => ['baz', 'bar']
         ]);
 
         $tag = $this->getSerializer()->deserialize($data, Tag::class, 'json');
@@ -89,6 +111,7 @@ class TagTest extends \PHPUnit_Framework_TestCase
         $this->assertAttributeEquals('foo', 'name', $tag);
         $this->assertAttributeEquals('bar', 'description', $tag);
         $this->assertAttributeInstanceOf(ExternalDocumentation::class, 'externalDocs', $tag);
+        $this->assertAttributeEquals($vendorExtensions, 'vendorExtensions', $tag);
 
         $json = $this->getSerializer()->serialize($tag, 'json');
 

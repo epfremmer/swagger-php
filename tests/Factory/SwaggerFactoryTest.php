@@ -92,6 +92,18 @@ class SwaggerFactoryTest extends \PHPUnit_Framework_TestCase
         $this->assertInstanceOf(Swagger::class, $swagger);
     }
 
+    /*public function testFactoryConstructorWithSubscribers()
+    {
+        $testEventSubscriber = new TestEventSubscriber();
+        $factory = new SwaggerFactory([
+            $testEventSubscriber
+        ]);
+
+        $factory->build($this->getFile(SwaggerParserTest::SWAGGER_JSON_FILE));
+
+        $this->assertTrue($testEventSubscriber->isTestFlag());
+    }*/
+
     /**
      * @covers Epfremme\Swagger\Factory\SwaggerFactory::build
      */

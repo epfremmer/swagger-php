@@ -7,6 +7,7 @@
 namespace Epfremme\Swagger\Entity\Parameters;
 
 use Epfremme\Swagger\Annotations as EP;
+use Epfremme\Swagger\Entity\Mixin\VendorExtensionsTrait;
 use JMS\Serializer\Annotation as JMS;
 
 /**
@@ -40,6 +41,8 @@ use JMS\Serializer\Annotation as JMS;
  */
 abstract class AbstractParameter
 {
+    use VendorExtensionsTrait;
+
     // parameter in constants
     const IN_BODY      = 'body';
     const IN_PATH      = 'path';

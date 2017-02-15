@@ -7,7 +7,12 @@
 namespace Epfremme\Swagger\Tests\Mixin;
 
 use Epfremme\Swagger\Listener\SerializationSubscriber;
+use Epfremme\Swagger\Listener\VendorExtensionListener;
 use JMS\Serializer\EventDispatcher\EventDispatcher;
+use JMS\Serializer\EventDispatcher\EventSubscriberInterface;
+use JMS\Serializer\EventDispatcher\ObjectEvent;
+use JMS\Serializer\EventDispatcher\PreDeserializeEvent;
+use JMS\Serializer\GenericSerializationVisitor;
 use JMS\Serializer\Serializer;
 use JMS\Serializer\SerializerBuilder;
 
@@ -33,8 +38,9 @@ trait SerializerContextTrait
     {
         $builder = SerializerBuilder::create();
 
-        $builder->configureListeners(function(EventDispatcher $eventDispatcher) {
+        $builder->configureListeners(function (EventDispatcher $eventDispatcher) {
             $eventDispatcher->addSubscriber(new SerializationSubscriber());
+            $eventDispatcher->addSubscriber(new VendorExtensionListener());
         });
 
         self::$serializer = $builder->build();
@@ -47,7 +53,9 @@ trait SerializerContextTrait
      */
     public function getSerializer()
     {
-        if (!self::$serializer) self::setUpBeforeClass();
+        if (!self::$serializer) {
+            self::setUpBeforeClass();
+        }
 
         return self::$serializer;
     }

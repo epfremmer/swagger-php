@@ -56,10 +56,30 @@ class PathTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * @covers Epfremme\Swagger\Entity\Path::getVendorExtensions
+     * @covers Epfremme\Swagger\Entity\Path::setVendorExtensions
+     */
+    public function testVendorExtension()
+    {
+        $this->assertClassHasAttribute('vendorExtensions', Path::class);
+        $vendorExtensions = [
+            'x-foo' => '1',
+            'x-bar' => 'baz'
+        ];
+        $this->assertInstanceOf(Path::class, $this->path->setVendorExtensions($vendorExtensions));
+        $this->assertAttributeEquals($vendorExtensions, 'vendorExtensions', $this->path);
+        $this->assertEquals($vendorExtensions, $this->path->getVendorExtensions());
+    }
+
+    /**
      * @covers Epfremme\Swagger\Entity\Path
      */
     public function testSerialize()
     {
+        $vendorExtensions = [
+            'x-foo' => 'bar',
+            'x-baz' => ['baz', 'bar']
+        ];
         $data = json_encode([
             'get' => [
                 'summary' => 'foo',
@@ -138,6 +158,8 @@ class PathTest extends \PHPUnit_Framework_TestCase
                 ],
                 'deprecated' => true,
             ],
+            'x-foo' => 'bar',
+            'x-baz' => ['baz', 'bar']
         ]);
 
         $path = $this->getSerializer()->deserialize($data, Path::class, 'json');
@@ -145,6 +167,7 @@ class PathTest extends \PHPUnit_Framework_TestCase
         $this->assertInstanceOf(Path::class, $path);
         $this->assertAttributeInstanceOf(ArrayCollection::class, 'operations', $path);
         $this->assertAttributeContainsOnly(Operation::class, 'operations', $path);
+        $this->assertAttributeEquals($vendorExtensions, 'vendorExtensions', $path);
 
         $json = $this->getSerializer()->serialize($path, 'json');
 

@@ -64,4 +64,20 @@ class AbstractHeaderTest extends \PHPUnit_Framework_TestCase
         $this->assertAttributeEquals('foo', 'default', $this->mockHeader);
         $this->assertEquals('foo', $this->mockHeader->getDefault());
     }
+
+    /**
+     * @covers Epfremme\Swagger\Entity\Headers\AbstractHeader::getVendorExtensions
+     * @covers Epfremme\Swagger\Entity\Headers\AbstractHeader::setVendorExtensions
+     */
+    public function testVendorExtension()
+    {
+        $this->assertClassHasAttribute('vendorExtensions', AbstractHeader::class);
+        $vendorExtensions = [
+            'x-foo' => '1',
+            'x-bar' => 'baz'
+        ];
+        $this->assertInstanceOf(AbstractHeader::class, $this->mockHeader->setVendorExtensions($vendorExtensions));
+        $this->assertAttributeEquals($vendorExtensions, 'vendorExtensions', $this->mockHeader);
+        $this->assertEquals($vendorExtensions, $this->mockHeader->getVendorExtensions());
+    }
 }

@@ -132,10 +132,30 @@ class SecurityDefinitionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * @covers Epfremme\Swagger\Entity\SecurityDefinition::getVendorExtensions
+     * @covers Epfremme\Swagger\Entity\SecurityDefinition::setVendorExtensions
+     */
+    public function testVendorExtension()
+    {
+        $this->assertClassHasAttribute('vendorExtensions', SecurityDefinition::class);
+        $vendorExtensions = [
+            'x-foo' => '1',
+            'x-bar' => 'baz'
+        ];
+        $this->assertInstanceOf(SecurityDefinition::class, $this->securityDefinition->setVendorExtensions($vendorExtensions));
+        $this->assertAttributeEquals($vendorExtensions, 'vendorExtensions', $this->securityDefinition);
+        $this->assertEquals($vendorExtensions, $this->securityDefinition->getVendorExtensions());
+    }
+
+    /**
      * @covers Epfremme\Swagger\Entity\SecurityDefinition
      */
     public function testSerialize()
     {
+        $vendorExtensions = [
+            'x-foo' => 'bar',
+            'x-baz' => ['baz', 'bar']
+        ];
         $data = json_encode([
             'type'             => 'foo',
             'description'      => 'bar',
@@ -149,6 +169,8 @@ class SecurityDefinitionTest extends \PHPUnit_Framework_TestCase
                 'bar',
                 'baz'
             ],
+            'x-foo' => 'bar',
+            'x-baz' => ['baz', 'bar']
         ]);
 
         $securityDefinition = $this->getSerializer()->deserialize($data, SecurityDefinition::class, 'json');
@@ -162,6 +184,7 @@ class SecurityDefinitionTest extends \PHPUnit_Framework_TestCase
         $this->assertAttributeEquals('corge', 'authorizationUrl', $securityDefinition);
         $this->assertAttributeEquals('grault', 'tokenUrl', $securityDefinition);
         $this->assertAttributeEquals(['foo', 'bar', 'baz'], 'scopes', $securityDefinition);
+        $this->assertAttributeEquals($vendorExtensions, 'vendorExtensions', $securityDefinition);
 
         $json = $this->getSerializer()->serialize($securityDefinition, 'json');
 

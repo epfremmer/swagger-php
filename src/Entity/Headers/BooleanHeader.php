@@ -7,7 +7,7 @@
 namespace Epfremme\Swagger\Entity\Headers;
 
 use Epfremme\Swagger\Entity\Mixin\Primitives;
-
+use JMS\Serializer\Annotation as JMS;
 
 /**
  * Class BooleanHeader
@@ -18,6 +18,14 @@ use Epfremme\Swagger\Entity\Mixin\Primitives;
 class BooleanHeader extends AbstractHeader
 {
     use Primitives\BooleanPrimitiveTrait;
+
+    /**
+     * @JMS\Since("2.0")
+     * @JMS\Type("string")
+     * @JMS\SerializedName("type")
+     * @var string
+     */
+    protected $type = AbstractHeader::BOOLEAN_TYPE;
 
     /**
      * {@inheritdoc}

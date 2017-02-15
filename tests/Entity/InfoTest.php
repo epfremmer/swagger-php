@@ -113,17 +113,39 @@ class InfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * @covers Epfremme\Swagger\Entity\Info::getVendorExtensions
+     * @covers Epfremme\Swagger\Entity\Info::setVendorExtensions
+     */
+    public function testVendorExtension()
+    {
+        $this->assertClassHasAttribute('vendorExtensions', Info::class);
+        $vendorExtensions = [
+            'x-foo' => '1',
+            'x-bar' => 'baz'
+        ];
+        $this->assertInstanceOf(Info::class, $this->info->setVendorExtensions($vendorExtensions));
+        $this->assertAttributeEquals($vendorExtensions, 'vendorExtensions', $this->info);
+        $this->assertEquals($vendorExtensions, $this->info->getVendorExtensions());
+    }
+
+    /**
      * @covers Epfremme\Swagger\Entity\Info
      */
     public function testSerialize()
     {
+        $vendorExtensions = [
+            'x-foo' => 'bar',
+            'x-baz' => ['baz', 'bar']
+        ];
         $data = json_encode([
             'title'          => 'foo',
             'description'    => 'bar',
             'termsOfService' => 'baz',
             'contact' => (object)[],
             'license' => (object)[],
-            'version' => '1.0.0'
+            'version' => '1.0.0',
+            'x-foo' => 'bar',
+            'x-baz' => ['baz', 'bar']
         ]);
 
         $info = $this->getSerializer()->deserialize($data, Info::class, 'json');
@@ -135,6 +157,7 @@ class InfoTest extends \PHPUnit_Framework_TestCase
         $this->assertAttributeInstanceOf(Contact::class, 'contact', $info);
         $this->assertAttributeInstanceOf(License::class, 'license', $info);
         $this->assertAttributeEquals('1.0.0', 'version', $info);
+        $this->assertAttributeEquals($vendorExtensions, 'vendorExtensions', $info);
 
         $json = $this->getSerializer()->serialize($info, 'json');
 

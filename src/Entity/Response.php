@@ -7,6 +7,7 @@
 namespace Epfremme\Swagger\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
+use Epfremme\Swagger\Entity\Mixin\VendorExtensionsTrait;
 use Epfremme\Swagger\Entity\Schemas\SchemaInterface;
 use Epfremme\Swagger\Entity\Headers\AbstractHeader;
 use JMS\Serializer\Annotation as JMS;
@@ -19,6 +20,8 @@ use JMS\Serializer\Annotation as JMS;
  */
 class Response
 {
+    use VendorExtensionsTrait;
+
     /**
      * @JMS\Since("2.0")
      * @JMS\Type("string")

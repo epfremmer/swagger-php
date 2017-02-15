@@ -8,6 +8,7 @@ namespace Epfremme\Swagger\Entity\Schemas;
 
 use Epfremme\Swagger\Annotations as EP;
 use Epfremme\Swagger\Entity\ExternalDocumentation;
+use Epfremme\Swagger\Entity\Mixin\VendorExtensionsTrait;
 use JMS\Serializer\Annotation as JMS;
 
 /**
@@ -28,6 +29,8 @@ use JMS\Serializer\Annotation as JMS;
  */
 abstract class AbstractSchema implements SchemaInterface
 {
+    use VendorExtensionsTrait;
+
     // schema types
     const NULL_TYPE    = 'null';
     const BOOLEAN_TYPE = 'boolean';

@@ -47,11 +47,17 @@ class StringHeaderTest extends \PHPUnit_Framework_TestCase
      */
     public function testSerialization()
     {
+        $vendorExtensions = [
+            'x-foo' => 'bar',
+            'x-baz' => ['baz', 'bar']
+        ];
         $data = json_encode([
             'type' => StringHeader::STRING_TYPE,
             'format'           => 'foo',
             'description'      => 'bar',
             'default'          => 'baz',
+            'x-foo' => 'bar',
+            'x-baz' => ['baz', 'bar']
         ]);
 
         $schema = $this->getSerializer()->deserialize($data, AbstractHeader::class, 'json');
@@ -60,6 +66,7 @@ class StringHeaderTest extends \PHPUnit_Framework_TestCase
         $this->assertAttributeEquals('foo', 'format', $schema);
         $this->assertAttributeEquals('bar', 'description', $schema);
         $this->assertAttributeEquals('baz', 'default', $schema);
+        $this->assertAttributeEquals($vendorExtensions, 'vendorExtensions', $schema);
 
         $json = $this->getSerializer()->serialize($schema, 'json');
 

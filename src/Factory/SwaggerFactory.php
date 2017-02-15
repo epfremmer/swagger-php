@@ -7,6 +7,7 @@
 namespace Epfremme\Swagger\Factory;
 
 use Epfremme\Swagger\Entity\Swagger;
+use Epfremme\Swagger\Listener\VendorExtensionListener;
 use Epfremme\Swagger\Parser\SwaggerParser;
 use JMS\Serializer\DeserializationContext;
 use JMS\Serializer\SerializationContext;
@@ -28,19 +29,28 @@ class SwaggerFactory
      */
     protected $serializer;
 
+
     /**
-     * Constructor
+     * SwaggerFactory constructor.
+     * @param array|null $subscribers
      */
-    public function __construct()
+    public function __construct(array $subscribers = null)
     {
         $serializerBuilder = new SerializerBuilder();
 
-        $serializerBuilder->configureListeners(function(EventDispatcher $eventDispatcher) {
+        $serializerBuilder->configureListeners(function (EventDispatcher $eventDispatcher) use ($subscribers) {
             $eventDispatcher->addSubscriber(new SerializationSubscriber());
+            $eventDispatcher->addSubscriber(new VendorExtensionListener());
+            if (null !== $subscribers) {
+                foreach ($subscribers as $subscriber) {
+                    $eventDispatcher->addSubscriber($subscriber);
+                }
+            }
         });
 
         $this->serializer = $serializerBuilder->build();
     }
+
 
     /**
      * Build Swagger document from parser interface
