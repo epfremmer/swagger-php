@@ -9,7 +9,7 @@ namespace Epfremme\Swagger\Tests\Factory;
 use JMS\Serializer\Serializer;
 use Epfremme\Swagger\Entity\Swagger;
 use Epfremme\Swagger\Factory\SwaggerFactory;
-use Epfremme\Swagger\Tests\Parser\SwaggerParserTest;
+use Epfremme\Swagger\Tests\Parser\FileParserTest;
 
 /**
  * Class SwaggerFactoryTest
@@ -19,6 +19,7 @@ use Epfremme\Swagger\Tests\Parser\SwaggerParserTest;
  */
 class SwaggerFactoryTest extends \PHPUnit_Framework_TestCase
 {
+    const testJsonString = '{"swaggerVersion": "1.2","apis": [{"path": "http://localhost:8000/listings/greetings","description": "Generating greetings in our application."}]}';
     /**
      * @var SwaggerFactory
      */
@@ -39,7 +40,9 @@ class SwaggerFactoryTest extends \PHPUnit_Framework_TestCase
      */
     public function getFactory()
     {
-        if (!self::$factory) self::setUpBeforeClass();
+        if (!self::$factory) {
+            self::setUpBeforeClass();
+        }
 
         return self::$factory;
     }
@@ -71,7 +74,7 @@ class SwaggerFactoryTest extends \PHPUnit_Framework_TestCase
      */
     public function testBuildMissing()
     {
-        $this->getFactory()->build($this->getFile(SwaggerParserTest::SWAGGER_MISSING_FILE));
+        $this->getFactory()->build($this->getFile(FileParserTest::SWAGGER_MISSING_FILE));
     }
 
     /**
@@ -79,7 +82,7 @@ class SwaggerFactoryTest extends \PHPUnit_Framework_TestCase
      */
     public function testBuildUnsupportedVersion()
     {
-        $this->getFactory()->build($this->getFile(SwaggerParserTest::SWAGGER_V1_FILE));
+        $this->getFactory()->build($this->getFile(FileParserTest::SWAGGER_V1_FILE));
     }
 
     /**
@@ -87,7 +90,19 @@ class SwaggerFactoryTest extends \PHPUnit_Framework_TestCase
      */
     public function testBuildJson()
     {
-        $swagger = $this->getFactory()->build($this->getFile(SwaggerParserTest::SWAGGER_JSON_FILE));
+        $swagger = $this->getFactory()->build($this->getFile(FileParserTest::SWAGGER_JSON_FILE));
+
+        $this->assertInstanceOf(Swagger::class, $swagger);
+    }
+
+    /**
+     * @covers Epfremme\Swagger\Factory\SwaggerFactory::buildFromJsonString
+     */
+    public function testBuildFromJsonString()
+    {
+        $swagger = $this->getFactory()->buildFromJsonString(
+            self::testJsonString
+        );
 
         $this->assertInstanceOf(Swagger::class, $swagger);
     }
@@ -109,7 +124,7 @@ class SwaggerFactoryTest extends \PHPUnit_Framework_TestCase
      */
     public function testBuildYaml()
     {
-        $swagger = $this->getFactory()->build($this->getFile(SwaggerParserTest::SWAGGER_YAML_FILE));
+        $swagger = $this->getFactory()->build($this->getFile(FileParserTest::SWAGGER_YAML_FILE));
 
         $this->assertInstanceOf(Swagger::class, $swagger);
     }
@@ -119,12 +134,15 @@ class SwaggerFactoryTest extends \PHPUnit_Framework_TestCase
      */
     public function testSerialize()
     {
-        $swagger = $this->getFactory()->build($this->getFile(SwaggerParserTest::SWAGGER_JSON_FILE));
+        $swagger = $this->getFactory()->build($this->getFile(FileParserTest::SWAGGER_JSON_FILE));
 
         $json = $this->getFactory()->serialize($swagger);
 
         $this->assertJson($json);
-        $this->assertJsonStringEqualsJsonString(file_get_contents($this->getFile(SwaggerParserTest::SWAGGER_JSON_FILE)), $json);
+        $this->assertJsonStringEqualsJsonString(
+            file_get_contents($this->getFile(FileParserTest::SWAGGER_JSON_FILE)),
+            $json
+        );
     }
 
     /**
@@ -132,7 +150,7 @@ class SwaggerFactoryTest extends \PHPUnit_Framework_TestCase
      */
     public function testSerializeUnsupportedVersion()
     {
-        $swagger = $this->getFactory()->build($this->getFile(SwaggerParserTest::SWAGGER_JSON_FILE));
+        $swagger = $this->getFactory()->build($this->getFile(FileParserTest::SWAGGER_JSON_FILE));
 
         $swagger->setVersion('1.0');
 

@@ -1,20 +1,21 @@
 <?php
 /**
- * File SwaggerParserTest.php
+ * File FileParserTest.php
  *
  * @author Edward Pfremmer <epfremme@nerdery.com>
  */
 namespace Epfremme\Swagger\Tests\Parser;
 
+use Epfremme\Swagger\Parser\FileParser;
 use Epfremme\Swagger\Parser\SwaggerParser;
 
 /**
- * Class SwaggerParserTest
+ * Class FileParserTest
  *
  * @package Epfremme\Swagger
  * @subpackage Tests\Parser
  */
-class SwaggerParserTest extends \PHPUnit_Framework_TestCase
+class FileParserTest extends \PHPUnit_Framework_TestCase
 {
     // swagger files
     const SWAGGER_JSON_FILE            = 'swagger.json';
@@ -37,7 +38,7 @@ class SwaggerParserTest extends \PHPUnit_Framework_TestCase
      */
     protected function getSwagger($file)
     {
-        return new SwaggerParser(realpath(__DIR__ . '/../Resources/' . $file));
+        return new FileParser(realpath(__DIR__ . '/../Resources/' . $file));
     }
 
     /**
@@ -45,7 +46,7 @@ class SwaggerParserTest extends \PHPUnit_Framework_TestCase
      */
     public function testConstructEmptyFileException()
     {
-        new SwaggerParser(null);
+        new FileParser(null);
     }
 
     /**
@@ -57,7 +58,7 @@ class SwaggerParserTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Parser\SwaggerParser::__construct
+     * @covers Epfremme\Swagger\Parser\FileParser::__construct
      */
     public function testConstructJsonFile()
     {
@@ -68,7 +69,7 @@ class SwaggerParserTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Parser\SwaggerParser::__construct
+     * @covers Epfremme\Swagger\Parser\FileParser::__construct
      */
     public function testConstructYamlFile()
     {

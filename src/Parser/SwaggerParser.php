@@ -15,7 +15,7 @@ use Symfony\Component\Yaml\Yaml;
  * @package Epfremme\Swagger
  * @subpackage Parser
  */
-class SwaggerParser
+abstract class SwaggerParser
 {
     // default swagger version
     const MINIMUM_VERSION = '2.0';
@@ -26,34 +26,6 @@ class SwaggerParser
      * @var array
      */
     protected $data;
-
-    /**
-     * Constructor
-     */
-    public function __construct($file)
-    {
-        if (!file_exists($file)) {
-            throw new \InvalidArgumentException(
-                sprintf("file '%s' doesn't exist", $file)
-            );
-        }
-
-        $this->data = $this->parse($file);
-
-    }
-
-    /**
-     * Parse the swagger file
-     *
-     * @param string $file - fully qualified file path
-     * @return array
-     */
-    protected function parse($file)
-    {
-        $data = json_decode(file_get_contents($file), true) ?: Yaml::parse(file_get_contents($file));
-
-        return $data;
-    }
 
     /**
      * Return swagger version
