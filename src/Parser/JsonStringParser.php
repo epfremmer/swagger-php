@@ -34,7 +34,7 @@ class JsonStringParser extends SwaggerParser
     {
         $data = json_decode($jsonString, true);
 
-        if (false === $data) {
+        if (json_last_error() !== JSON_ERROR_NONE) {
             throw new \InvalidArgumentException(
                 sprintf("Json string cannot be decoded, error: " . json_last_error_msg())
             );
