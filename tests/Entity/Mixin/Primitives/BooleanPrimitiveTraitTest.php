@@ -42,7 +42,7 @@ class BooleanPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\BooleanPrimitiveTrait
+     * @covers \Epfremme\Swagger\Entity\Mixin\Primitives\BooleanPrimitiveTrait
      */
     public function testSerialization()
     {

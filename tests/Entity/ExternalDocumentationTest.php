@@ -33,8 +33,8 @@ class ExternalDocumentationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\ExternalDocumentation::getDescription
-     * @covers Epfremme\Swagger\Entity\ExternalDocumentation::setDescription
+     * @covers \Epfremme\Swagger\Entity\ExternalDocumentation::getDescription
+     * @covers \Epfremme\Swagger\Entity\ExternalDocumentation::setDescription
      */
     public function testDescription()
     {
@@ -45,8 +45,8 @@ class ExternalDocumentationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\ExternalDocumentation::getUrl
-     * @covers Epfremme\Swagger\Entity\ExternalDocumentation::setUrl
+     * @covers \Epfremme\Swagger\Entity\ExternalDocumentation::getUrl
+     * @covers \Epfremme\Swagger\Entity\ExternalDocumentation::setUrl
      */
     public function testUrl()
     {
@@ -57,8 +57,8 @@ class ExternalDocumentationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Path::getVendorExtensions
-     * @covers Epfremme\Swagger\Entity\Path::setVendorExtensions
+     * @covers \Epfremme\Swagger\Entity\Path::getVendorExtensions
+     * @covers \Epfremme\Swagger\Entity\Path::setVendorExtensions
      */
     public function testVendorExtension()
     {
@@ -73,7 +73,7 @@ class ExternalDocumentationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\ExternalDocumentation
+     * @covers \Epfremme\Swagger\Entity\ExternalDocumentation
      */
     public function testSerialize()
     {

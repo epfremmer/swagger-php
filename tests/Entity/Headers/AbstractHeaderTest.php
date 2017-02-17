@@ -30,8 +30,8 @@ class AbstractHeaderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Headers\AbstractHeader::getDescription
-     * @covers Epfremme\Swagger\Entity\Headers\AbstractHeader::setDescription
+     * @covers \Epfremme\Swagger\Entity\Headers\AbstractHeader::getDescription
+     * @covers \Epfremme\Swagger\Entity\Headers\AbstractHeader::setDescription
      */
     public function testDescription()
     {
@@ -42,8 +42,8 @@ class AbstractHeaderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Headers\AbstractHeader::getFormat
-     * @covers Epfremme\Swagger\Entity\Headers\AbstractHeader::setFormat
+     * @covers \Epfremme\Swagger\Entity\Headers\AbstractHeader::getFormat
+     * @covers \Epfremme\Swagger\Entity\Headers\AbstractHeader::setFormat
      */
     public function testFormat()
     {
@@ -54,8 +54,8 @@ class AbstractHeaderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Headers\AbstractHeader::getDefault
-     * @covers Epfremme\Swagger\Entity\Headers\AbstractHeader::setDefault
+     * @covers \Epfremme\Swagger\Entity\Headers\AbstractHeader::getDefault
+     * @covers \Epfremme\Swagger\Entity\Headers\AbstractHeader::setDefault
      */
     public function testDefault()
     {
@@ -66,8 +66,8 @@ class AbstractHeaderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Headers\AbstractHeader::getVendorExtensions
-     * @covers Epfremme\Swagger\Entity\Headers\AbstractHeader::setVendorExtensions
+     * @covers \Epfremme\Swagger\Entity\Headers\AbstractHeader::getVendorExtensions
+     * @covers \Epfremme\Swagger\Entity\Headers\AbstractHeader::setVendorExtensions
      */
     public function testVendorExtension()
     {

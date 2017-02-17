@@ -39,8 +39,8 @@ class ResponseTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers Epfremme\Swagger\Entity\Response::getDescription
-     * @covers Epfremme\Swagger\Entity\Response::setDescription
+     * @covers \Epfremme\Swagger\Entity\Response::getDescription
+     * @covers \Epfremme\Swagger\Entity\Response::setDescription
      */
     public function testDescription()
     {
@@ -51,8 +51,8 @@ class ResponseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Response::getSchema
-     * @covers Epfremme\Swagger\Entity\Response::setSchema
+     * @covers \Epfremme\Swagger\Entity\Response::getSchema
+     * @covers \Epfremme\Swagger\Entity\Response::setSchema
      */
     public function testSchema()
     {
@@ -66,8 +66,8 @@ class ResponseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Response::getHeaders
-     * @covers Epfremme\Swagger\Entity\Response::setHeaders
+     * @covers \Epfremme\Swagger\Entity\Response::getHeaders
+     * @covers \Epfremme\Swagger\Entity\Response::setHeaders
      */
     public function testHeaders()
     {
@@ -86,8 +86,8 @@ class ResponseTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers Epfremme\Swagger\Entity\Response::getExamples
-     * @covers Epfremme\Swagger\Entity\Response::setExamples
+     * @covers \Epfremme\Swagger\Entity\Response::getExamples
+     * @covers \Epfremme\Swagger\Entity\Response::setExamples
      */
     public function testExamples()
     {
@@ -101,8 +101,8 @@ class ResponseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Response::getVendorExtensions
-     * @covers Epfremme\Swagger\Entity\Response::setVendorExtensions
+     * @covers \Epfremme\Swagger\Entity\Response::getVendorExtensions
+     * @covers \Epfremme\Swagger\Entity\Response::setVendorExtensions
      */
     public function testVendorExtension()
     {
@@ -117,7 +117,7 @@ class ResponseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Response
+     * @covers \Epfremme\Swagger\Entity\Response
      */
     public function testSerialize()
     {

@@ -43,8 +43,8 @@ class ArrayPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\ArrayPrimitiveTrait::getItems
-     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\ArrayPrimitiveTrait::setItems
+     * @covers \Epfremme\Swagger\Entity\Mixin\Primitives\ArrayPrimitiveTrait::getItems
+     * @covers \Epfremme\Swagger\Entity\Mixin\Primitives\ArrayPrimitiveTrait::setItems
      */
     public function testItems()
     {
@@ -58,8 +58,8 @@ class ArrayPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\ArrayPrimitiveTrait::isAdditionalItems
-     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\ArrayPrimitiveTrait::setAdditionalItems
+     * @covers \Epfremme\Swagger\Entity\Mixin\Primitives\ArrayPrimitiveTrait::isAdditionalItems
+     * @covers \Epfremme\Swagger\Entity\Mixin\Primitives\ArrayPrimitiveTrait::setAdditionalItems
      */
     public function testAdditionalItems()
     {
@@ -71,8 +71,8 @@ class ArrayPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\ArrayPrimitiveTrait::getMaxItems
-     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\ArrayPrimitiveTrait::setMaxItems
+     * @covers \Epfremme\Swagger\Entity\Mixin\Primitives\ArrayPrimitiveTrait::getMaxItems
+     * @covers \Epfremme\Swagger\Entity\Mixin\Primitives\ArrayPrimitiveTrait::setMaxItems
      */
     public function testMaxItems()
     {
@@ -84,8 +84,8 @@ class ArrayPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\ArrayPrimitiveTrait::getMinItems
-     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\ArrayPrimitiveTrait::setMinItems
+     * @covers \Epfremme\Swagger\Entity\Mixin\Primitives\ArrayPrimitiveTrait::getMinItems
+     * @covers \Epfremme\Swagger\Entity\Mixin\Primitives\ArrayPrimitiveTrait::setMinItems
      */
     public function testMinItems()
     {
@@ -97,8 +97,8 @@ class ArrayPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\ArrayPrimitiveTrait::isUniqueItems
-     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\ArrayPrimitiveTrait::setUniqueItems
+     * @covers \Epfremme\Swagger\Entity\Mixin\Primitives\ArrayPrimitiveTrait::isUniqueItems
+     * @covers \Epfremme\Swagger\Entity\Mixin\Primitives\ArrayPrimitiveTrait::setUniqueItems
      */
     public function testUniqueItems()
     {
@@ -110,7 +110,7 @@ class ArrayPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\ArrayPrimitiveTrait
+     * @covers \Epfremme\Swagger\Entity\Mixin\Primitives\ArrayPrimitiveTrait
      */
     public function testSerialization()
     {

@@ -35,7 +35,7 @@ class ArrayTypeTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Parameters\FormParameter\ArrayType
+     * @covers \Epfremme\Swagger\Entity\Parameters\FormParameter\ArrayType
      */
     public function testSerialization()
     {

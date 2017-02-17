@@ -42,7 +42,7 @@ class NullPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\NullPrimitiveTrait
+     * @covers \Epfremme\Swagger\Entity\Mixin\Primitives\NullPrimitiveTrait
      */
     public function testSerialization()
     {

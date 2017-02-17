@@ -35,7 +35,7 @@ class IntegerSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Schemas\IntegerSchema::getType
+     * @covers \Epfremme\Swagger\Entity\Schemas\IntegerSchema::getType
      */
     public function testType()
     {
@@ -44,7 +44,7 @@ class IntegerSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Schemas\IntegerSchema
+     * @covers \Epfremme\Swagger\Entity\Schemas\IntegerSchema
      */
     public function testSerialization()
     {

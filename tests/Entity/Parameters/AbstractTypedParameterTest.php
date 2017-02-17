@@ -30,8 +30,8 @@ class AbstractTypedParameterTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Parameters\AbstractTypedParameter::getType
-     * @covers Epfremme\Swagger\Entity\Parameters\AbstractTypedParameter::setType
+     * @covers \Epfremme\Swagger\Entity\Parameters\AbstractTypedParameter::getType
+     * @covers \Epfremme\Swagger\Entity\Parameters\AbstractTypedParameter::setType
      */
     public function testType()
     {
@@ -42,8 +42,8 @@ class AbstractTypedParameterTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Parameters\AbstractTypedParameter::getFormat
-     * @covers Epfremme\Swagger\Entity\Parameters\AbstractTypedParameter::setFormat
+     * @covers \Epfremme\Swagger\Entity\Parameters\AbstractTypedParameter::getFormat
+     * @covers \Epfremme\Swagger\Entity\Parameters\AbstractTypedParameter::setFormat
      */
     public function testFormat()
     {
@@ -54,8 +54,8 @@ class AbstractTypedParameterTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Parameters\AbstractTypedParameter::isAllowEmptyValues
-     * @covers Epfremme\Swagger\Entity\Parameters\AbstractTypedParameter::setAllowEmptyValues
+     * @covers \Epfremme\Swagger\Entity\Parameters\AbstractTypedParameter::isAllowEmptyValues
+     * @covers \Epfremme\Swagger\Entity\Parameters\AbstractTypedParameter::setAllowEmptyValues
      */
     public function testAllowEmptyValues()
     {
@@ -67,8 +67,8 @@ class AbstractTypedParameterTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Parameters\AbstractTypedParameter::getDefault
-     * @covers Epfremme\Swagger\Entity\Parameters\AbstractTypedParameter::setDefault
+     * @covers \Epfremme\Swagger\Entity\Parameters\AbstractTypedParameter::getDefault
+     * @covers \Epfremme\Swagger\Entity\Parameters\AbstractTypedParameter::setDefault
      */
     public function testDefault()
     {

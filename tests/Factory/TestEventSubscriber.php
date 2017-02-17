@@ -1,15 +1,17 @@
 <?php
 namespace Epfremme\Swagger\Tests\Factory;
 
+use JMS\Serializer\EventDispatcher\Events;
 use JMS\Serializer\EventDispatcher\EventSubscriberInterface;
+use JMS\Serializer\EventDispatcher\PreDeserializeEvent;
 
 /**
  * Class TestEventSubscriber
+ *
  * @package Epfremme\Swagger\Tests\Factory
  */
 class TestEventSubscriber implements EventSubscriberInterface
 {
-
     /**
      * @var bool
      */
@@ -21,11 +23,14 @@ class TestEventSubscriber implements EventSubscriberInterface
     public static function getSubscribedEvents()
     {
         return [
-            ['event' => 'serializer.pre_serialize', 'method' => 'onPreSerialize']
+            ['event' => Events::PRE_DESERIALIZE, 'method' => 'onPreDeserialize']
         ];
     }
 
-    public function onPreSerialize($event)
+    /**
+     * @param PreDeserializeEvent $event
+     */
+    public function onPreDeserialize(PreDeserializeEvent $event)
     {
         $this->testFlag = true;
     }

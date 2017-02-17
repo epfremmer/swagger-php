@@ -45,8 +45,8 @@ class SwaggerTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers Epfremme\Swagger\Entity\Swagger::getVersion
-     * @covers Epfremme\Swagger\Entity\Swagger::setVersion
+     * @covers \Epfremme\Swagger\Entity\Swagger::getVersion
+     * @covers \Epfremme\Swagger\Entity\Swagger::setVersion
      */
     public function testVersion()
     {
@@ -57,8 +57,8 @@ class SwaggerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Swagger::getInfo
-     * @covers Epfremme\Swagger\Entity\Swagger::setInfo
+     * @covers \Epfremme\Swagger\Entity\Swagger::getInfo
+     * @covers \Epfremme\Swagger\Entity\Swagger::setInfo
      */
     public function testInfo()
     {
@@ -72,8 +72,8 @@ class SwaggerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Swagger::getHost
-     * @covers Epfremme\Swagger\Entity\Swagger::setHost
+     * @covers \Epfremme\Swagger\Entity\Swagger::getHost
+     * @covers \Epfremme\Swagger\Entity\Swagger::setHost
      */
     public function testHost()
     {
@@ -84,8 +84,8 @@ class SwaggerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Swagger::getBasePath
-     * @covers Epfremme\Swagger\Entity\Swagger::setBasePath
+     * @covers \Epfremme\Swagger\Entity\Swagger::getBasePath
+     * @covers \Epfremme\Swagger\Entity\Swagger::setBasePath
      */
     public function testBasePath()
     {
@@ -96,8 +96,8 @@ class SwaggerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Swagger::getSchemes
-     * @covers Epfremme\Swagger\Entity\Swagger::setSchemes
+     * @covers \Epfremme\Swagger\Entity\Swagger::getSchemes
+     * @covers \Epfremme\Swagger\Entity\Swagger::setSchemes
      */
     public function testSchemes()
     {
@@ -110,8 +110,8 @@ class SwaggerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Swagger::getConsumes
-     * @covers Epfremme\Swagger\Entity\Swagger::setConsumes
+     * @covers \Epfremme\Swagger\Entity\Swagger::getConsumes
+     * @covers \Epfremme\Swagger\Entity\Swagger::setConsumes
      */
     public function testConsumes()
     {
@@ -124,8 +124,8 @@ class SwaggerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Swagger::getProduces
-     * @covers Epfremme\Swagger\Entity\Swagger::setProduces
+     * @covers \Epfremme\Swagger\Entity\Swagger::getProduces
+     * @covers \Epfremme\Swagger\Entity\Swagger::setProduces
      */
     public function testProduces()
     {
@@ -138,8 +138,8 @@ class SwaggerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Swagger::getPaths
-     * @covers Epfremme\Swagger\Entity\Swagger::setPaths
+     * @covers \Epfremme\Swagger\Entity\Swagger::getPaths
+     * @covers \Epfremme\Swagger\Entity\Swagger::setPaths
      */
     public function testPaths()
     {
@@ -158,8 +158,8 @@ class SwaggerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Swagger::getDefinitions
-     * @covers Epfremme\Swagger\Entity\Swagger::setDefinitions
+     * @covers \Epfremme\Swagger\Entity\Swagger::getDefinitions
+     * @covers \Epfremme\Swagger\Entity\Swagger::setDefinitions
      */
     public function testDefinitions()
     {
@@ -176,8 +176,8 @@ class SwaggerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Swagger::getParameters
-     * @covers Epfremme\Swagger\Entity\Swagger::setParameters
+     * @covers \Epfremme\Swagger\Entity\Swagger::getParameters
+     * @covers \Epfremme\Swagger\Entity\Swagger::setParameters
      */
     public function testParameters()
     {
@@ -196,8 +196,8 @@ class SwaggerTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers Epfremme\Swagger\Entity\Swagger::getResponses
-     * @covers Epfremme\Swagger\Entity\Swagger::setResponses
+     * @covers \Epfremme\Swagger\Entity\Swagger::getResponses
+     * @covers \Epfremme\Swagger\Entity\Swagger::setResponses
      */
     public function testResponses()
     {
@@ -215,8 +215,8 @@ class SwaggerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Swagger::getSecurityDefinitions
-     * @covers Epfremme\Swagger\Entity\Swagger::setSecurityDefinitions
+     * @covers \Epfremme\Swagger\Entity\Swagger::getSecurityDefinitions
+     * @covers \Epfremme\Swagger\Entity\Swagger::setSecurityDefinitions
      */
     public function testSecurityDefinitions()
     {
@@ -234,8 +234,8 @@ class SwaggerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Swagger::getSecurity
-     * @covers Epfremme\Swagger\Entity\Swagger::setSecurity
+     * @covers \Epfremme\Swagger\Entity\Swagger::getSecurity
+     * @covers \Epfremme\Swagger\Entity\Swagger::setSecurity
      */
     public function testSecurity()
     {
@@ -253,8 +253,8 @@ class SwaggerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Swagger::getTags
-     * @covers Epfremme\Swagger\Entity\Swagger::setTags
+     * @covers \Epfremme\Swagger\Entity\Swagger::getTags
+     * @covers \Epfremme\Swagger\Entity\Swagger::setTags
      */
     public function testTags()
     {
@@ -272,8 +272,8 @@ class SwaggerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Swagger::getExternalDocs
-     * @covers Epfremme\Swagger\Entity\Swagger::setExternalDocs
+     * @covers \Epfremme\Swagger\Entity\Swagger::getExternalDocs
+     * @covers \Epfremme\Swagger\Entity\Swagger::setExternalDocs
      */
     public function testExternalDocs()
     {
@@ -287,7 +287,7 @@ class SwaggerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Swagger
+     * @covers \Epfremme\Swagger\Entity\Swagger
      */
     public function testSerialize()
     {

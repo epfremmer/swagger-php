@@ -34,7 +34,7 @@ class ArrayHeaderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Headers\ArrayHeader::getType
+     * @covers \Epfremme\Swagger\Entity\Headers\ArrayHeader::getType
      */
     public function testType()
     {
@@ -43,8 +43,8 @@ class ArrayHeaderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Headers\ArrayHeader::getCollectionFormat
-     * @covers Epfremme\Swagger\Entity\Headers\ArrayHeader::setCollectionFormat
+     * @covers \Epfremme\Swagger\Entity\Headers\ArrayHeader::getCollectionFormat
+     * @covers \Epfremme\Swagger\Entity\Headers\ArrayHeader::setCollectionFormat
      */
     public function testCollectionFormat()
     {
@@ -55,7 +55,7 @@ class ArrayHeaderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Headers\ArrayHeader
+     * @covers \Epfremme\Swagger\Entity\Headers\ArrayHeader
      */
     public function testSerialization()
     {

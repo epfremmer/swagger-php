@@ -35,8 +35,8 @@ class InfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Info::getTitle
-     * @covers Epfremme\Swagger\Entity\Info::setTitle
+     * @covers \Epfremme\Swagger\Entity\Info::getTitle
+     * @covers \Epfremme\Swagger\Entity\Info::setTitle
      */
     public function testTitle()
     {
@@ -47,8 +47,8 @@ class InfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Info::getDescription
-     * @covers Epfremme\Swagger\Entity\Info::setDescription
+     * @covers \Epfremme\Swagger\Entity\Info::getDescription
+     * @covers \Epfremme\Swagger\Entity\Info::setDescription
      */
     public function testDescription()
     {
@@ -59,8 +59,8 @@ class InfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Info::getTermsOfService
-     * @covers Epfremme\Swagger\Entity\Info::setTermsOfService
+     * @covers \Epfremme\Swagger\Entity\Info::getTermsOfService
+     * @covers \Epfremme\Swagger\Entity\Info::setTermsOfService
      */
     public function testTermsOfService()
     {
@@ -71,8 +71,8 @@ class InfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Info::getContact
-     * @covers Epfremme\Swagger\Entity\Info::setContact
+     * @covers \Epfremme\Swagger\Entity\Info::getContact
+     * @covers \Epfremme\Swagger\Entity\Info::setContact
      */
     public function testContact()
     {
@@ -86,8 +86,8 @@ class InfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Info::getLicense
-     * @covers Epfremme\Swagger\Entity\Info::setLicense
+     * @covers \Epfremme\Swagger\Entity\Info::getLicense
+     * @covers \Epfremme\Swagger\Entity\Info::setLicense
      */
     public function testLicense()
     {
@@ -101,8 +101,8 @@ class InfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Info::getVersion
-     * @covers Epfremme\Swagger\Entity\Info::setVersion
+     * @covers \Epfremme\Swagger\Entity\Info::getVersion
+     * @covers \Epfremme\Swagger\Entity\Info::setVersion
      */
     public function testVersion()
     {
@@ -113,8 +113,8 @@ class InfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Info::getVendorExtensions
-     * @covers Epfremme\Swagger\Entity\Info::setVendorExtensions
+     * @covers \Epfremme\Swagger\Entity\Info::getVendorExtensions
+     * @covers \Epfremme\Swagger\Entity\Info::setVendorExtensions
      */
     public function testVendorExtension()
     {
@@ -129,7 +129,7 @@ class InfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Info
+     * @covers \Epfremme\Swagger\Entity\Info
      */
     public function testSerialize()
     {

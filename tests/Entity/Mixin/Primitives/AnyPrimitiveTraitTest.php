@@ -43,8 +43,8 @@ class AnyPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::getEnum
-     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::setEnum
+     * @covers \Epfremme\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::getEnum
+     * @covers \Epfremme\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::setEnum
      */
     public function testEnum()
     {
@@ -58,8 +58,8 @@ class AnyPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::getAllOf
-     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::setAllOf
+     * @covers \Epfremme\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::getAllOf
+     * @covers \Epfremme\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::setAllOf
      */
     public function testAllOf()
     {
@@ -73,8 +73,8 @@ class AnyPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::getAnyOf
-     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::setAnyOf
+     * @covers \Epfremme\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::getAnyOf
+     * @covers \Epfremme\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::setAnyOf
      */
     public function testAnyOf()
     {
@@ -88,8 +88,8 @@ class AnyPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::getOneOf
-     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::setOneOf
+     * @covers \Epfremme\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::getOneOf
+     * @covers \Epfremme\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::setOneOf
      */
     public function testOneOf()
     {
@@ -103,8 +103,8 @@ class AnyPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::getNot
-     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::setNot
+     * @covers \Epfremme\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::getNot
+     * @covers \Epfremme\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::setNot
      */
     public function testNot()
     {
@@ -118,8 +118,8 @@ class AnyPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::getDefinitions
-     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::setDefinitions
+     * @covers \Epfremme\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::getDefinitions
+     * @covers \Epfremme\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait::setDefinitions
      */
     public function testDefinitions()
     {
@@ -137,7 +137,7 @@ class AnyPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait
+     * @covers \Epfremme\Swagger\Entity\Mixin\Primitives\AnyPrimitiveTrait
      */
     public function testSerialization()
     {

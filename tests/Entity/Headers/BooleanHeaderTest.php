@@ -34,7 +34,7 @@ class BooleanHeaderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Headers\BooleanHeader::getType
+     * @covers \Epfremme\Swagger\Entity\Headers\BooleanHeader::getType
      */
     public function testType()
     {
@@ -43,7 +43,7 @@ class BooleanHeaderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Headers\BooleanHeader
+     * @covers \Epfremme\Swagger\Entity\Headers\BooleanHeader
      */
     public function testSerialization()
     {

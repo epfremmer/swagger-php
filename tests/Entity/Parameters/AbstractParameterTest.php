@@ -31,8 +31,8 @@ class AbstractParameterTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Parameters\AbstractParameter::getIn
-     * @covers Epfremme\Swagger\Entity\Parameters\AbstractParameter::setIn
+     * @covers \Epfremme\Swagger\Entity\Parameters\AbstractParameter::getIn
+     * @covers \Epfremme\Swagger\Entity\Parameters\AbstractParameter::setIn
      */
     public function testIn()
     {
@@ -43,8 +43,8 @@ class AbstractParameterTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Parameters\AbstractParameter::getName
-     * @covers Epfremme\Swagger\Entity\Parameters\AbstractParameter::setName
+     * @covers \Epfremme\Swagger\Entity\Parameters\AbstractParameter::getName
+     * @covers \Epfremme\Swagger\Entity\Parameters\AbstractParameter::setName
      */
     public function testName()
     {
@@ -55,8 +55,8 @@ class AbstractParameterTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Parameters\AbstractParameter::getDescription
-     * @covers Epfremme\Swagger\Entity\Parameters\AbstractParameter::setDescription
+     * @covers \Epfremme\Swagger\Entity\Parameters\AbstractParameter::getDescription
+     * @covers \Epfremme\Swagger\Entity\Parameters\AbstractParameter::setDescription
      */
     public function testDescription()
     {
@@ -67,8 +67,8 @@ class AbstractParameterTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Parameters\AbstractParameter::isRequired
-     * @covers Epfremme\Swagger\Entity\Parameters\AbstractParameter::setRequired
+     * @covers \Epfremme\Swagger\Entity\Parameters\AbstractParameter::isRequired
+     * @covers \Epfremme\Swagger\Entity\Parameters\AbstractParameter::setRequired
      */
     public function testRequired()
     {

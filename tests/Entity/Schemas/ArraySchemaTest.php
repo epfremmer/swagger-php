@@ -35,7 +35,7 @@ class ArraySchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Schemas\ArraySchema::getType
+     * @covers \Epfremme\Swagger\Entity\Schemas\ArraySchema::getType
      */
     public function testType()
     {
@@ -44,7 +44,7 @@ class ArraySchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Schemas\ArraySchema
+     * @covers \Epfremme\Swagger\Entity\Schemas\ArraySchema
      */
     public function testSerialization()
     {

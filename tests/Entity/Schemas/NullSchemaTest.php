@@ -35,7 +35,7 @@ class NullSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Schemas\NullSchema::getType
+     * @covers \Epfremme\Swagger\Entity\Schemas\NullSchema::getType
      */
     public function testType()
     {
@@ -44,7 +44,7 @@ class NullSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Schemas\NullSchema
+     * @covers \Epfremme\Swagger\Entity\Schemas\NullSchema
      */
     public function testSerialization()
     {

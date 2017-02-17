@@ -17,7 +17,7 @@ use Epfremme\Swagger\Annotations\Discriminator;
 class DiscriminatorTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers Epfremme\Swagger\Annotations\Discriminator::getClass
+     * @covers \Epfremme\Swagger\Annotations\Discriminator::getClass
      */
     public function testGetClass()
     {
@@ -37,8 +37,8 @@ class DiscriminatorTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Annotations\Discriminator::getClass
-     * @covers Epfremme\Swagger\Annotations\Discriminator::getDefault
+     * @covers \Epfremme\Swagger\Annotations\Discriminator::getClass
+     * @covers \Epfremme\Swagger\Annotations\Discriminator::getDefault
      */
     public function testGetClassDefault()
     {

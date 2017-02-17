@@ -33,8 +33,8 @@ class SecurityDefinitionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\SecurityDefinition::getType
-     * @covers Epfremme\Swagger\Entity\SecurityDefinition::setType
+     * @covers \Epfremme\Swagger\Entity\SecurityDefinition::getType
+     * @covers \Epfremme\Swagger\Entity\SecurityDefinition::setType
      */
     public function testType()
     {
@@ -45,8 +45,8 @@ class SecurityDefinitionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\SecurityDefinition::getDescription
-     * @covers Epfremme\Swagger\Entity\SecurityDefinition::setDescription
+     * @covers \Epfremme\Swagger\Entity\SecurityDefinition::getDescription
+     * @covers \Epfremme\Swagger\Entity\SecurityDefinition::setDescription
      */
     public function testDescription()
     {
@@ -57,8 +57,8 @@ class SecurityDefinitionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\SecurityDefinition::getName
-     * @covers Epfremme\Swagger\Entity\SecurityDefinition::setName
+     * @covers \Epfremme\Swagger\Entity\SecurityDefinition::getName
+     * @covers \Epfremme\Swagger\Entity\SecurityDefinition::setName
      */
     public function testName()
     {
@@ -69,8 +69,8 @@ class SecurityDefinitionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\SecurityDefinition::getIn
-     * @covers Epfremme\Swagger\Entity\SecurityDefinition::setIn
+     * @covers \Epfremme\Swagger\Entity\SecurityDefinition::getIn
+     * @covers \Epfremme\Swagger\Entity\SecurityDefinition::setIn
      */
     public function testIn()
     {
@@ -81,8 +81,8 @@ class SecurityDefinitionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\SecurityDefinition::getFlow
-     * @covers Epfremme\Swagger\Entity\SecurityDefinition::setFlow
+     * @covers \Epfremme\Swagger\Entity\SecurityDefinition::getFlow
+     * @covers \Epfremme\Swagger\Entity\SecurityDefinition::setFlow
      */
     public function testFlow()
     {
@@ -93,8 +93,8 @@ class SecurityDefinitionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\SecurityDefinition::getAuthorizationUrl
-     * @covers Epfremme\Swagger\Entity\SecurityDefinition::setAuthorizationUrl
+     * @covers \Epfremme\Swagger\Entity\SecurityDefinition::getAuthorizationUrl
+     * @covers \Epfremme\Swagger\Entity\SecurityDefinition::setAuthorizationUrl
      */
     public function testAuthorizationUrl()
     {
@@ -105,8 +105,8 @@ class SecurityDefinitionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\SecurityDefinition::getTokenUrl
-     * @covers Epfremme\Swagger\Entity\SecurityDefinition::setTokenUrl
+     * @covers \Epfremme\Swagger\Entity\SecurityDefinition::getTokenUrl
+     * @covers \Epfremme\Swagger\Entity\SecurityDefinition::setTokenUrl
      */
     public function testTokenUrl()
     {
@@ -117,8 +117,8 @@ class SecurityDefinitionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\SecurityDefinition::getScopes
-     * @covers Epfremme\Swagger\Entity\SecurityDefinition::setScopes
+     * @covers \Epfremme\Swagger\Entity\SecurityDefinition::getScopes
+     * @covers \Epfremme\Swagger\Entity\SecurityDefinition::setScopes
      */
     public function testScopes()
     {
@@ -132,8 +132,8 @@ class SecurityDefinitionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\SecurityDefinition::getVendorExtensions
-     * @covers Epfremme\Swagger\Entity\SecurityDefinition::setVendorExtensions
+     * @covers \Epfremme\Swagger\Entity\SecurityDefinition::getVendorExtensions
+     * @covers \Epfremme\Swagger\Entity\SecurityDefinition::setVendorExtensions
      */
     public function testVendorExtension()
     {
@@ -148,7 +148,7 @@ class SecurityDefinitionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\SecurityDefinition
+     * @covers \Epfremme\Swagger\Entity\SecurityDefinition
      */
     public function testSerialize()
     {

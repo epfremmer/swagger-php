@@ -58,7 +58,7 @@ class FileParserTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Parser\FileParser::__construct
+     * @covers \Epfremme\Swagger\Parser\FileParser::__construct
      */
     public function testConstructJsonFile()
     {
@@ -69,7 +69,7 @@ class FileParserTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Parser\FileParser::__construct
+     * @covers \Epfremme\Swagger\Parser\FileParser::__construct
      */
     public function testConstructYamlFile()
     {
@@ -80,7 +80,7 @@ class FileParserTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Parser\SwaggerParser::getVersion
+     * @covers \Epfremme\Swagger\Parser\SwaggerParser::getVersion
      * @depends testConstructJsonFile
      */
     public function testGetVersion()
@@ -92,7 +92,7 @@ class FileParserTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Parser\SwaggerParser::getVersion
+     * @covers \Epfremme\Swagger\Parser\SwaggerParser::getVersion
      * @depends testConstructJsonFile
      */
     public function testGetMissingVersion()
@@ -107,7 +107,7 @@ class FileParserTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Parser\SwaggerParser::getData
+     * @covers \Epfremme\Swagger\Parser\SwaggerParser::getData
      * @depends testConstructJsonFile
      */
     public function testGetData()
@@ -119,7 +119,7 @@ class FileParserTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Parser\SwaggerParser::getData
+     * @covers \Epfremme\Swagger\Parser\SwaggerParser::getData
      * @depends testConstructJsonFile
      */
     public function testToString()
@@ -127,7 +127,7 @@ class FileParserTest extends \PHPUnit_Framework_TestCase
         $swagger = $this->getSwagger(self::SWAGGER_JSON_FILE);
 
         $this->assertNotEmpty((string) $swagger);
-        $this->assertInternalType('string', (string)$swagger);
+        $this->assertInternalType('string', (string) $swagger);
         $this->assertJson((string) $swagger);
     }
 }

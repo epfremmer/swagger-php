@@ -35,7 +35,7 @@ class MultiSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Schemas\multiSchema::getType
+     * @covers \Epfremme\Swagger\Entity\Schemas\multiSchema::getType
      */
     public function testType()
     {
@@ -44,7 +44,7 @@ class MultiSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Schemas\multiSchema
+     * @covers \Epfremme\Swagger\Entity\Schemas\multiSchema
      */
     public function testSerialization()
     {

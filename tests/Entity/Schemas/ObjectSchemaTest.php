@@ -35,7 +35,7 @@ class ObjectSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Schemas\ObjectSchema::getType
+     * @covers \Epfremme\Swagger\Entity\Schemas\ObjectSchema::getType
      */
     public function testType()
     {
@@ -44,7 +44,7 @@ class ObjectSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Schemas\ObjectSchema
+     * @covers \Epfremme\Swagger\Entity\Schemas\ObjectSchema
      */
     public function testSerialization()
     {

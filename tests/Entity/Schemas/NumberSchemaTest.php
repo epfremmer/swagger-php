@@ -35,7 +35,7 @@ class NumberSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Schemas\NumberSchema::getType
+     * @covers \Epfremme\Swagger\Entity\Schemas\NumberSchema::getType
      */
     public function testType()
     {
@@ -44,7 +44,7 @@ class NumberSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Schemas\NumberSchema
+     * @covers \Epfremme\Swagger\Entity\Schemas\NumberSchema
      */
     public function testSerialization()
     {

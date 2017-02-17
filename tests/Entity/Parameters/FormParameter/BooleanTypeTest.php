@@ -35,7 +35,7 @@ class BooleanTypeTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Parameters\FormParameter\BooleanType
+     * @covers \Epfremme\Swagger\Entity\Parameters\FormParameter\BooleanType
      */
     public function testSerialization()
     {

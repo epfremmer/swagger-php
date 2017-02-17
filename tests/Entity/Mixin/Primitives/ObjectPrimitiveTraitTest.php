@@ -45,8 +45,8 @@ class ObjectPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait::getMaxProperties
-     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait::setMaxProperties
+     * @covers \Epfremme\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait::getMaxProperties
+     * @covers \Epfremme\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait::setMaxProperties
      */
     public function testMaxProperties()
     {
@@ -58,8 +58,8 @@ class ObjectPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait::getMinProperties
-     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait::setMinProperties
+     * @covers \Epfremme\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait::getMinProperties
+     * @covers \Epfremme\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait::setMinProperties
      */
     public function testMinProperties()
     {
@@ -71,8 +71,8 @@ class ObjectPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait::getRequired
-     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait::setRequired
+     * @covers \Epfremme\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait::getRequired
+     * @covers \Epfremme\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait::setRequired
      */
     public function testRequired()
     {
@@ -86,8 +86,8 @@ class ObjectPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait::getProperties
-     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait::setProperties
+     * @covers \Epfremme\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait::getProperties
+     * @covers \Epfremme\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait::setProperties
      */
     public function testProperties()
     {
@@ -105,8 +105,8 @@ class ObjectPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait::isAdditionalProperties
-     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait::setAdditionalProperties
+     * @covers \Epfremme\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait::isAdditionalProperties
+     * @covers \Epfremme\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait::setAdditionalProperties
      */
     public function testAdditionalProperties()
     {
@@ -118,8 +118,8 @@ class ObjectPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait::getPatternProperties
-     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait::setPatternProperties
+     * @covers \Epfremme\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait::getPatternProperties
+     * @covers \Epfremme\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait::setPatternProperties
      */
     public function testPatternProperties()
     {
@@ -131,8 +131,8 @@ class ObjectPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait::getDependencies
-     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait::setDependencies
+     * @covers \Epfremme\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait::getDependencies
+     * @covers \Epfremme\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait::setDependencies
      */
     public function testDependencies()
     {
@@ -146,7 +146,7 @@ class ObjectPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait
+     * @covers \Epfremme\Swagger\Entity\Mixin\Primitives\ObjectPrimitiveTrait
      */
     public function testSerialization()
     {

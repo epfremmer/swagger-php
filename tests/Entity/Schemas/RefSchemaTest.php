@@ -35,7 +35,7 @@ class RefSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Schemas\RefSchema::getType
+     * @covers \Epfremme\Swagger\Entity\Schemas\RefSchema::getType
      */
     public function testType()
     {
@@ -44,8 +44,8 @@ class RefSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Schemas\RefSchema::getRef
-     * @covers Epfremme\Swagger\Entity\Schemas\RefSchema::setRef
+     * @covers \Epfremme\Swagger\Entity\Schemas\RefSchema::getRef
+     * @covers \Epfremme\Swagger\Entity\Schemas\RefSchema::setRef
      */
     public function testRef()
     {
@@ -56,8 +56,8 @@ class RefSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Schemas\RefSchema::getTitle
-     * @covers Epfremme\Swagger\Entity\Schemas\RefSchema::setTitle
+     * @covers \Epfremme\Swagger\Entity\Schemas\RefSchema::getTitle
+     * @covers \Epfremme\Swagger\Entity\Schemas\RefSchema::setTitle
      */
     public function testTitle()
     {
@@ -68,8 +68,8 @@ class RefSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Schemas\RefSchema::getDescription
-     * @covers Epfremme\Swagger\Entity\Schemas\RefSchema::setDescription
+     * @covers \Epfremme\Swagger\Entity\Schemas\RefSchema::getDescription
+     * @covers \Epfremme\Swagger\Entity\Schemas\RefSchema::setDescription
      */
     public function testDescription()
     {
@@ -80,7 +80,7 @@ class RefSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Schemas\RefSchema
+     * @covers \Epfremme\Swagger\Entity\Schemas\RefSchema
      */
     public function testSerialization()
     {

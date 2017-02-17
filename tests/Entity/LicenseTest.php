@@ -33,8 +33,8 @@ class LicenseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\License::getName
-     * @covers Epfremme\Swagger\Entity\License::setName
+     * @covers \Epfremme\Swagger\Entity\License::getName
+     * @covers \Epfremme\Swagger\Entity\License::setName
      */
     public function testName()
     {
@@ -45,8 +45,8 @@ class LicenseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\License::getUrl
-     * @covers Epfremme\Swagger\Entity\License::setUrl
+     * @covers \Epfremme\Swagger\Entity\License::getUrl
+     * @covers \Epfremme\Swagger\Entity\License::setUrl
      */
     public function testUrl()
     {
@@ -57,8 +57,8 @@ class LicenseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\License::getVendorExtensions
-     * @covers Epfremme\Swagger\Entity\License::setVendorExtensions
+     * @covers \Epfremme\Swagger\Entity\License::getVendorExtensions
+     * @covers \Epfremme\Swagger\Entity\License::setVendorExtensions
      */
     public function testVendorExtension()
     {
@@ -73,7 +73,7 @@ class LicenseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\License
+     * @covers \Epfremme\Swagger\Entity\License
      */
     public function testSerialize()
     {

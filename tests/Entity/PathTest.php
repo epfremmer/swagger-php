@@ -36,8 +36,8 @@ class PathTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @covers Epfremme\Swagger\Entity\Path::getOperations
-     * @covers Epfremme\Swagger\Entity\Path::setOperations
+     * @covers \Epfremme\Swagger\Entity\Path::getOperations
+     * @covers \Epfremme\Swagger\Entity\Path::setOperations
      */
     public function testOperations()
     {
@@ -56,8 +56,8 @@ class PathTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Path::getVendorExtensions
-     * @covers Epfremme\Swagger\Entity\Path::setVendorExtensions
+     * @covers \Epfremme\Swagger\Entity\Path::getVendorExtensions
+     * @covers \Epfremme\Swagger\Entity\Path::setVendorExtensions
      */
     public function testVendorExtension()
     {
@@ -72,7 +72,7 @@ class PathTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Path
+     * @covers \Epfremme\Swagger\Entity\Path
      */
     public function testSerialize()
     {

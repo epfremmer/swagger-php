@@ -42,8 +42,8 @@ class StringPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\StringPrimitiveTrait::getMaxLength
-     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\StringPrimitiveTrait::setMaxLength
+     * @covers \Epfremme\Swagger\Entity\Mixin\Primitives\StringPrimitiveTrait::getMaxLength
+     * @covers \Epfremme\Swagger\Entity\Mixin\Primitives\StringPrimitiveTrait::setMaxLength
      */
     public function testMaxLength()
     {
@@ -55,8 +55,8 @@ class StringPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\StringPrimitiveTrait::getMinLength
-     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\StringPrimitiveTrait::setMinLength
+     * @covers \Epfremme\Swagger\Entity\Mixin\Primitives\StringPrimitiveTrait::getMinLength
+     * @covers \Epfremme\Swagger\Entity\Mixin\Primitives\StringPrimitiveTrait::setMinLength
      */
     public function testMinLength()
     {
@@ -68,8 +68,8 @@ class StringPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\StringPrimitiveTrait::getPattern
-     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\StringPrimitiveTrait::setPattern
+     * @covers \Epfremme\Swagger\Entity\Mixin\Primitives\StringPrimitiveTrait::getPattern
+     * @covers \Epfremme\Swagger\Entity\Mixin\Primitives\StringPrimitiveTrait::setPattern
      */
     public function testPattern()
     {
@@ -81,7 +81,7 @@ class StringPrimitiveTraitTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Mixin\Primitives\StringPrimitiveTrait
+     * @covers \Epfremme\Swagger\Entity\Mixin\Primitives\StringPrimitiveTrait
      */
     public function testSerialization()
     {

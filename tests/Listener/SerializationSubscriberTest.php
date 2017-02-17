@@ -28,7 +28,7 @@ use Epfremme\Swagger\Entity\Schemas\RefSchema;
 class SerializationSubscriberTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers Epfremme\Swagger\Listener\SerializationSubscriber::__construct
+     * @covers \Epfremme\Swagger\Listener\SerializationSubscriber::__construct
      */
     public function testConstruct()
     {
@@ -39,7 +39,7 @@ class SerializationSubscriberTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Listener\SerializationSubscriber::getSubscribedEvents
+     * @covers \Epfremme\Swagger\Listener\SerializationSubscriber::getSubscribedEvents
      */
     public function testGetSubscribedEvents()
     {
@@ -55,7 +55,7 @@ class SerializationSubscriberTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Listener\SerializationSubscriber::onPreSerialize
+     * @covers \Epfremme\Swagger\Listener\SerializationSubscriber::onPreSerialize
      */
     public function testOnPreSerialize()
     {
@@ -70,7 +70,7 @@ class SerializationSubscriberTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Listener\SerializationSubscriber::onPreDeserialize
+     * @covers \Epfremme\Swagger\Listener\SerializationSubscriber::onPreDeserialize
      */
     public function testOnPreDeserialize()
     {
@@ -85,7 +85,7 @@ class SerializationSubscriberTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Listener\SerializationSubscriber::onPreDeserialize
+     * @covers \Epfremme\Swagger\Listener\SerializationSubscriber::onPreDeserialize
      */
     public function testOnPreDeserializeCustomJmsType()
     {
@@ -98,7 +98,7 @@ class SerializationSubscriberTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Listener\SerializationSubscriber::onSchemaPreDeserialize
+     * @covers \Epfremme\Swagger\Listener\SerializationSubscriber::onSchemaPreDeserialize
      */
     public function testOnSchemaPreDeserialize()
     {
@@ -112,7 +112,7 @@ class SerializationSubscriberTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Listener\SerializationSubscriber::onSchemaPreDeserialize
+     * @covers \Epfremme\Swagger\Listener\SerializationSubscriber::onSchemaPreDeserialize
      */
     public function testOnSchemaPreDeserializeRefType()
     {
@@ -126,7 +126,7 @@ class SerializationSubscriberTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Listener\SerializationSubscriber::onSchemaPreDeserialize
+     * @covers \Epfremme\Swagger\Listener\SerializationSubscriber::onSchemaPreDeserialize
      */
     public function testOnSchemaPreDeserializeMultiType()
     {
@@ -140,7 +140,7 @@ class SerializationSubscriberTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Listener\SerializationSubscriber::onParameterPreDeserialize
+     * @covers \Epfremme\Swagger\Listener\SerializationSubscriber::onParameterPreDeserialize
      */
     public function testOnParameterPreDeserialize()
     {
@@ -155,7 +155,7 @@ class SerializationSubscriberTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Listener\SerializationSubscriber::onParameterPreDeserialize
+     * @covers \Epfremme\Swagger\Listener\SerializationSubscriber::onParameterPreDeserialize
      */
     public function testOnParameterPreDeserializeTyped()
     {
@@ -171,7 +171,7 @@ class SerializationSubscriberTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Listener\SerializationSubscriber::onParameterPreDeserialize
+     * @covers \Epfremme\Swagger\Listener\SerializationSubscriber::onParameterPreDeserialize
      */
     public function testOnParameterPreDeserializeRef()
     {
@@ -186,7 +186,7 @@ class SerializationSubscriberTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Listener\SerializationSubscriber::onPreDeserializeCollection
+     * @covers \Epfremme\Swagger\Listener\SerializationSubscriber::onPreDeserializeCollection
      */
     public function testOnPreDeserializeCollection()
     {

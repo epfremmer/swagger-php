@@ -40,11 +40,11 @@ use JMS\Serializer\SerializationContext;
 
 /**
  * Class VendorExtensionListenerTest
+ *
  * @package Epfremme\Swagger\Tests\Listener
  */
 class VendorExtensionListenerTest extends \PHPUnit_Framework_TestCase
 {
-
     /**
      * @test
      */
@@ -54,7 +54,7 @@ class VendorExtensionListenerTest extends \PHPUnit_Framework_TestCase
 
         $this->assertEquals(
             [
-                ['event' => Events::PRE_DESERIALIZE, 'method' => 'onDePreSerialize'],
+                ['event' => Events::PRE_DESERIALIZE, 'method' => 'onPreDeserialize'],
                 ['event' => Events::POST_SERIALIZE, 'method' => 'onPostSerialize'],
             ],
             $events
@@ -80,7 +80,7 @@ class VendorExtensionListenerTest extends \PHPUnit_Framework_TestCase
             ],
             ['name' => $className, 'params' => []]
         );
-        $lister->onDePreSerialize($event);
+        $lister->onPreDeserialize($event);
 
         $modifiedData = $event->getData();
 

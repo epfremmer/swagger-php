@@ -34,7 +34,7 @@ class NumberHeaderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Headers\NumberHeader::getType
+     * @covers \Epfremme\Swagger\Entity\Headers\NumberHeader::getType
      */
     public function testType()
     {
@@ -43,7 +43,7 @@ class NumberHeaderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Headers\NumberHeader
+     * @covers \Epfremme\Swagger\Entity\Headers\NumberHeader
      */
     public function testSerialization()
     {

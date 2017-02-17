@@ -35,7 +35,7 @@ class BooleanSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Schemas\BooleanSchema::getType
+     * @covers \Epfremme\Swagger\Entity\Schemas\BooleanSchema::getType
      */
     public function testType()
     {
@@ -44,7 +44,7 @@ class BooleanSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Schemas\BooleanSchema
+     * @covers \Epfremme\Swagger\Entity\Schemas\BooleanSchema
      */
     public function testSerialization()
     {

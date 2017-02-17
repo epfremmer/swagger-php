@@ -35,7 +35,7 @@ class StringSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Schemas\StringSchema::getType
+     * @covers \Epfremme\Swagger\Entity\Schemas\StringSchema::getType
      */
     public function testType()
     {
@@ -44,7 +44,7 @@ class StringSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Schemas\StringSchema
+     * @covers \Epfremme\Swagger\Entity\Schemas\StringSchema
      */
     public function testSerialization()
     {

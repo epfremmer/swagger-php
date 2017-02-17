@@ -34,7 +34,7 @@ class StringHeaderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Headers\StringHeader::getType
+     * @covers \Epfremme\Swagger\Entity\Headers\StringHeader::getType
      */
     public function testType()
     {
@@ -43,7 +43,7 @@ class StringHeaderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Headers\StringHeader
+     * @covers \Epfremme\Swagger\Entity\Headers\StringHeader
      */
     public function testSerialization()
     {

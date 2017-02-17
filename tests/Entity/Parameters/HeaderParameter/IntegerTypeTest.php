@@ -35,7 +35,7 @@ class IntegerTypeTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Parameters\HeaderParameter\IntegerType
+     * @covers \Epfremme\Swagger\Entity\Parameters\HeaderParameter\IntegerType
      */
     public function testSerialization()
     {

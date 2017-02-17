@@ -35,7 +35,7 @@ class StringTypeTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Parameters\QueryParameter\StringType
+     * @covers \Epfremme\Swagger\Entity\Parameters\QueryParameter\StringType
      */
     public function testSerialization()
     {

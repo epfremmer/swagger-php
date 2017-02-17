@@ -35,8 +35,8 @@ class BodyParameterTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Parameters\BodyParameter::getSchema
-     * @covers Epfremme\Swagger\Entity\Parameters\BodyParameter::setSchema
+     * @covers \Epfremme\Swagger\Entity\Parameters\BodyParameter::getSchema
+     * @covers \Epfremme\Swagger\Entity\Parameters\BodyParameter::setSchema
      */
     public function testSchema()
     {
@@ -50,7 +50,7 @@ class BodyParameterTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Parameters\BodyParameter
+     * @covers \Epfremme\Swagger\Entity\Parameters\BodyParameter
      */
     public function testSerialization()
     {

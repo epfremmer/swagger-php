@@ -34,8 +34,8 @@ class TagTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Tag::getName
-     * @covers Epfremme\Swagger\Entity\Tag::setName
+     * @covers \Epfremme\Swagger\Entity\Tag::getName
+     * @covers \Epfremme\Swagger\Entity\Tag::setName
      */
     public function testName()
     {
@@ -46,8 +46,8 @@ class TagTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Tag::getDescription
-     * @covers Epfremme\Swagger\Entity\Tag::setDescription
+     * @covers \Epfremme\Swagger\Entity\Tag::getDescription
+     * @covers \Epfremme\Swagger\Entity\Tag::setDescription
      */
     public function testDescription()
     {
@@ -58,8 +58,8 @@ class TagTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Tag::getExternalDocs
-     * @covers Epfremme\Swagger\Entity\Tag::setExternalDocs
+     * @covers \Epfremme\Swagger\Entity\Tag::getExternalDocs
+     * @covers \Epfremme\Swagger\Entity\Tag::setExternalDocs
      */
     public function testExternalDocs()
     {
@@ -73,8 +73,8 @@ class TagTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Tag::getVendorExtensions
-     * @covers Epfremme\Swagger\Entity\Tag::setVendorExtensions
+     * @covers \Epfremme\Swagger\Entity\Tag::getVendorExtensions
+     * @covers \Epfremme\Swagger\Entity\Tag::setVendorExtensions
      */
     public function testVendorExtension()
     {
@@ -89,7 +89,7 @@ class TagTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Tag
+     * @covers \Epfremme\Swagger\Entity\Tag
      */
     public function testSerialize()
     {

@@ -31,8 +31,8 @@ class AbstractSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Schemas\AbstractSchema::getDefault
-     * @covers Epfremme\Swagger\Entity\Schemas\AbstractSchema::setDefault
+     * @covers \Epfremme\Swagger\Entity\Schemas\AbstractSchema::getDefault
+     * @covers \Epfremme\Swagger\Entity\Schemas\AbstractSchema::setDefault
      */
     public function testDefault()
     {
@@ -43,8 +43,8 @@ class AbstractSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Schemas\AbstractSchema::getFormat
-     * @covers Epfremme\Swagger\Entity\Schemas\AbstractSchema::setFormat
+     * @covers \Epfremme\Swagger\Entity\Schemas\AbstractSchema::getFormat
+     * @covers \Epfremme\Swagger\Entity\Schemas\AbstractSchema::setFormat
      */
     public function testFormat()
     {
@@ -55,8 +55,8 @@ class AbstractSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Schemas\AbstractSchema::getTitle
-     * @covers Epfremme\Swagger\Entity\Schemas\AbstractSchema::setTitle
+     * @covers \Epfremme\Swagger\Entity\Schemas\AbstractSchema::getTitle
+     * @covers \Epfremme\Swagger\Entity\Schemas\AbstractSchema::setTitle
      */
     public function testTitle()
     {
@@ -67,8 +67,8 @@ class AbstractSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Schemas\AbstractSchema::getDescription
-     * @covers Epfremme\Swagger\Entity\Schemas\AbstractSchema::setDescription
+     * @covers \Epfremme\Swagger\Entity\Schemas\AbstractSchema::getDescription
+     * @covers \Epfremme\Swagger\Entity\Schemas\AbstractSchema::setDescription
      */
     public function testDescription()
     {
@@ -79,8 +79,8 @@ class AbstractSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Schemas\AbstractSchema::getExample
-     * @covers Epfremme\Swagger\Entity\Schemas\AbstractSchema::setExample
+     * @covers \Epfremme\Swagger\Entity\Schemas\AbstractSchema::getExample
+     * @covers \Epfremme\Swagger\Entity\Schemas\AbstractSchema::setExample
      */
     public function testExample()
     {
@@ -103,8 +103,8 @@ class AbstractSchemaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Schemas\AbstractSchema::getExternalDocs
-     * @covers Epfremme\Swagger\Entity\Schemas\AbstractSchema::setExternalDocs
+     * @covers \Epfremme\Swagger\Entity\Schemas\AbstractSchema::getExternalDocs
+     * @covers \Epfremme\Swagger\Entity\Schemas\AbstractSchema::setExternalDocs
      */
     public function testExternalDocs()
     {

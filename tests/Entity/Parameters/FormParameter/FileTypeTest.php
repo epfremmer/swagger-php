@@ -35,7 +35,7 @@ class FileTypeTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Parameters\FormParameter\FileType
+     * @covers \Epfremme\Swagger\Entity\Parameters\FormParameter\FileType
      */
     public function testSerialization()
     {

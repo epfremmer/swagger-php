@@ -34,8 +34,8 @@ class ExamplesTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Examples::getExamples
-     * @covers Epfremme\Swagger\Entity\Examples::setExamples
+     * @covers \Epfremme\Swagger\Entity\Examples::getExamples
+     * @covers \Epfremme\Swagger\Entity\Examples::setExamples
      */
     public function testExamples()
     {
@@ -59,7 +59,7 @@ class ExamplesTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Entity\Examples
+     * @covers \Epfremme\Swagger\Entity\Examples
      */
     public function testSerialize()
     {
