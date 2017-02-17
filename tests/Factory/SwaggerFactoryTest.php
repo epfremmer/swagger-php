@@ -10,6 +10,7 @@ use JMS\Serializer\Serializer;
 use Epfremme\Swagger\Entity\Swagger;
 use Epfremme\Swagger\Factory\SwaggerFactory;
 use Epfremme\Swagger\Tests\Parser\FileParserTest;
+use Epfremme\Swagger\Tests\Parser\JsonStringParserTest;
 
 /**
  * Class SwaggerFactoryTest
@@ -19,7 +20,6 @@ use Epfremme\Swagger\Tests\Parser\FileParserTest;
  */
 class SwaggerFactoryTest extends \PHPUnit_Framework_TestCase
 {
-    const testJsonString = '{"swaggerVersion": "1.2","apis": [{"path": "http://localhost:8000/listings/greetings","description": "Generating greetings in our application."}]}';
     /**
      * @var SwaggerFactory
      */
@@ -59,7 +59,7 @@ class SwaggerFactoryTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Factory\SwaggerFactory::__construct
+     * @covers \Epfremme\Swagger\Factory\SwaggerFactory::__construct
      */
     public function testFactoryConstructor()
     {
@@ -86,7 +86,7 @@ class SwaggerFactoryTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Factory\SwaggerFactory::build
+     * @covers \Epfremme\Swagger\Factory\SwaggerFactory::build
      */
     public function testBuildJson()
     {
@@ -96,31 +96,32 @@ class SwaggerFactoryTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Factory\SwaggerFactory::buildFromJsonString
+     * @covers \Epfremme\Swagger\Factory\SwaggerFactory::buildFromJsonString
      */
     public function testBuildFromJsonString()
     {
-        $swagger = $this->getFactory()->buildFromJsonString(
-            self::testJsonString
-        );
+        $swagger = $this->getFactory()->buildFromJsonString(JsonStringParserTest::TEST_JSON_STRING);
 
         $this->assertInstanceOf(Swagger::class, $swagger);
     }
 
-    /*public function testFactoryConstructorWithSubscribers()
+    /**
+     * @covers \Epfremme\Swagger\Factory\SwaggerFactory::__construct
+     */
+    public function testFactoryConstructorWithSubscribers()
     {
         $testEventSubscriber = new TestEventSubscriber();
         $factory = new SwaggerFactory([
             $testEventSubscriber
         ]);
 
-        $factory->build($this->getFile(SwaggerParserTest::SWAGGER_JSON_FILE));
+        $factory->build($this->getFile(FileParserTest::SWAGGER_JSON_FILE));
 
         $this->assertTrue($testEventSubscriber->isTestFlag());
-    }*/
+    }
 
     /**
-     * @covers Epfremme\Swagger\Factory\SwaggerFactory::build
+     * @covers \Epfremme\Swagger\Factory\SwaggerFactory::build
      */
     public function testBuildYaml()
     {
@@ -130,7 +131,7 @@ class SwaggerFactoryTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Epfremme\Swagger\Factory\SwaggerFactory::serialize
+     * @covers \Epfremme\Swagger\Factory\SwaggerFactory::serialize
      */
     public function testSerialize()
     {
