@@ -33,20 +33,20 @@ class SwaggerFactory
 
 
     /**
-     * SwaggerFactory constructor.
+     * SwaggerFactory constructor
+     *
      * @param array|null $subscribers
      */
-    public function __construct(array $subscribers = null)
+    public function __construct(array $subscribers = [])
     {
         $serializerBuilder = new SerializerBuilder();
 
         $serializerBuilder->configureListeners(function (EventDispatcher $eventDispatcher) use ($subscribers) {
             $eventDispatcher->addSubscriber(new SerializationSubscriber());
             $eventDispatcher->addSubscriber(new VendorExtensionListener());
-            if (null !== $subscribers) {
-                foreach ($subscribers as $subscriber) {
-                    $eventDispatcher->addSubscriber($subscriber);
-                }
+
+            foreach ($subscribers as $subscriber) {
+                $eventDispatcher->addSubscriber($subscriber);
             }
         });
 
@@ -62,9 +62,9 @@ class SwaggerFactory
      */
     public function build($file)
     {
-        $swagger = new FileParser($file);
+        $parser = new FileParser($file);
 
-        return $this->buildFromParser($swagger);
+        return $this->buildFromParser($parser);
     }
 
     /**
@@ -75,9 +75,9 @@ class SwaggerFactory
      */
     public function buildFromJsonString($json)
     {
-        $swagger = new JsonStringParser($json);
+        $parser = new JsonStringParser($json);
 
-        return $this->buildFromParser($swagger);
+        return $this->buildFromParser($parser);
     }
 
     /**
@@ -98,18 +98,20 @@ class SwaggerFactory
     }
 
     /**
-     * @param SwaggerParser $swagger
-     * @return array|\JMS\Serializer\scalar|object
+     * Return de-serialized Swagger result
+     *
+     * @param SwaggerParser $parser
+     * @return Swagger
      * @throws \LogicException
      */
-    private function buildFromParser(SwaggerParser $swagger)
+    private function buildFromParser(SwaggerParser $parser)
     {
         $context = new DeserializationContext();
 
         $context->setVersion(
-            $swagger->getVersion()
+            $parser->getVersion()
         );
 
-        return $this->serializer->deserialize($swagger, Swagger::class, 'json', $context);
+        return $this->serializer->deserialize($parser, Swagger::class, 'json', $context);
     }
 }

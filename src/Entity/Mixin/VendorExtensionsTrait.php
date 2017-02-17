@@ -1,10 +1,16 @@
 <?php
+/**
+ * File VendorExtensionsTrait.php
+ *
+ * @author Edward Pfremmer <epfremme@nerdery.com>
+ */
 namespace Epfremme\Swagger\Entity\Mixin;
 
 use JMS\Serializer\Annotation as JMS;
 
 /**
  * Class VendorExtensionsTrait
+ *
  * @package Epfremme\Swagger\Entity\Mixin
  */
 trait VendorExtensionsTrait
@@ -13,13 +19,13 @@ trait VendorExtensionsTrait
      * @JMS\Since("2.0")
      * @JMS\Type("array")
      * @JMS\SerializedName("vendorExtensions")
-     * @JMS\Accessor(getter="getVendorExtensionNull")
+     * @JMS\Accessor(getter="getNullVendorExtensions")
      * @var string[]
      */
     protected $vendorExtensions;
 
     /**
-     * @return \string[]
+     * @return string[]
      */
     public function getVendorExtensions()
     {
@@ -30,7 +36,7 @@ trait VendorExtensionsTrait
      * This method exists to filter out this field when serializing
      * @return null
      */
-    public function getVendorExtensionNull()
+    public function getNullVendorExtensions()
     {
         return null;
     }

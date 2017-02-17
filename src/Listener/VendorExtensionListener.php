@@ -30,7 +30,7 @@ class VendorExtensionListener implements EventSubscriberInterface
     public static function getSubscribedEvents()
     {
         return [
-            ['event' => Events::PRE_DESERIALIZE, 'method' => 'onDePreSerialize'],
+            ['event' => Events::PRE_DESERIALIZE, 'method' => 'onPreDeserialize'],
             ['event' => Events::POST_SERIALIZE, 'method' => 'onPostSerialize'],
         ];
     }
@@ -38,7 +38,7 @@ class VendorExtensionListener implements EventSubscriberInterface
     /**
      * @param PreDeserializeEvent $event
      */
-    public function onDePreSerialize(PreDeserializeEvent $event)
+    public function onPreDeserialize(PreDeserializeEvent $event)
     {
         if ($this->checkExpectedType($event, Info::class) ||
             $this->checkExpectedType($event, Response::class) ||
