@@ -45,7 +45,7 @@ class License
 
     /**
      * @param string $name
-     * @return Contact
+     * @return License
      */
     public function setName($name)
     {
@@ -63,7 +63,7 @@ class License
 
     /**
      * @param string $url
-     * @return Contact
+     * @return License
      */
     public function setUrl($url)
     {
