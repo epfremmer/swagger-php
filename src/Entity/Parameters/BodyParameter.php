@@ -7,6 +7,7 @@
 namespace Epfremme\Swagger\Entity\Parameters;
 
 use Epfremme\Swagger\Entity\Schemas\SchemaInterface;
+use Epfremme\Swagger\Type\BodyParameterInterface;
 use JMS\Serializer\Annotation as JMS;
 
 /**
@@ -15,7 +16,7 @@ use JMS\Serializer\Annotation as JMS;
  * @package Epfremme\Swagger
  * @subpackage Entity\Parameters
  */
-class BodyParameter extends AbstractParameter
+class BodyParameter extends AbstractParameter implements BodyParameterInterface
 {
     /**
      * @JMS\Since("2.0")

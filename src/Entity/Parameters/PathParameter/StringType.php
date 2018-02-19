@@ -8,6 +8,8 @@ namespace Epfremme\Swagger\Entity\Parameters\PathParameter;
 
 use Epfremme\Swagger\Entity\Mixin\Primitives;
 use Epfremme\Swagger\Entity\Parameters\AbstractTypedParameter;
+use Epfremme\Swagger\Type\PathParameterInterface;
+use Epfremme\Swagger\Type\StringTypeInterface;
 
 /**
  * Class StringType
@@ -15,7 +17,7 @@ use Epfremme\Swagger\Entity\Parameters\AbstractTypedParameter;
  * @package Epfremme\Swagger
  * @subpackage Entity\Parameters\PathParameter
  */
-class StringType extends AbstractTypedParameter
+class StringType extends AbstractTypedParameter implements PathParameterInterface, StringTypeInterface
 {
     use Primitives\StringPrimitiveTrait;
 }

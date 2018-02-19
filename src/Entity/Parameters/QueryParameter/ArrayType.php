@@ -8,6 +8,8 @@ namespace Epfremme\Swagger\Entity\Parameters\QueryParameter;
 
 use Epfremme\Swagger\Entity\Mixin\Primitives;
 use Epfremme\Swagger\Entity\Parameters\AbstractTypedParameter;
+use Epfremme\Swagger\Type\ArrayTypeInterface;
+use Epfremme\Swagger\Type\QueryParameterInterface;
 
 /**
  * Class ArrayType
@@ -15,7 +17,7 @@ use Epfremme\Swagger\Entity\Parameters\AbstractTypedParameter;
  * @package Epfremme\Swagger
  * @subpackage Entity\Parameters\QueryParameter
  */
-class ArrayType extends AbstractTypedParameter
+class ArrayType extends AbstractTypedParameter implements QueryParameterInterface, ArrayTypeInterface
 {
     use Primitives\ArrayPrimitiveTrait;
 }

@@ -8,6 +8,8 @@ namespace Epfremme\Swagger\Entity\Parameters\HeaderParameter;
 
 use Epfremme\Swagger\Entity\Mixin\Primitives;
 use Epfremme\Swagger\Entity\Parameters\AbstractTypedParameter;
+use Epfremme\Swagger\Type\BooleanTypeInterface;
+use Epfremme\Swagger\Type\HeaderParameterInterface;
 
 /**
  * Class BooleanType
@@ -15,7 +17,7 @@ use Epfremme\Swagger\Entity\Parameters\AbstractTypedParameter;
  * @package Epfremme\Swagger
  * @subpackage Entity\Parameters\HeaderParameter
  */
-class BooleanType extends AbstractTypedParameter
+class BooleanType extends AbstractTypedParameter implements HeaderParameterInterface, BooleanTypeInterface
 {
     use Primitives\BooleanPrimitiveTrait;
 }

@@ -8,6 +8,8 @@ namespace Epfremme\Swagger\Entity\Parameters\QueryParameter;
 
 use Epfremme\Swagger\Entity\Mixin\Primitives;
 use Epfremme\Swagger\Entity\Parameters\AbstractTypedParameter;
+use Epfremme\Swagger\Type\QueryParameterInterface;
+use Epfremme\Swagger\Type\StringTypeInterface;
 
 /**
  * Class StringType
@@ -15,7 +17,7 @@ use Epfremme\Swagger\Entity\Parameters\AbstractTypedParameter;
  * @package Epfremme\Swagger
  * @subpackage Entity\Parameters\QueryParameter
  */
-class StringType extends AbstractTypedParameter
+class StringType extends AbstractTypedParameter implements QueryParameterInterface, StringTypeInterface
 {
     use Primitives\StringPrimitiveTrait;
 }

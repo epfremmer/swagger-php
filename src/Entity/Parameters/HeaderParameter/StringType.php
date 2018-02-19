@@ -8,6 +8,8 @@ namespace Epfremme\Swagger\Entity\Parameters\HeaderParameter;
 
 use Epfremme\Swagger\Entity\Mixin\Primitives;
 use Epfremme\Swagger\Entity\Parameters\AbstractTypedParameter;
+use Epfremme\Swagger\Type\HeaderParameterInterface;
+use Epfremme\Swagger\Type\StringTypeInterface;
 
 /**
  * Class StringType
@@ -15,7 +17,7 @@ use Epfremme\Swagger\Entity\Parameters\AbstractTypedParameter;
  * @package Epfremme\Swagger
  * @subpackage Entity\Parameters\HeaderParameter
  */
-class StringType extends AbstractTypedParameter
+class StringType extends AbstractTypedParameter implements HeaderParameterInterface, StringTypeInterface
 {
     use Primitives\StringPrimitiveTrait;
 }

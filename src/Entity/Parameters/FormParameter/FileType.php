@@ -8,6 +8,8 @@ namespace Epfremme\Swagger\Entity\Parameters\FormParameter;
 
 use Epfremme\Swagger\Entity\Mixin\Primitives;
 use Epfremme\Swagger\Entity\Parameters\AbstractTypedParameter;
+use Epfremme\Swagger\Type\FileTypeInterface;
+use Epfremme\Swagger\Type\FormParameterInterface;
 
 /**
  * Class FileType
@@ -15,7 +17,7 @@ use Epfremme\Swagger\Entity\Parameters\AbstractTypedParameter;
  * @package Epfremme\Swagger
  * @subpackage Entity\Parameters\FormParameter
  */
-class FileType extends AbstractTypedParameter
+class FileType extends AbstractTypedParameter implements FormParameterInterface, FileTypeInterface
 {
 
 }
